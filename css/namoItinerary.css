@@ -403,3 +403,8 @@ body .scop-one-font {
 .font-color-sandy-beach {
   color: #FFE5CC !important;
 }
+header nav .collapse a.btn {
+  border: 2px solid #F28B24;
+  border-radius: 3.125rem;
+  padding: 0.625rem 1.25rem;
+}
