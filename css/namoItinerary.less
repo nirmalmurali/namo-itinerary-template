@@ -1,152 +1,183 @@
-
-@primaryColor: #F28B24;
+@primaryColor: #f28b24;
 @secondaryColor: #000000;
-@cloudyGrey:#726E6E;
-@blackCat:#3F3F3F;
-@fuelYellow:#F2B024;
-@white:#ffffff;
-@vistaWhite:#FFF7F4;
-@greyCloud:#BABABA;
-@seaGreen:#269A59;
-@pineGreen:#098753;
-@shipGrey:#444444;
-@davyGrey:#605B5B;
-@sandyBeach:#FFE5CC;
+@cloudyGrey: #726e6e;
+@blackCat: #3f3f3f;
+@fuelYellow: #f2b024;
+@white: #ffffff;
+@vistaWhite: #fff7f4;
+@greyCloud: #bababa;
+@seaGreen: #269a59;
+@pineGreen: #098753;
+@shipGrey: #444444;
+@davyGrey: #605b5b;
+@sandyBeach: #ffe5cc;
 html {
-    font-size: 16px;
-    height: 100%;
+  font-size: 16px;
+  height: 100%;
 
-    @media screen {
-        @media (max-width: 576px) {
-            font-size: 15px;
-        }
+  @media screen {
+    @media (max-width: 576px) {
+      font-size: 15px;
     }
+  }
 }
 
 body {
-    font-family: "Roboto", sans-serif !important;
-    height: 100%;
-    .anton-font {
-        font-family: "Anton", sans-serif !important;
-        font-weight: 400;
-    }
-    .scop-one-font {
-        font-family: "Scope One", serif !important;
-        font-weight: 400;
-    }
+  font-family: "Roboto", sans-serif !important;
+  height: 100%;
+  .anton-font {
+    font-family: "Anton", sans-serif !important;
+    font-weight: 400;
+  }
+  .scop-one-font {
+    font-family: "Scope One", serif !important;
+    font-weight: 400;
+  }
 }
 
 // Font Size Loop (fs-)
 .fs-loop(@j) when (@j <= 100) {
-    @size: (@j / 16); // Convert px to rem
+  @size: (@j / 16); // Convert px to rem
 
-    .fs-@{j} {
-        font-size: @size * 1rem !important;
-    }
+  .fs-@{j} {
+    font-size: @size * 1rem !important;
+  }
 
-    .fs-loop(@j + 1); // Recursive call
+  .fs-loop(@j + 1); // Recursive call
 }
 // Start from 5 instead of 10 (if intended)
 .fs-loop(5);
 // Font Weight Loop (fw-)
 .fw-loop(@i) when (@i < 10) {
-    // Ensure 10 is included
-    @weight: @i * 100;
+  // Ensure 10 is included
+  @weight: @i * 100;
 
-    .fw-@{weight} {
-        font-weight: @weight !important;
-    }
+  .fw-@{weight} {
+    font-weight: @weight !important;
+  }
 
-    .fw-loop(@i + 1); // Recursive call
+  .fw-loop(@i + 1); // Recursive call
 }
 // Start from 1
 .fw-loop(1);
 
 .bg-color-primary {
-    background-color: @primaryColor !important;
+  background-color: @primaryColor !important;
 }
 .bg-color-secondary {
-    background-color: @secondaryColor !important;
+  background-color: @secondaryColor !important;
 }
 .bg-color-cloudy-grey {
-    background-color: @cloudyGrey !important;
+  background-color: @cloudyGrey !important;
 }
 .bg-color-black-cat {
-    background-color: @blackCat !important;
+  background-color: @blackCat !important;
 }
 .bg-color-fuel-yellow {
-    background-color: @fuelYellow !important;
+  background-color: @fuelYellow !important;
 }
 .bg-color-vista-white {
-    background-color: @vistaWhite !important;
+  background-color: @vistaWhite !important;
 }
 .bg-color-grey-cloud {
-    background-color: @greyCloud !important;
+  background-color: @greyCloud !important;
 }
 .bg-color-sea-green {
-    background-color: @seaGreen !important;
+  background-color: @seaGreen !important;
 }
 .bg-color-pine-green {
-    background-color: @pineGreen !important;
+  background-color: @pineGreen !important;
 }
 .bg-color-ship-grey {
-    background-color: @shipGrey !important;
+  background-color: @shipGrey !important;
 }
 .bg-color-davy-grey {
-    background-color: @davyGrey !important;
+  background-color: @davyGrey !important;
 }
 
 .bg-color-sandy-beach {
-    background-color: @sandyBeach !important;
+  background-color: @sandyBeach !important;
 }
 
 .font-color-primary {
-    color: @primaryColor !important;
+  color: @primaryColor !important;
 }
 .font-color-secondary {
-    color: @secondaryColor !important;
+  color: @secondaryColor !important;
 }
 
 .font-color-cloudy-grey {
-    color: @cloudyGrey !important;
+  color: @cloudyGrey !important;
 }
 
 .font-color-black-cat {
-    color: @blackCat !important;
+  color: @blackCat !important;
 }
 .font-color-fuel-yellow {
-    color: @fuelYellow !important;
+  color: @fuelYellow !important;
 }
 .font-color-grey-cloud {
-    color: @greyCloud !important;
+  color: @greyCloud !important;
 }
 .font-color-sea-green {
-    color: @seaGreen !important;
+  color: @seaGreen !important;
 }
 .font-color-pine-green {
-    color: @pineGreen !important;
+  color: @pineGreen !important;
 }
 .font-color-ship-grey {
-    color: @shipGrey !important;
+  color: @shipGrey !important;
 }
 .font-color-davy-grey {
-    color: @davyGrey !important;
+  color: @davyGrey !important;
 }
 .font-color-sandy-beach {
-    color: @sandyBeach !important;
+  color: @sandyBeach !important;
 }
 
-
-header{
-    nav{
-        .collapse{
-            a{
-                &.btn{
-                    border: 2px solid @primaryColor;
-                    border-radius: 3.125rem;
-                    padding: 0.625rem 1.25rem;
-                }
-            }
+header {
+  nav {
+    .collapse {
+      a {
+        &.btn {
+          border: 2px solid @primaryColor;
+          border-radius: 3.125rem;
+          padding: 0.625rem 1.25rem;
+          color: @primaryColor;
+          &:hover {
+            background-color: @primaryColor;
+            color: @white;
+          }
         }
+      }
     }
+  }
+}
+
+.home-banner-wrapper {
+  h3 {
+    font-size: 3.75rem;
+    @media screen {
+      @media (max-width: 576px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .btn {
+    border: 2px solid @primaryColor;
+    border-radius: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    color: @primaryColor;
+    &:hover {
+      background-color: @primaryColor;
+      color: @white;
+    }
+  }
+  ul {
+    gap: 1.75rem;
+    margin-top: 3.25rem;
+    li {
+      padding: 0;
+    }
+  }
 }
