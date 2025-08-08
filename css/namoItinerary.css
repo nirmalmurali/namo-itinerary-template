@@ -19,6 +19,9 @@ body .scop-one-font {
   font-family: "Scope One", serif !important;
   font-weight: 400;
 }
+body .pt-font {
+  font-family: "PT Sans", sans-serif !important;
+}
 .fs-5 {
   font-size: 0.3125rem !important;
 }
@@ -340,6 +343,9 @@ body .scop-one-font {
 .bg-color-secondary {
   background-color: #000000 !important;
 }
+.bg-color-smoky-black {
+  background-color: #0C0C0C !important;
+}
 .bg-color-cloudy-grey {
   background-color: #726e6e !important;
 }
@@ -375,6 +381,9 @@ body .scop-one-font {
 }
 .font-color-secondary {
   color: #000000 !important;
+}
+.font-color-smoky-black {
+  color: #0C0C0C !important;
 }
 .font-color-cloudy-grey {
   color: #726e6e !important;
@@ -436,5 +445,42 @@ header nav .collapse a.btn:hover {
   margin-top: 3.25rem;
 }
 .home-banner-wrapper ul li {
+  padding: 0;
+}
+.home-about-wrapper {
+  padding: 3.375rem 0;
+}
+.booking-list {
+  gap: 2.188rem;
+}
+.view-more-btn {
+  border: 2px solid #f28b24;
+  border-radius: 3.125rem;
+  padding: 0.625rem 1.25rem;
+  color: #f28b24;
+}
+.view-more-btn:hover {
+  background-color: #f28b24;
+  color: #ffffff;
+}
+.image-bg,
+.home-trusted-partner-wrapper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home-trusted-partner-wrapper {
+  padding: 3.375rem 0;
+  background-image: url("../assets/images/home_trusted_partner_bg.png");
+}
+.home-trusted-partner-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2.813rem;
+}
+.home-trusted-partner-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
   padding: 0;
 }
