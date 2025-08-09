@@ -22,6 +22,13 @@ body .scop-one-font {
 body .pt-font {
   font-family: "PT Sans", sans-serif !important;
 }
+body .baloo-font {
+  font-family: "Baloo 2", sans-serif !important;
+}
+body .pt-mono-font {
+  font-family: "PT Mono", monospace !important;
+  font-weight: 400;
+}
 .fs-5 {
   font-size: 0.3125rem !important;
 }
@@ -49,7 +56,8 @@ body .pt-font {
 .fs-13 {
   font-size: 0.8125rem !important;
 }
-.fs-14 {
+.fs-14,
+footer .quick-links-wrapper li a {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -319,7 +327,8 @@ body .pt-font {
 .fw-300 {
   font-weight: 300 !important;
 }
-.fw-400 {
+.fw-400,
+footer .quick-links-wrapper li a {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -344,7 +353,7 @@ body .pt-font {
   background-color: #000000 !important;
 }
 .bg-color-smoky-black {
-  background-color: #0C0C0C !important;
+  background-color: #0c0c0c !important;
 }
 .bg-color-cloudy-grey {
   background-color: #726e6e !important;
@@ -376,6 +385,9 @@ body .pt-font {
 .bg-color-sandy-beach {
   background-color: #ffe5cc !important;
 }
+.bg-color-night {
+  background-color: #0d0d0d !important;
+}
 .font-color-primary {
   color: #f28b24 !important;
 }
@@ -383,7 +395,7 @@ body .pt-font {
   color: #000000 !important;
 }
 .font-color-smoky-black {
-  color: #0C0C0C !important;
+  color: #0c0c0c !important;
 }
 .font-color-cloudy-grey {
   color: #726e6e !important;
@@ -411,6 +423,9 @@ body .pt-font {
 }
 .font-color-sandy-beach {
   color: #ffe5cc !important;
+}
+.font-color-night {
+  color: #0d0d0d !important;
 }
 header nav .collapse a.btn {
   border: 2px solid #f28b24;
@@ -491,5 +506,53 @@ header nav .collapse a.btn:hover {
 /****************** Footer start ****************/
 footer {
   padding: 1.875rem 0;
+  background: #0d0d0d;
+}
+footer .social-media-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+footer .social-media-wrapper ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.563rem;
+  flex-shrink: 0;
+}
+footer .social-media-wrapper ul li {
+  padding: 0;
+  flex-shrink: 0;
+}
+footer .social-media-wrapper ul li a {
+  text-decoration: none;
+}
+footer .vr {
+  background-color: #ffffff26;
+  opacity: 1;
+}
+footer .quick-links-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer .quick-links-wrapper li {
+  padding: 0;
+}
+footer .quick-links-wrapper li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.438rem;
+}
+footer .quick-links-wrapper li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "PT Mono", monospace !important;
 }
 /****************** Footer end ****************/

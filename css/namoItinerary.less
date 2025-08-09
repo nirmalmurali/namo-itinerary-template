@@ -1,6 +1,6 @@
 @primaryColor: #f28b24;
 @secondaryColor: #000000;
-@smokyBlack:#0C0C0C;
+@smokyBlack: #0c0c0c;
 @cloudyGrey: #726e6e;
 @blackCat: #3f3f3f;
 @fuelYellow: #f2b024;
@@ -12,6 +12,7 @@
 @shipGrey: #444444;
 @davyGrey: #605b5b;
 @sandyBeach: #ffe5cc;
+@night: #0d0d0d;
 html {
   font-size: 16px;
   height: 100%;
@@ -34,8 +35,15 @@ body {
     font-family: "Scope One", serif !important;
     font-weight: 400;
   }
-  .pt-font{
+  .pt-font {
     font-family: "PT Sans", sans-serif !important;
+  }
+  .baloo-font {
+    font-family: "Baloo 2", sans-serif !important;
+  }
+  .pt-mono-font {
+    font-family: "PT Mono", monospace !important;
+    font-weight: 400;
   }
 }
 
@@ -105,7 +113,9 @@ body {
 .bg-color-sandy-beach {
   background-color: @sandyBeach !important;
 }
-
+.bg-color-night {
+  background-color: @night !important;
+}
 .font-color-primary {
   color: @primaryColor !important;
 }
@@ -143,7 +153,9 @@ body {
 .font-color-sandy-beach {
   color: @sandyBeach !important;
 }
-
+.font-color-night {
+  color: @night !important;
+}
 header {
   nav {
     .collapse {
@@ -191,14 +203,13 @@ header {
   }
 }
 /****************** home-banner-wrapper end ****************/
-.home-about-wrapper{
+.home-about-wrapper {
   padding: 3.375rem 0;
 }
-.booking-list{
+.booking-list {
   gap: 2.188rem;
-
 }
-.view-more-btn{
+.view-more-btn {
   border: 2px solid @primaryColor;
   border-radius: 3.125rem;
   padding: 0.625rem 1.25rem;
@@ -208,21 +219,21 @@ header {
     color: @white;
   }
 }
-.image-bg{
+.image-bg {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 /****************** home  Trusted Booking Partner section start ****************/
-.home-trusted-partner-wrapper{
+.home-trusted-partner-wrapper {
   padding: 3.375rem 0;
   &:extend(.image-bg);
   background-image: url("../assets/images/home_trusted_partner_bg.png");
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     gap: 2.813rem;
-    li{
+    li {
       display: flex;
       align-items: center;
       gap: 1.375rem;
@@ -233,7 +244,57 @@ header {
 /****************** home Trusted Booking Partner section end ****************/
 
 /****************** Footer start ****************/
-footer{
+footer {
   padding: 1.875rem 0;
+  background: @night;
+  .social-media-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.563rem;
+      flex-shrink: 0;
+      li {
+        padding: 0;
+        flex-shrink: 0;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .vr {
+    background-color: #ffffff26;
+    opacity: 1;
+  }
+  .quick-links-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: @white;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 0.438rem;
+      }
+      a {
+        text-decoration: none;
+        &:extend(.fs-14,
+        .fw-400);
+        color: @white;
+        font-family: "PT Mono", monospace !important;
+      }
+    }
+  }
 }
 /****************** Footer end ****************/
