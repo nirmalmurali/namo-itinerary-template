@@ -422,6 +422,7 @@ header nav .collapse a.btn:hover {
   background-color: #f28b24;
   color: #ffffff;
 }
+/************ home-banner-wrapper start **************/
 .home-banner-wrapper h3 {
   font-size: 3.75rem;
 }
@@ -447,6 +448,7 @@ header nav .collapse a.btn:hover {
 .home-banner-wrapper ul li {
   padding: 0;
 }
+/****************** home-banner-wrapper end ****************/
 .home-about-wrapper {
   padding: 3.375rem 0;
 }
@@ -469,6 +471,7 @@ header nav .collapse a.btn:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
+/****************** home  Trusted Booking Partner section start ****************/
 .home-trusted-partner-wrapper {
   padding: 3.375rem 0;
   background-image: url("../assets/images/home_trusted_partner_bg.png");
@@ -484,3 +487,9 @@ header nav .collapse a.btn:hover {
   gap: 1.375rem;
   padding: 0;
 }
+/****************** home  Trusted Booking Partner section end ****************/
+/****************** Footer start ****************/
+footer {
+  padding: 1.875rem 0;
+}
+/****************** Footer end ****************/
