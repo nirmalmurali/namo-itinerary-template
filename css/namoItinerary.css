@@ -438,6 +438,32 @@ header nav .collapse a.btn:hover {
   color: #ffffff;
 }
 /************ home-banner-wrapper start **************/
+.home-banner-wrapper .home-banner-content {
+  background-image: url("../assets/images/banner_bg.png");
+  position: relative;
+  z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  .home-banner-wrapper .home-banner-content {
+    background-size: contain !important;
+  }
+}
+.home-banner-wrapper .home-banner-content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/images/root_map_img.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: block;
+  inset: 0;
+  margin: auto;
+}
+@media screen and (max-width: 1199px) {
+  .home-banner-wrapper .home-banner-content::before {
+    display: none;
+  }
+}
 .home-banner-wrapper h3 {
   font-size: 3.75rem;
 }
@@ -481,6 +507,7 @@ header nav .collapse a.btn:hover {
   color: #ffffff;
 }
 .image-bg,
+.home-banner-wrapper .home-banner-content,
 .home-trusted-partner-wrapper {
   background-size: cover;
   background-position: center;
@@ -503,6 +530,25 @@ header nav .collapse a.btn:hover {
   padding: 0;
 }
 /****************** home Trusted Booking Partner section end ****************/
+/****************** home our team start ****************/
+.home-our-team-wrapper .team-slider-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+.home-our-team-wrapper .team-slider-wrapper .team-track {
+  list-style: none;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.875rem;
+}
+.home-our-team-wrapper .team-slider-wrapper .team-track .team-item {
+  max-width: 13.75rem;
+  width: 100%;
+  text-align: center;
+}
+/****************** home our team end ****************/
 /****************** Footer start ****************/
 footer {
   padding: 1.875rem 0;
@@ -537,6 +583,9 @@ footer .quick-links-wrapper {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.188rem;
 }
 footer .quick-links-wrapper li {
   padding: 0;
@@ -554,5 +603,16 @@ footer .quick-links-wrapper li a {
   text-decoration: none;
   color: #ffffff;
   font-family: "PT Mono", monospace !important;
+}
+footer .footer-company-info {
+  border-right: 1px solid #ffffff26;
+}
+@media screen and (min-width: 992px) {
+  footer .first-quick-link {
+    border-right: 1px solid #ffffff26;
+  }
+}
+footer .second-quick-link {
+  border-right: 1px solid #ffffff26;
 }
 /****************** Footer end ****************/
