@@ -13,6 +13,7 @@
 @davyGrey: #605b5b;
 @sandyBeach: #ffe5cc;
 @night: #0d0d0d;
+@milkWhite: #fffafa;
 html {
   font-size: 16px;
   height: 100%;
@@ -116,6 +117,9 @@ body {
 .bg-color-night {
   background-color: @night !important;
 }
+.bg-color-milk-white {
+  background-color: @milkWhite !important;
+}
 .font-color-primary {
   color: @primaryColor !important;
 }
@@ -155,6 +159,9 @@ body {
 }
 .font-color-night {
   color: @night !important;
+}
+.font-color-milk-white {
+  color: @milkWhite !important;
 }
 header {
   nav {
@@ -272,7 +279,7 @@ header {
 /****************** home our team start ****************/
 .home-our-team-wrapper {
   padding: 3.375rem 0;
-  .team-slider-wrapper {
+  .custom-slider-wrapper {
     display: flex;
     gap: 3rem;
     @media screen {
@@ -280,7 +287,7 @@ header {
         gap: 1rem;
       }
     }
-    .team-track {
+    .slider-track {
       list-style: none;
       flex-grow: 1;
       overflow: hidden;
@@ -298,7 +305,7 @@ header {
           }
         }
       }
-      .team-item {
+      .slider-item {
         max-width: 13.75rem;
         width: 100%;
         text-align: center;
@@ -320,6 +327,42 @@ header {
   }
 }
 /****************** home our team end ****************/
+/****************** home testimonials start ****************/
+.home-testimonials-wrapper {
+  background: @milkWhite;
+  padding-bottom: 4.063rem;
+  .testimonials-slider-wrapper {
+    padding-top: 6.25rem;
+    @media screen {
+      @media (max-width: 991px) {
+        padding-top: 3rem;
+      }
+    }
+  }
+  .custom-slider-wrapper {
+    padding-left: 0.5rem;
+    .slider-track {
+      display: flex;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      .slider-item {
+        width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+      }
+    }
+  }
+}
+/****************** home testimonials end ****************/
+/****************** home contact us start ****************/
+.home-contact-us-wrapper {
+  padding: 4.625rem 0;
+}
+/****************** home contact us end ****************/
 /****************** Footer start ****************/
 footer {
   padding: 1.875rem 0;
