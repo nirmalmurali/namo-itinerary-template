@@ -163,6 +163,9 @@ body {
 .font-color-milk-white {
   color: @milkWhite !important;
 }
+.w-fit-content {
+  width: fit-content !important;
+}
 header {
   nav {
     .collapse {
@@ -361,8 +364,61 @@ header {
 /****************** home contact us start ****************/
 .home-contact-us-wrapper {
   padding: 4.625rem 0;
+  .home-contact-details-wrapper {
+    .contact-info-wrapper {
+      background: @vistaWhite;
+      border-radius: 1rem;
+      padding: 1.875rem 1.125rem 1.563rem;
+      height: 100%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        li {
+          padding: 0 0 1.25rem 0;
+          border-bottom: 1px solid @primaryColor;
+          &:last-child {
+            border-bottom: none;
+          }
+          img {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+    .home-contact-form-wrapper {
+      .line-with-dot {
+        width: 70%;
+      }
+    }
+  }
 }
 /****************** home contact us end ****************/
+.line-with-dot {
+  height: 1px;
+  width: 60%;
+  background-color: @primaryColor;
+  display: block;
+  position: relative;
+  margin-top: 0.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: @primaryColor;
+  }
+}
+
 /****************** Footer start ****************/
 footer {
   padding: 1.875rem 0;
@@ -431,6 +487,16 @@ footer {
   }
   .second-quick-link {
     border-right: 1px solid #ffffff26;
+  }
+  .footer-bottom-wrapper {
+    border-top: 1px solid #ffffff26;
+    margin-top: 2rem;
+    padding-top: 1.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    flex-wrap: wrap;
   }
 }
 /****************** Footer end ****************/
