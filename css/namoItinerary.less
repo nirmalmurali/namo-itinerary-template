@@ -14,6 +14,7 @@
 @sandyBeach: #ffe5cc;
 @night: #0d0d0d;
 @milkWhite: #fffafa;
+@lightGrey: #d9d9d9;
 html {
   font-size: 16px;
   height: 100%;
@@ -500,3 +501,65 @@ footer {
   }
 }
 /****************** Footer end ****************/
+
+.form-floating {
+  .form-control {
+    border-radius: 6px;
+    height: 32px;
+    padding: 0 1.188rem;
+    min-height: inherit;
+    box-shadow: none !important;
+    outline: none !important;
+    font-family: "PT Sans", sans-serif !important;
+    &:extend(.fs-14,
+    .fw-400);
+    &:focus {
+      border: 1px solid @primaryColor;
+    }
+    &:focus,
+    &:not(:placeholder-shown) {
+      padding: 0 1.188rem;
+      & ~ label {
+        transform: scale(0.85) translateY(-0.7rem) translateX(1.299rem);
+        padding: 0;
+        background-color: @white;
+      }
+    }
+  }
+  label {
+    padding: 0;
+    &:extend(.fs-14,
+    .fw-400);
+    transform: translateY(0.24rem) translateX(1.188rem);
+    font-family: "PT Sans", sans-serif !important;
+    height: fit-content;
+  }
+}
+.form-control {
+  border-radius: 6px;
+  height: 40px;
+  padding: 0 1.188rem;
+  min-height: inherit;
+  box-shadow: none !important;
+  outline: none !important;
+  font-family: "PT Sans", sans-serif !important;
+  border: 1px solid @lightGrey;
+  &:extend(.fs-14,
+  .fw-400);
+  &:focus {
+    border: 1px solid @primaryColor;
+  }
+  &::placeholder {
+    color: @greyCloud;
+  }
+}
+.map-wrap {
+  width: 100%;
+  height: 260px; /* Adjust to your design */
+  border-radius: 6px;
+  overflow: hidden;
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+}
