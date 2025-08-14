@@ -442,25 +442,69 @@ footer .quick-links-wrapper li a,
 .w-fit-content {
   width: fit-content !important;
 }
-header nav .collapse a.btn {
+header nav .navbar-collapse {
+  display: flex;
+}
+header nav .navbar-collapse a.btn {
   border: 2px solid #f28b24;
   border-radius: 3.125rem;
   padding: 0.625rem 1.25rem;
   color: #f28b24;
 }
-header nav .collapse a.btn:hover {
+header nav .navbar-collapse a.btn:hover {
   background-color: #f28b24;
   color: #ffffff;
+}
+header .mobile-nav-menu {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  header .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    position: fixed;
+    padding: 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #fffafa;
+    width: 100%;
+    z-index: 999;
+    max-width: 300px;
+    box-shadow: -5px 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-110%);
+  }
+}
+header .mobile-nav-menu.active {
+  transform: translateX(0);
+}
+header .black-drop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0000004d;
+  z-index: 998;
+}
+header .black-drop.active {
+  display: block;
+}
+main {
+  padding-top: 71px;
 }
 /************ home-banner-wrapper start **************/
 .home-banner-wrapper .home-banner-content {
   background-image: url("../assets/images/banner_bg.png");
   position: relative;
   z-index: 0;
+  padding-top: 2rem;
 }
 @media screen and (max-width: 767px) {
   .home-banner-wrapper .home-banner-content {
     background-size: contain !important;
+    padding-top: 1rem;
   }
 }
 .home-banner-wrapper .home-banner-content::before {

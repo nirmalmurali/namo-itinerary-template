@@ -99,4 +99,9 @@ $(document).ready(function () {
   $(".custom-slider-wrapper").each(function () {
     initSlider($(this));
   });
+
+  $(".navbar-toggler,.black-drop,.menu-close").click(function () {
+    $(".mobile-nav-menu").toggleClass("active");
+    $(".black-drop").toggleClass("active");
+  });
 });

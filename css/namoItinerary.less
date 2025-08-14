@@ -169,7 +169,8 @@ body {
 }
 header {
   nav {
-    .collapse {
+    .navbar-collapse {
+      display: flex;
       a {
         &.btn {
           border: 2px solid @primaryColor;
@@ -184,6 +185,45 @@ header {
       }
     }
   }
+  .mobile-nav-menu {
+    display: none;
+    @media screen {
+      @media (max-width: 991px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: fixed;
+        padding: 1rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: @milkWhite;
+        width: 100%;
+        z-index: 999;
+        max-width: 300px;
+        box-shadow: -5px 0px 5px 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-110%);
+      }
+    }
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  .black-drop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0000004d;
+    z-index: 998;
+    &.active {
+      display: block;
+    }
+  }
+}
+main {
+  padding-top: 71px;
 }
 /************ home-banner-wrapper start **************/
 .home-banner-wrapper {
@@ -192,9 +232,11 @@ header {
     &:extend(.image-bg);
     position: relative;
     z-index: 0;
+    padding-top: 2rem;
     @media screen {
       @media (max-width: 767px) {
         background-size: contain !important;
+        padding-top: 1rem;
       }
     }
     &::before {

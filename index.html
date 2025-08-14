@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1 user-scalable=no "
+      content="width=device-width, initial-scale=1 user-scalable=no"
     />
     <title>Home</title>
     <link
@@ -37,6 +37,10 @@
       href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Leaflet CSS -->
     <link
       rel="stylesheet"
@@ -47,25 +51,23 @@
     <link rel="stylesheet" href="css/namoItinerary.css" />
   </head>
   <body>
-    <header>
+    <header class="fixed-top">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="assets/images/namo_logo.svg" alt="" />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler btn p-0 border-0 shadow-none"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <i
+              class="fa fa-bars font-color-primary fw-500"
+              aria-hidden="true"
+            ></i>
           </button>
           <div
-            class="collapse navbar-collapse d-flex justify-content-between align-items-center"
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center"
             id="navbarNavAltMarkup"
           >
             <div class="flex-grow-1 d-flex justify-content-center">
@@ -79,6 +81,23 @@
             <a href="#" class="btn fw-400 fs-13">LOGIN / SIGNUP</a>
           </div>
         </div>
+        <div class="mobile-nav-menu">
+          <div class="d-flex justify-content-end w-100">
+            <button class="menu-close btn p-0 border-0">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#">About Us</a>
+              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Contact US</a>
+            </div>
+          </div>
+          <a href="#" class="btn fw-400 fs-13 view-more-btn">LOGIN / SIGNUP</a>
+        </div>
+        <div class="black-drop"></div>
       </nav>
     </header>
     <main>
@@ -594,10 +613,10 @@
       <!-- home testimonials start -->
       <div class="home-testimonials-wrapper">
         <div class="container">
-          <div class="row gx-3 gy-0">
+          <div class="row gx-5 gy-0">
             <div class="col-lg-4 col-xl-3 text-center text-lg-start">
               <img
-                src="assets/images/testimonials_img.png"
+                src="assets/images/testimonials_img.svg"
                 class="img-fluid"
                 alt=""
               />
