@@ -104,4 +104,17 @@ $(document).ready(function () {
     $(".mobile-nav-menu").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
+
+  $(".otp-input-wrapper input").on("input", function () {
+    if (this.value.length === 1) {
+      $(this).next("input").focus();
+    }
+  });
+
+  // Only allow digits
+  $(".otp-input-wrapper input").on("keypress", function (e) {
+    if (e.which < 48 || e.which > 57) {
+      e.preventDefault();
+    }
+  });
 });
