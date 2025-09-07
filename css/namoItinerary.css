@@ -10,6 +10,7 @@ html {
 body {
   font-family: "Roboto", sans-serif !important;
   height: 100%;
+  /* For Firefox */
 }
 body .anton-font {
   font-family: "Anton", sans-serif !important;
@@ -28,6 +29,33 @@ body .baloo-font {
 body .pt-mono-font {
   font-family: "PT Mono", monospace !important;
   font-weight: 400;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+  /* Track color */
+  border-radius: 10px;
+  /* Rounded corners */
+  display: none;
+}
+body::-webkit-scrollbar-thumb {
+  background: #f28b24;
+  /* Scroll thumb color */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #f28b24;
+  /* Darker shade on hover */
+}
+body * {
+  scrollbar-width: thin;
+  /* Makes scrollbar thinner */
+  scrollbar-color: #f28b24 transparent;
+  /* thumb color | track color */
 }
 .fs-5 {
   font-size: 0.3125rem !important;
@@ -881,7 +909,7 @@ footer .footer-bottom-wrapper {
   height: 20px;
   border-radius: 4px;
   background-color: #ffffff !important;
-  border: 1px solid #DADADA;
+  border: 1px solid #dadada;
 }
 .form-check input[type="checkbox"]:checked + label::after,
 .form-check input[type="checkbox"]:not(:checked) + label::after {
@@ -942,12 +970,14 @@ footer .footer-bottom-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   overflow-y: auto;
   padding: 0 10%;
 }
 @media screen and (max-width: 991px) {
   .login-view-wrapper .login-form-wrapper {
     padding: 0;
+    justify-content: flex-start;
   }
 }
 .login-view-wrapper .login-form-wrapper .login-logo {
@@ -966,4 +996,7 @@ footer .footer-bottom-wrapper {
 .otp-input-wrapper .form-control {
   width: 45px;
   height: 45px;
+}
+.login-next-btn {
+  height: 2rem !important;
 }
