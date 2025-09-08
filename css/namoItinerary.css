@@ -993,10 +993,27 @@ footer .footer-bottom-wrapper {
   justify-content: center;
   border-radius: 0.313rem;
 }
+.login-view-wrapper.create-account-wrapper .login-form-wrapper {
+  padding: 0;
+}
 .otp-input-wrapper .form-control {
   width: 45px;
   height: 45px;
 }
 .login-next-btn {
   height: 2rem !important;
+}
+.create-account-stepper-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+.create-account-stepper-wrapper ul li {
+  padding: 0;
+  flex-shrink: 0;
+}
+.create-account-stepper-wrapper ul li a {
+  text-decoration: none;
 }

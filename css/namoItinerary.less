@@ -766,6 +766,11 @@ footer {
       border-radius: 0.313rem;
     }
   }
+  &.create-account-wrapper {
+    .login-form-wrapper {
+      padding: 0;
+    }
+  }
 }
 .otp-input-wrapper {
   .form-control {
@@ -775,4 +780,20 @@ footer {
 }
 .login-next-btn {
   height: 2rem !important;
+}
+.create-account-stepper-wrapper {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    li {
+      padding: 0;
+      flex-shrink: 0;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }
