@@ -1017,3 +1017,24 @@ footer .footer-bottom-wrapper {
 .create-account-stepper-wrapper ul li a {
   text-decoration: none;
 }
+.create-account-stepper-wrapper ul li.stepper-completed .stepper-img-wrapper {
+  background-color: #098753;
+}
+.create-account-stepper-wrapper ul li.stepper-completed .stepper-img-wrapper img {
+  content: url("../assets/images/tick.svg");
+}
+.create-account-stepper-wrapper ul li.stepper-in-progress .stepper-img-wrapper {
+  background-color: #f28b24;
+}
+.create-account-stepper-wrapper ul li.stepper-in-progress .stepper-img-wrapper img {
+  content: url("../assets/images/progress_icon.svg");
+}
+.create-account-stepper-wrapper ul li .stepper-img-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d6d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -794,6 +794,31 @@ footer {
       a {
         text-decoration: none;
       }
+      &.stepper-completed {
+        .stepper-img-wrapper {
+          background-color: @pineGreen;
+          img {
+            content: url("../assets/images/tick.svg");
+          }
+        }
+      }
+      &.stepper-in-progress {
+        .stepper-img-wrapper {
+          background-color: @primaryColor;
+          img {
+            content: url("../assets/images/progress_icon.svg");
+          }
+        }
+      }
+      .stepper-img-wrapper {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #d6d6d6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
