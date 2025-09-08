@@ -996,6 +996,12 @@ footer .footer-bottom-wrapper {
 .login-view-wrapper.create-account-wrapper .login-form-wrapper {
   padding: 0;
 }
+@media screen and (max-width: 576px) {
+  .login-view-wrapper.create-account-wrapper .login-form-wrapper {
+    padding-bottom: 10px;
+    padding-right: 8px;
+  }
+}
 .otp-input-wrapper .form-control {
   width: 45px;
   height: 45px;
@@ -1003,16 +1009,30 @@ footer .footer-bottom-wrapper {
 .login-next-btn {
   height: 2rem !important;
 }
+.create-account-stepper-wrapper {
+  margin-bottom: 1.625rem;
+}
 .create-account-stepper-wrapper ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  overflow: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.create-account-stepper-wrapper ul::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 .create-account-stepper-wrapper ul li {
   padding: 0;
   flex-shrink: 0;
+  position: relative;
 }
 .create-account-stepper-wrapper ul li a {
   text-decoration: none;
@@ -1037,4 +1057,17 @@ footer .footer-bottom-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.create-account-stepper-wrapper ul li:after {
+  content: "";
+  width: calc(100% - 32px);
+  height: 2px;
+  background-color: #d6d6d6;
+  position: absolute;
+  display: block;
+  top: 30%;
+  right: -5%;
+}
+.create-account-stepper-wrapper ul li:last-child:after {
+  display: none;
 }
