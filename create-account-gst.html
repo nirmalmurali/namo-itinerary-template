@@ -54,7 +54,7 @@
     <main>
       <div class="login-view-wrapper create-account-wrapper">
         <div
-          class="row h-100 overflow-hidden justify-content-center justify-content-lg-start g-0 g-md-4"
+          class="row h-100 overflow-hidden justify-content-center justify-content-lg-start g-0 gx-md-4"
         >
           <div
             class="col-lg-5 col-xl-4 overflow-hidden rounded-2 login-banner-wrapper d-none d-lg-block"
@@ -134,212 +134,59 @@
               </div>
               <form action="">
                 <div class="row g-3 gy-4">
-                  <div class="col-sm-6 col-md-4">
+                  <div class="col-sm-6">
                     <div class="form-floating">
                       <input
                         type="text"
                         class="form-control"
-                        id="agencyNameInput"
-                        placeholder="Agency Name *"
+                        id="gstNameInput"
+                        placeholder="GST Name"
                       />
-                      <label for="agencyNameInput">Agency Name *</label>
+                      <label for="gstNameInput">GST Name</label>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
+                  <div class="col-sm-6">
                     <div class="form-floating">
                       <input
                         type="text"
                         class="form-control"
-                        id="titleInput"
-                        placeholder="Title *"
+                        id="gstNumberInput"
+                        placeholder="GST Number"
                       />
-                      <label for="titleInput">Title *</label>
+                      <label for="gstNumberInput">GST Number</label>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="ownerFirstNameInput"
-                        placeholder="Owner's First Name *"
-                      />
-                      <label for="ownerFirstNameInput"
-                        >Owner's First Name *</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="ownerLastNameInput"
-                        placeholder="Owner's Last Name *"
-                      />
-                      <label for="ownerLastNameInput"
-                        >Owner's Last Name *</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="establishmentYearInput"
-                      />
-                      <label for="establishmentYearInput"
-                        >Establishment Year *</label
-                      >
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <select
-                        class="form-select form-control"
-                        id="IATASelect"
-                        aria-label="Select"
-                      >
-                        <option selected>Select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="IATASelect">IATA Registered</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="IATACodeInput"
-                        placeholder="IATA Code"
-                      />
-                      <label for="IATACodeInput">IATA Code</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <select
-                        class="form-select form-control"
-                        id="countrySelect"
-                        aria-label="Select"
-                      >
-                        <option selected>Select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="countrySelect">Currency *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <select
-                        class="form-select form-control"
-                        id="stateSelect"
-                        aria-label="Select"
-                      >
-                        <option selected>Select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="stateSelect">State *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <select
-                        class="form-select form-control"
-                        id="citySelect"
-                        aria-label="Select"
-                      >
-                        <option selected>Select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <label for="citySelect">City *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="addressInput"
-                        placeholder="Address *"
-                      />
-                      <label for="addressInput">Address *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="pincodeInput"
-                        placeholder="Pincode *"
-                      />
-                      <label for="pincodeInput">Pincode *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="referByInput"
-                        placeholder="Refer By *"
-                      />
-                      <label for="referByInput">Refer By *</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
+                  <div class="col-sm-6">
                     <div class="form-floating">
                       <input
                         type="tel"
                         class="form-control"
-                        id="phoneNoInput"
-                        placeholder="Phone No"
+                        id="gstMobileInput"
+                        placeholder="GST Mobile"
                       />
-                      <label for="phoneNoInput">Phone No</label>
+                      <label for="gstMobileInput">GST Mobile</label>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
+                  <div class="col-sm-6">
                     <div class="form-floating">
                       <input
-                        type="tel"
+                        type="email"
                         class="form-control"
-                        id="mobileNoInput"
-                        placeholder="Mobile *"
+                        id="gstEmailInput"
+                        placeholder="GST Email"
                       />
-                      <label for="mobileNoInput">Mobile *</label>
+                      <label for="gstEmailInput">GST Email</label>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="websiteInput"
-                        placeholder="Website"
-                      />
-                      <label for="websiteInput">Website</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
+                  <div class="col-12">
                     <div class="form-floating">
                       <input
                         type="text"
                         class="form-control"
-                        id="PANNumberInput"
-                        placeholder="Website"
+                        id="gstAddressInput"
+                        placeholder="GST Address"
                       />
-                      <label for="PANNumberInput">PAN Number *</label>
+                      <label for="gstAddressInput">GST Address</label>
                     </div>
                   </div>
                 </div>
@@ -350,7 +197,7 @@
                     <p class="pt-font fs-14 fw-400 text-black mb-0">
                       Already have an account ?
                       <a
-                        href="#"
+                        href="login.html"
                         class="font-color-sea-green text-decoration-none"
                         >Sign in
                       </a>
@@ -358,7 +205,7 @@
                   </div>
                   <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2">
                     <a
-                      href="otp-varification.html"
+                      href="#"
                       class="btn pt-font fs-16 fw-700 text-white bg-color-primary w-100 border-0 login-next-btn"
                     >
                       Next</a
