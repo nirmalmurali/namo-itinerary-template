@@ -956,6 +956,11 @@ footer .footer-bottom-wrapper {
   overflow: hidden;
   padding: 1.875rem;
 }
+@media screen and (max-width: 576px) {
+  .login-view-wrapper {
+    padding: 1rem;
+  }
+}
 .login-view-wrapper .login-banner-wrapper {
   height: 93dvh;
 }
@@ -986,6 +991,11 @@ footer .footer-bottom-wrapper {
   max-width: 137px;
   /* Adjust as needed */
 }
+@media screen and (max-width: 576px) {
+  .login-view-wrapper .login-form-wrapper .login-logo {
+    margin-bottom: 1rem;
+  }
+}
 .login-view-wrapper .login-form-wrapper .btn {
   height: 2.813rem;
   display: flex;
@@ -995,12 +1005,25 @@ footer .footer-bottom-wrapper {
 }
 .login-view-wrapper.create-account-wrapper .login-form-wrapper {
   padding: 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 576px) {
   .login-view-wrapper.create-account-wrapper .login-form-wrapper {
     padding-bottom: 10px;
     padding-right: 8px;
   }
+}
+.login-view-wrapper.create-account-wrapper .login-form-wrapper form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.login-view-wrapper.create-account-wrapper .login-form-wrapper form .create-account-form-wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .otp-input-wrapper .form-control {
   width: 45px;
@@ -1065,7 +1088,7 @@ footer .footer-bottom-wrapper {
   background-color: #d6d6d6;
   position: absolute;
   display: block;
-  top: 30%;
+  top: 15px;
   right: -5%;
 }
 .create-account-stepper-wrapper ul li:last-child:after {
