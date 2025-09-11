@@ -1094,3 +1094,17 @@ footer .footer-bottom-wrapper {
 .create-account-stepper-wrapper ul li:last-child:after {
   display: none;
 }
+.profile-header-dropdown-wrapper:has(.dropdown-menu.show)::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #0000007d;
+  z-index: 1;
+}
+.profile-header-dropdown-wrapper .dropdown-menu.show {
+  z-index: 2;
+  background: #ffffff;
+  border: 1px solid CDD5DF;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
