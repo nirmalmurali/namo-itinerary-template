@@ -193,80 +193,194 @@
     <main>
       <div class="dashboard-banner-wrapper">
         <div class="container">
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like). Where
-          does it come from? Contrary to popular belief, Lorem Ipsum is not
-          simply random text. It has roots in a piece of classical Latin
-          literature from 45 BC, making it over 2000 years old. Richard
-          McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-          looked up one of the more obscure Latin words, consectetur, from a
-          Lorem Ipsum passage, and going through the cites of the word in
-          classical literature, discovered the undoubtable source. Lorem Ipsum
-          comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-          Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-          This book is a treatise on the theory of ethics, very popular during
-          the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-          amet..", comes from a line in section 1.10.32. The standard chunk of
-          Lorem Ipsum used since the 1500s is reproduced below for those
-          interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-          Malorum" by Cicero are also reproduced in their exact original form,
-          accompanied by English versions from the 1914 translation by H.
-          Rackham.
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s, when an unknown printer took a galley
-          of type and scrambled it to make a type specimen book. It has survived
-          not only five centuries, but also the leap into electronic
-          typesetting, remaining essentially unchanged. It was popularised in
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum
-          passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like). Where
-          does it come from? Contrary to popular belief, Lorem Ipsum is not
-          simply random text. It has roots in a piece of classical Latin
-          literature from 45 BC, making it over 2000 years old. Richard
-          McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-          looked up one of the more obscure Latin words, consectetur, from a
-          Lorem Ipsum passage, and going through the cites of the word in
-          classical literature, discovered the undoubtable source. Lorem Ipsum
-          comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-          Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-          This book is a treatise on the theory of ethics, very popular during
-          the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-          amet..", comes from a line in section 1.10.32. The standard chunk of
-          Lorem Ipsum used since the 1500s is reproduced below for those
-          interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-          Malorum" by Cicero are also reproduced in their exact original form,
-          accompanied by English versions from the 1914 translation by H.
-          Rackham.
+          <div class="dashboard-platforms-wrapper">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="pillsFlightsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pillsFlights"
+                  type="button"
+                  role="tab"
+                  aria-controls="pillsFlights"
+                  aria-selected="true"
+                >
+                  <img src="assets/images/flight_tab_icon.svg" alt="" />
+                  Flight
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pillsHotelsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pillsHotels"
+                  type="button"
+                  role="tab"
+                  aria-controls="pillsHotels"
+                  aria-selected="false"
+                >
+                  <img src="assets/images/hotels_tab_icon.svg" alt="" />
+                  Hotels
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="pillsHolidaysTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pillsHolidays"
+                  type="button"
+                  role="tab"
+                  aria-controls="pillsHolidays"
+                  aria-selected="false"
+                >
+                  <img src="assets/images/holidays_tab_icon.svg" alt="" />
+                  Holidays
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pillsFlights"
+                role="tabpanel"
+                aria-labelledby="pillsFlightsTab"
+                tabindex="0"
+              >
+                Flights
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pillsHotels"
+                role="tabpanel"
+                aria-labelledby="pillsHotelsTab"
+                tabindex="0"
+              >
+                Hotels
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pillsHolidays"
+                role="tabpanel"
+                aria-labelledby="pillsHolidaysTab"
+                tabindex="0"
+              >
+                Holidays
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offers-list-wrapper bg-white py-3">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="#" class="text-decoration-none">
+                <div class="offer-list-card">
+                  <img src="assets/images/offer_img.png" alt="" />
+                  <div class="offer-list-card-content">
+                    <h5
+                      class="pt-sans-font-family fw-700 text-black mb-0 fs-18"
+                    >
+                      Save Flat Rs. 450 on Flights
+                    </h5>
+                    <p class="pt-sans-font-family fs-14 fw-400 text-black">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                    <h6
+                      class="pt-sans-font-family mb-0 fs-14 fw-700 font-color-primary text-end"
+                    >
+                      Book
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="#" class="text-decoration-none">
+                <div class="offer-list-card">
+                  <img src="assets/images/offer_img2.png" alt="" />
+                  <div class="offer-list-card-content">
+                    <h5
+                      class="pt-sans-font-family fw-700 text-black mb-0 fs-18"
+                    >
+                      Up to INR 7,500 OFF*
+                    </h5>
+                    <p class="pt-sans-font-family fs-14 fw-400 text-black">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                    <h6
+                      class="pt-sans-font-family mb-0 fs-14 fw-700 font-color-primary text-end"
+                    >
+                      Book
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="#" class="text-decoration-none">
+                <div class="offer-list-card">
+                  <img src="assets/images/offer_img.png" alt="" />
+                  <div class="offer-list-card-content">
+                    <h5
+                      class="pt-sans-font-family fw-700 text-black mb-0 fs-18"
+                    >
+                      Save Flat Rs. 450 on Flights
+                    </h5>
+                    <p class="pt-sans-font-family fs-14 fw-400 text-black">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                    <h6
+                      class="pt-sans-font-family mb-0 fs-14 fw-700 font-color-primary text-end"
+                    >
+                      Book
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <a href="#" class="text-decoration-none">
+                <div class="offer-list-card">
+                  <img src="assets/images/offer_img2.png" alt="" />
+                  <div class="offer-list-card-content">
+                    <h5
+                      class="pt-sans-font-family fw-700 text-black mb-0 fs-18"
+                    >
+                      Up to INR 7,500 OFF*
+                    </h5>
+                    <p class="pt-sans-font-family fs-14 fw-400 text-black">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                    <h6
+                      class="pt-sans-font-family mb-0 fs-14 fw-700 font-color-primary text-end"
+                    >
+                      Book
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 text-end">
+              <a
+                href="#"
+                class="pt-sans-font-family fs-13 fw-400 text-black text-decoration-none"
+              >
+                More Offers</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -275,13 +389,15 @@
         <div class="row g-4">
           <div class="col-lg-3 col-sm-6 footer-company-info">
             <img src="assets/images/footer_logo.svg" alt="" />
-            <p class="pt-font fs-14 fw-400 text-white mt-2 mb-3">
+            <p class="pt-sans-font-family fs-14 fw-400 text-white mt-2 mb-3">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s
             </p>
             <div class="social-media-wrapper">
-              <p class="fs-15 fw-400 text-white pt-font mb-0">Follow us</p>
+              <p class="fs-15 fw-400 text-white pt-sans-font-family mb-0">
+                Follow us
+              </p>
               <ul class="list-unstyled">
                 <li>
                   <a href="#"
@@ -310,7 +426,7 @@
             class="col-lg-3 d-flex col-sm-6 justify-content-sm-center first-quick-link"
           >
             <div>
-              <h5 class="baloo-font fw-600 text-white mb-2 fs-15">
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
                 Quick Links
               </h5>
               <ul class="quick-links-wrapper">
@@ -339,7 +455,7 @@
             class="col-lg-3 d-flex col-sm-6 justify-content-lg-center second-quick-link"
           >
             <div>
-              <h5 class="baloo-font fw-600 text-white mb-2 fs-15">
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
                 Quick Links
               </h5>
               <ul class="quick-links-wrapper">
@@ -366,32 +482,32 @@
           </div>
           <div class="col-lg-3 col-sm-6 d-flex justify-content-sm-center">
             <div class="ps-lg-5 ps-sm-3">
-              <h5 class="baloo-font fw-600 text-white mb-2 fs-15">
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
                 Contact Info
               </h5>
-              <p class="pt-font fs-14 fw-400 text-white mb-3">
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-3">
                 201, 2nd Floor, Antariksh Thakoor House <br />
                 Makwana Road, Marol, Andheri(E) <br />
                 Mumbai, Maharashtra 400059
               </p>
-              <p class="pt-font fs-14 fw-400 text-white mb-2">
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-2">
                 9958377492, 9958377493
               </p>
               <a
                 href="mailto:ajish44@gmail.com"
-                class="pt-font fs-14 fw-400 text-white text-decoration-none"
+                class="pt-sans-font-family fs-14 fw-400 text-white text-decoration-none"
                 >ajish44@gmail.com</a
               >
             </div>
           </div>
         </div>
         <div class="footer-bottom-wrapper flex-column flex-sm-row">
-          <p class="fs-14 fw-400 text-white pt-font mb-0">
+          <p class="fs-14 fw-400 text-white pt-sans-font-family mb-0">
             © 2024 Travel. All rights reserved.
           </p>
           <a
             href="#"
-            class="fs-14 fw-400 text-white pt-font mb-0 text-decoration-none"
+            class="fs-14 fw-400 text-white pt-sans-font-family mb-0 text-decoration-none"
           >
             Privacy Policy Terms of Use
           </a>
