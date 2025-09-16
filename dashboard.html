@@ -194,7 +194,11 @@
       <div class="dashboard-banner-wrapper">
         <div class="container">
           <div class="dashboard-platforms-wrapper">
-            <ul class="nav nav-pills mb-3 platforms-nav-pills" id="pills-tab" role="tablist">
+            <ul
+              class="nav nav-pills mb-3 platforms-nav-pills"
+              id="pills-tab"
+              role="tablist"
+            >
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link active"
@@ -241,7 +245,10 @@
                 </button>
               </li>
             </ul>
-            <div class="tab-content platforms-tab-content " id="pills-tabContent">
+            <div
+              class="tab-content platforms-tab-content"
+              id="pills-tabContent"
+            >
               <div
                 class="tab-pane fade show active"
                 id="pillsFlights"
@@ -249,7 +256,133 @@
                 aria-labelledby="pillsFlightsTab"
                 tabindex="0"
               >
-                Flights
+                <div class="trip-tab-wrapper">
+                  <ul
+                    class="nav nav-pills mb-3 trip-tab-pills"
+                    id="tripPillsTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <div
+                        class="nav-link active form-check"
+                        id="oneWayTab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#oneWayFlights"
+                        role="tab"
+                        aria-controls="oneWayFlights"
+                        aria-selected="true"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="fightTrips"
+                          id="radioOneWay"
+                        />
+                        <label class="form-check-label" for="radioOneWay">
+                          One Way
+                        </label>
+                      </div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <div
+                        class="nav-link form-check"
+                        id="roundTripTab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#roundTripFlights"
+                        role="tab"
+                        aria-controls="roundTripFlights"
+                        aria-selected="false"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="fightTrips"
+                          id="radioRoundTrip"
+                        />
+                        <label class="form-check-label" for="radioRoundTrip">
+                          Round Trip
+                        </label>
+                      </div>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <div
+                        class="nav-link form-check"
+                        id="multiCityTab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#multiCityFlights"
+                        role="tab"
+                        aria-controls="multiCityFlights"
+                        aria-selected="false"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="fightTrips"
+                          id="radioMultiCity"
+                        />
+                        <label class="form-check-label" for="radioMultiCity">
+                          Multi City
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div
+                    class="tab-content trip-tab-content"
+                    id="tripPillsTabContent"
+                  >
+                    <div
+                      class="tab-pane fade show active"
+                      id="oneWayFlights"
+                      role="tabpanel"
+                      aria-labelledby="oneWayTab"
+                      tabindex="0"
+                    >
+                      One way
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="roundTripFlights"
+                      role="tabpanel"
+                      aria-labelledby="roundTripTab"
+                      tabindex="0"
+                    >
+                      Round trip
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="multiCityFlights"
+                      role="tabpanel"
+                      aria-labelledby="multiCityTab"
+                      tabindex="0"
+                    >
+                      Multi city
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="radioDefault"
+                    id="radioDefault1"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Default radio
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="radioDefault"
+                    id="radioDefault2"
+                    checked
+                  />
+                  <label class="form-check-label" for="radioDefault2">
+                    Default checked radio
+                  </label>
+                </div>
               </div>
               <div
                 class="tab-pane fade"

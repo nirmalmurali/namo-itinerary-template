@@ -90,6 +90,8 @@ footer .quick-links-wrapper li a,
 .form-floating label,
 .form-control,
 .form-label,
+.form-check input[type="radio"]:checked + label,
+.form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
   font-size: 0.875rem !important;
 }
@@ -366,6 +368,8 @@ footer .quick-links-wrapper li a,
 .form-floating label,
 .form-control,
 .form-label,
+.form-check input[type="radio"]:checked + label,
+.form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
   font-weight: 400 !important;
 }
@@ -477,7 +481,9 @@ footer .quick-links-wrapper li a,
 .font-color-heavy-metal {
   color: #272727 !important;
 }
-.font-color-fuscous-grey,
+.font-color-gravel-grey,
+.form-check input[type="radio"]:checked + label,
+.form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
   color: #4a4a4a !important;
 }
@@ -896,7 +902,7 @@ footer .footer-bottom-wrapper {
 }
 .form-label {
   font-family: "PT Sans", sans-serif !important;
-  color: #4a4a4a;
+  color: #525252;
 }
 .form-check input[type="checkbox"]:focus:checked + label::before,
 .form-check input[type="checkbox"]:focus:not(:checked) + label::before {
@@ -956,6 +962,65 @@ footer .footer-bottom-wrapper {
   display: none;
 }
 .form-check input[type="checkbox"]:checked + label::before {
+  display: none;
+}
+.form-check input[type="radio"]:focus:checked + label::before,
+.form-check input[type="radio"]:focus:not(:checked) + label::before {
+  box-shadow: none !important;
+}
+.form-check input[type="radio"]:checked,
+.form-check input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  border: none;
+  display: none;
+}
+.form-check input[type="radio"]:checked + label,
+.form-check input[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 0px;
+  cursor: pointer;
+  line-height: 18px;
+  display: inline-block;
+}
+.form-check input[type="radio"]:checked + label::before,
+.form-check input[type="radio"]:not(:checked) + label::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff !important;
+  border: 1px solid #4B5565;
+}
+.form-check input[type="radio"]:checked + label::after,
+.form-check input[type="radio"]:not(:checked) + label::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  border: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-image: url("../assets/images/radio_checked.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form-check input[type="radio"]:not(:checked) + label::before {
+  background-color: #ffffff !important;
+}
+.form-check input[type="radio"]:not(:checked) + label::after {
+  background-color: #ffffff !important;
+  display: none;
+}
+.form-check input[type="radio"]:checked + label {
+  font-weight: 600 !important;
+}
+.form-check input[type="radio"]:checked + label::before {
   display: none;
 }
 .map-wrap {
@@ -1247,4 +1312,7 @@ footer .footer-bottom-wrapper {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 1rem;
+}
+.trip-tab-wrapper .trip-tab-pills .nav-item .nav-link.active {
+  background: transparent;
 }

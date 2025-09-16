@@ -21,7 +21,7 @@
 @heavyMetal: #272727;
 @ecruWhite: #fff2e4;
 @catskillWhite: #f5f5f5;
-@fuscousGrey: #4a4a4a;
+@gravelGrey: #4a4a4a;
 html {
   font-size: 16px;
   height: 100%;
@@ -201,8 +201,8 @@ body {
 .font-color-heavy-metal {
   color: @heavyMetal !important;
 }
-.font-color-fuscous-grey {
-  color: @fuscousGrey !important;
+.font-color-gravel-grey {
+  color: @gravelGrey !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -734,6 +734,83 @@ footer {
         }
       }
     }
+    &[type="radio"] {
+      &:focus {
+        &:checked,
+        &:not(:checked) {
+          & + label {
+            &::before {
+              box-shadow: none !important;
+            }
+          }
+        }
+      }
+      &:checked,
+      &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+        border: none;
+        display: none;
+
+        & + label {
+          position: relative;
+          padding-left: 0px;
+          cursor: pointer;
+          line-height: 18px;
+          display: inline-block;
+          &:extend(.fs-14,
+          .fw-400,.font-color-gravel-grey);
+          &::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffffff !important;
+            border: 1px solid #4B5565;
+          }
+
+          &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 0px;
+            left: -20px;
+            border: none;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            background-image: url("../assets/images/radio_checked.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      &:not(:checked) {
+        & + label {
+          &::before {
+            background-color: #ffffff !important;
+          }
+
+          &::after {
+            background-color: #ffffff !important;
+            display: none;
+          }
+        }
+      }
+
+      &:checked {
+        & + label {
+          font-weight: 600 !important;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 .map-wrap {
@@ -1031,7 +1108,7 @@ footer {
         padding: 0;
         &:extend(.fs-14,
         .fw-400,
-        .font-color-fuscous-grey);
+        .font-color-gravel-grey);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1046,5 +1123,16 @@ footer {
     background-color: @white;
     border-radius: 10px;
     padding: 1rem;
+  }
+}
+.trip-tab-wrapper{
+  .trip-tab-pills{
+    .nav-item{
+      .nav-link{
+        &.active{
+          background: transparent;
+        }
+      }
+    }
   }
 }
