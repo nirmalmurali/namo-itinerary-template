@@ -92,7 +92,9 @@ footer .quick-links-wrapper li a,
 .form-label,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
-.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
+.flight-trip-details-wrapper .from-to-details-wrapper h6,
+.flight-trip-details-wrapper .from-to-details-wrapper p {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -125,7 +127,8 @@ footer .quick-links-wrapper li a,
 .fs-24 {
   font-size: 1.5rem !important;
 }
-.fs-25 {
+.fs-25,
+.flight-trip-details-wrapper .from-to-details-wrapper h4 {
   font-size: 1.5625rem !important;
 }
 .fs-26 {
@@ -370,7 +373,9 @@ footer .quick-links-wrapper li a,
 .form-label,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
-.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
+.flight-trip-details-wrapper .from-to-details-wrapper h6,
+.flight-trip-details-wrapper .from-to-details-wrapper p {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -379,7 +384,8 @@ footer .quick-links-wrapper li a,
 .fw-600 {
   font-weight: 600 !important;
 }
-.fw-700 {
+.fw-700,
+.flight-trip-details-wrapper .from-to-details-wrapper h4 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -436,7 +442,8 @@ footer .quick-links-wrapper li a,
 .font-color-primary {
   color: #f28b24 !important;
 }
-.font-color-secondary {
+.font-color-secondary,
+.flight-trip-details-wrapper .from-to-details-wrapper h4 {
   color: #000000 !important;
 }
 .font-color-smoky-black {
@@ -484,7 +491,9 @@ footer .quick-links-wrapper li a,
 .font-color-gravel-grey,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
-.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link {
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
+.flight-trip-details-wrapper .from-to-details-wrapper h6,
+.flight-trip-details-wrapper .from-to-details-wrapper p {
   color: #4a4a4a !important;
 }
 .w-fit-content {
@@ -993,7 +1002,7 @@ footer .footer-bottom-wrapper {
   height: 15px;
   border-radius: 50%;
   background-color: #ffffff !important;
-  border: 1px solid #4B5565;
+  border: 1px solid #4b5565;
 }
 .form-check input[type="radio"]:checked + label::after,
 .form-check input[type="radio"]:not(:checked) + label::after {
@@ -1226,7 +1235,8 @@ footer .footer-bottom-wrapper {
   background-color: #fff2e4;
   position: relative;
   z-index: 0;
-  padding-top: 71px;
+  padding: 71px 0 4.875rem;
+  overflow: hidden;
 }
 .dashboard-banner-wrapper::before {
   content: "";
@@ -1315,4 +1325,38 @@ footer .footer-bottom-wrapper {
 }
 .trip-tab-wrapper .trip-tab-pills .nav-item .nav-link.active {
   background: transparent;
+}
+.flight-trip-details-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper {
+  display: flex;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper h6 {
+  margin-bottom: 0.625rem;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper h4 {
+  margin-bottom: 0rem;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper p {
+  margin-bottom: 0;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper .from-details {
+  border-right: 1px solid #e7e7e7;
+  padding: 0.438rem 2rem 0.438rem 0.875rem;
+  position: relative;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper .from-details .from-to-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  margin: auto;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper .to-details {
+  border-right: 1px solid #e7e7e7;
+  padding: 0.438rem 0.875rem 0.438rem 2rem;
 }

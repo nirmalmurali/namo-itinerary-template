@@ -759,7 +759,8 @@ footer {
           line-height: 18px;
           display: inline-block;
           &:extend(.fs-14,
-          .fw-400,.font-color-gravel-grey);
+          .fw-400,
+          .font-color-gravel-grey);
           &::before {
             content: "";
             position: absolute;
@@ -769,7 +770,7 @@ footer {
             height: 15px;
             border-radius: 50%;
             background-color: #ffffff !important;
-            border: 1px solid #4B5565;
+            border: 1px solid #4b5565;
           }
 
           &::after {
@@ -1031,7 +1032,8 @@ footer {
   background-color: @ecruWhite;
   position: relative;
   z-index: 0;
-  padding-top: 71px;
+  padding: 71px 0 4.875rem;
+  overflow: hidden;
   &::before {
     content: "";
     background-image: url("../assets/images/dashboard_map.png");
@@ -1125,14 +1127,62 @@ footer {
     padding: 1rem;
   }
 }
-.trip-tab-wrapper{
-  .trip-tab-pills{
-    .nav-item{
-      .nav-link{
-        &.active{
+.trip-tab-wrapper {
+  .trip-tab-pills {
+    .nav-item {
+      .nav-link {
+        &.active {
           background: transparent;
         }
       }
+    }
+  }
+}
+
+.flight-trip-details-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  .from-to-details-wrapper {
+    display: flex;
+
+    h6 {
+      margin-bottom: 0.625rem;
+      &:extend(.pt-sans-font-family,
+      .fs-14,
+      .fw-400,
+      .font-color-gravel-grey);
+    }
+    h4 {
+      margin-bottom: 0rem;
+      &:extend(.pt-sans-font-family,
+      .fs-25,
+      .fw-700,
+      .font-color-secondary);
+    }
+    p {
+      margin-bottom: 0;
+      &:extend(.pt-sans-font-family,
+      .fs-14,
+      .fw-400,
+      .font-color-gravel-grey);
+    }
+    .from-details {
+      border-right: 1px solid #e7e7e7;
+      padding: 0.438rem 2rem 0.438rem 0.875rem;
+      position: relative;
+      .from-to-icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -20px;
+        margin: auto;
+      }
+    }
+    .to-details {
+      border-right: 1px solid #e7e7e7;
+      padding: 0.438rem 0.875rem 0.438rem 2rem;
     }
   }
 }
