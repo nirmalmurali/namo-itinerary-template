@@ -95,6 +95,7 @@ footer .quick-links-wrapper li a,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p {
   font-size: 0.875rem !important;
@@ -378,6 +379,7 @@ footer .quick-links-wrapper li a,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p {
   font-weight: 400 !important;
@@ -448,6 +450,7 @@ footer .quick-links-wrapper li a,
 }
 .font-color-secondary,
 .flight-trip-details-wrapper .from-to-details-wrapper h4,
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li h4 {
   color: #000000 !important;
 }
@@ -1334,13 +1337,15 @@ footer .footer-bottom-wrapper {
   background: transparent;
 }
 .flight-trip-details-wrapper {
-  display: flex;
-  align-items: center;
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
 .flight-trip-details-wrapper .from-to-details-wrapper {
   display: flex;
+  height: 100%;
+}
+.flight-trip-details-wrapper .from-to-details-wrapper > div {
+  flex-grow: 1;
 }
 .flight-trip-details-wrapper .from-to-details-wrapper h6 {
   margin-bottom: 0.625rem;
@@ -1367,6 +1372,20 @@ footer .footer-bottom-wrapper {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem 0.438rem 2rem;
 }
+.flight-trip-details-wrapper .airline-preference-wrapper {
+  border-top: 1px solid #e7e7e7;
+}
+.flight-trip-details-wrapper .airline-preference-wrapper > div {
+  flex: 0 0 auto;
+}
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title {
+  border-right: 1px solid #e7e7e7;
+  padding: 0.438rem 0.875rem;
+  height: 100%;
+}
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p {
+  margin-bottom: 0;
+}
 .travel-date-details {
   height: 100%;
 }
@@ -1379,6 +1398,7 @@ footer .footer-bottom-wrapper {
 .travel-date-details > ul > li {
   padding: 0.438rem 0.625rem;
   border-right: 1px solid #e7e7e7;
+  flex-grow: 1;
 }
 .travel-date-details > ul > li:last-child {
   border-right: none;
@@ -1406,4 +1426,29 @@ footer .footer-bottom-wrapper {
 }
 .travel-date-details > ul > li p {
   margin-bottom: 0;
+}
+.dropdown:has(.dropdown-menu.show)::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #0000007d;
+  z-index: 1;
+}
+.dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dropdown .dropdown-menu {
+  z-index: 2;
+  background: #ffffff;
+  border: 1px solid CDD5DF;
+  border-radius: 0.375rem;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  padding: 1.188rem 0rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dropdown .dropdown-menu.show {
+  display: flex;
 }
