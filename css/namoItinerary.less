@@ -1186,15 +1186,55 @@ footer {
     }
   }
 }
-.travel-date-details{
-  ul{
+.travel-date-details {
+  height: 100%;
+  & > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    li{
-      padding: 0;
-     
+    & > li {
+      padding: 0.438rem 0.625rem;
+      border-right: 1px solid #e7e7e7;
+      &:last-child {
+        border-right: none;
+      }
+      .dropdown {
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0;
+          background: transparent;
+          border-radius: 0;
+          border: none;
+          margin-bottom: 0.563rem;
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-gravel-grey,
+          .pt-sans-font-family);
+          &::after {
+            display: none;
+          }
+        }
+      }
+      h4 {
+        margin-bottom: 0rem;
+        &:extend(.pt-sans-font-family,
+        .font-color-secondary);
+        font-size: 1rem;
+        font-weight: 400;
+        b{
+          font-size: 1.563rem;
+        }
+      }
+      p {
+        margin-bottom: 0;
+        &:extend(.pt-sans-font-family,
+        .fs-14,
+        .fw-400,
+        .font-color-gravel-grey);
+      }
     }
   }
 }

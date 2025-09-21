@@ -94,7 +94,9 @@ footer .quick-links-wrapper li a,
 .form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
-.flight-trip-details-wrapper .from-to-details-wrapper p {
+.flight-trip-details-wrapper .from-to-details-wrapper p,
+.travel-date-details > ul > li .dropdown .dropdown-toggle,
+.travel-date-details > ul > li p {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -375,7 +377,9 @@ footer .quick-links-wrapper li a,
 .form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
-.flight-trip-details-wrapper .from-to-details-wrapper p {
+.flight-trip-details-wrapper .from-to-details-wrapper p,
+.travel-date-details > ul > li .dropdown .dropdown-toggle,
+.travel-date-details > ul > li p {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -443,7 +447,8 @@ footer .quick-links-wrapper li a,
   color: #f28b24 !important;
 }
 .font-color-secondary,
-.flight-trip-details-wrapper .from-to-details-wrapper h4 {
+.flight-trip-details-wrapper .from-to-details-wrapper h4,
+.travel-date-details > ul > li h4 {
   color: #000000 !important;
 }
 .font-color-smoky-black {
@@ -493,7 +498,9 @@ footer .quick-links-wrapper li a,
 .form-check input[type="radio"]:not(:checked) + label,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
-.flight-trip-details-wrapper .from-to-details-wrapper p {
+.flight-trip-details-wrapper .from-to-details-wrapper p,
+.travel-date-details > ul > li .dropdown .dropdown-toggle,
+.travel-date-details > ul > li p {
   color: #4a4a4a !important;
 }
 .w-fit-content {
@@ -1360,12 +1367,43 @@ footer .footer-bottom-wrapper {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem 0.438rem 2rem;
 }
-.travel-date-details ul {
+.travel-date-details {
+  height: 100%;
+}
+.travel-date-details > ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
-.travel-date-details ul li {
+.travel-date-details > ul > li {
+  padding: 0.438rem 0.625rem;
+  border-right: 1px solid #e7e7e7;
+}
+.travel-date-details > ul > li:last-child {
+  border-right: none;
+}
+.travel-date-details > ul > li .dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0.563rem;
+}
+.travel-date-details > ul > li .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.travel-date-details > ul > li h4 {
+  margin-bottom: 0rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.travel-date-details > ul > li h4 b {
+  font-size: 1.563rem;
+}
+.travel-date-details > ul > li p {
+  margin-bottom: 0;
 }
