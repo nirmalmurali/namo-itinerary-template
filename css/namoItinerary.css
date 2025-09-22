@@ -97,7 +97,8 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
-.travel-date-details > ul > li p {
+.travel-date-details > ul > li p,
+.select-airline-dropdown .dropdown-toggle {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -381,7 +382,8 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
-.travel-date-details > ul > li p {
+.travel-date-details > ul > li p,
+.select-airline-dropdown .dropdown-toggle {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -451,7 +453,8 @@ footer .quick-links-wrapper li a,
 .font-color-secondary,
 .flight-trip-details-wrapper .from-to-details-wrapper h4,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
-.travel-date-details > ul > li h4 {
+.travel-date-details > ul > li h4,
+.select-airline-dropdown .dropdown-toggle {
   color: #000000 !important;
 }
 .font-color-smoky-black {
@@ -1432,7 +1435,7 @@ footer .footer-bottom-wrapper {
   position: fixed;
   inset: 0;
   background: #0000007d;
-  z-index: 1;
+  z-index: 1040;
 }
 .dropdown .dropdown-toggle {
   display: flex;
@@ -1440,9 +1443,9 @@ footer .footer-bottom-wrapper {
   gap: 0.5rem;
 }
 .dropdown .dropdown-menu {
-  z-index: 2;
+  z-index: 2000;
   background: #ffffff;
-  border: 1px solid CDD5DF;
+  border: 1px solid #cdd5df;
   border-radius: 0.375rem;
   box-shadow: 0px 4px 4px 0px #00000040;
   padding: 1.188rem 0rem;
@@ -1451,4 +1454,14 @@ footer .footer-bottom-wrapper {
 }
 .dropdown .dropdown-menu.show {
   display: flex;
+}
+.select-airline-dropdown .dropdown-toggle {
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 0.375rem;
+  margin: 0.25rem 0;
+}
+.select-airline-dropdown .dropdown-toggle::after {
+  display: none;
 }
