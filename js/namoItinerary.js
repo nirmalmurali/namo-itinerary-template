@@ -117,7 +117,7 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
-    // Header scroll class toggle
+  // Header scroll class toggle
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 0) {
       $("header").addClass("scrolled");
@@ -125,4 +125,5 @@ $(document).ready(function () {
       $("header").removeClass("scrolled");
     }
   });
+
 });

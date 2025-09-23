@@ -495,33 +495,162 @@
                                     role="button"
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
+                                    data-bs-auto-close="outside"
                                   >
-                                    Dropdown link
+                                    Select Airlines
                                     <i
                                       class="fa fa-angle-down font-color-primary"
                                       aria-hidden="true"
                                     ></i>
                                   </a>
 
-                                  <ul class="dropdown-menu">
-                                    <li>
-                                      <a class="dropdown-item" href="#"
-                                        >Action</a
-                                      >
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#"
-                                        >Another action</a
-                                      >
-                                    </li>
-                                    <li>
-                                      <a class="dropdown-item" href="#"
-                                        >Something else here</a
-                                      >
-                                    </li>
-                                  </ul>
+                                  <div class="dropdown-menu airline-search-dropdown-wrapper">
+                                    <div class="airline-search-box">
+                                      <i
+                                        class="fa fa-search"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search Airlines"
+                                      />
+                                    </div>
+                                    <div class="airline-list-check-list">
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value=""
+                                          id="selectAllCheck"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="selectAllCheck"
+                                        >
+                                          Select All
+                                        </label>
+                                      </div>
+                                      <ul>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck1"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck1"
+                                            >
+                                              Air India
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck2"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck2"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck3"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck3"
+                                            >
+                                              Air India
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck4"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck4"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                         <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck5"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck5"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                         <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck6"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck6"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                         <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck7"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck7"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="airline-preference-check-list d-flex flex-wrap align-items-center gap-3">
+                                <div
+                                  class="airline-preference-check-list d-flex flex-wrap align-items-center gap-3"
+                                >
                                   <div class="form-check">
                                     <input
                                       class="form-check-input"
@@ -530,7 +659,7 @@
                                       id="lowCostAirlinesCheckInput"
                                     />
                                     <label
-                                      class="form-check-label"
+                                      class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
                                       for="lowCostAirlinesCheckInput"
                                     >
                                       Low Cost Airlines
@@ -544,11 +673,17 @@
                                       id="gdsAirlinesCheckInput"
                                     />
                                     <label
-                                      class="form-check-label"
+                                      class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
                                       for="gdsAirlinesCheckInput"
                                     >
                                       GDS Airlines
                                     </label>
+                                  </div>
+                                </div>
+                                <div class="selected-airline-list-wrapper d-flex align-items-center flex-wrap">
+                                  <div class="selected-airline-list-item">
+                                    <p>Air India Express-AX[AX]</p>
+                                    <button class="btn p-0 border-0 "><i class="fa fa-times" aria-hidden="true"></i></button>
                                   </div>
                                 </div>
                               </div>
