@@ -1,4 +1,4 @@
-@baltic Sea #272222;
+@balticsea #272222;
 html {
   font-size: 16px;
   height: 100%;
@@ -1407,6 +1407,11 @@ footer .footer-bottom-wrapper {
   display: flex;
   height: 100%;
 }
+@media screen and (max-width: 567px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper {
+    flex-direction: column;
+  }
+}
 .flight-trip-details-wrapper .from-to-details-wrapper > div {
   flex-grow: 1;
 }
@@ -1424,19 +1429,48 @@ footer .footer-bottom-wrapper {
   padding: 0.438rem 2rem 0.438rem 0.875rem;
   position: relative;
 }
+@media screen and (max-width: 567px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper .from-details {
+    padding: 1rem 2rem 2rem;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
+  }
+}
 .flight-trip-details-wrapper .from-to-details-wrapper .from-details .from-to-icon {
   position: absolute;
   top: 0;
   bottom: 0;
   right: -20px;
   margin: auto;
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (max-width: 567px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper .from-details .from-to-icon {
+    right: 0;
+    left: 0;
+    top: inherit;
+    bottom: -20px;
+    transform: rotate(90deg);
+  }
 }
 .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem 0.438rem 2rem;
 }
+@media screen and (max-width: 567px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+  }
+}
 .flight-trip-details-wrapper .airline-preference-wrapper {
   border-top: 1px solid #e7e7e7;
+}
+@media screen and (max-width: 767px) {
+  .flight-trip-details-wrapper .airline-preference-wrapper {
+    border: none;
+  }
 }
 .flight-trip-details-wrapper .airline-preference-wrapper > div {
   flex: 0 0 auto;
@@ -1445,6 +1479,15 @@ footer .footer-bottom-wrapper {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem;
   height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    justify-content: center;
+  }
 }
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p {
   margin-bottom: 0;
@@ -1452,11 +1495,22 @@ footer .footer-bottom-wrapper {
 .travel-date-details {
   height: 100%;
 }
+@media screen and (max-width: 991px) {
+  .travel-date-details {
+    border-top: 1px solid #e7e7e7;
+  }
+}
 .travel-date-details > ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .travel-date-details > ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .travel-date-details > ul > li {
   padding: 0.438rem 0.625rem;
@@ -1465,6 +1519,16 @@ footer .footer-bottom-wrapper {
 }
 .travel-date-details > ul > li:last-child {
   border-right: none;
+}
+@media screen and (max-width: 767px) {
+  .travel-date-details > ul > li {
+    border-right: none;
+    border-bottom: 1px solid #e7e7e7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .travel-date-details > ul > li .dropdown .dropdown-toggle {
   display: flex;
@@ -1583,7 +1647,7 @@ footer .footer-bottom-wrapper {
   gap: 0.5rem;
 }
 .selected-airline-list-item {
-  padding: 0.313rem 0.375rem;
+  padding: 0.2rem 0.375rem;
   border-radius: 4px;
   display: flex;
   gap: 0.5rem;

@@ -22,8 +22,7 @@
 @ecruWhite: #fff2e4;
 @catskillWhite: #f5f5f5;
 @gravelGrey: #4a4a4a;
-@balticSea #272222;
-
+@balticsea #272222;
 
 @colors: primary #f28b24, secondary #000000, smoky-black #0c0c0c,
   cloudy-grey #726e6e, black-cat #3f3f3f, fuel-yellow #f2b024, white #ffffff,
@@ -1080,6 +1079,11 @@ footer {
   .from-to-details-wrapper {
     display: flex;
     height: 100%;
+    @media screen {
+      @media (max-width: 567px) {
+        flex-direction: column;
+      }
+    }
     & > div {
       flex-grow: 1;
     }
@@ -1108,22 +1112,50 @@ footer {
       border-right: 1px solid #e7e7e7;
       padding: 0.438rem 2rem 0.438rem 0.875rem;
       position: relative;
+      @media screen {
+        @media (max-width: 567px) {
+          padding: 1rem 2rem 2rem;
+          border: none;
+          border-bottom: 1px solid #e7e7e7;
+          text-align: center;
+        }
+      }
       .from-to-icon {
         position: absolute;
         top: 0;
         bottom: 0;
         right: -20px;
         margin: auto;
+        transition: transform 0.3s ease-in-out;
+        @media screen {
+          @media (max-width: 567px) {
+            right: 0;
+            left: 0;
+            top: inherit;
+            bottom: -20px;
+            transform: rotate(90deg);
+          }
+        }
       }
     }
     .to-details {
       border-right: 1px solid #e7e7e7;
       padding: 0.438rem 0.875rem 0.438rem 2rem;
+      @media screen {
+        @media (max-width: 567px) {
+          padding: 2rem 2rem 1rem;
+          text-align: center;
+        }
+      }
     }
   }
   .airline-preference-wrapper {
     border-top: 1px solid #e7e7e7;
-
+    @media screen {
+      @media (max-width: 767px) {
+        border: none;
+      }
+    }
     & > div {
       flex: 0 0 auto;
     }
@@ -1131,6 +1163,15 @@ footer {
       border-right: 1px solid #e7e7e7;
       padding: 0.438rem 0.875rem;
       height: 100%;
+      display: flex;
+      align-items: center;
+      @media screen {
+        @media (max-width: 767px) {
+          border: none;
+          border-bottom: 1px solid #e7e7e7;
+          justify-content: center;
+        }
+      }
       p {
         &:extend(.fs-14,
         .fw-400,
@@ -1143,17 +1184,38 @@ footer {
 }
 .travel-date-details {
   height: 100%;
+  @media screen {
+    @media (max-width: 991px) {
+      border-top: 1px solid #e7e7e7;
+    }
+  }
   & > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    @media screen {
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     & > li {
       padding: 0.438rem 0.625rem;
       border-right: 1px solid #e7e7e7;
       flex-grow: 1;
       &:last-child {
         border-right: none;
+      }
+      @media screen {
+        @media (max-width: 767px) {
+          border-right: none;
+          border-bottom: 1px solid #e7e7e7;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
       .dropdown {
         .dropdown-toggle {
@@ -1299,23 +1361,21 @@ footer {
     }
   }
 }
-.selected-airline-list-item{
+.selected-airline-list-item {
   &:extend(.bg-color-sandy-beach);
-  padding: 0.313rem 0.375rem;
+  padding: 0.2rem 0.375rem;
   border-radius: 4px;
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  p{
+  p {
     margin-bottom: 0;
-      &:extend(
-  .font-color-night,
-  .pt-sans-font-family,
-  .fs-14,
-  .fw-400);
+    &:extend(.font-color-night,
+    .pt-sans-font-family,
+    .fs-14,
+    .fw-400);
   }
-  .btn{
+  .btn {
     &:extend(.font-color-gravel-grey);
-    
   }
 }
