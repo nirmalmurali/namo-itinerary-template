@@ -23,7 +23,7 @@
 @catskillWhite: #f5f5f5;
 @gravelGrey: #4a4a4a;
 @balticsea #272222;
-
+@paleOrange: #fd985f;
 @colors: primary #f28b24, secondary #000000, smoky-black #0c0c0c,
   cloudy-grey #726e6e, black-cat #3f3f3f, fuel-yellow #f2b024, white #ffffff,
   vista-white #fff7f4, grey-cloud #bababa, sea-green #269a59, pine-green #098753,
@@ -31,7 +31,7 @@
   milk-white #fffafa, light-grey #d9d9d9, fuscous-grey #525252,
   quill-grey #d6d6d6, charcoal-grey #3d3d3d, heavy-metal #272727,
   ecru-white #fff2e4, catskill-white #f5f5f5, baltic-sea #272222,
-  gravel-grey #4a4a4a;
+  pale-orange #fd985f, gravel-grey #4a4a4a;
 
 html {
   font-size: 16px;
@@ -1142,6 +1142,9 @@ footer {
       border-right: 1px solid #e7e7e7;
       padding: 0.438rem 0.875rem 0.438rem 2rem;
       @media screen {
+        @media (max-width: 991px) {
+          border: none;
+        }
         @media (max-width: 567px) {
           padding: 2rem 2rem 1rem;
           text-align: center;
@@ -1377,5 +1380,70 @@ footer {
   }
   .btn {
     &:extend(.font-color-gravel-grey);
+  }
+}
+.trip-fare-check-list {
+  margin-top: 1.25rem;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    li {
+      padding: 0;
+    }
+  }
+}
+.search-filter-btn {
+  padding: 11px 20px;
+  position: absolute;
+  top: -5px;
+  right: 25px;
+  @media screen {
+    @media (max-width: 576px) {
+      position: static;
+      width: 100%;
+    }
+  }
+}
+.number-btn-group-wrapper {
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  padding: 3px;
+  display: flex;
+  gap: 5px;
+  .btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50% !important;
+    &:extend(.pt-sans-font-family,
+    .fs-14,
+    .fw-700);
+    color: @gravelGrey;
+    border: none !important;
+    background-color: @white;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.active,
+    &:hover {
+      background-color: @primaryColor;
+      color: @white;
+      &:extend(.font-color-white,
+      .bg-color-primary);
+    }
+  }
+}
+.chosen-travelers-class-wrapper {
+  .travels-number-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

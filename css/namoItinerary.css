@@ -100,7 +100,8 @@ footer .quick-links-wrapper li a,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
 .select-airline-dropdown .dropdown-toggle,
-.selected-airline-list-item p {
+.selected-airline-list-item p,
+.number-btn-group-wrapper .btn {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -396,7 +397,8 @@ footer .quick-links-wrapper li a,
   font-weight: 600 !important;
 }
 .fw-700,
-.flight-trip-details-wrapper .from-to-details-wrapper h4 {
+.flight-trip-details-wrapper .from-to-details-wrapper h4,
+.number-btn-group-wrapper .btn {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -408,7 +410,9 @@ footer .quick-links-wrapper li a,
 .font-color-primary {
   color: #f28b24 !important;
 }
-.bg-color-primary {
+.bg-color-primary,
+.number-btn-group-wrapper .btn.active,
+.number-btn-group-wrapper .btn:hover {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -445,7 +449,9 @@ footer .quick-links-wrapper li a,
 .bg-color-fuel-yellow {
   background-color: #f2b024 !important;
 }
-.font-color-white {
+.font-color-white,
+.number-btn-group-wrapper .btn.active,
+.number-btn-group-wrapper .btn:hover {
   color: #ffffff !important;
 }
 .bg-color-white {
@@ -554,6 +560,12 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-baltic-sea {
   background-color: #272222 !important;
+}
+.font-color-pale-orange {
+  color: #fd985f !important;
+}
+.bg-color-pale-orange {
+  background-color: #fd985f !important;
 }
 .font-color-gravel-grey,
 .form-check input[type="radio"]:checked + label,
@@ -1458,6 +1470,11 @@ footer .footer-bottom-wrapper {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem 0.438rem 2rem;
 }
+@media screen and (max-width: 991px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
+    border: none;
+  }
+}
 @media screen and (max-width: 567px) {
   .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
     padding: 2rem 2rem 1rem;
@@ -1655,4 +1672,62 @@ footer .footer-bottom-wrapper {
 }
 .selected-airline-list-item p {
   margin-bottom: 0;
+}
+.trip-fare-check-list {
+  margin-top: 1.25rem;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.trip-fare-check-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.trip-fare-check-list ul li {
+  padding: 0;
+}
+.search-filter-btn {
+  padding: 11px 20px;
+  position: absolute;
+  top: -5px;
+  right: 25px;
+}
+@media screen and (max-width: 576px) {
+  .search-filter-btn {
+    position: static;
+    width: 100%;
+  }
+}
+.number-btn-group-wrapper {
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  padding: 3px;
+  display: flex;
+  gap: 5px;
+}
+.number-btn-group-wrapper .btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50% !important;
+  color: #4a4a4a;
+  border: none !important;
+  background-color: #ffffff;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number-btn-group-wrapper .btn.active,
+.number-btn-group-wrapper .btn:hover {
+  background-color: #f28b24;
+  color: #ffffff;
+}
+.chosen-travelers-class-wrapper .travels-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }

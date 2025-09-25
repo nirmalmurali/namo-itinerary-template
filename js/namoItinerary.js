@@ -125,5 +125,25 @@ $(document).ready(function () {
       $("header").removeClass("scrolled");
     }
   });
+  $(".number-btn-group,.infants-btn-group,.children-btn-group").on(
+    "click",
+    "button",
+    function () {
+      const $group = $(this).closest(
+        ".number-btn-group,.infants-btn-group,.children-btn-group"
+      );
 
+      // Remove active from all buttons in the group
+      $group.find("button").removeClass("active");
+
+      // Add active to the clicked button
+      $(this).addClass("active");
+
+      // Get selected value and label
+      const selectedValue = $(this).data("value");
+      const label = $group.prev(".form-label").text();
+
+      console.log(`${label} selected: ${selectedValue}`);
+    }
+  );
 });

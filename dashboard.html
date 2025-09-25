@@ -444,6 +444,7 @@
                                       role="button"
                                       data-bs-toggle="dropdown"
                                       aria-expanded="false"
+                                      data-bs-auto-close="outside"
                                     >
                                       Travelers & Class
                                       <i
@@ -452,23 +453,188 @@
                                       ></i>
                                     </a>
 
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Another action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Something else here</a
-                                        >
-                                      </li>
-                                    </ul>
+                                    <div
+                                      class="dropdown-menu chosen-travelers-class-wrapper"
+                                    >
+                                      <div class="travels-number-wrapper">
+                                        <div>
+                                          <label class="form-label fw-bold"
+                                            >Adults (12y+)</label
+                                          >
+                                          <div
+                                            class="btn-group number-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="adultSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <label class="form-label fw-bold"
+                                            >Children 2 - 12 Years</label
+                                          >
+                                          <div
+                                            class="btn-group children-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="childrenSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="0"
+                                            >
+                                              0
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <label class="form-label fw-bold"
+                                            >Infants 0 - 23 Months</label
+                                          >
+                                          <div
+                                            class="btn-group infants-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="infantsSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="0"
+                                            >
+                                              0
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <h4><b>2</b> Travelers</h4>
                                   <p>Tuesday</p>
@@ -735,6 +901,7 @@
                   </div>
                 </div>
               </div>
+
               <div
                 class="tab-pane fade"
                 id="pillsHotels"
@@ -752,6 +919,81 @@
                 tabindex="0"
               >
                 Holidays
+              </div>
+              <div class="trip-fare-check-list">
+                <ul>
+                  <li>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="directFlightCheckInput"
+                      />
+                      <label
+                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                        for="directFlightCheckInput"
+                      >
+                        Direct Flight
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="nearbyAirportsCheckInput"
+                      />
+                      <label
+                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                        for="nearbyAirportsCheckInput"
+                      >
+                        Nearby Airports
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="studentFareCheckInput"
+                      />
+                      <label
+                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                        for="studentFareCheckInput"
+                      >
+                        Student Fare
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="cityzenFareCheckInput"
+                      />
+                      <label
+                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                        for="cityzenFareCheckInput"
+                      >
+                        Sr. Citizen Fare
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex justify-content-end position-relative">
+                <button
+                  class="btn border-0 search-filter-btn rounded-pill bg-color-pale-orange text-white pt-sans-font-family fs-14 fw-700 d-flex align-items-center justify-content-center"
+                >
+                  Search Flights
+                </button>
               </div>
             </div>
           </div>
