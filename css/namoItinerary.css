@@ -1726,8 +1726,15 @@ footer .footer-bottom-wrapper {
   background-color: #f28b24;
   color: #ffffff;
 }
-.chosen-travelers-class-wrapper .travels-number-wrapper {
+.travel-date-details .chosen-travelers-class-wrapper {
+  padding: 0;
+  max-width: 418px;
+  width: 100%;
+  min-width: fit-content;
+}
+.travel-date-details .chosen-travelers-class-wrapper .travels-number-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.25rem;
+  padding: 23px;
 }
