@@ -89,6 +89,19 @@ body {
     scrollbar-width: thin; /* Makes scrollbar thinner */
     scrollbar-color: @primaryColor transparent; /* thumb color | track color */
   }
+  .back-drop {
+    position: fixed;
+    inset: 0;
+    background: #0000007d;
+    z-index: 1040;
+    display: none;
+  }
+  // &:has(.dropdown-menu.show){
+  //   overflow: hidden;
+  //   .back-drop {
+  //     display: block;
+  //   }
+  // }
 }
 
 // Font Size Loop (fs-)
@@ -966,7 +979,7 @@ footer {
   background-color: @ecruWhite;
   position: relative;
   z-index: 0;
-  padding: 71px 0 4.875rem;
+  padding: 71px 0 14rem;
   overflow: hidden;
   &::before {
     content: "";
@@ -1261,13 +1274,13 @@ footer {
 }
 .dropdown {
   &:has(.dropdown-menu.show) {
-    &::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: #0000007d;
-      z-index: 1040;
-    }
+    // &::after {
+    //   content: "";
+    //   position: fixed;
+    //   inset: 0;
+    //   background: #0000007d;
+    //   z-index: 1040;
+    // }
   }
   .dropdown-toggle {
     display: flex;
@@ -1402,7 +1415,7 @@ footer {
 .search-filter-btn {
   padding: 11px 20px;
   position: absolute;
-  top: -5px;
+  top: -8px;
   right: 25px;
   @media screen {
     @media (max-width: 576px) {
@@ -1417,8 +1430,10 @@ footer {
   padding: 3px;
   display: flex;
   gap: 5px;
+  justify-content: space-between;
   .btn {
-    width: 26px;
+    max-width: 26px;
+    width: 100%;
     height: 26px;
     border-radius: 50% !important;
     &:extend(.pt-sans-font-family,
@@ -1445,12 +1460,24 @@ footer {
     padding: 0;
     max-width: 418px;
     width: 100%;
-    min-width: fit-content;
+    min-width: 418px;
+    gap: 0;
     .travels-number-wrapper {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
       padding: 23px;
+    }
+    .choose-travel-class{
+      border-top: 1px solid #e7e7e7;
+      padding: 19px 23px;
+      p{
+        margin-bottom: 10px;
+        &:extend(.pt-sans-font-family,
+        .fs-14,
+        .fw-400,
+        .font-color-gravel-grey);  
+      }
     }
   }
 }

@@ -58,6 +58,13 @@ body * {
   scrollbar-color: #f28b24 transparent;
   /* thumb color | track color */
 }
+body .back-drop {
+  position: fixed;
+  inset: 0;
+  background: #0000007d;
+  z-index: 1040;
+  display: none;
+}
 .fs-5 {
   font-size: 0.3125rem !important;
 }
@@ -101,7 +108,8 @@ footer .quick-links-wrapper li a,
 .travel-date-details > ul > li p,
 .select-airline-dropdown .dropdown-toggle,
 .selected-airline-list-item p,
-.number-btn-group-wrapper .btn {
+.number-btn-group-wrapper .btn,
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -387,7 +395,8 @@ footer .quick-links-wrapper li a,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
 .select-airline-dropdown .dropdown-toggle,
-.selected-airline-list-item p {
+.selected-airline-list-item p,
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -575,7 +584,8 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
-.selected-airline-list-item .btn {
+.selected-airline-list-item .btn,
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1320,7 +1330,7 @@ footer .footer-bottom-wrapper {
   background-color: #fff2e4;
   position: relative;
   z-index: 0;
-  padding: 71px 0 4.875rem;
+  padding: 71px 0 14rem;
   overflow: hidden;
 }
 .dashboard-banner-wrapper::before {
@@ -1571,13 +1581,6 @@ footer .footer-bottom-wrapper {
 .travel-date-details > ul > li p {
   margin-bottom: 0;
 }
-.dropdown:has(.dropdown-menu.show)::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: #0000007d;
-  z-index: 1040;
-}
 .dropdown .dropdown-toggle {
   display: flex;
   align-items: center;
@@ -1693,7 +1696,7 @@ footer .footer-bottom-wrapper {
 .search-filter-btn {
   padding: 11px 20px;
   position: absolute;
-  top: -5px;
+  top: -8px;
   right: 25px;
 }
 @media screen and (max-width: 576px) {
@@ -1708,9 +1711,11 @@ footer .footer-bottom-wrapper {
   padding: 3px;
   display: flex;
   gap: 5px;
+  justify-content: space-between;
 }
 .number-btn-group-wrapper .btn {
-  width: 26px;
+  max-width: 26px;
+  width: 100%;
   height: 26px;
   border-radius: 50% !important;
   color: #4a4a4a;
@@ -1730,11 +1735,19 @@ footer .footer-bottom-wrapper {
   padding: 0;
   max-width: 418px;
   width: 100%;
-  min-width: fit-content;
+  min-width: 418px;
+  gap: 0;
 }
 .travel-date-details .chosen-travelers-class-wrapper .travels-number-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 23px;
+}
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class {
+  border-top: 1px solid #e7e7e7;
+  padding: 19px 23px;
+}
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
+  margin-bottom: 10px;
 }
