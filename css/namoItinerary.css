@@ -115,7 +115,7 @@ footer .quick-links-wrapper li a,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li p {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li span {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -406,7 +406,7 @@ footer .quick-links-wrapper li a,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li p {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li span {
   font-weight: 400 !important;
 }
 .fw-500 {
@@ -615,7 +615,7 @@ footer .quick-links-wrapper li a,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li p {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li span {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1869,6 +1869,9 @@ footer .footer-bottom-wrapper {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li {
   padding: 0;
@@ -1877,7 +1880,10 @@ footer .footer-bottom-wrapper {
   gap: 0.5rem;
   justify-content: space-between;
 }
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li p {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li.hidden {
+  display: none;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-options ul li span {
   margin-bottom: 0;
   flex-shrink: 0;
 }

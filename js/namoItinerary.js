@@ -146,4 +146,29 @@ $(document).ready(function () {
       console.log(`${label} selected: ${selectedValue}`);
     }
   );
+  // filter list show more
+  $(".filter-side-bar-options").each(function () {
+    let $section = $(this);
+    let $items = $section.find("ul li");
+    let $button = $section.find(".filter-list-show-more-btn");
+
+    // Hide items after 5
+    if ($items.length > 5) {
+      $items.slice(5).addClass("hidden");
+      $button.text("+" + ($items.length - 5) + " more");
+    } else {
+      $button.hide();
+    }
+
+    // Toggle logic
+    $button.on("click", function () {
+      if ($items.filter(".hidden").length > 0) {
+        $items.removeClass("hidden").slideDown();
+        $button.text("Show less");
+      } else {
+        $items.slice(5).addClass("hidden").slideUp();
+        $button.text("+" + ($items.length - 5) + " more");
+      }
+    });
+  });
 });

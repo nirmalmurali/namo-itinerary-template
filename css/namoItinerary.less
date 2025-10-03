@@ -1598,13 +1598,19 @@ footer {
               list-style: none;
               margin: 0;
               padding: 0;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
               li {
                 padding: 0;
                 margin: 0;
                 display: flex;
                 gap: 0.5rem;
                 justify-content: space-between;
-                p {
+                &.hidden {
+                  display: none;
+                }
+                span {
                   margin-bottom: 0;
                   &:extend(.fs-14,
                   .fw-400,

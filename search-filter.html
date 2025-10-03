@@ -776,59 +776,310 @@
               <div class="container h-100">
                 <div class="tab-content-filter-view-content">
                   <div class="filter-side-bar">
-                    <div class="filter-side-bar-options">
-                      <h5>Popular Filters</h5>
-                      <ul>
-                        <li>
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="gdsAirlinesCheckInput"
-                            />
-                            <label
-                              class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                              for="gdsAirlinesCheckInput"
-                            >
-                              GDS Airlines
-                            </label>
-                          </div>
-                          <p>₹ 7,667</p>
-                        </li>
-                      </ul>
-                      <button
-                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family"
-                      >
-                        +5 more
-                      </button>
-                    </div>
-                    <div class="filter-side-bar-options">
-                      <h5>Popular Filters</h5>
-                      <ul>
-                        <li>
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="gdsAirlinesCheckInput"
-                            />
-                            <label
-                              class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                              for="gdsAirlinesCheckInput"
-                            >
-                              GDS Airlines
-                            </label>
-                          </div>
-                          <p>₹ 7,667</p>
-                        </li>
-                      </ul>
-                      <button
-                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family"
-                      >
-                        +5 more
-                      </button>
+                    <div class="filter-side-bar-list-wrapper">
+                      <div class="filter-side-bar-options">
+                        <h5>Popular Filters</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="nonStopCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="nonStopCheckInput"
+                              >
+                                Non Stop
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 7,667</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="hideNearbyAirportsCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="hideNearbyAirportsCheckInput"
+                              >
+                                Hide Nearby Airports
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="refundableFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="refundableFaresCheckInput"
+                              >
+                                Refundable Fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="indiGoCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="indiGoCheckInput"
+                              >
+                                IndiGo
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        >
+                          +5 more
+                        </button>
+                      </div>
+
+                      <div class="filter-side-bar-options">
+                        <h5>Fare Type</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="normalFareCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="normalFareCheckInput"
+                              >
+                                Normal fare
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateFaresCheckInput"
+                              >
+                                Corporate fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="specialFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="specialFaresCheckInput"
+                              >
+                                Special fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="saverCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="saverCheckInput"
+                              >
+                                Saver
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateSelectCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateSelectCheckInput"
+                              >
+                                Corporate select
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexiCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="flexiCheckInput"
+                              >
+                                Flexi
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        >
+                          + 5 more
+                        </button>
+                      </div>
+                      <div class="filter-side-bar-options">
+                        <h5>Fare Type</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="normalFareCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="normalFareCheckInput"
+                              >
+                                Normal fare
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateFaresCheckInput"
+                              >
+                                Corporate fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="specialFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="specialFaresCheckInput"
+                              >
+                                Special fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="saverCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="saverCheckInput"
+                              >
+                                Saver
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateSelectCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateSelectCheckInput"
+                              >
+                                Corporate select
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexiCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="flexiCheckInput"
+                              >
+                                Flexi
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        >
+                          + 5 more
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div class="filter-view-content-wrapper"></div>
