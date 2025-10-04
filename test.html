@@ -1,106 +1,310 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap Dropdown + Litepicker</title>
+<div class="container tab-content-filter-view-content">
+  <div class="filter-side-bar">
+    <div class="filter-side-bar-list-wrapper">
+      <div class="filter-side-bar-options">
+        <h5>Popular Filters</h5>
+        <ul>
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="nonStopCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="nonStopCheckInput"
+              >
+                Non Stop
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 7,667</span>
+          </li>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="hideNearbyAirportsCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="hideNearbyAirportsCheckInput"
+              >
+                Hide Nearby Airports
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
 
- <link href="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.css" rel="stylesheet"/>
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="refundableFaresCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="refundableFaresCheckInput"
+              >
+                Refundable Fares
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
 
-<style>
-  .dep-tile {
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 10px 14px;
-    width: 180px;
-    text-align: left;
-    background: #fff;
-  }
-  .dep-label {
-    font-size: 12px; color: #6b7280; display:flex; align-items:center; gap:6px;
-  }
-  .dep-day { font-size: 40px; line-height: 1; font-weight: 700; }
-  .dep-month { font-weight: 600; margin-left: 6px; }
-  .dep-week { font-size: 12px; color: #6b7280; }
-  .caret { font-size: 12px; color: #f59e0b; }
-  .dropdown-menu { min-width: 560px; padding: 10px; }
-</style>
-  </head>
-  <body class="p-4">
-    <div class="dropdown" data-bs-auto-close="outside">
-      <button
-        class="btn p-0 dep-tile dropdown-toggle"
-        type="button"
-        id="depBtn"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <div class="dep-label">Departure <span class="caret">▾</span></div>
-        <div class="d-flex align-items-baseline mt-1">
-          <span class="dep-day" id="depDay">--</span>
-          <span class="dep-month" id="depMonth">---</span>
-        </div>
-        <div class="dep-week" id="depWeek">Select a date</div>
-      </button>
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="indiGoCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="indiGoCheckInput"
+              >
+                IndiGo
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+        </ul>
 
-      <div class="dropdown-menu" aria-labelledby="depBtn">
-        <div id="depPickerHost"></div>
+        <button
+          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+        >
+          +5 more
+        </button>
+      </div>
+
+      <div class="filter-side-bar-options">
+        <h5>Fare Type</h5>
+        <ul>
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="normalFareCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="normalFareCheckInput"
+              >
+                Normal fare
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="corporateFaresCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="corporateFaresCheckInput"
+              >
+                Corporate fares
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="specialFaresCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="specialFaresCheckInput"
+              >
+                Special fares
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="saverCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="saverCheckInput"
+              >
+                Saver
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="corporateSelectCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="corporateSelectCheckInput"
+              >
+                Corporate select
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexiCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="flexiCheckInput"
+              >
+                Flexi
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+        </ul>
+
+        <button
+          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+        >
+          + 5 more
+        </button>
+      </div>
+      <div class="filter-side-bar-options">
+        <h5>Fare Type</h5>
+        <ul>
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="normalFareCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="normalFareCheckInput"
+              >
+                Normal fare
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="corporateFaresCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="corporateFaresCheckInput"
+              >
+                Corporate fares
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="specialFaresCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="specialFaresCheckInput"
+              >
+                Special fares
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="saverCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="saverCheckInput"
+              >
+                Saver
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="corporateSelectCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="corporateSelectCheckInput"
+              >
+                Corporate select
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+
+          <li>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexiCheckInput"
+              />
+              <label
+                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                for="flexiCheckInput"
+              >
+                Flexi
+              </label>
+            </div>
+            <span class="font-color-secondary">₹ 6,894</span>
+          </li>
+        </ul>
+
+        <button
+          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+        >
+          + 5 more
+        </button>
       </div>
     </div>
-
-    <!-- jQuery (not required by Bootstrap 5, but fine if you already use it) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap JS Bundle (with Popper) -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
-    <script>
-      const depBtn = document.getElementById("depBtn");
-      const dd = bootstrap.Dropdown.getOrCreateInstance(depBtn);
-      const depDay = document.getElementById("depDay");
-      const depMonth = document.getElementById("depMonth");
-      const depWeek = document.getElementById("depWeek");
-
-      // Helpers
-      const monthShort = (d) => d.toLocaleString(undefined, { month: "short" });
-      const weekday = (d) => d.toLocaleString(undefined, { weekday: "long" });
-      const twoDigitYear = (d) => String(d.getFullYear()).slice(-2);
-
-      // Init Litepicker inline inside dropdown
-      const depPicker = new Litepicker({
-        element: depBtn, // anchor
-        container: document.getElementById("depPickerHost"),
-        singleMode: true,
-        inlineMode: true,
-        autoApply: true,
-        numberOfMonths: 2,
-        numberOfColumns: 2,
-        setup: (lp) => {
-          lp.on("selected", (date) => {
-            // date can be a Date or Dayjs-like; normalize:
-            const jsDate = date instanceof Date ? date : new Date(date);
-            // Update the tile
-            depDay.textContent = jsDate.getDate();
-            depMonth.textContent = `${monthShort(jsDate)}’${twoDigitYear(
-              jsDate
-            )}`;
-            depWeek.textContent = weekday(jsDate);
-            // Close dropdown after select
-            dd.hide();
-          });
-        },
-      });
-
-      // Ensure proper layout when dropdown opens (calendar measures while visible)
-      depBtn.addEventListener("shown.bs.dropdown", () => {
-        setTimeout(() => depPicker.render(), 0);
-      });
-    </script>
-  </body>
-</html>
+  </div>
+  <div class="filter-view-content-wrapper"></div>
+</div>
