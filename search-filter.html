@@ -1081,7 +1081,96 @@
                     </div>
                   </div>
                 </div>
-                <div class="filter-view-content-wrapper"></div>
+                <div class="filter-view-content-wrapper">
+                  <ul
+                    class="nav nav-pills mb-3 view-change-nav-wrapper"
+                    id="viewChangeTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="combinedViewTab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#combinedView"
+                        type="button"
+                        role="tab"
+                        aria-controls="combinedView"
+                        aria-selected="true"
+                      >
+                        Combined view
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="splitViewTab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#splitView"
+                        type="button"
+                        role="tab"
+                        aria-controls="splitView"
+                        aria-selected="false"
+                      >
+                        Split view
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="filter-view-content-header">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h5
+                          class="font-color-secondary fw-700 fs-18 pt-sans-font-family"
+                        >
+                          Flights from Mumbai  New Delhi
+                        </h5>
+                      </div>
+                      <div
+                        class="col-lg-4 d-flex justify-content-end align-items-center gap-2"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="searchContent"
+                          required=""
+                          hidden
+                        />
+                        <button
+                          class="btn p-0 border-0"
+                          onclick="searchContent.hidden^=1"
+                        >
+                          <img
+                            src="assets/images/serach_btn_icon.svg"
+                            alt="search icon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-content view-change-tab-content"
+                    id="viewChangeTabContent"
+                  >
+                    <div
+                      class="tab-pane fade show active"
+                      id="combinedView"
+                      role="tabpanel"
+                      aria-labelledby="combinedViewTab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="splitView"
+                      role="tabpanel"
+                      aria-labelledby="splitViewTab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
