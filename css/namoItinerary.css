@@ -118,7 +118,7 @@ footer .quick-links-wrapper li a,
 .selected-airline-list-item p,
 .number-btn-group-wrapper .btn,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
-.search-tab-wrapper .search-tab-header-wrapper ul li button,
+.page-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
@@ -421,7 +421,7 @@ footer .quick-links-wrapper li a,
 .select-airline-dropdown .dropdown-toggle,
 .selected-airline-list-item p,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
-.search-tab-wrapper .search-tab-header-wrapper ul li button,
+.page-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
@@ -468,7 +468,7 @@ footer .quick-links-wrapper li a,
 .bg-color-primary,
 .number-btn-group-wrapper .btn.active,
 .number-btn-group-wrapper .btn:hover,
-.search-tab-wrapper .search-tab-header-wrapper ul li button.active::after,
+.page-tab-header-wrapper ul li button.active::after,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active {
   background-color: #f28b24 !important;
 }
@@ -661,7 +661,7 @@ footer .quick-links-wrapper li a,
 .travel-date-details > ul > li p,
 .selected-airline-list-item .btn,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
-.search-tab-wrapper .search-tab-header-wrapper ul li button,
+.page-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
@@ -1837,10 +1837,10 @@ footer .footer-bottom-wrapper {
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
   margin-bottom: 10px;
 }
-.search-tab-wrapper .search-tab-header-wrapper {
+.page-tab-header-wrapper {
   padding: 8px 0;
 }
-.search-tab-wrapper .search-tab-header-wrapper ul {
+.page-tab-header-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1848,7 +1848,7 @@ footer .footer-bottom-wrapper {
   align-items: center;
   gap: 0.5rem;
 }
-.search-tab-wrapper .search-tab-header-wrapper ul li button {
+.page-tab-header-wrapper ul li button {
   background: none !important;
   padding: 0 11px;
   border: none;
@@ -1859,10 +1859,10 @@ footer .footer-bottom-wrapper {
   gap: 5px;
   height: 60px;
 }
-.search-tab-wrapper .search-tab-header-wrapper ul li button.active {
+.page-tab-header-wrapper ul li button.active {
   position: relative;
 }
-.search-tab-wrapper .search-tab-header-wrapper ul li button.active::after {
+.page-tab-header-wrapper ul li button.active::after {
   content: "";
   position: absolute;
   bottom: -7px;
