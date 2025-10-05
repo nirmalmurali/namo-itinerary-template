@@ -89,7 +89,8 @@ body:has(header.fixed-top) main {
 .fs-11 {
   font-size: 0.6875rem !important;
 }
-.fs-12 {
+.fs-12,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p {
   font-size: 0.75rem !important;
 }
 .fs-13 {
@@ -116,7 +117,8 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -408,10 +410,12 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p {
   font-weight: 400 !important;
 }
-.fw-500 {
+.fw-500,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span {
   font-weight: 500 !important;
 }
 .fw-600 {
@@ -444,7 +448,8 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li h4,
 .select-airline-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5 {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -482,7 +487,8 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-white,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -621,7 +627,8 @@ footer .quick-links-wrapper li a,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
 .search-tab-wrapper .search-tab-header-wrapper ul li button,
 .global-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1910,10 +1917,81 @@ footer .footer-bottom-wrapper {
   overflow: hidden;
   flex-grow: 1;
 }
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .filter-view-content-header .form-control {
+  height: 30px;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .filter-view-content-header:has(#searchContent:not([hidden])) .filter-content-search-btn .img-hover {
+  display: block;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .filter-view-content-header:has(#searchContent:not([hidden])) .filter-content-search-btn .img-default {
+  display: none;
+}
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link {
   border-radius: 0;
   border: 1px solid #d3d3d3;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active {
   border: 1px solid #f28b24;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper {
+  padding-top: 0.5rem;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper {
+  display: flex;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .btn {
+  border: none;
+  border-radius: 0;
+  color: #f28b24;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .btn.left {
+  border-right: 1px solid #eaeaea;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .btn.right {
+  border-left: 1px solid #eaeaea;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  gap: 0;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li {
+  padding: 0.5rem 1rem;
+  flex-shrink: 0;
+  text-align: center;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #eaeaea;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li:last-child {
+  border-right: none;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.btn .img-hover {
+  display: none;
+}
+.btn:hover .img-hover {
+  display: block;
+}
+.btn:hover .img-default {
+  display: none;
 }

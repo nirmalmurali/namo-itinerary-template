@@ -171,4 +171,40 @@ $(document).ready(function () {
       }
     });
   });
+  $(".flight-rate-list-wrapper").each(function () {
+    const $wrapper = $(this);
+    const $list = $wrapper.find(".scroll-list");
+    const $leftBtn = $wrapper.find(".left.btn"); // fixed selector
+    const $rightBtn = $wrapper.find(".right.btn"); // fixed selector
+
+    // Scroll by ~3 cards per click (adjust as you like)
+    const step =
+      Math.ceil($list.find("li").first().outerWidth(true) * 3) || 200;
+
+    function updateFlightRateButtons() {
+      const el = $list[0];
+      const max = el.scrollWidth - el.clientWidth;
+      const x = el.scrollLeft;
+
+      $leftBtn.prop("disabled", x <= 0);
+      $rightBtn.prop("disabled", x >= max - 1);
+    }
+
+    $rightBtn.on("click", function () {
+      $list
+        .stop()
+        .animate({ scrollLeft: "+=" + step }, 300, updateFlightRateButtons); // fixed callback name
+    });
+
+    $leftBtn.on("click", function () {
+      $list
+        .stop()
+        .animate({ scrollLeft: "-=" + step }, 300, updateFlightRateButtons); // fixed callback name
+    });
+
+    $list.on("scroll", updateFlightRateButtons);
+
+    // Initial state
+    updateFlightRateButtons();
+  });
 });
