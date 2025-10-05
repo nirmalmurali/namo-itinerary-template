@@ -207,4 +207,13 @@ $(document).ready(function () {
     // Initial state
     updateFlightRateButtons();
   });
+
+  // Add active class to sort-list-wrapper buttons
+  $(document).on("click", ".sort-list-wrapper .btn", function () {
+    $(".sort-list-wrapper .btn").removeClass("active");
+    $(this).addClass("active");
+  });
+  $(document).on("click", ".sort-view-btn", function () {
+    $(".sort-list-wrapper, .sort-view-btn").toggleClass("active");
+  });
 });
