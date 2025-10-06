@@ -26,6 +26,9 @@
 @paleOrange: #fd985f;
 @oldLace: #fff1e4;
 @desertStorm: #f6f6f6;
+@woodSmoke: #090909;
+@merino: #ffeede;
+@lavenderMist: #eaeaea;
 @colors: primary #f28b24, secondary #000000, smoky-black #0c0c0c,
   cloudy-grey #726e6e, black-cat #3f3f3f, fuel-yellow #f2b024, white #ffffff,
   vista-white #fff7f4, grey-cloud #bababa, sea-green #269a59, pine-green #098753,
@@ -34,7 +37,7 @@
   quill-grey #d6d6d6, charcoal-grey #3d3d3d, heavy-metal #272727,
   ecru-white #fff2e4, catskill-white #f5f5f5, baltic-sea #272222,
   pale-orange #fd985f, old-lace #fff1e4, desert-storm #f6f6f6,
-  gravel-grey #4a4a4a;
+  wood-smoke #090909, merino #ffeede, lavender-mist #eaeaea, gravel-grey #4a4a4a;
 
 html {
   font-size: 16px;
@@ -1680,7 +1683,7 @@ footer {
                 .flight-rate-list-wrapper {
                   display: flex;
                   width: 100%;
-                  border: 1px solid #eaeaea;
+                  border: 1px solid @lavenderMist;
                   border-radius: 5px;
                   &:extend(.bg-color-white);
                   .btn {
@@ -1688,10 +1691,10 @@ footer {
                     border-radius: 0;
                     color: @primaryColor;
                     &.left {
-                      border-right: 1px solid #eaeaea;
+                      border-right: 1px solid @lavenderMist;
                     }
                     &.right {
-                      border-left: 1px solid #eaeaea;
+                      border-left: 1px solid @lavenderMist;
                     }
                     &:disabled {
                       opacity: 0.4;
@@ -1716,7 +1719,7 @@ footer {
                       display: flex;
                       justify-content: center;
                       align-items: center;
-                      border-right: 1px solid #eaeaea;
+                      border-right: 1px solid @lavenderMist;
                       &:last-child {
                         border-right: none;
                       }
@@ -1820,7 +1823,12 @@ footer {
 .sorted-flight-details {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  column-gap: 4rem;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+  & > div {
+    flex-shrink: 0;
+  }
   .flight-profile-details {
     display: flex;
     align-items: center;
@@ -1886,7 +1894,7 @@ footer {
     margin: 0;
     list-style: none;
     li {
-      border: 1px solid #eaeaea;
+      border: 1px solid @lavenderMist;
       border-radius: 5px;
       padding: 0 13px;
       display: flex;
@@ -1943,6 +1951,70 @@ footer {
           .fw-400,
           .pt-sans-font-family);
         }
+      }
+      .change-booking-btns-wrapper {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        .btn {
+          &:extend(.font-color-wood-smoke,
+          .fs-14,
+          .fw-400,
+          .pt-sans-font-family,
+          .bg-color-merino);
+          border-radius: 4px;
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          flex-shrink: 0;
+          border: none;
+        }
+      }
+      .filter-fare-wrapper {
+        text-align: center;
+        h5 {
+          margin: 0;
+          &:extend(.font-color-secondary,
+          .fs-18,
+          .fw-700,
+          .pt-sans-font-family);
+        }
+        p {
+          margin: 0;
+          &:extend(.font-color-gravel-grey,
+          .fs-12,
+          .fw-400,
+          .pt-sans-font-family);
+        }
+      }
+      .active-fare-type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid @lavenderMist;
+        border-right: 1px solid @lavenderMist;
+        border-radius: 0;
+        padding: 6px;
+        &.active {
+          &:extend(.bg-color-primary);
+          border: none;
+          img {
+            content: url(../assets/images/tick_active_icon.svg);
+          }
+        }
+      }
+      .filter-book-now-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        border: 1px solid @primaryColor;
+        display: flex;
+        flex-shrink: 0;
+        height: fit-content;
+        width: fit-content;
+        &:extend(.font-color-primary,
+        .fs-14,
+        .fw-700,
+        .pt-sans-font-family);
       }
     }
   }

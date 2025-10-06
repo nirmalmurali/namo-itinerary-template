@@ -94,7 +94,8 @@ body:has(header.fixed-top) main {
 .sorted-flight-details .flight-profile-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper p {
+.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
   font-size: 0.75rem !important;
 }
 .fs-13 {
@@ -131,7 +132,9 @@ footer .quick-links-wrapper li a,
 .sorted-flight-details .duration-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
+.book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -145,7 +148,8 @@ footer .quick-links-wrapper li a,
   font-size: 1.0625rem !important;
 }
 .fs-18,
-.sorted-flight-details .time-details h6 b {
+.sorted-flight-details .time-details h6 b,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -436,7 +440,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper p {
+.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -452,7 +458,9 @@ footer .quick-links-wrapper li a,
 .number-btn-group-wrapper .btn,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .sorted-flight-details .time-details h6 b,
-.book-now-fare-type-list-wrapper ul li .book-now-fare-type h6 {
+.book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -462,14 +470,16 @@ footer .quick-links-wrapper li a,
   font-weight: 900 !important;
 }
 .font-color-primary,
-.sort-view-btn.active {
+.sort-view-btn.active,
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
   color: #f28b24 !important;
 }
 .bg-color-primary,
 .number-btn-group-wrapper .btn.active,
 .number-btn-group-wrapper .btn:hover,
 .page-tab-header-wrapper ul li button.active::after,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
+.book-now-fare-type-list-wrapper ul li .active-fare-type.active {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -482,7 +492,8 @@ footer .quick-links-wrapper li a,
 .sorted-flight-details .flight-profile-details h6,
 .sorted-flight-details .time-details h6 b,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
-.book-now-fare-type-list-wrapper ul li .seats-wrapper h6 {
+.book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -651,6 +662,26 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view {
   background-color: #f6f6f6 !important;
 }
+.font-color-wood-smoke,
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
+  color: #090909 !important;
+}
+.bg-color-wood-smoke {
+  background-color: #090909 !important;
+}
+.font-color-merino {
+  color: #ffeede !important;
+}
+.bg-color-merino,
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
+  background-color: #ffeede !important;
+}
+.font-color-lavender-mist {
+  color: #eaeaea !important;
+}
+.bg-color-lavender-mist {
+  background-color: #eaeaea !important;
+}
 .font-color-gravel-grey,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
@@ -673,7 +704,8 @@ footer .quick-links-wrapper li a,
 .sorted-flight-details .duration-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper p {
+.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -2083,7 +2115,12 @@ footer .footer-bottom-wrapper {
 .sorted-flight-details {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  column-gap: 4rem;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+}
+.sorted-flight-details > div {
+  flex-shrink: 0;
 }
 .sorted-flight-details .flight-profile-details {
   display: flex;
@@ -2156,4 +2193,50 @@ footer .footer-bottom-wrapper {
 }
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p {
   margin: 0;
+}
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
+  border-radius: 4px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+}
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper {
+  text-align: center;
+}
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5 {
+  margin: 0;
+}
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
+  margin: 0;
+}
+.book-now-fare-type-list-wrapper ul li .active-fare-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-radius: 0;
+  padding: 6px;
+}
+.book-now-fare-type-list-wrapper ul li .active-fare-type.active {
+  border: none;
+}
+.book-now-fare-type-list-wrapper ul li .active-fare-type.active img {
+  content: url(../assets/images/tick_active_icon.svg);
+}
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #f28b24;
+  display: flex;
+  flex-shrink: 0;
+  height: fit-content;
+  width: fit-content;
 }
