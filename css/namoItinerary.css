@@ -98,7 +98,8 @@ body:has(header.fixed-top) main {
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
   font-size: 0.75rem !important;
 }
-.fs-13 {
+.fs-13,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -134,7 +135,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
-.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
+.booking-details-right-content .nav .nav-item .nav-link {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -442,7 +444,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
+.booking-details-right-content .nav .nav-item .nav-link,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -479,7 +483,8 @@ footer .quick-links-wrapper li a,
 .number-btn-group-wrapper .btn:hover,
 .page-tab-header-wrapper ul li button.active::after,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
-.book-now-fare-type-list-wrapper ul li .active-fare-type.active {
+.book-now-fare-type-list-wrapper ul li .active-fare-type.active,
+.booking-details-right-content .nav .nav-item .nav-link.active {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -526,14 +531,17 @@ footer .quick-links-wrapper li a,
 .font-color-white,
 .number-btn-group-wrapper .btn.active,
 .number-btn-group-wrapper .btn:hover,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
+.booking-details-right-content .nav .nav-item .nav-link.active {
   color: #ffffff !important;
 }
 .bg-color-white,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper,
-.sorted-list-wrapper > ul > li {
+.sorted-list-wrapper > ul > li,
+.booking-details-right-content .nav .nav-item .nav-link,
+.booking-details-right-content .tab-content .tab-pane.active {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -563,7 +571,8 @@ footer .quick-links-wrapper li a,
   background-color: #098753 !important;
 }
 .font-color-ship-grey,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
+.booking-details-right-content .nav .nav-item .nav-link {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -681,6 +690,13 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-lavender-mist {
   background-color: #eaeaea !important;
+}
+.font-color-dorado,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
+  color: #605e5e !important;
+}
+.bg-color-dorado {
+  background-color: #605e5e !important;
 }
 .font-color-gravel-grey,
 .form-check input[type="radio"]:checked + label,
@@ -1991,6 +2007,8 @@ footer .footer-bottom-wrapper {
   flex-shrink: 0;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   flex-grow: 1;
 }
@@ -2009,6 +2027,19 @@ footer .footer-bottom-wrapper {
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active {
   border: 1px solid #f28b24;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane.active {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper {
   padding-top: 0.5rem;
@@ -2102,10 +2133,18 @@ footer .footer-bottom-wrapper {
 .sort-view-btn.active img {
   content: url("../assets/images/sort_arrow_active_icon.svg");
 }
+.sorted-list-wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
 .sorted-list-wrapper > ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .sorted-list-wrapper > ul > li {
   padding: 1rem;
@@ -2118,6 +2157,7 @@ footer .footer-bottom-wrapper {
   column-gap: 4rem;
   row-gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 .sorted-flight-details > div {
   flex-shrink: 0;
@@ -2157,18 +2197,34 @@ footer .footer-bottom-wrapper {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .book-now-fare-type-list-wrapper ul li {
   border: 1px solid #eaeaea;
   border-radius: 5px;
   padding: 0 13px;
   display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.book-now-fare-type-list-wrapper ul li .fare-type-section-one {
+  display: flex;
   align-items: center;
+  padding: 0.6rem 0;
+}
+.book-now-fare-type-list-wrapper ul li .fare-type-section-two {
+  display: flex;
+  align-items: stretch;
 }
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type {
   display: flex;
   gap: 1rem;
   align-items: center;
+  border-right: 1px solid #eaeaea;
+  padding-right: 0.5rem;
+  flex-shrink: 0;
 }
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6 {
   margin: 0;
@@ -2178,6 +2234,7 @@ footer .footer-bottom-wrapper {
 }
 .book-now-fare-type-list-wrapper ul li .seats-wrapper {
   padding: 0 1rem;
+  border-right: 1px solid #eaeaea;
 }
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6 {
   margin: 0;
@@ -2187,6 +2244,7 @@ footer .footer-bottom-wrapper {
 }
 .book-now-fare-type-list-wrapper ul li .refund-wrapper {
   padding: 0 1rem;
+  border-right: 1px solid #eaeaea;
 }
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
   margin: 0;
@@ -2198,6 +2256,7 @@ footer .footer-bottom-wrapper {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  padding: 0 1rem;
 }
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
   border-radius: 4px;
@@ -2209,6 +2268,9 @@ footer .footer-bottom-wrapper {
 }
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5 {
   margin: 0;
@@ -2232,11 +2294,59 @@ footer .footer-bottom-wrapper {
   content: url(../assets/images/tick_active_icon.svg);
 }
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
-  padding: 0.5rem 1rem;
+  padding: 0rem 1rem;
   border-radius: 50px;
   border: 1px solid #f28b24;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  height: fit-content;
+  height: 30px;
   width: fit-content;
+}
+.booking-details-right-content {
+  max-width: 267px;
+  width: 100%;
+}
+.booking-details-right-content .nav .nav-item .nav-link {
+  border-radius: 0;
+  border: 1px solid #d3d3d3;
+}
+.booking-details-right-content .nav .nav-item .nav-link.active {
+  border: 1px solid #f28b24;
+}
+.booking-details-right-content .tab-content .tab-pane.active {
+  border: 1px solid #f4efef;
+  padding: 1.125rem;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 0.5rem;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
+  margin: 0;
 }

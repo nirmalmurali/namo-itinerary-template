@@ -147,7 +147,7 @@ $(document).ready(function () {
     }
   );
   // filter list show more
-  $(".filter-side-bar-options").each(function () {
+  $(".content-view-more-wrapper").each(function () {
     let $section = $(this);
     let $items = $section.find("ul li");
     let $button = $section.find(".filter-list-show-more-btn");
@@ -168,6 +168,40 @@ $(document).ready(function () {
       } else {
         $items.slice(5).addClass("hidden").slideUp();
         $button.text("+" + ($items.length - 5) + " more");
+      }
+    });
+  });
+  // filter list show more
+  $(".booking-fare-list-count").each(function () {
+    const $section = $(this);
+    const $items = $section.find("ul li");
+    const $button = $section.find(".booking-fare-list-show-btn");
+
+    // If more than 2 items
+    if ($items.length > 2) {
+      // Hide all items after the first 2
+      $items.slice(2).hide().addClass("hidden");
+
+      // Show button with count
+      $button.text("+" + ($items.length - 2) + " more").show();
+    } else {
+      $button.hide();
+    }
+
+    // Toggle logic
+    $button.on("click", function () {
+      const isCollapsed = $items.filter(".hidden").length > 0;
+
+      if (isCollapsed) {
+        // Expand list
+        $items.slideDown().removeClass("hidden");
+        $button.text("Show less");
+      } else {
+        // Collapse back to 2 items
+        $items.slice(2).slideUp(function () {
+          $(this).addClass("hidden");
+        });
+        $button.text("+" + ($items.length - 2) + " more");
       }
     });
   });

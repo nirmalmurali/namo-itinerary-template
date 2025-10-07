@@ -29,6 +29,7 @@
 @woodSmoke: #090909;
 @merino: #ffeede;
 @lavenderMist: #eaeaea;
+@dorado: #605e5e;
 @colors: primary #f28b24, secondary #000000, smoky-black #0c0c0c,
   cloudy-grey #726e6e, black-cat #3f3f3f, fuel-yellow #f2b024, white #ffffff,
   vista-white #fff7f4, grey-cloud #bababa, sea-green #269a59, pine-green #098753,
@@ -37,7 +38,8 @@
   quill-grey #d6d6d6, charcoal-grey #3d3d3d, heavy-metal #272727,
   ecru-white #fff2e4, catskill-white #f5f5f5, baltic-sea #272222,
   pale-orange #fd985f, old-lace #fff1e4, desert-storm #f6f6f6,
-  wood-smoke #090909, merino #ffeede, lavender-mist #eaeaea, gravel-grey #4a4a4a;
+  wood-smoke #090909, merino #ffeede, lavender-mist #eaeaea, dorado #605e5e,
+  gravel-grey #4a4a4a;
 
 html {
   font-size: 16px;
@@ -1641,6 +1643,8 @@ footer {
           }
         }
         .filter-view-content-wrapper {
+          display: flex;
+          flex-direction: column;
           overflow: hidden;
           flex-grow: 1;
           .filter-view-content-header {
@@ -1677,7 +1681,18 @@ footer {
             }
           }
           .view-change-tab-content {
+            flex-grow: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             .tab-pane {
+              &.active {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                flex-grow: 1;
+                overflow: hidden;
+              }
               .flight-filter-list-result-wrapper {
                 padding-top: 0.5rem;
                 .flight-rate-list-wrapper {
@@ -1808,10 +1823,16 @@ footer {
   }
 }
 .sorted-list-wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
   & > ul {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     & > li {
       padding: 1rem;
       &:extend(.bg-color-white);
@@ -1826,6 +1847,7 @@ footer {
   column-gap: 4rem;
   row-gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 10px;
   & > div {
     flex-shrink: 0;
   }
@@ -1893,16 +1915,32 @@ footer {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     li {
       border: 1px solid @lavenderMist;
       border-radius: 5px;
       padding: 0 13px;
       display: flex;
-      align-items: center;
+      align-items: stretch;
+      justify-content: space-between;
+      .fare-type-section-one {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 0;
+      }
+      .fare-type-section-two {
+        display: flex;
+        align-items: stretch;
+      }
       .book-now-fare-type {
         display: flex;
         gap: 1rem;
         align-items: center;
+        border-right: 1px solid @lavenderMist;
+        padding-right: 0.5rem;
+        flex-shrink: 0;
         h6 {
           margin: 0;
           &:extend(.font-color-secondary,
@@ -1920,6 +1958,7 @@ footer {
       }
       .seats-wrapper {
         padding: 0 1rem;
+        border-right: 1px solid @lavenderMist;
         h6 {
           margin: 0;
           &:extend(.font-color-secondary,
@@ -1937,6 +1976,7 @@ footer {
       }
       .refund-wrapper {
         padding: 0 1rem;
+        border-right: 1px solid @lavenderMist;
         h6 {
           margin: 0;
           &:extend(.font-color-sea-green,
@@ -1956,6 +1996,7 @@ footer {
         display: flex;
         gap: 5px;
         flex-wrap: wrap;
+        padding: 0 1rem;
         .btn {
           &:extend(.font-color-wood-smoke,
           .fs-14,
@@ -1972,6 +2013,9 @@ footer {
       }
       .filter-fare-wrapper {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h5 {
           margin: 0;
           &:extend(.font-color-secondary,
@@ -2004,17 +2048,87 @@ footer {
         }
       }
       .filter-book-now-btn {
-        padding: 0.5rem 1rem;
+        padding: 0rem 1rem;
         border-radius: 50px;
         border: 1px solid @primaryColor;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
-        height: fit-content;
+        height: 30px;
         width: fit-content;
         &:extend(.font-color-primary,
         .fs-14,
         .fw-700,
         .pt-sans-font-family);
+      }
+    }
+  }
+}
+.booking-details-right-content {
+  max-width: 267px;
+  width: 100%;
+  .nav {
+    .nav-item {
+      .nav-link {
+        &:extend(.fs-14,
+        .fw-400,
+        .bg-color-white,
+        .font-color-ship-grey,
+        .pt-sans-font-family);
+        border-radius: 0;
+        border: 1px solid #d3d3d3;
+        &.active {
+          &:extend(.bg-color-primary,
+          .font-color-white);
+          border: 1px solid @primaryColor;
+        }
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      &.active {
+        &:extend(.bg-color-white);
+        border: 1px solid #f4efef;
+        padding: 1.125rem;
+        &.fare-details-tab-panel {
+          .fare-list-nav {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            & .fare-list-item {
+              display: flex;
+              gap: 0.5rem;
+              border-bottom: 1px solid #ebebeb;
+              padding-bottom: 0.5rem;
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                flex-grow: 1;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                  display: flex;
+                  gap: 0.5rem;
+                  justify-content: space-between;
+                  p {
+                    margin: 0;
+                    &:extend(.font-color-dorado,
+                    .fs-13,
+                    .fw-400,
+                    .pt-sans-font-family);
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

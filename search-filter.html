@@ -776,7 +776,9 @@
               <div class="container tab-content-filter-view-content">
                 <div class="filter-side-bar">
                   <div class="filter-side-bar-list-wrapper">
-                    <div class="filter-side-bar-options">
+                    <div
+                      class="filter-side-bar-options content-view-more-wrapper"
+                    >
                       <h5>Popular Filters</h5>
                       <ul>
                         <li>
@@ -849,13 +851,15 @@
                       </ul>
 
                       <button
-                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
                       >
                         +5 more
                       </button>
                     </div>
 
-                    <div class="filter-side-bar-options">
+                    <div
+                      class="filter-side-bar-options content-view-more-wrapper"
+                    >
                       <h5>Fare Type</h5>
                       <ul>
                         <li>
@@ -962,12 +966,14 @@
                       </ul>
 
                       <button
-                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
                       >
                         + 5 more
                       </button>
                     </div>
-                    <div class="filter-side-bar-options">
+                    <div
+                      class="filter-side-bar-options content-view-more-wrapper"
+                    >
                       <h5>Fare Type</h5>
                       <ul>
                         <li>
@@ -1074,7 +1080,7 @@
                       </ul>
 
                       <button
-                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family filter-list-show-more-btn"
+                        class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
                       >
                         + 5 more
                       </button>
@@ -1374,71 +1380,508 @@
                                 <p>New Delhi, Terminal D</p>
                               </div>
                             </div>
-                            <div class="book-now-fare-type-list-wrapper">
+                            <div
+                              class="book-now-fare-type-list-wrapper booking-fare-list-count"
+                            >
                               <ul>
                                 <li>
-                                  <div class="book-now-fare-type">
-                                    <div>
-                                      <h6>Fare Type</h6>
-                                      <p>Standard Economy</p>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
+                                    >
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
                                     </div>
                                     <div
-                                      class="d-flex gap-2 align-items-center"
+                                      class="d-flex align-items-center flex-shrink-0"
                                     >
-                                      <img
-                                        src="assets/images/suitcase_icon.svg"
-                                      />
-                                      <img
-                                        src="assets/images/baggage_icon.svg"
-                                        alt=""
-                                      />
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
                                     </div>
                                   </div>
-                                  <div class="seats-wrapper">
-                                    <p>Seats</p>
-                                    <h6>2</h6>
+                                </li>
+                                <li>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
                                   </div>
-                                  <div class="refund-wrapper">
-                                    <p>Refund</p>
-                                    <h6>Refundable</h6>
-                                  </div>
-                                  <div class="change-booking-btns-wrapper">
-                                    <button class="btn change-booking-btn">
-                                      Change Booking Class
-                                      <i
-                                        class="fa fa-angle-down"
-                                        aria-hidden="true"
-                                      ></i>
-                                    </button>
-                                    <button
-                                      class="btn change-flight-details-btn"
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
                                     >
-                                      Flight Details
-                                      <i
-                                        class="fa fa-angle-down"
-                                        aria-hidden="true"
-                                      ></i>
-                                    </button>
-                                    <button class="btn change-fare-rule-btn">
-                                      Fare Rule
-                                      <i
-                                        class="fa fa-angle-down"
-                                        aria-hidden="true"
-                                      ></i>
-                                    </button>
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
+                                    </div>
+                                    <div
+                                      class="d-flex align-items-center flex-shrink-0"
+                                    >
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
+                                    </div>
                                   </div>
-                                  <div class="filter-fare-wrapper">
-                                    <h5>₹12,886</h5>
-                                    <p>Net Fare: ₹ 11,016</p>
-                                  </div>
-                                  <div class="active-fare-type">
-                                    <img src="assets/images/tick_icon.svg" />
-                                  </div>
-                                  <button class="btn filter-book-now-btn">
-                                    Book Now
-                                  </button>
                                 </li>
                               </ul>
+                              <div class="d-flex justify-content-end">
+                                <button
+                                  class="btn booking-fare-list-show-btn p-0 border-0 pt-sans-font-family fs-16 fw-400 font-color-secondary mt-2"
+                                >
+                                  +10 More Fares
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="sorted-flight-details">
+                              <div class="flight-profile-details">
+                                <img src="assets/images/air_india_icon.svg" />
+                                <div>
+                                  <h6>Air India</h6>
+                                  <p>AI - 2950</p>
+                                </div>
+                              </div>
+                              <div class="time-details">
+                                <h6><b>22:30</b> Mon, 2 Jun, 25</h6>
+                                <p>New Delhi, Terminal D</p>
+                              </div>
+                              <div class="duration-details">
+                                <p>02h 20m</p>
+                                <img
+                                  src="assets/images/duration_view_img.svg"
+                                  alt=""
+                                />
+                                <p>Non stop</p>
+                              </div>
+                              <div class="time-details">
+                                <h6><b>22:30</b> Mon, 2 Jun, 25</h6>
+                                <p>New Delhi, Terminal D</p>
+                              </div>
+                            </div>
+                            <div
+                              class="book-now-fare-type-list-wrapper booking-fare-list-count"
+                            >
+                              <ul>
+                                <li>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
+                                    >
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
+                                    </div>
+                                    <div
+                                      class="d-flex align-items-center flex-shrink-0"
+                                    >
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
+                                    >
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
+                                    </div>
+                                    <div
+                                      class="d-flex align-items-center flex-shrink-0"
+                                    >
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
+                                    >
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
+                                    </div>
+                                    <div
+                                      class="d-flex align-items-center flex-shrink-0"
+                                    >
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="fare-type-section-one">
+                                    <div class="book-now-fare-type">
+                                      <div>
+                                        <h6>Fare Type</h6>
+                                        <p>Standard Economy</p>
+                                      </div>
+                                      <div
+                                        class="d-flex gap-2 align-items-center"
+                                      >
+                                        <img
+                                          src="assets/images/suitcase_icon.svg"
+                                        />
+                                        <img
+                                          src="assets/images/baggage_icon.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="seats-wrapper">
+                                      <p>Seats</p>
+                                      <h6>2</h6>
+                                    </div>
+                                    <div class="refund-wrapper">
+                                      <p>Refund</p>
+                                      <h6>Refundable</h6>
+                                    </div>
+                                    <div class="change-booking-btns-wrapper">
+                                      <button class="btn change-booking-btn">
+                                        Change Booking Class
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button
+                                        class="btn change-flight-details-btn"
+                                      >
+                                        Flight Details
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                      <button class="btn change-fare-rule-btn">
+                                        Fare Rule
+                                        <i
+                                          class="fa fa-angle-down"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="fare-type-section-two">
+                                    <div
+                                      class="filter-fare-wrapper flex-shrink-0"
+                                    >
+                                      <h5>₹12,886</h5>
+                                      <p>Net Fare: ₹ 11,016</p>
+                                    </div>
+                                    <div class="active-fare-type mx-3">
+                                      <img src="assets/images/tick_icon.svg" />
+                                    </div>
+                                    <div
+                                      class="d-flex align-items-center flex-shrink-0"
+                                    >
+                                      <a
+                                        class="btn filter-book-now-btn"
+                                        href="booking-details.html"
+                                      >
+                                        Book Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="d-flex justify-content-end">
+                                <button
+                                  class="btn booking-fare-list-show-btn p-0 border-0 pt-sans-font-family fs-16 fw-400 font-color-secondary mt-2"
+                                >
+                                  +10 More Fares
+                                </button>
+                              </div>
                             </div>
                           </li>
                         </ul>
