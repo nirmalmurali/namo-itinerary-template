@@ -136,7 +136,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
-.booking-details-right-content .nav .nav-item .nav-link {
+.booking-details-right-content .nav .nav-item .nav-link,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -446,12 +448,14 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .booking-details-right-content .nav .nav-item .nav-link,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
-.sorted-flight-details .flight-profile-details h6 {
+.sorted-flight-details .flight-profile-details h6,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
   font-weight: 500 !important;
 }
 .fw-600 {
@@ -498,7 +502,9 @@ footer .quick-links-wrapper li a,
 .sorted-flight-details .time-details h6 b,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5 {
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -541,7 +547,8 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper,
 .sorted-list-wrapper > ul > li,
 .booking-details-right-content .nav .nav-item .nav-link,
-.booking-details-right-content .tab-content .tab-pane.active {
+.booking-details-right-content .tab-content .tab-pane.active,
+.white-bg-with-radius {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -1093,6 +1100,9 @@ footer .footer-bottom-wrapper {
   flex-wrap: wrap;
 }
 /****************** Footer end ****************/
+.form-floating {
+  margin-top: 5px;
+}
 .form-floating .form-control {
   border-radius: 6px;
   height: 32px;
@@ -2325,13 +2335,17 @@ footer .footer-bottom-wrapper {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.063rem;
 }
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item {
   display: flex;
   gap: 0.5rem;
   border-bottom: 1px solid #ebebeb;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.875rem;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul {
   display: flex;
@@ -2347,6 +2361,20 @@ footer .footer-bottom-wrapper {
   gap: 0.5rem;
   justify-content: space-between;
 }
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5 {
+  margin: 0;
+}
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
+  margin: 0;
+}
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
   margin: 0;
+}
+.booking-details-right-content .review-booking-btn {
+  margin-top: 1rem;
+  border-radius: 3.125rem;
+  padding: 0.5rem 0;
+}
+.white-bg-with-radius {
+  border-radius: 5px;
 }

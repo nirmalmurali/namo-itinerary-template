@@ -552,6 +552,7 @@ footer {
 /****************** Footer end ****************/
 
 .form-floating {
+  margin-top: 5px;
   .form-control {
     border-radius: 6px;
     height: 32px;
@@ -2099,12 +2100,16 @@ footer {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1.063rem;
             & .fare-list-item {
               display: flex;
               gap: 0.5rem;
               border-bottom: 1px solid #ebebeb;
-              padding-bottom: 0.5rem;
+              padding-bottom: 0.875rem;
+              &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+              }
               ul {
                 display: flex;
                 flex-direction: column;
@@ -2117,6 +2122,19 @@ footer {
                   display: flex;
                   gap: 0.5rem;
                   justify-content: space-between;
+                  h5 {
+                    margin: 0;
+                    &:extend(.font-color-secondary,
+                    .fs-14,
+                    .fw-400,
+                    .pt-sans-font-family);
+                  }
+                  h6 {
+                    margin: 0;
+                    &:extend(.font-color-secondary,
+                    .fs-14,
+                    .fw-500);
+                  }
                   p {
                     margin: 0;
                     &:extend(.font-color-dorado,
@@ -2132,4 +2150,13 @@ footer {
       }
     }
   }
+  .review-booking-btn {
+    margin-top: 1rem;
+    border-radius: 3.125rem;
+    padding: 0.5rem 0;
+  }
+}
+.white-bg-with-radius {
+  &:extend(.bg-color-white);
+  border-radius: 5px;
 }
