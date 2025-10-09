@@ -450,8 +450,686 @@
                   </h4>
                   <div class="white-bg-with-radius p-3 mb-3">
                     <h6 class="fs-14 fw-700 font-color-secondary">
-                      ADULT 1 12+ years
+                      ADULT 1 <span class="fw-400"> 12+ years</span>
                     </h6>
+                    <div class="row g-3">
+                      <div class="col-lg-2">
+                        <div class="form-floating">
+                          <select
+                            class="form-select"
+                            id="titleSelect"
+                            aria-label="Floating label select example"
+                          >
+                            <option value="1">MR</option>
+                            <option value="2">MRS</option>
+                          </select>
+                          <label for="titleSelect">Title</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyNameInput"
+                            placeholder="Enter GST Company Name"
+                          />
+                          <label for="enterGSTCompanyNameInput"
+                            >First Name</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyContactInput"
+                            placeholder="Enter GST Company Contact No."
+                          />
+                          <label for="enterGSTCompanyContactInput"
+                            >Last Name</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Optional
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="DOBInput"
+                                      placeholder="Date of birth"
+                                    />
+                                    <label for="DOBInput">Date of birth</label>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="nationalityInput"
+                                      placeholder="Enter Nationality"
+                                    />
+                                    <label for="nationalityInput"
+                                      >Nationality</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="passportNumberInput"
+                                      placeholder=" Enter Passport Number"
+                                    />
+                                    <label for="passportNumberInput"
+                                      >Passport Number</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="issuingCountryInput"
+                                      placeholder="Enter Issuing Country "
+                                    />
+                                    <label for="issuingCountryInput"
+                                      >Issuing Country</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportIssuedInput"
+                                      placeholder="Passport Issued"
+                                    />
+                                    <label for="passportIssuedInput"
+                                      >Passport Issued</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportExpiryInput"
+                                      placeholder="Passport Expiry"
+                                    />
+                                    <label for="passportExpiryInput"
+                                      >Passport Expiry</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <select
+                                      class="form-select"
+                                      id="visaTypeSelect"
+                                      aria-label="Floating label select example"
+                                    >
+                                      <option value="1">Visa Type 1</option>
+                                      <option value="2">Visa Type 2</option>
+                                    </select>
+                                    <label for="visaTypeSelect"
+                                      >Visa Type</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseAddFrequentFlyer"
+                              aria-expanded="true"
+                              aria-controls="collapseAddFrequentFlyer"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Add Frequent Flyer Number
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseAddFrequentFlyer"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div
+                                  class="col-lg-4 d-flex align-items-center gap-2"
+                                >
+                                  <p
+                                    class="fw-400 fs-14 pt-sans-font-family mb-0 font-color-secondary"
+                                  >
+                                    SpiceJet
+                                  </p>
+                                  <div class="form-floating flex-grow-1">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="FrequentFlyerNumberInput"
+                                      placeholder="Frequent Flyer Number"
+                                    />
+                                    <label for="FrequentFlyerNumberInput"
+                                      >Frequent Flyer Number</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="fs-14 fw-700 font-color-secondary mt-4">
+                      ADULT 1 <span class="fw-400"> 12+ years</span>
+                    </h6>
+                    <div class="row g-3">
+                      <div class="col-lg-2">
+                        <div class="form-floating">
+                          <select
+                            class="form-select"
+                            id="titleSelect"
+                            aria-label="Floating label select example"
+                          >
+                            <option value="1">MR</option>
+                            <option value="2">MRS</option>
+                          </select>
+                          <label for="titleSelect">Title</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyNameInput"
+                            placeholder="Enter GST Company Name"
+                          />
+                          <label for="enterGSTCompanyNameInput"
+                            >First Name</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyContactInput"
+                            placeholder="Enter GST Company Contact No."
+                          />
+                          <label for="enterGSTCompanyContactInput"
+                            >Last Name</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Optional
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="DOBInput"
+                                      placeholder="Date of birth"
+                                    />
+                                    <label for="DOBInput">Date of birth</label>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="nationalityInput"
+                                      placeholder="Enter Nationality"
+                                    />
+                                    <label for="nationalityInput"
+                                      >Nationality</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="passportNumberInput"
+                                      placeholder=" Enter Passport Number"
+                                    />
+                                    <label for="passportNumberInput"
+                                      >Passport Number</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="issuingCountryInput"
+                                      placeholder="Enter Issuing Country "
+                                    />
+                                    <label for="issuingCountryInput"
+                                      >Issuing Country</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportIssuedInput"
+                                      placeholder="Passport Issued"
+                                    />
+                                    <label for="passportIssuedInput"
+                                      >Passport Issued</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportExpiryInput"
+                                      placeholder="Passport Expiry"
+                                    />
+                                    <label for="passportExpiryInput"
+                                      >Passport Expiry</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <select
+                                      class="form-select"
+                                      id="visaTypeSelect"
+                                      aria-label="Floating label select example"
+                                    >
+                                      <option value="1">Visa Type 1</option>
+                                      <option value="2">Visa Type 2</option>
+                                    </select>
+                                    <label for="visaTypeSelect"
+                                      >Visa Type</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseAddFrequentFlyer"
+                              aria-expanded="true"
+                              aria-controls="collapseAddFrequentFlyer"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Add Frequent Flyer Number
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseAddFrequentFlyer"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div
+                                  class="col-lg-4 d-flex align-items-center gap-2"
+                                >
+                                  <p
+                                    class="fw-400 fs-14 pt-sans-font-family mb-0 font-color-secondary"
+                                  >
+                                    SpiceJet
+                                  </p>
+                                  <div class="form-floating flex-grow-1">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="FrequentFlyerNumberInput"
+                                      placeholder="Frequent Flyer Number"
+                                    />
+                                    <label for="FrequentFlyerNumberInput"
+                                      >Frequent Flyer Number</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="fs-14 fw-700 font-color-secondary mt-4">
+                      CHILD 1 <span class="fw-400"> 12+ years</span>
+                    </h6>
+                    <div class="row g-3">
+                      <div class="col-lg-2">
+                        <div class="form-floating">
+                          <select
+                            class="form-select"
+                            id="titleSelect"
+                            aria-label="Floating label select example"
+                          >
+                            <option value="1">MR</option>
+                            <option value="2">MRS</option>
+                          </select>
+                          <label for="titleSelect">Title</label>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyNameInput"
+                            placeholder="Enter GST Company Name"
+                          />
+                          <label for="enterGSTCompanyNameInput"
+                            >First Name</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="enterGSTCompanyContactInput"
+                            placeholder="Enter GST Company Contact No."
+                          />
+                          <label for="enterGSTCompanyContactInput"
+                            >Last Name</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Optional
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="DOBInput"
+                                      placeholder="Date of birth"
+                                    />
+                                    <label for="DOBInput">Date of birth</label>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="nationalityInput"
+                                      placeholder="Enter Nationality"
+                                    />
+                                    <label for="nationalityInput"
+                                      >Nationality</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="passportNumberInput"
+                                      placeholder=" Enter Passport Number"
+                                    />
+                                    <label for="passportNumberInput"
+                                      >Passport Number</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="issuingCountryInput"
+                                      placeholder="Enter Issuing Country "
+                                    />
+                                    <label for="issuingCountryInput"
+                                      >Issuing Country</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportIssuedInput"
+                                      placeholder="Passport Issued"
+                                    />
+                                    <label for="passportIssuedInput"
+                                      >Passport Issued</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <input
+                                      type="date"
+                                      class="form-control"
+                                      id="passportExpiryInput"
+                                      placeholder="Passport Expiry"
+                                    />
+                                    <label for="passportExpiryInput"
+                                      >Passport Expiry</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-lg-3">
+                                  <div class="form-floating">
+                                    <select
+                                      class="form-select"
+                                      id="visaTypeSelect"
+                                      aria-label="Floating label select example"
+                                    >
+                                      <option value="1">Visa Type 1</option>
+                                      <option value="2">Visa Type 2</option>
+                                    </select>
+                                    <label for="visaTypeSelect"
+                                      >Visa Type</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="optional-accordion-wrapper">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseAddFrequentFlyer"
+                              aria-expanded="true"
+                              aria-controls="collapseAddFrequentFlyer"
+                            >
+                              <img
+                                src="assets/images/optional_uncollapse_icon.svg"
+                                class="inactive"
+                              />
+                              <img
+                                src="assets/images/optional_collapse_icon.svg"
+                                class="active"
+                              />
+                              Add Frequent Flyer Number
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseAddFrequentFlyer"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <div class="row g-3">
+                                <div
+                                  class="col-lg-4 d-flex align-items-center gap-2"
+                                >
+                                  <p
+                                    class="fw-400 fs-14 pt-sans-font-family mb-0 font-color-secondary"
+                                  >
+                                    SpiceJet
+                                  </p>
+                                  <div class="form-floating flex-grow-1">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="FrequentFlyerNumberInput"
+                                      placeholder="Frequent Flyer Number"
+                                    />
+                                    <label for="FrequentFlyerNumberInput"
+                                      >Frequent Flyer Number</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="booking-details-right-content">

@@ -105,6 +105,7 @@ body:has(header.fixed-top) main {
 .fs-14,
 footer .quick-links-wrapper li a,
 .form-floating .form-control,
+.form-floating .form-select,
 .form-floating label,
 .form-control,
 .form-label,
@@ -138,7 +139,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
 .booking-details-right-content .nav .nav-item .nav-link,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6,
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -415,6 +417,7 @@ footer .quick-links-wrapper li a,
 .fw-400,
 footer .quick-links-wrapper li a,
 .form-floating .form-control,
+.form-floating .form-select,
 .form-floating label,
 .form-control,
 .form-label,
@@ -449,7 +452,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .booking-details-right-content .nav .nav-item .nav-link,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -504,7 +508,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6,
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1103,7 +1108,8 @@ footer .footer-bottom-wrapper {
 .form-floating {
   margin-top: 5px;
 }
-.form-floating .form-control {
+.form-floating .form-control,
+.form-floating .form-select {
   border-radius: 6px;
   height: 32px;
   padding: 0 1.188rem;
@@ -1112,18 +1118,26 @@ footer .footer-bottom-wrapper {
   outline: none !important;
   font-family: "PT Sans", sans-serif !important;
 }
-.form-floating .form-control:focus {
+.form-floating .form-control:focus,
+.form-floating .form-select:focus {
   border: 1px solid #f28b24;
 }
 .form-floating .form-control:focus,
-.form-floating .form-control:not(:placeholder-shown) {
+.form-floating .form-select:focus,
+.form-floating .form-control:not(:placeholder-shown),
+.form-floating .form-select:not(:placeholder-shown) {
   padding: 0 1.188rem;
 }
 .form-floating .form-control:focus ~ label,
-.form-floating .form-control:not(:placeholder-shown) ~ label {
+.form-floating .form-select:focus ~ label,
+.form-floating .form-control:not(:placeholder-shown) ~ label,
+.form-floating .form-select:not(:placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-0.7rem) translateX(1.299rem);
   padding: 0;
   background-color: #ffffff;
+}
+.form-floating .form-select {
+  background-position: right 0.3rem center;
 }
 .form-floating label {
   padding: 0;
@@ -2377,4 +2391,37 @@ footer .footer-bottom-wrapper {
 }
 .white-bg-with-radius {
   border-radius: 5px;
+}
+.optional-accordion-wrapper {
+  margin-top: 1.125rem;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 1.563rem;
+}
+.optional-accordion-wrapper .accordion .accordion-item {
+  border: none;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button {
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button::after {
+  display: none;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button img.active {
+  display: none;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button.collapsed img.inactive {
+  display: none;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button.collapsed img.active {
+  display: block;
+}
+.optional-accordion-wrapper .accordion .accordion-item .accordion-body {
+  padding: 1.125rem 0 0;
 }
