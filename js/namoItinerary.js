@@ -250,4 +250,35 @@ $(document).ready(function () {
   $(document).on("click", ".sort-view-btn", function () {
     $(".sort-list-wrapper, .sort-view-btn").toggleClass("active");
   });
+  // Open sidebar and show correct tab
+  $(".open-addons").on("click", function () {
+    const tabId = $(this).data("tab");
+
+    // show sidebar
+    $(".draggable-side-bar-popup").addClass("active");
+
+    // reset tabs
+    $("#addonsTab .nav-link").removeClass("active");
+    $("#addonsTabContent .tab-pane").removeClass("show active");
+
+    // activate target tab
+    $("#" + tabId + "-tab").addClass("active");
+    $("#" + tabId).addClass("show active");
+  });
+
+  // Close sidebar
+  $(".draggable-side-bar-popup .close-btn").on("click", function () {
+    $(".draggable-side-bar-popup").removeClass("active");
+  });
+
+  // Optional: close sidebar on clicking outside (overlay)
+  $(document).on("click", function (e) {
+    const popup = $(".draggable-side-bar-popup");
+    if (
+      popup.hasClass("active") &&
+      !$(e.target).closest(".draggable-side-bar-popup, .open-addons").length
+    ) {
+      popup.removeClass("active");
+    }
+  });
 });

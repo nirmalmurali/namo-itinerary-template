@@ -136,9 +136,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
-.booking-details-right-content .nav .nav-item .nav-link,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6,
+.primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button {
   font-size: 0.875rem !important;
 }
@@ -449,9 +449,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
-.booking-details-right-content .nav .nav-item .nav-link,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button {
   font-weight: 400 !important;
 }
@@ -491,7 +491,7 @@ footer .quick-links-wrapper li a,
 .page-tab-header-wrapper ul li button.active::after,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
 .book-now-fare-type-list-wrapper ul li .active-fare-type.active,
-.booking-details-right-content .nav .nav-item .nav-link.active {
+.primary-tab-nav-wrapper .nav .nav-item .nav-link.active {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -542,7 +542,7 @@ footer .quick-links-wrapper li a,
 .number-btn-group-wrapper .btn.active,
 .number-btn-group-wrapper .btn:hover,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
-.booking-details-right-content .nav .nav-item .nav-link.active {
+.primary-tab-nav-wrapper .nav .nav-item .nav-link.active {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -550,8 +550,8 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper,
 .sorted-list-wrapper > ul > li,
-.booking-details-right-content .nav .nav-item .nav-link,
 .booking-details-right-content .tab-content .tab-pane.active,
+.primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .white-bg-with-radius {
   background-color: #ffffff !important;
 }
@@ -583,7 +583,7 @@ footer .quick-links-wrapper li a,
 }
 .font-color-ship-grey,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
-.booking-details-right-content .nav .nav-item .nav-link {
+.primary-tab-nav-wrapper .nav .nav-item .nav-link {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -2337,13 +2337,6 @@ footer .footer-bottom-wrapper {
   max-width: 267px;
   width: 100%;
 }
-.booking-details-right-content .nav .nav-item .nav-link {
-  border-radius: 0;
-  border: 1px solid #d3d3d3;
-}
-.booking-details-right-content .nav .nav-item .nav-link.active {
-  border: 1px solid #f28b24;
-}
 .booking-details-right-content .tab-content .tab-pane.active {
   border: 1px solid #f4efef;
   padding: 1.125rem;
@@ -2393,6 +2386,13 @@ footer .footer-bottom-wrapper {
   margin-top: 1rem;
   border-radius: 3.125rem;
   padding: 0.5rem 0;
+}
+.primary-tab-nav-wrapper .nav .nav-item .nav-link {
+  border-radius: 0;
+  border: 1px solid #d3d3d3;
+}
+.primary-tab-nav-wrapper .nav .nav-item .nav-link.active {
+  border: 1px solid #f28b24;
 }
 .white-bg-with-radius {
   border-radius: 5px;
@@ -2449,4 +2449,18 @@ footer .footer-bottom-wrapper {
   align-items: center;
   gap: 0.75rem;
   height: 100%;
+}
+.draggable-side-bar-popup {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 480px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.draggable-side-bar-popup.active {
+  right: 0;
 }

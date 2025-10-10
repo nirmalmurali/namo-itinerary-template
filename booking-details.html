@@ -1139,7 +1139,10 @@
                   <div class="white-bg-with-radius p-3 mb-3">
                     <ul class="addons-optional-list-wrapper">
                       <li>
-                        <button class="btn text-center">
+                        <button
+                          class="btn text-center open-addons"
+                          data-tab="baggage"
+                        >
                           <img
                             src="assets/images/bage_icon.svg"
                             alt=""
@@ -1157,7 +1160,10 @@
                         </button>
                       </li>
                       <li>
-                        <button class="btn text-center">
+                        <button
+                          class="btn text-center open-addons"
+                          data-tab="meals"
+                        >
                           <img
                             src="assets/images/plate_icon.svg"
                             alt=""
@@ -1175,7 +1181,10 @@
                         </button>
                       </li>
                       <li>
-                        <button class="btn text-center">
+                        <button
+                          class="btn text-center open-addons"
+                          data-tab="seat"
+                        >
                           <img
                             src="assets/images/seat_icon.svg"
                             alt=""
@@ -1195,7 +1204,9 @@
                     </ul>
                   </div>
                 </div>
-                <div class="booking-details-right-content">
+                <div
+                  class="booking-details-right-content primary-tab-nav-wrapper"
+                >
                   <h3
                     class="fs-18 fw-700 font-color-secondary mb-2 pt-sans-font-family"
                   >
@@ -1354,6 +1365,165 @@
             Holidays content...
           </div>
         </div>
+
+        <!-- add on popup start -->
+        <div class="draggable-side-bar-popup">
+          <div
+            class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+          >
+            <h4
+              class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+            >
+              Addons
+            </h4>
+            <button class="btn close-btn p-0">
+              <img src="assets/images/close_round_icon.svg" alt="" />
+            </button>
+          </div>
+          <div class="side-bar-popup-body p-3">
+            <div class="primary-tab-nav-wrapper">
+              <ul
+                class="nav nav-pills mb-3 justify-content-center"
+                id="addonsTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="baggage-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#baggage"
+                    type="button"
+                    role="tab"
+                  >
+                    Baggage
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="meals-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#meals"
+                    type="button"
+                    role="tab"
+                  >
+                    Meals
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="seat-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#seat"
+                    type="button"
+                    role="tab"
+                  >
+                    Seat
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="addonsTabContent">
+              <!-- Baggage -->
+              <div
+                class="tab-pane fade show active"
+                id="baggage"
+                role="tabpanel"
+              >
+                <div class="addons-header border-bottom pb-2 mb-3">
+                  <h6 class="fw-700 text-dark mb-1">DEPART</h6>
+                  <p class="text-secondary mb-0 fs-14">Dubai → Kozhikode</p>
+                </div>
+
+                <!-- Passenger 1 -->
+                <!-- <div class="addons-passenger mb-3">
+                  <h6 class="fw-bold text-dark">
+                    Mr Jhon Due
+                    <span class="text-secondary fs-14">(Adults)</span>
+                  </h6>
+                  <div class="row g-2">
+                    <div class="col-4">
+                      <div
+                        class="card text-center p-2 border-primary border-2 rounded-3"
+                      >
+                        <div class="fw-600">up to 5KG</div>
+                        <div class="fw-bold text-success">₹6,661</div>
+                        <button class="btn btn-sm btn-success mt-2 w-100">
+                          Selected
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card text-center p-2 border rounded-3">
+                        <div class="fw-600">up to 10KG</div>
+                        <div class="fw-bold text-dark">₹13,323</div>
+                        <button
+                          class="btn btn-sm btn-outline-primary mt-2 w-100"
+                        >
+                          ADD
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="card text-center p-2 border rounded-3">
+                        <div class="fw-600">up to 15KG</div>
+                        <div class="fw-bold text-dark">₹18,323</div>
+                        <button
+                          class="btn btn-sm btn-outline-primary mt-2 w-100"
+                        >
+                          ADD
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- Passenger 2 -->
+                <!-- <div class="addons-passenger mb-3">
+                  <h6 class="fw-bold text-dark">
+                    Mr Jake Doe
+                    <span class="text-secondary fs-14">(Child)</span>
+                  </h6>
+                  <button class="btn btn-outline-success btn-sm">+ ADD</button>
+                </div> -->
+
+                <!-- Footer -->
+                <!-- <div
+                  class="addons-footer d-flex justify-content-between align-items-center border-top pt-3 mt-3"
+                >
+                  <div>
+                    <p class="mb-0 text-secondary fs-14">Baggage amount</p>
+                    <h6 class="mb-0 fw-bold text-dark">₹6,661</h6>
+                  </div>
+                  <div class="text-end">
+                    <h5 class="fw-bold mb-0 text-dark">₹12,886</h5>
+                    <p class="mb-0 text-secondary fs-12">Net Fare ₹11,016</p>
+                  </div>
+                  <button class="btn btn-warning fw-bold">Done</button>
+                </div> -->
+              </div>
+
+              <!-- Meals -->
+              <div class="tab-pane fade" id="meals" role="tabpanel">
+                <p class="text-center mt-3 text-secondary">
+                  Meals options coming soon...
+                </p>
+              </div>
+
+              <!-- Seat -->
+              <div class="tab-pane fade" id="seat" role="tabpanel">
+                <p class="text-center mt-3 text-secondary">
+                  Seat selection coming soon...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- add on popup end -->
       </div>
     </main>
     <footer>
