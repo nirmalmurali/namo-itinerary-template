@@ -1,4 +1,3 @@
-@balticsea #272222;
 html {
   font-size: 16px;
   height: 100%;
@@ -658,6 +657,35 @@ footer .quick-links-wrapper li a,
 .bg-color-catskill-white {
   background-color: #f5f5f5 !important;
 }
+.font-color-gravel-grey,
+.form-check input[type="radio"]:checked + label,
+.form-check input[type="radio"]:not(:checked) + label,
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
+.flight-trip-details-wrapper .from-to-details-wrapper h6,
+.flight-trip-details-wrapper .from-to-details-wrapper p,
+.travel-date-details > ul > li .dropdown .dropdown-toggle,
+.travel-date-details > ul > li p,
+.selected-airline-list-item .btn,
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
+.page-tab-header-wrapper ul li button,
+.global-dropdown .dropdown-toggle,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
+.sort-list-wrapper li .btn,
+.sort-view-btn,
+.sorted-flight-details .flight-profile-details p,
+.sorted-flight-details .time-details h6,
+.sorted-flight-details .time-details p,
+.sorted-flight-details .duration-details p,
+.book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
+.book-now-fare-type-list-wrapper ul li .seats-wrapper p,
+.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
+  color: #4a4a4a !important;
+}
+.bg-color-gravel-grey {
+  background-color: #4a4a4a !important;
+}
 .font-color-baltic-sea {
   color: #272222 !important;
 }
@@ -710,34 +738,11 @@ footer .quick-links-wrapper li a,
 .bg-color-dorado {
   background-color: #605e5e !important;
 }
-.font-color-gravel-grey,
-.form-check input[type="radio"]:checked + label,
-.form-check input[type="radio"]:not(:checked) + label,
-.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
-.flight-trip-details-wrapper .from-to-details-wrapper h6,
-.flight-trip-details-wrapper .from-to-details-wrapper p,
-.travel-date-details > ul > li .dropdown .dropdown-toggle,
-.travel-date-details > ul > li p,
-.selected-airline-list-item .btn,
-.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
-.page-tab-header-wrapper ul li button,
-.global-dropdown .dropdown-toggle,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options ul li span,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
-.sort-list-wrapper li .btn,
-.sort-view-btn,
-.sorted-flight-details .flight-profile-details p,
-.sorted-flight-details .time-details h6,
-.sorted-flight-details .time-details p,
-.sorted-flight-details .duration-details p,
-.book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
-.book-now-fare-type-list-wrapper ul li .seats-wrapper p,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
-  color: #4a4a4a !important;
+.font-color-Amour {
+  color: #eeeeee !important;
 }
-.bg-color-gravel-grey {
-  background-color: #4a4a4a !important;
+.bg-color-Amour {
+  background-color: #eeeeee !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -2424,4 +2429,24 @@ footer .footer-bottom-wrapper {
 }
 .optional-accordion-wrapper .accordion .accordion-item .accordion-body {
   padding: 1.125rem 0 0;
+}
+.addons-optional-list-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.addons-optional-list-wrapper li {
+  padding: 0;
+}
+.addons-optional-list-wrapper li .btn {
+  border: 1px solid #eeeeee !important;
+  padding: 0.563rem 0.938rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  height: 100%;
 }
