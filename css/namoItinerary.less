@@ -31,7 +31,9 @@
 @lavenderMist: #eaeaea;
 @dorado: #605e5e;
 @Amour: #eeeeee;
-
+@greenWhite: #ebebeb;
+@niceBlue: #186caa;
+@darkMint: #3cb878;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -42,7 +44,8 @@
   heavy-metal @heavyMetal, ecru-white @ecruWhite, catskill-white @catskillWhite,
   gravel-grey @gravelGrey, baltic-sea @balticSea, pale-orange @paleOrange,
   old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
-  merino @merino, lavender-mist @lavenderMist, dorado @dorado, Amour @Amour;
+  merino @merino, lavender-mist @lavenderMist, dorado @dorado, Amour @Amour,
+  green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint;
 
 html {
   font-size: 16px;
@@ -2094,7 +2097,7 @@ footer {
             & .fare-list-item {
               display: flex;
               gap: 0.5rem;
-              border-bottom: 1px solid #ebebeb;
+              border-bottom: 1px solid @greenWhite;
               padding-bottom: 0.875rem;
               &:last-child {
                 border-bottom: none;
@@ -2247,5 +2250,110 @@ footer {
   z-index: 9999;
   &.active {
     right: 0;
+  }
+  .side-bar-popup-header {
+    border-bottom: 1px solid #eef2f6;
+  }
+  .side-bar-popup-body {
+    .baggage-wrapper {
+      .accordion {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .accordion-item {
+          border: 1px solid @greenWhite;
+          border-radius: 4px;
+          .accordion-header {
+            padding: 12px 14px;
+            border-bottom: 1px solid @greenWhite;
+            .accordion-button {
+              border-radius: 0;
+              padding: 0;
+              border: none;
+              box-shadow: none;
+              background: none;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 0.375rem;
+              p {
+                margin: 0;
+                &:extend(.font-color-ship-grey,
+                .fs-12,
+                .fw-400,
+                .pt-sans-font-family);
+              }
+              h5 {
+                margin: 0;
+                &:extend(.font-color-secondary,
+                .fs-18,
+                .fw-700,
+                .pt-sans-font-family);
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+              }
+              &::after {
+                content: "";
+                background-image: url("../assets/images/accordion_arrow.svg");
+                display: block;
+                width: 20px;
+                height: 20px;
+                transform: rotate(0deg);
+              }
+              &.collapsed {
+                &::after {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+          .accordion-collapse {
+            .accordion-body {
+              padding: 13px;
+              .addons-passenger-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                border-top: 1px solid @greenWhite;
+                margin-top: 10px;
+                li {
+                  padding: 0;
+                  .addons-passenger-content-wrapper {
+                    .addons-passenger-content-header {
+                      h6 {
+                        margin: 0;
+                        &:extend(.font-color-nice-blue,
+                        .fs-14,
+                        .fw-700,
+                        .pt-sans-font-family);
+                      }
+                      .btn {
+                        &:extend(.font-color-white,
+                        .fs-14,
+                        .fw-400,
+                        .pt-sans-font-family,
+                        .bg-color-dark-mint);
+                        padding: 4px 6px;
+                        border: none;
+                        background: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.2rem;
+                        border-radius: 4px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

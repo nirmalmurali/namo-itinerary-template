@@ -205,7 +205,7 @@ $(document).ready(function () {
       }
     });
   });
-  $(".flight-rate-list-wrapper").each(function () {
+  $(".horizontal-scrollbar-wrapper").each(function () {
     const $wrapper = $(this);
     const $list = $wrapper.find(".scroll-list");
     const $leftBtn = $wrapper.find(".left.btn"); // fixed selector
@@ -279,6 +279,30 @@ $(document).ready(function () {
       !$(e.target).closest(".addons-side-bar-popup, .open-addons").length
     ) {
       popup.removeClass("active");
+    }
+  });
+
+  // Prevent inside clicks from bubbling (so it won't close)
+  $(document).on(
+    "mousedown touchstart",
+    ".draggable-side-bar-popup",
+    function (e) {
+      e.stopPropagation();
+    }
+  );
+
+  // Close draggable-side-bar-popup when clicking outside
+  $(document).on("mousedown touchstart", function (e) {
+    const $popup = $(".draggable-side-bar-popup");
+    if (!$popup.hasClass("active")) return;
+
+    if (
+      $(e.target).closest(".draggable-side-bar-popup, .open-addons").length ===
+      0
+    ) {
+      $popup.removeClass("active");
+      $(".side-bar-overlay").removeClass("active"); // if overlay exists
+      $("body").css("overflow", "");
     }
   });
 });
