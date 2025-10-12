@@ -255,7 +255,7 @@ $(document).ready(function () {
     const tabId = $(this).data("tab");
 
     // show sidebar
-    $(".draggable-side-bar-popup").addClass("active");
+    $(".addons-side-bar-popup").addClass("active");
 
     // reset tabs
     $("#addonsTab .nav-link").removeClass("active");
@@ -267,16 +267,16 @@ $(document).ready(function () {
   });
 
   // Close sidebar
-  $(".draggable-side-bar-popup .close-btn").on("click", function () {
-    $(".draggable-side-bar-popup").removeClass("active");
+  $(".addons-side-bar-popup .close-btn").on("click", function () {
+    $(".addons-side-bar-popup").removeClass("active");
   });
 
   // Optional: close sidebar on clicking outside (overlay)
   $(document).on("click", function (e) {
-    const popup = $(".draggable-side-bar-popup");
+    const popup = $(".addons-side-bar-popup");
     if (
       popup.hasClass("active") &&
-      !$(e.target).closest(".draggable-side-bar-popup, .open-addons").length
+      !$(e.target).closest(".addons-side-bar-popup, .open-addons").length
     ) {
       popup.removeClass("active");
     }
