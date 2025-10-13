@@ -2325,6 +2325,8 @@ footer {
                   padding: 0;
                   .addons-passenger-content-wrapper {
                     .addons-passenger-content-header {
+                      padding: 10px 0;
+                      border-bottom: 1px solid @greenWhite;
                       h6 {
                         margin: 0;
                         &:extend(.font-color-nice-blue,
@@ -2347,6 +2349,81 @@ footer {
                         border-radius: 4px;
                       }
                     }
+                    .addons-passenger-content-body {
+                      padding: 10px 0;
+                      position: relative;
+                      .addons-items-wrapper {
+                        display: flex;
+                        width: 100%;
+                        gap: 5px;
+                        & > button {
+                          color: #a9a9a9;
+                          border: none;
+                        }
+                        .scroll-list {
+                          gap: 0.625rem;
+                          li {
+                            padding: 0;
+                            flex-shrink: 0;
+                            max-width: 160px;
+                            width: 100%;
+                            .btn {
+                              border: 1px solid @quillGrey;
+                              padding: 10px 20px;
+                              border-radius: 5px;
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              gap: 5px;
+                              height: 100%;
+                              width: 100%;
+                              img {
+                                margin: auto;
+                                &.item-active-tick {
+                                  display: none;
+                                }
+                              }
+                              p {
+                                margin: 0;
+                                &:extend(.font-color-fuscous-grey,
+                                .fs-13,
+                                .fw-400,
+                                .pt-sans-font-family);
+                                flex-grow: 1;
+                              }
+                              h6 {
+                                margin: 0;
+                                &:extend(.font-color-secondary,
+                                .fs-16,
+                                .fw-400,
+                                .pt-sans-font-family);
+                              }
+                              span {
+                                margin: 0;
+                                &:extend(.font-color-white,
+                                .bg-color-primary,
+                                .fs-12,
+                                .fw-700,
+                                .pt-sans-font-family);
+                                padding: 3px 5px;
+                                border-radius: 4px;
+                              }
+                              &.active {
+                                border-color: @darkMint;
+                                span {
+                                  display: none;
+                                }
+                                img {
+                                  &.item-active-tick {
+                                    display: block;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -2356,4 +2433,14 @@ footer {
       }
     }
   }
+}
+.scroll-list {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  // overflow-x: auto; /* was hidden */
+  scroll-behavior: smooth;
 }
