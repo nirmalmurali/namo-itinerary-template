@@ -144,7 +144,9 @@ footer .quick-links-wrapper li a,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header h6,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .btn {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
+.draggable-side-bar-popup .side-bar-popup-footer p {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -161,7 +163,8 @@ footer .quick-links-wrapper li a,
 .fs-18,
 .sorted-flight-details .time-details h6 b,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5 {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
+.draggable-side-bar-popup .side-bar-popup-footer h5 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -461,9 +464,11 @@ footer .quick-links-wrapper li a,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .btn,
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6 {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
+.draggable-side-bar-popup .side-bar-popup-footer p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -485,7 +490,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header h6,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
+.draggable-side-bar-popup .side-bar-popup-footer h5 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -525,7 +531,8 @@ footer .quick-links-wrapper li a,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6 {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
+.draggable-side-bar-popup .side-bar-popup-footer h5 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -560,7 +567,7 @@ footer .quick-links-wrapper li a,
 .number-btn-group-wrapper .btn:hover,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link.active,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .btn,
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span {
   color: #ffffff !important;
 }
@@ -603,7 +610,8 @@ footer .quick-links-wrapper li a,
 .font-color-ship-grey,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -782,8 +790,15 @@ footer .quick-links-wrapper li a,
   color: #3cb878 !important;
 }
 .bg-color-dark-mint,
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .btn {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item {
   background-color: #3cb878 !important;
+}
+.font-color-dark-grey,
+.draggable-side-bar-popup .side-bar-popup-footer p {
+  color: #333333 !important;
+}
+.bg-color-dark-grey {
+  background-color: #333333 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -2501,12 +2516,26 @@ footer .footer-bottom-wrapper {
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
 }
 .draggable-side-bar-popup.active {
   right: 0;
 }
 .draggable-side-bar-popup .side-bar-popup-header {
   border-bottom: 1px solid #eef2f6;
+}
+.draggable-side-bar-popup .side-bar-popup-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.draggable-side-bar-popup .side-bar-popup-body .tab-content {
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion {
   border: none;
@@ -2576,7 +2605,7 @@ footer .footer-bottom-wrapper {
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header h6 {
   margin: 0;
 }
-.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .btn {
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item {
   padding: 4px 6px;
   border: none;
   background: none;
@@ -2585,9 +2614,44 @@ footer .footer-bottom-wrapper {
   gap: 0.2rem;
   border-radius: 4px;
 }
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header.active .add-addons-item {
+  display: none;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header.active .addon-selected-items {
+  display: block;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items {
+  display: none;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p {
+  margin: 0;
+  line-height: 1;
+}
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body {
   padding: 10px 0;
   position: relative;
+  display: none;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body.active {
+  display: block;
+}
+.draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 0;
 }
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper {
   display: flex;
@@ -2644,6 +2708,33 @@ footer .footer-bottom-wrapper {
 }
 .draggable-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn.active img.item-active-tick {
   display: block;
+}
+.draggable-side-bar-popup .side-bar-popup-footer {
+  border-top: 1px solid #eef2f6;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.draggable-side-bar-popup .side-bar-popup-footer h5 {
+  margin: 0;
+}
+.draggable-side-bar-popup .side-bar-popup-footer p {
+  margin: 0;
+}
+.draggable-side-bar-popup .side-bar-popup-footer .addons-total-cost {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.draggable-side-bar-popup .side-bar-popup-footer .addons-total-cost .btn {
+  height: 36px;
+  border-radius: 50px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .scroll-list {
   flex-grow: 1;

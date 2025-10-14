@@ -34,6 +34,7 @@
 @greenWhite: #ebebeb;
 @niceBlue: #186caa;
 @darkMint: #3cb878;
+@darkGrey: #333333;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -45,7 +46,8 @@
   gravel-grey @gravelGrey, baltic-sea @balticSea, pale-orange @paleOrange,
   old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
   merino @merino, lavender-mist @lavenderMist, dorado @dorado, Amour @Amour,
-  green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint;
+  green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
+  dark-grey @darkGrey;
 
 html {
   font-size: 16px;
@@ -2248,6 +2250,8 @@ footer {
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
   &.active {
     right: 0;
   }
@@ -2255,6 +2259,17 @@ footer {
     border-bottom: 1px solid #eef2f6;
   }
   .side-bar-popup-body {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    .tab-content {
+      flex-grow: 1;
+      overflow: hidden;
+      overflow-y: auto;
+    }
     .baggage-wrapper {
       .accordion {
         border: none;
@@ -2334,7 +2349,7 @@ footer {
                         .fw-700,
                         .pt-sans-font-family);
                       }
-                      .btn {
+                      .add-addons-item {
                         &:extend(.font-color-white,
                         .fs-14,
                         .fw-400,
@@ -2348,10 +2363,51 @@ footer {
                         gap: 0.2rem;
                         border-radius: 4px;
                       }
+                      &.active {
+                        .add-addons-item {
+                          display: none;
+                        }
+                        .addon-selected-items {
+                          display: block;
+                        }
+                      }
+                      .addon-selected-items {
+                        display: none;
+                        ul {
+                          list-style: none;
+                          margin: 0;
+                          padding: 0;
+                          display: flex;
+                          gap: 5px;
+                          li {
+                            padding: 0;
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            p {
+                              &:extend(.font-color-ship-grey,
+                              .fs-14,
+                              .fw-400,
+                              .pt-sans-font-family);
+                              margin: 0;
+                              line-height: 1;
+                            }
+                          }
+                        }
+                      }
                     }
                     .addons-passenger-content-body {
                       padding: 10px 0;
                       position: relative;
+                      display: none;
+                      &.active {
+                        display: block;
+                      }
+                      .addons-close-btn {
+                        position: absolute;
+                        top: 5px;
+                        right: 0;
+                      }
                       .addons-items-wrapper {
                         display: flex;
                         width: 100%;
@@ -2430,6 +2486,41 @@ footer {
             }
           }
         }
+      }
+    }
+  }
+  .side-bar-popup-footer {
+    border-top: 1px solid #eef2f6;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    h5 {
+      margin: 0;
+      &:extend(.font-color-secondary,
+      .fs-18,
+      .fw-700,
+      .pt-sans-font-family);
+    }
+    p {
+      margin: 0;
+      &:extend(.font-color-dark-grey,
+      .fs-14,
+      .fw-400,
+      .pt-sans-font-family);
+    }
+    .addons-total-cost {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .btn {
+        height: 36px;
+        border-radius: 50px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

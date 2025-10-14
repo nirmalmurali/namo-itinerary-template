@@ -305,7 +305,7 @@ $(document).ready(function () {
       $("body").css("overflow", "");
     }
   });
-  // when we click the addons-items-wrapper scroll-list li btn the add class active toggle and remove active from other btns when we click again then remove the active class
+
   $(document).on(
     "click",
     ".addons-items-wrapper .scroll-list li button",
@@ -318,4 +318,19 @@ $(document).ready(function () {
       }
     }
   );
+
+  $(document).on("click", ".add-addons-item", function () {
+    $(this).parents(".addons-passenger-content-header").addClass("active");
+    $(this)
+      .parents(".addons-passenger-content-header")
+      .siblings(".addons-passenger-content-body")
+      .addClass("active");
+  });
+  $(document).on("click", ".addons-close-btn", function () {
+    $(this).parents(".addons-passenger-content-body").removeClass("active");
+    $(this)
+      .parents(".addons-passenger-content-body")
+      .siblings(".addons-passenger-content-header")
+      .removeClass("active");
+  });
 });
