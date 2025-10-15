@@ -205,42 +205,42 @@ $(document).ready(function () {
       }
     });
   });
-  $(".horizontal-scrollbar-wrapper").each(function () {
-    const $wrapper = $(this);
-    const $list = $wrapper.find(".scroll-list");
-    const $leftBtn = $wrapper.find(".left.btn"); // fixed selector
-    const $rightBtn = $wrapper.find(".right.btn"); // fixed selector
+  // $(".horizontal-scrollbar-wrapper").each(function () {
+  //   const $wrapper = $(this);
+  //   const $list = $wrapper.find(".scroll-list");
+  //   const $leftBtn = $wrapper.find(".left.btn"); // fixed selector
+  //   const $rightBtn = $wrapper.find(".right.btn"); // fixed selector
 
-    // Scroll by ~3 cards per click (adjust as you like)
-    const step =
-      Math.ceil($list.find("li").first().outerWidth(true) * 3) || 200;
+  //   // Scroll by ~3 cards per click (adjust as you like)
+  //   const step =
+  //     Math.ceil($list.find("li").first().outerWidth(true) * 3) || 200;
 
-    function updateFlightRateButtons() {
-      const el = $list[0];
-      const max = el.scrollWidth - el.clientWidth;
-      const x = el.scrollLeft;
+  //   function updateFlightRateButtons() {
+  //     const el = $list[0];
+  //     const max = el.scrollWidth - el.clientWidth;
+  //     const x = el.scrollLeft;
 
-      $leftBtn.prop("disabled", x <= 0);
-      $rightBtn.prop("disabled", x >= max - 1);
-    }
+  //     $leftBtn.prop("disabled", x <= 0);
+  //     $rightBtn.prop("disabled", x >= max - 1);
+  //   }
 
-    $rightBtn.on("click", function () {
-      $list
-        .stop()
-        .animate({ scrollLeft: "+=" + step }, 300, updateFlightRateButtons); // fixed callback name
-    });
+  //   $rightBtn.on("click", function () {
+  //     $list
+  //       .stop()
+  //       .animate({ scrollLeft: "+=" + step }, 300, updateFlightRateButtons); // fixed callback name
+  //   });
 
-    $leftBtn.on("click", function () {
-      $list
-        .stop()
-        .animate({ scrollLeft: "-=" + step }, 300, updateFlightRateButtons); // fixed callback name
-    });
+  //   $leftBtn.on("click", function () {
+  //     $list
+  //       .stop()
+  //       .animate({ scrollLeft: "-=" + step }, 300, updateFlightRateButtons); // fixed callback name
+  //   });
 
-    $list.on("scroll", updateFlightRateButtons);
+  //   $list.on("scroll", updateFlightRateButtons);
 
-    // Initial state
-    updateFlightRateButtons();
-  });
+  //   // Initial state
+  //   updateFlightRateButtons();
+  // });
 
   // Add active class to sort-list-wrapper buttons
   $(document).on("click", ".sort-list-wrapper .btn", function () {
@@ -308,14 +308,23 @@ $(document).ready(function () {
 
   $(document).on(
     "click",
-    ".addons-items-wrapper .scroll-list li button",
+    ".baggage-items-wrapper .scroll-list li button",
     function () {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
       } else {
-        $(".addons-items-wrapper .scroll-list li button").removeClass("active");
+        $(".baggage-items-wrapper .scroll-list li button").removeClass(
+          "active"
+        );
         $(this).addClass("active");
       }
+    }
+  );
+  $(document).on(
+    "click",
+    ".meals-items-wrapper .scroll-list li button",
+    function () {
+      $(this).toggleClass("active");
     }
   );
 
@@ -325,6 +334,14 @@ $(document).ready(function () {
       .parents(".addons-passenger-content-header")
       .siblings(".addons-passenger-content-body")
       .addClass("active");
+    // Re-init scrollbar for newly visible section
+    $(this)
+      .parents(".addons-passenger-content-header")
+      .siblings(".addons-passenger-content-body")
+      .find(".horizontal-scrollbar-wrapper")
+      .each(function () {
+        initHorizontalScrollbar($(this));
+      });
   });
   $(document).on("click", ".addons-close-btn", function () {
     $(this).parents(".addons-passenger-content-body").removeClass("active");
@@ -332,5 +349,36 @@ $(document).ready(function () {
       .parents(".addons-passenger-content-body")
       .siblings(".addons-passenger-content-header")
       .removeClass("active");
+  });
+
+  function initHorizontalScrollbar($wrapper) {
+    const $list = $wrapper.find(".scroll-list");
+    const $left = $wrapper.find(".left");
+    const $right = $wrapper.find(".right");
+
+    function updateBtns() {
+      const scrollLeft = $list.scrollLeft();
+      const maxScroll = $list[0].scrollWidth - $list.outerWidth();
+      $left.prop("disabled", scrollLeft <= 0);
+      $right.prop("disabled", scrollLeft >= maxScroll - 1);
+    }
+
+    $left.off("click.hscroll").on("click.hscroll", function () {
+      $list.animate({ scrollLeft: $list.scrollLeft() - 200 }, 200, updateBtns);
+    });
+
+    $right.off("click.hscroll").on("click.hscroll", function () {
+      $list.animate({ scrollLeft: $list.scrollLeft() + 200 }, 200, updateBtns);
+    });
+
+    $list.off("scroll.hscroll").on("scroll.hscroll", updateBtns);
+
+    // Initial state
+    updateBtns();
+  }
+
+  // Initialize on page load for all
+  $(".horizontal-scrollbar-wrapper").each(function () {
+    initHorizontalScrollbar($(this));
   });
 });
