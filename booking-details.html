@@ -1365,9 +1365,72 @@
             Holidays content...
           </div>
         </div>
-
+        <!-- fare rules popup start -->
+        <div class="draggable-side-bar-popup fare-rules-side-bar-popup active">
+          <div
+            class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+          >
+            <h4
+              class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+            >
+              Fare Rules
+            </h4>
+            <button class="btn close-btn p-0 border-0">
+              <img src="assets/images/close_round_icon.svg" alt="" />
+            </button>
+          </div>
+          <div class="side-bar-popup-body p-3">
+            <div class="fare-rules-wrapper">
+              <div class="fare-flight-details table-responsive">
+                <table class="table table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th>DXB &gt; COK</th>
+                      <th>ADULT</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-fee-header">
+                      <td colspan="2">Change Fee</td>
+                    </tr>
+                    <tr>
+                      <td>Reissue Charge</td>
+                      <td>Changeable</td>
+                    </tr>
+                    <tr>
+                      <td>After Departure</td>
+                      <td>Non Refundable</td>
+                    </tr>
+                    <tr class="table-fee-header">
+                      <td colspan="2">Cancellation Fee</td>
+                    </tr>
+                    <tr>
+                      <td>0 Days - 1 Days To Departure</td>
+                      <td>AED 218</td>
+                    </tr>
+                    <tr>
+                      <td>2 Days - 364 Days T Departure</td>
+                      <td>AED 218</td>
+                    </tr>
+                    <tr class="table-fee-header">
+                      <td colspan="2">ATO Service Fee</td>
+                    </tr>
+                    <tr>
+                      <td>Cancellation</td>
+                      <td>AED 218</td>
+                    </tr>
+                    <tr>
+                      <td>Reissue Charge</td>
+                      <td>AED 218</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- add on popup start -->
-        <div class="draggable-side-bar-popup addons-side-bar-popup active">
+        <div class="draggable-side-bar-popup addons-side-bar-popup">
           <div
             class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
           >
@@ -1442,9 +1505,9 @@
                           class="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
+                          data-bs-target="#collapseOneBaggage"
                           aria-expanded="true"
-                          aria-controls="collapseOne"
+                          aria-controls="collapseOneBaggage"
                         >
                           <div>
                             <p>DEPART</p>
@@ -1460,7 +1523,7 @@
                         </div>
                       </div>
                       <div
-                        id="collapseOne"
+                        id="collapseOneBaggage"
                         class="accordion-collapse collapse show"
                         data-bs-parent="#accordionExample"
                       >
@@ -1721,9 +1784,9 @@
                           class="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
+                          data-bs-target="#collapseOneMeals"
                           aria-expanded="true"
-                          aria-controls="collapseOne"
+                          aria-controls="collapseOneMeals"
                         >
                           <div>
                             <p>DEPART</p>
@@ -1739,7 +1802,7 @@
                         </div>
                       </div>
                       <div
-                        id="collapseOne"
+                        id="collapseOneMeals"
                         class="accordion-collapse collapse show"
                         data-bs-parent="#accordionExample"
                       >
@@ -2050,9 +2113,9 @@
                           class="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
+                          data-bs-target="#collapseOneSeat"
                           aria-expanded="true"
-                          aria-controls="collapseOne"
+                          aria-controls="collapseOneSeat"
                         >
                           <div>
                             <p>DEPART</p>
@@ -2068,7 +2131,7 @@
                         </div>
                       </div>
                       <div
-                        id="collapseOne"
+                        id="collapseOneSeat"
                         class="accordion-collapse collapse show"
                         data-bs-parent="#accordionExample"
                       >
@@ -3252,6 +3315,46 @@
                                     </div>
 
                                     <button class="right btn">BACK</button>
+                                  </div>
+                                  <div class="seat-identify-view">
+                                    <ul>
+                                      <li>
+                                        <img
+                                          src="assets/images/selected_seat_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Selected Seat</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/reserved_seat_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Reserved Seat</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/spice_max_seat_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>SpiceMax Seat</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/preferred_seat_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Preferred Seat</p>
+                                      </li>
+
+                                      <li>
+                                        <img
+                                          src="assets/images/others_seat_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Other Seat</p>
+                                      </li>
+                                    </ul>
                                   </div>
                                 </div>
                               </div>

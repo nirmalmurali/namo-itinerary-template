@@ -265,10 +265,13 @@ $(document).ready(function () {
     $("#" + tabId + "-tab").addClass("active");
     $("#" + tabId).addClass("show active");
   });
-
+  // fare rules sidebar
+  $(".open-fare-rules-btn").on("click", function () {
+    $(".fare-rules-side-bar-popup").addClass("active");
+  });
   // Close sidebar
-  $(".addons-side-bar-popup .close-btn").on("click", function () {
-    $(".addons-side-bar-popup").removeClass("active");
+  $(".draggable-side-bar-popup .close-btn").on("click", function () {
+    $(".draggable-side-bar-popup").removeClass("active");
   });
 
   // Optional: close sidebar on clicking outside (overlay)

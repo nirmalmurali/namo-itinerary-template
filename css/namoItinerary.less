@@ -2256,17 +2256,25 @@ footer {
   &.active {
     right: 0;
   }
+
+  .side-bar-popup-header {
+    border-bottom: 1px solid #eef2f6;
+  }
+  .side-bar-popup-body {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  .side-bar-popup-footer {
+    border-top: 1px solid #eef2f6;
+    padding: 1rem;
+    display: flex;
+  }
   &.addons-side-bar-popup {
-    .side-bar-popup-header {
-      border-bottom: 1px solid #eef2f6;
-    }
     .side-bar-popup-body {
-      flex-grow: 1;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      overflow: hidden;
       .tab-content {
         flex-grow: 1;
         overflow: hidden;
@@ -2416,6 +2424,39 @@ footer {
                           position: absolute;
                           top: 5px;
                           right: 0;
+                        }
+                        .seat-identify-view {
+                          border: 10px solid #f3f3f3;
+                          border-top: none;
+                          padding: 13px 20px;
+                          ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            gap: 1rem;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            @media screen {
+                              @media (max-width: 767px) {
+                                justify-content: flex-start;
+                              }
+                            }
+                            li {
+                              padding: 0;
+                              flex-shrink: 0;
+                              display: flex;
+                              align-items: center;
+                              gap: 8px;
+                              p {
+                                &:extend(.fs-13,
+                                .fw-400,
+                                .font-color-cloudy-grey,
+                                .pt-sans-font-family);
+                                margin-bottom: 0;
+                              }
+                            }
+                          }
                         }
                         .addons-items-wrapper {
                           display: flex;
@@ -2577,4 +2618,38 @@ footer {
   margin: 0;
   // overflow-x: auto; /* was hidden */
   scroll-behavior: smooth;
+}
+.fare-rules-side-bar-popup {
+  .side-bar-popup-body {
+    .fare-rules-wrapper {
+      height: 100%;
+      overflow: hidden;
+      overflow-y: auto;
+      .fare-flight-details {
+        table {
+          // border-radius: 10px;
+          // overflow: hidden;
+          border: none;
+          thead {
+            tr {
+              border-top-left-radius: 10px;
+              th {
+                border: 1px solid @greenWhite;
+                &:extend(.font-color-secondary,
+                .fs-14,
+                .fw-400,
+                .pt-sans-font-family);
+                // padding: 10px;
+                text-align: left;
+                background: #efefef;
+                &:first-child {
+                  border-top-left-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

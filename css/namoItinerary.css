@@ -101,6 +101,7 @@ body:has(header.fixed-top) main {
 }
 .fs-13,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p {
   font-size: 0.8125rem !important;
@@ -148,7 +149,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -468,11 +470,13 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -537,7 +541,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5 {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -550,6 +555,7 @@ footer .quick-links-wrapper li a,
   background-color: #0c0c0c !important;
 }
 .font-color-cloudy-grey,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td {
   color: #726e6e !important;
 }
@@ -2529,15 +2535,20 @@ footer .footer-bottom-wrapper {
 .draggable-side-bar-popup.active {
   right: 0;
 }
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-header {
+.draggable-side-bar-popup .side-bar-popup-header {
   border-bottom: 1px solid #eef2f6;
 }
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body {
+.draggable-side-bar-popup .side-bar-popup-body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+}
+.draggable-side-bar-popup .side-bar-popup-footer {
+  border-top: 1px solid #eef2f6;
+  padding: 1rem;
+  display: flex;
 }
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .tab-content {
   flex-grow: 1;
@@ -2665,6 +2676,35 @@ footer .footer-bottom-wrapper {
   top: 5px;
   right: 0;
 }
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view {
+  border: 10px solid #f3f3f3;
+  border-top: none;
+  padding: 13px 20px;
+}
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul {
+    justify-content: flex-start;
+  }
+}
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li {
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p {
+  margin-bottom: 0;
+}
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper {
   display: flex;
   width: 100%;
@@ -2774,4 +2814,23 @@ footer .footer-bottom-wrapper {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table {
+  border: none;
+}
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr {
+  border-top-left-radius: 10px;
+}
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th {
+  border: 1px solid #ebebeb;
+  text-align: left;
+  background: #efefef;
+}
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th:first-child {
+  border-top-left-radius: 10px;
 }
