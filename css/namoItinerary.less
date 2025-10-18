@@ -2627,9 +2627,9 @@ footer {
       overflow-y: auto;
       .fare-flight-details {
         table {
-          // border-radius: 10px;
-          // overflow: hidden;
-          border: none;
+          border-radius: 10px;
+          overflow: hidden;
+          border-color: @greenWhite;
           thead {
             tr {
               border-top-left-radius: 10px;
@@ -2639,11 +2639,42 @@ footer {
                 .fs-14,
                 .fw-400,
                 .pt-sans-font-family);
-                // padding: 10px;
                 text-align: left;
                 background: #efefef;
                 &:first-child {
                   border-top-left-radius: 10px;
+                }
+                &:last-child {
+                  border-top-right-radius: 10px;
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              border: none;
+              td {
+                border: 1px solid @greenWhite;
+                &:extend(.font-color-ship-grey,
+                .fs-14,
+                .fw-400,
+                .pt-sans-font-family);
+                text-align: left;
+              }
+              &.table-fee-header {
+                td {
+                  background: #f8fafc;
+                  color: #003c89 !important;
+                }
+              }
+              &:last-child {
+                td {
+                  &:first-child {
+                    border-bottom-left-radius: 10px;
+                  }
+                  &:last-child {
+                    border-bottom-right-radius: 10px;
+                  }
                 }
               }
             }
@@ -2651,5 +2682,43 @@ footer {
         }
       }
     }
+  }
+}
+.cancellation-penalty-wrapper {
+  margin-top: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 1.25rem;
+  h4 {
+    &:extend(.font-color-ship-grey,
+    .fs-18,
+    .fw-700,
+    .pt-sans-font-family);
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 16px;
+    li {
+      &::marker {
+        color: @primaryColor;
+      }
+      &:extend(.font-color-ship-grey,
+      .fs-14,
+      .fw-400,
+      .pt-sans-font-family);
+    }
+  }
+}
+.open-fare-rules-btn {
+  border: 1px solid @primaryColor;
+  border-radius: 50px;
+  &:hover,
+  &:focus {
+    background: @primaryColor;
+    &:extend(.font-color-white);
   }
 }
