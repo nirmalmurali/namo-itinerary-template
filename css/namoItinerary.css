@@ -90,7 +90,7 @@ body:has(header.fixed-top) main {
 }
 .fs-12,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
-.sorted-flight-details .flight-profile-details p,
+.flight-profile-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
@@ -132,10 +132,10 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
 .sort-list-wrapper li .btn,
 .sort-view-btn,
-.sorted-flight-details .flight-profile-details h6,
 .sorted-flight-details .time-details h6,
 .sorted-flight-details .time-details p,
-.sorted-flight-details .duration-details p,
+.duration-details p,
+.flight-profile-details h6,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
@@ -455,10 +455,10 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
 .sort-list-wrapper li .btn,
 .sort-view-btn,
-.sorted-flight-details .flight-profile-details p,
 .sorted-flight-details .time-details h6,
 .sorted-flight-details .time-details p,
-.sorted-flight-details .duration-details p,
+.duration-details p,
+.flight-profile-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
@@ -486,7 +486,7 @@ footer .quick-links-wrapper li a,
 }
 .fw-500,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
-.sorted-flight-details .flight-profile-details h6,
+.flight-profile-details h6,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
   font-weight: 500 !important;
 }
@@ -536,8 +536,8 @@ footer .quick-links-wrapper li a,
 .select-airline-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
-.sorted-flight-details .flight-profile-details h6,
 .sorted-flight-details .time-details h6 b,
+.flight-profile-details h6,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
@@ -725,10 +725,10 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
 .sort-list-wrapper li .btn,
 .sort-view-btn,
-.sorted-flight-details .flight-profile-details p,
 .sorted-flight-details .time-details h6,
 .sorted-flight-details .time-details p,
-.sorted-flight-details .duration-details p,
+.duration-details p,
+.flight-profile-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
@@ -2270,36 +2270,36 @@ footer .footer-bottom-wrapper {
 .sorted-flight-details > div {
   flex-shrink: 0;
 }
-.sorted-flight-details .flight-profile-details {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.sorted-flight-details .flight-profile-details img {
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-}
-.sorted-flight-details .flight-profile-details h6 {
-  margin: 0;
-}
-.sorted-flight-details .flight-profile-details p {
-  margin: 0;
-  line-height: 1.2;
-}
 .sorted-flight-details .time-details h6 {
   margin: 0;
 }
 .sorted-flight-details .time-details p {
   margin: 0;
 }
-.sorted-flight-details .duration-details {
+.duration-details {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sorted-flight-details .duration-details p {
+.duration-details p {
   margin: 0;
+}
+.flight-profile-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.flight-profile-details img {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+.flight-profile-details h6 {
+  margin: 0;
+}
+.flight-profile-details p {
+  margin: 0;
+  line-height: 1.2;
 }
 .book-now-fare-type-list-wrapper ul {
   padding: 0;
@@ -2893,4 +2893,8 @@ footer .footer-bottom-wrapper {
 .open-fare-rules-btn:hover,
 .open-fare-rules-btn:focus {
   background: #f28b24;
+}
+.flights-booking-details {
+  padding: 22px 1rem;
+  margin: 6px 0 25px;
 }

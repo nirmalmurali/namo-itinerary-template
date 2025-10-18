@@ -1864,31 +1864,7 @@ footer {
   & > div {
     flex-shrink: 0;
   }
-  .flight-profile-details {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    img {
-      width: 25px;
-      height: 25px;
-      border-radius: 5px;
-    }
-    h6 {
-      &:extend(.font-color-secondary,
-      .fs-14,
-      .fw-500,
-      .pt-sans-font-family);
-      margin: 0;
-    }
-    p {
-      &:extend(.font-color-gravel-grey,
-      .fs-12,
-      .fw-400,
-      .pt-sans-font-family);
-      margin: 0;
-      line-height: 1.2;
-    }
-  }
+
   .time-details {
     h6 {
       &:extend(.font-color-gravel-grey,
@@ -1910,17 +1886,42 @@ footer {
       margin: 0;
     }
   }
-  .duration-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p {
-      &:extend(.font-color-gravel-grey,
-      .fs-14,
-      .fw-400,
-      .pt-sans-font-family);
-      margin: 0;
-    }
+}
+.duration-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    &:extend(.font-color-gravel-grey,
+    .fs-14,
+    .fw-400,
+    .pt-sans-font-family);
+    margin: 0;
+  }
+}
+.flight-profile-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+  }
+  h6 {
+    &:extend(.font-color-secondary,
+    .fs-14,
+    .fw-500,
+    .pt-sans-font-family);
+    margin: 0;
+  }
+  p {
+    &:extend(.font-color-gravel-grey,
+    .fs-12,
+    .fw-400,
+    .pt-sans-font-family);
+    margin: 0;
+    line-height: 1.2;
   }
 }
 .book-now-fare-type-list-wrapper {
@@ -2721,4 +2722,8 @@ footer {
     background: @primaryColor;
     &:extend(.font-color-white);
   }
+}
+.flights-booking-details {
+  padding: 22px 1rem;
+  margin: 6px 0 25px;
 }
