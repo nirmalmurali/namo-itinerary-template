@@ -160,7 +160,8 @@ footer .quick-links-wrapper li a,
 }
 .fs-16,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6 {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -481,7 +482,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
-.cancellation-penalty-wrapper ul li {
+.cancellation-penalty-wrapper ul li,
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -790,10 +792,10 @@ footer .quick-links-wrapper li a,
 .bg-color-dorado {
   background-color: #605e5e !important;
 }
-.font-color-Amour {
+.font-color-amour {
   color: #eeeeee !important;
 }
-.bg-color-Amour {
+.bg-color-amour {
   background-color: #eeeeee !important;
 }
 .font-color-green-white {
@@ -815,6 +817,12 @@ footer .quick-links-wrapper li a,
 .bg-color-dark-mint,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item {
   background-color: #3cb878 !important;
+}
+.font-color-santa-grey {
+  color: #a6a6a6 !important;
+}
+.bg-color-santa-grey {
+  background-color: #a6a6a6 !important;
 }
 .font-color-dark-grey,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p {
@@ -2896,5 +2904,69 @@ footer .footer-bottom-wrapper {
 }
 .flights-booking-details {
   padding: 22px 1rem;
-  margin: 6px 0 25px;
+  margin: 10px 0 25px;
+}
+.booking-details-separator {
+  padding: 2rem 0 1rem;
+}
+.booking-details-separator hr {
+  border-color: #eeeeee;
+  opacity: 1;
+  margin: 0;
+}
+.booking-details-separator img {
+  position: relative;
+  top: -16px;
+}
+.modal .modal-dialog .modal-content {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 10px;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content {
+  padding: 25px 18px;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+  padding: 0 0 6px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-body {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border: none;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
+  padding: 6px 0 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn {
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #f28b24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn.close-btn {
+  background: #ffffff;
+  color: #f28b24;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn.close-btn:hover {
+  background: #f28b24;
+  color: #ffffff;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn.fare-proceed-btn {
+  background: #f28b24;
+  color: #ffffff;
+}
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn.fare-proceed-btn:hover {
+  background: #ffffff;
+  color: #f28b24;
 }

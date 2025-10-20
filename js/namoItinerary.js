@@ -354,6 +354,7 @@ $(document).ready(function () {
       .removeClass("active");
   });
 
+  // Universal horizontal scroll for all .horizontal-scrollbar-wrapper
   function initHorizontalScrollbar($wrapper) {
     const $list = $wrapper.find(".scroll-list");
     const $left = $wrapper.find(".left");

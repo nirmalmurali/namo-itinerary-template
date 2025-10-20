@@ -30,11 +30,12 @@
 @merino: #ffeede;
 @lavenderMist: #eaeaea;
 @dorado: #605e5e;
-@Amour: #eeeeee;
+@amour: #eeeeee;
 @greenWhite: #ebebeb;
 @niceBlue: #186caa;
 @darkMint: #3cb878;
 @darkGrey: #333333;
+@santaGrey: #a6a6a6;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -45,9 +46,9 @@
   heavy-metal @heavyMetal, ecru-white @ecruWhite, catskill-white @catskillWhite,
   gravel-grey @gravelGrey, baltic-sea @balticSea, pale-orange @paleOrange,
   old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
-  merino @merino, lavender-mist @lavenderMist, dorado @dorado, Amour @Amour,
+  merino @merino, lavender-mist @lavenderMist, dorado @dorado, amour @amour,
   green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
-  dark-grey @darkGrey;
+  santa-grey @santaGrey, dark-grey @darkGrey;
 
 html {
   font-size: 16px;
@@ -2230,7 +2231,7 @@ footer {
   li {
     padding: 0;
     .btn {
-      border: 1px solid @Amour !important;
+      border: 1px solid @amour !important;
       padding: 0.563rem 0.938rem;
       border-radius: 10px;
       display: flex;
@@ -2725,5 +2726,80 @@ footer {
 }
 .flights-booking-details {
   padding: 22px 1rem;
-  margin: 6px 0 25px;
+  margin: 10px 0 25px;
+}
+.booking-details-separator {
+  padding: 2rem 0 1rem;
+  hr {
+    border-color: @amour;
+    opacity: 1;
+    margin: 0;
+  }
+  img {
+    position: relative;
+    top: -16px;
+  }
+}
+.modal {
+  .modal-dialog {
+    .modal-content {
+      box-shadow: 0px 4px 4px 0px #00000040;
+      border-radius: 10px;
+    }
+  }
+  &.fare-change-alert-modal {
+    .modal-dialog {
+      .modal-content {
+        padding: 25px 18px;
+        .modal-header {
+          border-bottom: none;
+          padding: 0 0 6px;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .modal-body {
+          background-color: #f8f8f8;
+          padding: 1rem;
+          border: none;
+        }
+        .modal-footer {
+          border-top: none;
+          padding: 6px 0 0;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+          .btn {
+            height: 32px;
+            border-radius: 4px;
+            &:extend(.pt-sans-font-family,
+            .fs-16,
+            .fw-400);
+            border: 1px solid @primaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.close-btn {
+              background: @white;
+              color: @primaryColor;
+              &:hover {
+                background: @primaryColor;
+                color: @white;
+              }
+            }
+            &.fare-proceed-btn {
+              background: @primaryColor;
+              color: @white;
+              &:hover {
+                background: @white;
+                color: @primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
