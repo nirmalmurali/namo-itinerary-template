@@ -36,6 +36,8 @@
 @darkMint: #3cb878;
 @darkGrey: #333333;
 @santaGrey: #a6a6a6;
+@seashell: #f4efef;
+@coralRed: #FF3B30;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -48,7 +50,7 @@
   old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
   merino @merino, lavender-mist @lavenderMist, dorado @dorado, amour @amour,
   green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
-  santa-grey @santaGrey, dark-grey @darkGrey;
+  seashell @seashell, santa-grey @santaGrey, dark-grey @darkGrey, coral-red @coralRed;
 
 html {
   font-size: 16px;
@@ -1850,7 +1852,7 @@ footer {
     & > li {
       padding: 1rem;
       &:extend(.bg-color-white);
-      border: 1px solid #f4efef;
+      border: 1px solid @seashell;
       width: 100%;
     }
   }
@@ -2088,7 +2090,7 @@ footer {
     .tab-pane {
       &.active {
         &:extend(.bg-color-white);
-        border: 1px solid #f4efef;
+        border: 1px solid @seashell;
         padding: 1.125rem;
         &.fare-details-tab-panel {
           .fare-list-nav {
@@ -2227,6 +2229,7 @@ footer {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 1rem;
   li {
     padding: 0;
@@ -2801,5 +2804,51 @@ footer {
         }
       }
     }
+  }
+}
+.vr {
+  background-color: @seashell;
+  opacity: 1;
+}
+.review-border-right-none {
+  border-right: none !important;
+}
+.review-border-right {
+  border-right: 1px solid @seashell !important;
+}
+.review-border-right-sm {
+  @media screen and (min-width: 576px) {
+    border-right: 1px solid @seashell !important;
+  }
+}
+.review-border-right-md {
+  @media screen and (min-width: 768px) {
+    border-right: 1px solid @seashell !important;
+  }
+}
+.review-border-right-lg {
+  @media screen and (min-width: 992px) {
+    border-right: 1px solid @seashell !important;
+  }
+}
+.review-border-right-xl {
+  @media screen and (min-width: 1200px) {
+    border-right: 1px solid @seashell !important;
+  }
+}
+.review-form-content{
+  p{
+    &:extend(.font-color-fuscous-grey,
+    .fs-12,
+    .fw-400,
+    .pt-sans-font-family);
+    margin-bottom: 5px;
+  }
+  h6{
+    &:extend(.font-color-ship-grey,
+    .fs-14,
+    .fw-500,
+    .pt-sans-font-family);
+    margin-top: 0px;
   }
 }

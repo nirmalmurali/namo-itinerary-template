@@ -633,25 +633,15 @@
                   <div class="white-bg-with-radius p-3 mb-3">
                     <div class="row g-3">
                       <div class="col-lg-6">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="mobileInput"
-                            placeholder="Agency Name *"
-                          />
-                          <label for="mobileInput">Mobile *</label>
+                        <div class="review-form-content review-border-right-sm">
+                          <p>Mobile</p>
+                          <h6>9845264548</h6>
                         </div>
                       </div>
                       <div class="col-lg-6">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="emailInput"
-                            placeholder="Agency Name *"
-                          />
-                          <label for="emailInput">Email *</label>
+                        <div class="review-form-content">
+                          <p>Email</p>
+                          <h6>jondue@gmail.com</h6>
                         </div>
                       </div>
                       <div class="col-12">
@@ -661,6 +651,7 @@
                             type="checkbox"
                             value=""
                             id="gstDetailsCheck"
+                            checked
                           />
                           <label class="form-check-label" for="gstDetailsCheck">
                             GST Details ( Note : Please fill GST details only
@@ -669,36 +660,21 @@
                         </div>
                       </div>
                       <div class="col-lg-2">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="mobileCodeInput"
-                            placeholder="Code"
-                          />
-                          <label for="mobileCodeInput">Code </label>
+                        <div class="review-form-content review-border-right-sm">
+                          <p>Code</p>
+                          <h6>+91</h6>
                         </div>
                       </div>
                       <div class="col-lg-5">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="mobileNumberInput"
-                            placeholder="Mobile Number *"
-                          />
-                          <label for="mobileNumberInput">Mobile Number</label>
+                        <div class="review-form-content review-border-right-sm">
+                          <p>Mobile</p>
+                          <h6>9845264548</h6>
                         </div>
                       </div>
                       <div class="col-lg-5">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="userEmailInput"
-                            placeholder="Email *"
-                          />
-                          <label for="userEmailInput">Email *</label>
+                        <div class="review-form-content">
+                          <p>Email</p>
+                          <h6>jondue@gmail.com</h6>
                         </div>
                       </div>
                     </div>
@@ -1000,7 +976,7 @@
                             <div class="accordion-body">
                               <div class="row g-3">
                                 <div
-                                  class="col-lg-4 d-flex align-items-center gap-2"
+                                  class="col-lg-6 d-flex align-items-center gap-2"
                                 >
                                   <p
                                     class="fw-400 fs-14 pt-sans-font-family mb-0 font-color-secondary"
@@ -1508,15 +1484,26 @@
                             width="32"
                           />
                           <p
-                            class="mb-0 pt-sans-font-family font-color-secondary fs-12 fw-400 d-flex align-items-center gap-1"
+                            class="mb-0 pt-sans-font-family font-color-sea-green fs-12 fw-400 d-flex align-items-center gap-1"
                           >
-                            <img
-                              src="assets/images/plus_with_round_icon.svg"
-                              alt=""
-                            />
-                            Add Baggage
+                            3 Baggage Added
                           </p>
                         </button>
+                        <div
+                          class="d-flex align-items-center gap-1 py-2 justify-content-center"
+                        >
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-coral-red fs-12 fw-400"
+                          >
+                            Remove 
+                          </p>
+                          <div class="vr"></div>
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-fuscous-grey fs-12 fw-400 d-flex align-items-center gap-1"
+                          >
+                             Change
+                          </p>
+                        </div>
                       </li>
                       <li>
                         <button
@@ -1538,6 +1525,21 @@
                             Add Meals
                           </p>
                         </button>
+                        <div
+                          class="d-flex align-items-center gap-1 py-2 justify-content-center"
+                        >
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-coral-red fs-12 fw-400"
+                          >
+                            Remove 
+                          </p>
+                          <div class="vr"></div>
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-fuscous-grey fs-12 fw-400 d-flex align-items-center gap-1"
+                          >
+                             Change
+                          </p>
+                        </div>
                       </li>
                       <li>
                         <button
@@ -1559,8 +1561,164 @@
                             Add Seats
                           </p>
                         </button>
+                        <div
+                          class="d-flex align-items-center gap-1 py-2 justify-content-center"
+                        >
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-coral-red fs-12 fw-400"
+                          >
+                            Remove 
+                          </p>
+                          <div class="vr"></div>
+                          <p
+                            class="mb-0 pt-sans-font-family font-color-fuscous-grey fs-12 fw-400 d-flex align-items-center gap-1"
+                          >
+                             Change
+                          </p>
+                        </div>
                       </li>
                     </ul>
+                  </div>
+                  <h4
+                    class="fs-18 fw-700 font-color-secondary pt-sans-font-family mb-2 mt-4"
+                  >
+                    Payment Options
+                  </h4>
+                  <div
+                    class="white-bg-with-radius payment-options-wrapper mb-3"
+                  >
+                    <div class="payment-tab-header">
+                      <ul
+                        class="nav nav-pills mb-3"
+                        id="payment-tab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="pills-wallet-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-wallet"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-wallet"
+                            aria-selected="true"
+                          >
+                            Wallet
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pills-debit-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-debit"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-debit"
+                            aria-selected="false"
+                          >
+                            Debit Card
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pills-credit-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-credit"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-credit"
+                            aria-selected="false"
+                          >
+                            Credit Card
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pills-netbanking-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-netbanking"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-netbanking"
+                            aria-selected="false"
+                          >
+                            Net Banking
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="pills-upi-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#pills-upi"
+                            type="button"
+                            role="tab"
+                            aria-controls="pills-upi"
+                            aria-selected="false"
+                          >
+                            UPI
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="payment-tab-body">
+                      <div class="tab-content" id="paymentTabContent">
+                        <div
+                          class="tab-pane fade show active"
+                          id="pills-wallet"
+                          role="tabpanel"
+                          aria-labelledby="pills-wallet-tab"
+                        >
+                          <p class="mt-2">
+                            Wallet payment options content will go here.
+                          </p>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="pills-debit"
+                          role="tabpanel"
+                          aria-labelledby="pills-debit-tab"
+                        >
+                          <p class="mt-2">
+                            Debit Card payment options content will go here.
+                          </p>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="pills-credit"
+                          role="tabpanel"
+                          aria-labelledby="pills-credit-tab"
+                        >
+                          <p class="mt-2">
+                            Credit Card payment options content will go here.
+                          </p>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="pills-netbanking"
+                          role="tabpanel"
+                          aria-labelledby="pills-netbanking-tab"
+                        >
+                          <p class="mt-2">
+                            Net Banking payment options content will go here.
+                          </p>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="pills-upi"
+                          role="tabpanel"
+                          aria-labelledby="pills-upi-tab"
+                        >
+                          <p class="mt-2">
+                            UPI payment options content will go here.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

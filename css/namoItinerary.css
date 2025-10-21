@@ -96,7 +96,8 @@ body:has(header.fixed-top) main {
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
+.review-form-content p {
   font-size: 0.75rem !important;
 }
 .fs-13,
@@ -152,7 +153,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
-.cancellation-penalty-wrapper ul li {
+.cancellation-penalty-wrapper ul li,
+.review-form-content h6 {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -483,13 +485,15 @@ footer .quick-links-wrapper li a,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper ul li,
-.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn {
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
+.review-form-content p {
   font-weight: 400 !important;
 }
 .fw-500,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
 .flight-profile-details h6,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6 {
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h6,
+.review-form-content h6 {
   font-weight: 500 !important;
 }
 .fw-600 {
@@ -636,7 +640,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper h4,
-.cancellation-penalty-wrapper ul li {
+.cancellation-penalty-wrapper ul li,
+.review-form-content h6 {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -675,7 +680,8 @@ footer .quick-links-wrapper li a,
   background-color: #d9d9d9 !important;
 }
 .font-color-fuscous-grey,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
+.review-form-content p {
   color: #525252 !important;
 }
 .bg-color-fuscous-grey {
@@ -818,6 +824,12 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item {
   background-color: #3cb878 !important;
 }
+.font-color-seashell {
+  color: #f4efef !important;
+}
+.bg-color-seashell {
+  background-color: #f4efef !important;
+}
 .font-color-santa-grey {
   color: #a6a6a6 !important;
 }
@@ -830,6 +842,12 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-dark-grey {
   background-color: #333333 !important;
+}
+.font-color-coral-red {
+  color: #FF3B30 !important;
+}
+.bg-color-coral-red {
+  background-color: #FF3B30 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -2522,6 +2540,7 @@ footer .footer-bottom-wrapper {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 .addons-optional-list-wrapper li {
@@ -2969,4 +2988,40 @@ footer .footer-bottom-wrapper {
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn.fare-proceed-btn:hover {
   background: #ffffff;
   color: #f28b24;
+}
+.vr {
+  background-color: #f4efef;
+  opacity: 1;
+}
+.review-border-right-none {
+  border-right: none !important;
+}
+.review-border-right {
+  border-right: 1px solid #f4efef !important;
+}
+@media screen and (min-width: 576px) {
+  .review-border-right-sm {
+    border-right: 1px solid #f4efef !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .review-border-right-md {
+    border-right: 1px solid #f4efef !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .review-border-right-lg {
+    border-right: 1px solid #f4efef !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .review-border-right-xl {
+    border-right: 1px solid #f4efef !important;
+  }
+}
+.review-form-content p {
+  margin-bottom: 5px;
+}
+.review-form-content h6 {
+  margin-top: 0px;
 }
