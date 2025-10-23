@@ -478,14 +478,18 @@
                       <div
                         class="d-flex gap-4 align-items-center justify-content-center"
                       >
-                        <p class="mb-0 font-color-santa-grey fw-400 fs-12">
+                        <p
+                          class="mb-0 font-color-santa-grey fw-400 fs-12 pt-sans-font-family"
+                        >
                           Bengaluru International Airport |Bangalore (BLR)
                         </p>
                         <img
                           src="assets/images/flying_flight_icon.svg"
                           alt=""
                         />
-                        <p class="mb-0 font-color-santa-grey fw-400 fs-12">
+                        <p
+                          class="mb-0 font-color-santa-grey fw-400 fs-12 pt-sans-font-family"
+                        >
                           Connecting Time : 16Hr .55Min 
                         </p>
                       </div>
@@ -1589,7 +1593,7 @@
                   >
                     <div class="payment-tab-header">
                       <ul
-                        class="nav nav-pills mb-3"
+                        class="nav nav-pills m-0"
                         id="payment-tab"
                         role="tablist"
                       >
@@ -1604,7 +1608,21 @@
                             aria-controls="pills-wallet"
                             aria-selected="true"
                           >
-                            Wallet
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="wallet-checkbox"
+                                value="wallet"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="wallet-checkbox"
+                              >
+                                Wallet
+                              </label>
+                            </div>
                           </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -1618,7 +1636,20 @@
                             aria-controls="pills-debit"
                             aria-selected="false"
                           >
-                            Debit Card
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="debit-checkbox"
+                                value="debit"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="debit-checkbox"
+                              >
+                                Debit Card
+                              </label>
+                            </div>
                           </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -1632,7 +1663,20 @@
                             aria-controls="pills-credit"
                             aria-selected="false"
                           >
-                            Credit Card
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="credit-checkbox"
+                                value="credit"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="credit-checkbox"
+                              >
+                                Credit Card
+                              </label>
+                            </div>
                           </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -1646,7 +1690,20 @@
                             aria-controls="pills-netbanking"
                             aria-selected="false"
                           >
-                            Net Banking
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="netbanking-checkbox"
+                                value="netbanking"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="netbanking-checkbox"
+                              >
+                                Net Banking
+                              </label>
+                            </div>
                           </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -1660,7 +1717,20 @@
                             aria-controls="pills-upi"
                             aria-selected="false"
                           >
-                            UPI
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="upi-checkbox"
+                                value="upi"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="upi-checkbox"
+                              >
+                                UPI
+                              </label>
+                            </div>
                           </button>
                         </li>
                       </ul>

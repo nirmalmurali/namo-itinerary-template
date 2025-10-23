@@ -37,7 +37,8 @@
 @darkGrey: #333333;
 @santaGrey: #a6a6a6;
 @seashell: #f4efef;
-@coralRed: #FF3B30;
+@coralRed: #ff3b30;
+@mirage: #222121;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -50,7 +51,8 @@
   old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
   merino @merino, lavender-mist @lavenderMist, dorado @dorado, amour @amour,
   green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
-  seashell @seashell, santa-grey @santaGrey, dark-grey @darkGrey, coral-red @coralRed;
+  seashell @seashell, santa-grey @santaGrey, dark-grey @darkGrey, mirage @mirage,
+  coral-red @coralRed;
 
 html {
   font-size: 16px;
@@ -66,24 +68,7 @@ html {
 body {
   font-family: "Roboto", sans-serif !important;
   height: 100%;
-  .anton-font-family {
-    font-family: "Anton", sans-serif !important;
-    font-weight: 400;
-  }
-  .scop-one-font-family {
-    font-family: "Scope One", serif !important;
-    font-weight: 400;
-  }
-  .pt-sans-font-family {
-    font-family: "PT Sans", sans-serif !important;
-  }
-  .baloo-font-family {
-    font-family: "Baloo 2", sans-serif !important;
-  }
-  .pt-mono-font-family {
-    font-family: "PT Mono", monospace !important;
-    font-weight: 400;
-  }
+
   &::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
@@ -127,7 +112,24 @@ body {
     }
   }
 }
-
+.anton-font-family {
+  font-family: "Anton", sans-serif !important;
+  font-weight: 400;
+}
+.scop-one-font-family {
+  font-family: "Scope One", serif !important;
+  font-weight: 400;
+}
+.pt-sans-font-family {
+  font-family: "PT Sans", sans-serif !important;
+}
+.baloo-font-family {
+  font-family: "Baloo 2", sans-serif !important;
+}
+.pt-mono-font-family {
+  font-family: "PT Mono", monospace !important;
+  font-weight: 400;
+}
 // Font Size Loop (fs-)
 .fs-loop(@j) when (@j <= 100) {
   @size: (@j / 16); // Convert px to rem
@@ -239,6 +241,13 @@ header {
   // & ~ main {
   //   padding-top: 71px;
   // }
+  .navbar-nav {
+    .nav-link {
+      &.active {
+        color: @primaryColor;
+      }
+    }
+  }
 }
 // main {
 //   padding-top: 71px;
@@ -2836,19 +2845,105 @@ footer {
     border-right: 1px solid @seashell !important;
   }
 }
-.review-form-content{
-  p{
+.review-form-content {
+  p {
     &:extend(.font-color-fuscous-grey,
     .fs-12,
     .fw-400,
     .pt-sans-font-family);
     margin-bottom: 5px;
   }
-  h6{
+  h6 {
     &:extend(.font-color-ship-grey,
     .fs-14,
     .fw-500,
     .pt-sans-font-family);
     margin-top: 0px;
   }
+}
+
+.payment-options-wrapper {
+  .payment-tab-header {
+    .nav {
+      border-bottom: 1px solid @amour;
+      overflow: hidden;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      .nav-item {
+        flex-shrink: 0;
+        .nav-link {
+          &:extend(.fs-14,
+          .fw-400,
+          .bg-color-white,
+          .font-color-secondary,
+          .pt-sans-font-family);
+          border-radius: 0;
+          border: 1px solid @amour;
+          border-right: none;
+          border-bottom: none;
+          padding: 1rem 1.5rem;
+          .form-check {
+            margin-bottom: 0;
+          }
+        }
+        &:first-child {
+          .nav-link {
+            padding-left: 0.75rem;
+          }
+        }
+        &:last-child {
+          .nav-link {
+            border-right: 1px solid @amour;
+          }
+        }
+      }
+    }
+  }
+}
+.about-us-banner-wrapper {
+  padding: 6.938rem 0;
+  // background-color: #f28b2433;
+  background-image: url("../assets/images/about_us_banner_bg.png");
+  position: relative;
+  &:extend(.image-bg);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #f28b2433;
+    z-index: 1;
+  }
+  h3 {
+    text-align: center;
+    &:extend(.font-color-white,
+    .fs-40,
+    .fw-400,
+    .anton-font-family);
+    position: relative;
+    z-index: 2;
+  }
+}
+.travel-solutions-wrapper {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.675rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.125rem;
+      p {
+        &:extend(.fs-18,
+        .fw-400,
+        .font-color-mirage);
+        margin: 0;
+      }
+    }
+  }
+}
+.sections-top-padding {
+  padding-top: 3.375rem;
+}
+.sections-bottom-padding {
+  padding-bottom: 3.375rem;
 }

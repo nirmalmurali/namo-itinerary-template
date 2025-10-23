@@ -12,24 +12,6 @@ body {
   height: 100%;
   /* For Firefox */
 }
-body .anton-font-family {
-  font-family: "Anton", sans-serif !important;
-  font-weight: 400;
-}
-body .scop-one-font-family {
-  font-family: "Scope One", serif !important;
-  font-weight: 400;
-}
-body .pt-sans-font-family {
-  font-family: "PT Sans", sans-serif !important;
-}
-body .baloo-font-family {
-  font-family: "Baloo 2", sans-serif !important;
-}
-body .pt-mono-font-family {
-  font-family: "PT Mono", monospace !important;
-  font-weight: 400;
-}
 body::-webkit-scrollbar {
   width: 8px;
   /* Width of the scrollbar */
@@ -66,6 +48,83 @@ body .back-drop {
 }
 body:has(header.fixed-top) main {
   padding-top: 71px;
+}
+.anton-font-family,
+.about-us-banner-wrapper h3 {
+  font-family: "Anton", sans-serif !important;
+  font-weight: 400;
+}
+.scop-one-font-family {
+  font-family: "Scope One", serif !important;
+  font-weight: 400;
+}
+.pt-sans-font-family,
+.flight-trip-details-wrapper .from-to-details-wrapper h6,
+.flight-trip-details-wrapper .from-to-details-wrapper h4,
+.flight-trip-details-wrapper .from-to-details-wrapper p,
+.flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
+.travel-date-details > ul > li .dropdown .dropdown-toggle,
+.travel-date-details > ul > li h4,
+.travel-date-details > ul > li p,
+.select-airline-dropdown .dropdown-toggle,
+.selected-airline-list-item p,
+.number-btn-group-wrapper .btn,
+.travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
+.page-tab-header-wrapper ul li button,
+.global-dropdown .dropdown-toggle,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
+.sort-list-wrapper li .btn,
+.sort-view-btn,
+.sorted-flight-details .time-details h6,
+.sorted-flight-details .time-details p,
+.duration-details p,
+.flight-profile-details h6,
+.flight-profile-details p,
+.book-now-fare-type-list-wrapper ul li .book-now-fare-type h6,
+.book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
+.book-now-fare-type-list-wrapper ul li .seats-wrapper h6,
+.book-now-fare-type-list-wrapper ul li .seats-wrapper p,
+.book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
+.book-now-fare-type-list-wrapper ul li .refund-wrapper p,
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.primary-tab-nav-wrapper .nav .nav-item .nav-link,
+.optional-accordion-wrapper .accordion .accordion-item .accordion-button,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header h6,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
+.cancellation-penalty-wrapper h4,
+.cancellation-penalty-wrapper ul li,
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
+.review-form-content p,
+.review-form-content h6,
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+  font-family: "PT Sans", sans-serif !important;
+}
+.baloo-font-family {
+  font-family: "Baloo 2", sans-serif !important;
+}
+.pt-mono-font-family {
+  font-family: "PT Mono", monospace !important;
+  font-weight: 400;
 }
 .fs-5 {
   font-size: 0.3125rem !important;
@@ -154,7 +213,8 @@ footer .quick-links-wrapper li a,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper ul li,
-.review-form-content h6 {
+.review-form-content h6,
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
   font-size: 0.875rem !important;
 }
 .fs-15 {
@@ -174,7 +234,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
-.cancellation-penalty-wrapper h4 {
+.cancellation-penalty-wrapper h4,
+.travel-solutions-wrapper ul li p {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -241,7 +302,8 @@ footer .quick-links-wrapper li a,
 .fs-39 {
   font-size: 2.4375rem !important;
 }
-.fs-40 {
+.fs-40,
+.about-us-banner-wrapper h3 {
   font-size: 2.5rem !important;
 }
 .fs-41 {
@@ -486,7 +548,10 @@ footer .quick-links-wrapper li a,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper ul li,
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
-.review-form-content p {
+.review-form-content p,
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.about-us-banner-wrapper h3,
+.travel-solutions-wrapper ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -554,7 +619,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
-.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th {
+.fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -594,7 +660,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .open-fare-rules-btn:hover,
-.open-fare-rules-btn:focus {
+.open-fare-rules-btn:focus,
+.about-us-banner-wrapper h3 {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -604,7 +671,8 @@ footer .quick-links-wrapper li a,
 .sorted-list-wrapper > ul > li,
 .booking-details-right-content .tab-content .tab-pane.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
-.white-bg-with-radius {
+.white-bg-with-radius,
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -843,11 +911,18 @@ footer .quick-links-wrapper li a,
 .bg-color-dark-grey {
   background-color: #333333 !important;
 }
+.font-color-mirage,
+.travel-solutions-wrapper ul li p {
+  color: #222121 !important;
+}
+.bg-color-mirage {
+  background-color: #222121 !important;
+}
 .font-color-coral-red {
-  color: #FF3B30 !important;
+  color: #ff3b30 !important;
 }
 .bg-color-coral-red {
-  background-color: #FF3B30 !important;
+  background-color: #ff3b30 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -906,6 +981,9 @@ header .black-drop {
 }
 header .black-drop.active {
   display: block;
+}
+header .navbar-nav .nav-link.active {
+  color: #f28b24;
 }
 /************ home-banner-wrapper start **************/
 .home-banner-wrapper .home-banner-content {
@@ -980,7 +1058,8 @@ header .black-drop.active {
 }
 .image-bg,
 .home-banner-wrapper .home-banner-content,
-.home-trusted-partner-wrapper {
+.home-trusted-partner-wrapper,
+.about-us-banner-wrapper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3024,4 +3103,65 @@ footer .footer-bottom-wrapper {
 }
 .review-form-content h6 {
   margin-top: 0px;
+}
+.payment-options-wrapper .payment-tab-header .nav {
+  border-bottom: 1px solid #eeeeee;
+  overflow: hidden;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.payment-options-wrapper .payment-tab-header .nav .nav-item {
+  flex-shrink: 0;
+}
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+  border-radius: 0;
+  border: 1px solid #eeeeee;
+  border-right: none;
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link .form-check {
+  margin-bottom: 0;
+}
+.payment-options-wrapper .payment-tab-header .nav .nav-item:first-child .nav-link {
+  padding-left: 0.75rem;
+}
+.payment-options-wrapper .payment-tab-header .nav .nav-item:last-child .nav-link {
+  border-right: 1px solid #eeeeee;
+}
+.about-us-banner-wrapper {
+  padding: 6.938rem 0;
+  background-image: url("../assets/images/about_us_banner_bg.png");
+  position: relative;
+}
+.about-us-banner-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f28b2433;
+  z-index: 1;
+}
+.about-us-banner-wrapper h3 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.travel-solutions-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.675rem;
+}
+.travel-solutions-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+}
+.travel-solutions-wrapper ul li p {
+  margin: 0;
+}
+.sections-top-padding {
+  padding-top: 3.375rem;
+}
+.sections-bottom-padding {
+  padding-bottom: 3.375rem;
 }

@@ -385,4 +385,64 @@ $(document).ready(function () {
   $(".horizontal-scrollbar-wrapper").each(function () {
     initHorizontalScrollbar($(this));
   });
+
+  // Payment tab checkbox synchronization
+
+  // When nav-link is clicked, check/uncheck corresponding checkbox and show tab
+  $(document).on("click", "#payment-tab .nav-link", function (e) {
+    e.preventDefault();
+
+    const $navLink = $(this);
+    const $checkbox = $navLink.find(".form-check-input");
+    const tabTarget = $navLink.data("bs-target");
+
+    // Remove active from all nav-links and uncheck all checkboxes
+    $("#payment-tab .nav-link")
+      .removeClass("active")
+      .attr("aria-selected", "false");
+    $("#payment-tab .form-check-input").prop("checked", false);
+
+    // Add active to clicked nav-link and check its checkbox
+    $navLink.addClass("active").attr("aria-selected", "true");
+    $checkbox.prop("checked", true);
+
+    // Show corresponding tab pane
+    $("#paymentTabContent .tab-pane").removeClass("show active");
+    $(tabTarget).addClass("show active");
+  });
+
+  // When checkbox is clicked directly, sync with nav-link
+  $(document).on("change", "#payment-tab .form-check-input", function (e) {
+    e.stopPropagation();
+
+    const $checkbox = $(this);
+    const $navLink = $checkbox.closest(".nav-link");
+    const tabTarget = $navLink.data("bs-target");
+
+    if ($checkbox.is(":checked")) {
+      // Remove active from all other nav-links and uncheck other checkboxes
+      $("#payment-tab .nav-link")
+        .not($navLink)
+        .removeClass("active")
+        .attr("aria-selected", "false");
+      $("#payment-tab .form-check-input").not($checkbox).prop("checked", false);
+
+      // Add active to current nav-link
+      $navLink.addClass("active").attr("aria-selected", "true");
+
+      // Show corresponding tab pane
+      $("#paymentTabContent .tab-pane").removeClass("show active");
+      $(tabTarget).addClass("show active");
+    } else {
+      // If unchecked, remove active from nav-link and hide tab
+      $navLink.removeClass("active").attr("aria-selected", "false");
+      $("#paymentTabContent .tab-pane").removeClass("show active");
+    }
+  });
+
+  // Initialize: Check the checkbox for the active nav-link on page load
+  const $activeNavLink = $("#payment-tab .nav-link.active");
+  if ($activeNavLink.length) {
+    $activeNavLink.find(".form-check-input").prop("checked", true);
+  }
 });
