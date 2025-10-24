@@ -50,7 +50,8 @@ body:has(header.fixed-top) main {
   padding-top: 71px;
 }
 .anton-font-family,
-.about-us-banner-wrapper h3 {
+.about-us-banner-wrapper h3,
+.who-we-are-wrapper ul li h6 {
   font-family: "Anton", sans-serif !important;
   font-weight: 400;
 }
@@ -223,7 +224,8 @@ footer .quick-links-wrapper li a,
 .fs-16,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
-.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn {
+.modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
+.who-we-are-wrapper ul li p {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -272,7 +274,8 @@ footer .quick-links-wrapper li a,
 .fs-29 {
   font-size: 1.8125rem !important;
 }
-.fs-30 {
+.fs-30,
+.who-we-are-wrapper ul li h6 {
   font-size: 1.875rem !important;
 }
 .fs-31 {
@@ -551,7 +554,9 @@ footer .quick-links-wrapper li a,
 .review-form-content p,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
 .about-us-banner-wrapper h3,
-.travel-solutions-wrapper ul li p {
+.travel-solutions-wrapper ul li p,
+.who-we-are-wrapper ul li h6,
+.who-we-are-wrapper ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -587,7 +592,8 @@ footer .quick-links-wrapper li a,
 }
 .font-color-primary,
 .sort-view-btn.active,
-.book-now-fare-type-list-wrapper ul li .filter-book-now-btn {
+.book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
+.who-we-are-wrapper ul li h6 {
   color: #f28b24 !important;
 }
 .bg-color-primary,
@@ -860,7 +866,8 @@ footer .quick-links-wrapper li a,
   background-color: #eaeaea !important;
 }
 .font-color-dorado,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p {
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.who-we-are-wrapper ul li p {
   color: #605e5e !important;
 }
 .bg-color-dorado {
@@ -1059,7 +1066,8 @@ header .navbar-nav .nav-link.active {
 .image-bg,
 .home-banner-wrapper .home-banner-content,
 .home-trusted-partner-wrapper,
-.about-us-banner-wrapper {
+.about-us-banner-wrapper,
+.traveling-idea-wrapper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3164,4 +3172,61 @@ footer .footer-bottom-wrapper {
 }
 .sections-bottom-padding {
   padding-bottom: 3.375rem;
+}
+.who-we-are-wrapper .who-we-are-img-wrapper {
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 576px) {
+  .who-we-are-wrapper .who-we-are-img-wrapper {
+    flex-direction: column;
+  }
+}
+.who-we-are-wrapper .who-we-are-img-wrapper img {
+  border-radius: 1rem;
+}
+.who-we-are-wrapper .who-we-are-img-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.who-we-are-wrapper .who-we-are-img-wrapper > div img {
+  object-fit: cover;
+}
+.who-we-are-wrapper ul {
+  display: flex;
+}
+.who-we-are-wrapper ul li {
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 123px;
+  height: 123px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: -16px;
+}
+@media screen and (max-width: 576px) {
+  .who-we-are-wrapper ul li {
+    width: 110px;
+    height: 110px;
+  }
+}
+.who-we-are-wrapper ul li:first-child {
+  margin-left: 0;
+}
+.who-we-are-wrapper ul li h6 {
+  margin-bottom: 0rem;
+  text-align: center;
+}
+.who-we-are-wrapper ul li p {
+  margin: 0;
+  text-align: center;
+}
+.traveling-idea-wrapper {
+  background-image: url("../assets/images/traveling_idea_bg.png");
+  padding: 8.25rem 0 6.125rem;
+  background-position: right;
 }

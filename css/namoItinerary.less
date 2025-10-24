@@ -2947,3 +2947,71 @@ footer {
 .sections-bottom-padding {
   padding-bottom: 3.375rem;
 }
+.who-we-are-wrapper {
+  .who-we-are-img-wrapper {
+    display: flex;
+    gap: 8px;
+    @media screen {
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+    img {
+      border-radius: 1rem;
+    }
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  ul {
+    display: flex;
+
+    li {
+      border: 1px solid @lavenderMist;
+      border-radius: 50%;
+      padding: 1rem;
+      width: 123px;
+      height: 123px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: -16px;
+      @media screen {
+        @media (max-width: 576px) {
+          width: 110px;
+          height: 110px;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      h6 {
+        &:extend(.fs-30,
+        .fw-400,
+        .font-color-primary,
+        .anton-font-family);
+        margin-bottom: 0rem;
+        text-align: center;
+      }
+      p {
+        &:extend(.fs-16,
+        .fw-400,
+        .font-color-dorado);
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+.traveling-idea-wrapper {
+  background-image: url("../assets/images/traveling_idea_bg.png");
+  &:extend(.image-bg);
+  padding: 8.25rem 0 6.125rem;
+  background-position: right;
+}
