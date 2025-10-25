@@ -51,7 +51,8 @@ body:has(header.fixed-top) main {
 }
 .anton-font-family,
 .about-us-banner-wrapper h3,
-.who-we-are-wrapper ul li h6 {
+.who-we-are-wrapper ul li h6,
+.contact-banner-wrapper h3 {
   font-family: "Anton", sans-serif !important;
   font-weight: 400;
 }
@@ -306,7 +307,8 @@ footer .quick-links-wrapper li a,
   font-size: 2.4375rem !important;
 }
 .fs-40,
-.about-us-banner-wrapper h3 {
+.about-us-banner-wrapper h3,
+.contact-banner-wrapper h3 {
   font-size: 2.5rem !important;
 }
 .fs-41 {
@@ -556,7 +558,8 @@ footer .quick-links-wrapper li a,
 .about-us-banner-wrapper h3,
 .travel-solutions-wrapper ul li p,
 .who-we-are-wrapper ul li h6,
-.who-we-are-wrapper ul li p {
+.who-we-are-wrapper ul li p,
+.contact-banner-wrapper h3 {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -667,7 +670,10 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .open-fare-rules-btn:hover,
 .open-fare-rules-btn:focus,
-.about-us-banner-wrapper h3 {
+.about-us-banner-wrapper h3,
+.contact-banner-wrapper h3,
+.drop-message-wrapper .drop-message-submit-btn:hover,
+.drop-message-wrapper .drop-message-submit-btn:focus {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -678,7 +684,8 @@ footer .quick-links-wrapper li a,
 .booking-details-right-content .tab-content .tab-pane.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .white-bg-with-radius,
-.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.competitive-edge-card {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -925,6 +932,12 @@ footer .quick-links-wrapper li a,
 .bg-color-mirage {
   background-color: #222121 !important;
 }
+.font-color-foggy-grey {
+  color: #cacaca !important;
+}
+.bg-color-foggy-grey {
+  background-color: #cacaca !important;
+}
 .font-color-coral-red {
   color: #ff3b30 !important;
 }
@@ -1067,7 +1080,9 @@ header .navbar-nav .nav-link.active {
 .home-banner-wrapper .home-banner-content,
 .home-trusted-partner-wrapper,
 .about-us-banner-wrapper,
-.traveling-idea-wrapper {
+.traveling-idea-wrapper,
+.our-motto-wrapper,
+.contact-banner-wrapper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1357,6 +1372,10 @@ footer .footer-bottom-wrapper {
 }
 .form-control::placeholder {
   color: #bababa;
+}
+textarea.form-control {
+  height: auto !important;
+  padding-top: 0.75rem;
 }
 .form-label {
   font-family: "PT Sans", sans-serif !important;
@@ -3229,4 +3248,91 @@ footer .footer-bottom-wrapper {
   background-image: url("../assets/images/traveling_idea_bg.png");
   padding: 8.25rem 0 6.125rem;
   background-position: right;
+}
+.competitive-edge-card {
+  border: 1px solid #ebebeb;
+  border-radius: 0.875rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+.our-motto-wrapper {
+  background-color: #0d0d0d;
+  background-image: url("../assets/images/about_us_footer_bg.png");
+  padding: 4.063rem 0;
+}
+.contact-banner-wrapper {
+  padding: 6.938rem 0;
+  background-image: url("../assets/images/contact_us_banner_bg.png");
+  position: relative;
+}
+.contact-banner-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f28b2433;
+  z-index: 1;
+}
+.contact-banner-wrapper h3 {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.contact-address-wrapper {
+  margin-top: 2.5em;
+  padding: 1.75rem 2.063rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 576px) {
+  .contact-address-wrapper {
+    padding: 1rem;
+  }
+}
+.contact-address-wrapper .contact-info-box {
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+  padding: 1.313rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.drop-message-wrapper {
+  padding-top: 3rem;
+}
+.drop-message-wrapper .drop-message-divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.drop-message-wrapper .drop-message-divider::before {
+  content: "";
+  background-color: #f28b24;
+  width: 99px;
+  height: 1px;
+  display: block;
+}
+.drop-message-wrapper .drop-message-divider::after {
+  content: "";
+  background-color: #f28b24;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+}
+.drop-message-wrapper .drop-message-submit-btn {
+  border: 2px solid #f28b24;
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  color: #f28b24;
+}
+.drop-message-wrapper .drop-message-submit-btn:hover,
+.drop-message-wrapper .drop-message-submit-btn:focus {
+  background: #f28b24;
+}
+@media screen and (min-width: 992px) {
+  .drop-message-wrapper .map-wrap {
+    height: 100%;
+  }
 }
