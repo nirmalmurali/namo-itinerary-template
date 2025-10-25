@@ -118,7 +118,17 @@ body:has(header.fixed-top) main {
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
 .review-form-content p,
 .review-form-content h6,
-.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.services-list-wrapper .service-card-wrapper .service-card-content h5,
+.services-list-wrapper .service-card-wrapper .service-card-content p,
+.services-list-wrapper .service-card-wrapper .service-card-content .btn,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
+.blogs-items-wrapper h6,
+.blogs-items-wrapper p,
+.blogs-items-wrapper h5 {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -158,14 +168,16 @@ body:has(header.fixed-top) main {
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
-.review-form-content p {
+.review-form-content p,
+.comments-view-wrapper ul li .reply-btn {
   font-size: 0.75rem !important;
 }
 .fs-13,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -216,10 +228,20 @@ footer .quick-links-wrapper li a,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper ul li,
 .review-form-content h6,
-.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.services-list-wrapper .service-card-wrapper .service-card-content p,
+.services-list-wrapper .service-card-wrapper .service-card-content .btn,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list li a,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
+.blogs-items-wrapper p,
+.blogs-items-wrapper a {
   font-size: 0.875rem !important;
 }
-.fs-15 {
+.fs-15,
+.blogs-items-wrapper h5 {
   font-size: 0.9375rem !important;
 }
 .fs-16,
@@ -238,7 +260,9 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .cancellation-penalty-wrapper h4,
-.travel-solutions-wrapper ul li p {
+.travel-solutions-wrapper ul li p,
+.services-list-wrapper .service-card-wrapper .service-card-content h5,
+.blogs-items-wrapper h6 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -559,7 +583,17 @@ footer .quick-links-wrapper li a,
 .travel-solutions-wrapper ul li p,
 .who-we-are-wrapper ul li h6,
 .who-we-are-wrapper ul li p,
-.contact-banner-wrapper h3 {
+.contact-banner-wrapper h3,
+.services-list-wrapper .service-card-wrapper .service-card-content p,
+.services-list-wrapper .service-card-wrapper .service-card-content .btn,
+.comments-view-wrapper ul li .reply-btn,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list li a,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
+.blogs-items-wrapper h6,
+.blogs-items-wrapper p,
+.blogs-items-wrapper a {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -584,7 +618,11 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header h6,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
-.cancellation-penalty-wrapper h4 {
+.cancellation-penalty-wrapper h4,
+.services-list-wrapper .service-card-wrapper .service-card-content h5,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
+.blogs-items-wrapper h5 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -596,7 +634,10 @@ footer .quick-links-wrapper li a,
 .font-color-primary,
 .sort-view-btn.active,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
-.who-we-are-wrapper ul li h6 {
+.who-we-are-wrapper ul li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
+.blogs-items-wrapper h6 {
   color: #f28b24 !important;
 }
 .bg-color-primary,
@@ -629,7 +670,11 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
-.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link {
+.payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.services-list-wrapper .service-card-wrapper .service-card-content h5,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
+.blogs-items-wrapper h5 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -643,7 +688,8 @@ footer .quick-links-wrapper li a,
 }
 .font-color-cloudy-grey,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
+.services-list-wrapper .service-card-wrapper .service-card-content p {
   color: #726e6e !important;
 }
 .bg-color-cloudy-grey {
@@ -673,7 +719,9 @@ footer .quick-links-wrapper li a,
 .about-us-banner-wrapper h3,
 .contact-banner-wrapper h3,
 .drop-message-wrapper .drop-message-submit-btn:hover,
-.drop-message-wrapper .drop-message-submit-btn:focus {
+.drop-message-wrapper .drop-message-submit-btn:focus,
+.primary-bg-outline-btn:hover,
+.primary-bg-outline-btn:focus {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -685,7 +733,8 @@ footer .quick-links-wrapper li a,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .white-bg-with-radius,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
-.competitive-edge-card {
+.competitive-edge-card,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -762,7 +811,8 @@ footer .quick-links-wrapper li a,
 }
 .font-color-fuscous-grey,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
-.review-form-content p {
+.review-form-content p,
+.blogs-items-wrapper p {
   color: #525252 !important;
 }
 .bg-color-fuscous-grey {
@@ -874,7 +924,10 @@ footer .quick-links-wrapper li a,
 }
 .font-color-dorado,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
-.who-we-are-wrapper ul li p {
+.who-we-are-wrapper ul li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list li a,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
+.blogs-items-wrapper a {
   color: #605e5e !important;
 }
 .bg-color-dorado {
@@ -938,11 +991,24 @@ footer .quick-links-wrapper li a,
 .bg-color-foggy-grey {
   background-color: #cacaca !important;
 }
+.font-color-fantasy {
+  color: #f4f4f3 !important;
+}
+.bg-color-fantasy,
+.blog-sidebar-wrapper > li {
+  background-color: #f4f4f3 !important;
+}
 .font-color-coral-red {
   color: #ff3b30 !important;
 }
 .bg-color-coral-red {
   background-color: #ff3b30 !important;
+}
+.font-color-white-rock {
+  color: #e6e6e6 !important;
+}
+.bg-color-white-rock {
+  background-color: #e6e6e6 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -1082,7 +1148,10 @@ header .navbar-nav .nav-link.active {
 .about-us-banner-wrapper,
 .traveling-idea-wrapper,
 .our-motto-wrapper,
-.contact-banner-wrapper {
+.contact-banner-wrapper,
+.services-banner-wrapper,
+.services-list-wrapper .service-card-wrapper .service-card-content,
+.blog-banner-wrapper {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3189,8 +3258,18 @@ textarea.form-control {
 .sections-top-padding {
   padding-top: 3.375rem;
 }
+@media screen and (max-width: 576px) {
+  .sections-top-padding {
+    padding-top: 1.6rem;
+  }
+}
 .sections-bottom-padding {
   padding-bottom: 3.375rem;
+}
+@media screen and (max-width: 576px) {
+  .sections-bottom-padding {
+    padding-bottom: 1.6rem;
+  }
 }
 .who-we-are-wrapper .who-we-are-img-wrapper {
   display: flex;
@@ -3335,4 +3414,178 @@ textarea.form-control {
   .drop-message-wrapper .map-wrap {
     height: 100%;
   }
+}
+.services-banner-wrapper {
+  padding: 6.938rem 0;
+  background-image: url("../assets/images/service_banner_bg.png");
+  position: relative;
+}
+.services-banner-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f28b2433;
+  z-index: 1;
+}
+.services-banner-wrapper h3 {
+  position: relative;
+  z-index: 2;
+}
+.primary-bg-outline-btn {
+  color: #f28b24;
+  border: 1px solid #f28b24;
+  border-radius: 50px;
+}
+.primary-bg-outline-btn:hover,
+.primary-bg-outline-btn:focus {
+  background: #f28b24;
+}
+.services-list-wrapper .service-list-row > div:nth-child(even) .service-card-wrapper .service-card-content {
+  background-image: url("../assets/images/service_card_content_even_bg.png");
+}
+.services-list-wrapper .service-card-wrapper .service-card-content {
+  background-image: url("../assets/images/service_card_content_bg.png");
+  min-height: 245px;
+  max-width: 259px;
+  width: 100%;
+  padding: 76px 20px 20px;
+  background-size: contain;
+}
+.services-list-wrapper .service-card-wrapper .service-card-content h5 {
+  margin-bottom: 0.5rem;
+}
+.services-list-wrapper .service-card-wrapper .service-card-content p {
+  margin-bottom: 1rem;
+}
+.blog-banner-wrapper {
+  padding: 6.938rem 0;
+  background-image: url("../assets/images/blog_banner_bg.png");
+  position: relative;
+  background-position: right;
+}
+.blog-banner-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f28b2433;
+  z-index: 1;
+}
+.blog-banner-wrapper h3 {
+  position: relative;
+  z-index: 2;
+}
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comments-view-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comments-view-wrapper ul li {
+  display: flex;
+  gap: 13px;
+}
+.comments-view-wrapper ul li .reply-btn {
+  background: none;
+  border: none;
+  border-radius: 20px;
+}
+.comments-view-wrapper ul.reply-comment-list {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .comments-view-wrapper ul.main-comment-list > li {
+    flex-direction: column;
+  }
+}
+.blog-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blog-sidebar-wrapper > li {
+  padding: 1rem;
+  border-radius: 5px;
+}
+.blog-sidebar-wrapper > li .blog-search-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+.blog-sidebar-wrapper > li .blog-search-wrapper .form-control {
+  background: transparent;
+  height: 30px;
+  padding: 0 0.7rem;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-header {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0.5rem 0 0.75rem;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body {
+  padding: 0.625rem 0 0;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list li a {
+  text-decoration: none;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a {
+  display: flex;
+  gap: 0.688rem;
+  text-decoration: none;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li img,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a img {
+  border-radius: 0;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p {
+  margin-bottom: 4px;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6 {
+  margin: 0;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 10px;
+}
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a {
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.blogs-items-wrapper {
+  border: 1px solid #e6e6e6;
+  padding: 0.8rem;
+}
+.blogs-items-wrapper img {
+  width: 100%;
+}
+.blogs-items-wrapper h6 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 0;
+}
+.blogs-items-wrapper p {
+  margin-bottom: 0.5rem;
+}
+.blogs-items-wrapper h5 {
+  margin-bottom: 1rem;
+}
+.blogs-items-wrapper a:hover {
+  text-decoration: none;
 }

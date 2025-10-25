@@ -40,6 +40,8 @@
 @coralRed: #ff3b30;
 @mirage: #222121;
 @foggyGrey: #cacaca;
+@fantasy: #f4f4f3;
+@whiteRock: #e6e6e6;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -53,7 +55,8 @@
   merino @merino, lavender-mist @lavenderMist, dorado @dorado, amour @amour,
   green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
   seashell @seashell, santa-grey @santaGrey, dark-grey @darkGrey, mirage @mirage,
-  foggy-grey @foggyGrey, coral-red @coralRed;
+  foggy-grey @foggyGrey, fantasy @fantasy, coral-red @coralRed,
+  white-rock @whiteRock;
 
 html {
   font-size: 16px;
@@ -2950,9 +2953,19 @@ textarea {
 }
 .sections-top-padding {
   padding-top: 3.375rem;
+  @media screen {
+    @media (max-width: 576px) {
+      padding-top: 1.6rem;
+    }
+  }
 }
 .sections-bottom-padding {
   padding-bottom: 3.375rem;
+  @media screen {
+    @media (max-width: 576px) {
+      padding-bottom: 1.6rem;
+    }
+  }
 }
 .who-we-are-wrapper {
   .who-we-are-img-wrapper {
@@ -3117,6 +3130,254 @@ textarea {
       @media (min-width: 992px) {
         height: 100%;
       }
+    }
+  }
+}
+.services-banner-wrapper {
+  padding: 6.938rem 0;
+  // background-color: #f28b2433;
+  background-image: url("../assets/images/service_banner_bg.png");
+  position: relative;
+  &:extend(.image-bg);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #f28b2433;
+    z-index: 1;
+  }
+  h3 {
+    position: relative;
+    z-index: 2;
+  }
+}
+.primary-bg-outline-btn {
+  color: @primaryColor;
+  border: 1px solid @primaryColor;
+  border-radius: 50px;
+  &:hover,
+  &:focus {
+    background: @primaryColor;
+    &:extend(.font-color-white);
+  }
+}
+.services-list-wrapper {
+  .service-list-row {
+    & > div {
+      // Style for EVEN cards (2nd, 4th, 6th...)
+      &:nth-child(even) {
+        .service-card-wrapper {
+          .service-card-content {
+            background-image: url("../assets/images/service_card_content_even_bg.png");
+          }
+        }
+      }
+    }
+  }
+  .service-card-wrapper {
+    .service-card-content {
+      background-image: url("../assets/images/service_card_content_bg.png");
+      &:extend(.image-bg);
+      min-height: 245px;
+      max-width: 259px;
+      width: 100%;
+      padding: 76px 20px 20px;
+      background-size: contain;
+      h5 {
+        &:extend(.font-color-secondary,
+        .fs-18,
+        .fw-700,
+        .pt-sans-font-family);
+        margin-bottom: 0.5rem;
+      }
+      p {
+        &:extend(.font-color-cloudy-grey,
+        .fs-14,
+        .fw-400,
+        .pt-sans-font-family);
+        margin-bottom: 1rem;
+      }
+      .btn {
+        &:extend(.fs-14,
+        .fw-400,
+        .pt-sans-font-family);
+      }
+    }
+  }
+}
+.blog-banner-wrapper {
+  padding: 6.938rem 0;
+  // background-color: #f28b2433;
+  background-image: url("../assets/images/blog_banner_bg.png");
+  position: relative;
+  &:extend(.image-bg);
+  background-position: right;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #f28b2433;
+    z-index: 1;
+  }
+  h3 {
+    position: relative;
+    z-index: 2;
+  }
+}
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.comments-view-wrapper {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    li {
+      display: flex;
+      gap: 13px;
+      .reply-btn {
+        &:extend(.fs-12,
+        .fw-400);
+        background: none;
+        border: none;
+        border-radius: 20px;
+      }
+    }
+    &.reply-comment-list {
+      margin-top: 2rem;
+    }
+    &.main-comment-list {
+      & > li {
+        @media screen {
+          @media (max-width: 576px) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+.blog-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  & > li {
+    padding: 1rem;
+    &:extend(.bg-color-fantasy);
+    border-radius: 5px;
+    .blog-search-wrapper {
+      display: flex;
+      gap: 0.5rem;
+      .form-control {
+        background: transparent;
+        height: 30px;
+        padding: 0 0.7rem;
+      }
+    }
+    .blog-sidebar-list-header {
+      border-bottom: 1px solid @lightGrey;
+      padding: 0.5rem 0 0.75rem;
+    }
+    .blog-sidebar-list-body {
+      padding: 0.625rem 0 0;
+      .categories-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        li {
+          a {
+            &:extend(.font-color-dorado,
+            .fs-14,
+            .fw-400);
+            text-decoration: none;
+          }
+        }
+      }
+      .recent-posts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li,
+        a {
+          display: flex;
+          gap: 0.688rem;
+          text-decoration: none;
+          img {
+            border-radius: 0;
+          }
+          p {
+            margin-bottom: 4px;
+            &:extend(.font-color-primary,
+            .fs-14,
+            .fw-400,
+            .pt-sans-font-family);
+          }
+          h6 {
+            margin: 0;
+            &:extend(.font-color-secondary,
+            .fs-14,
+            .fw-700,
+            .pt-sans-font-family);
+          }
+        }
+      }
+      .tags-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        row-gap: 10px;
+        li {
+          a {
+            &:extend(.font-color-dorado,
+            .bg-color-white,
+            .fs-13,
+            .fw-400);
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.blogs-items-wrapper {
+  border: 1px solid @whiteRock;
+  padding: 0.8rem;
+  img {
+    width: 100%;
+  }
+  h6 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    &:extend(.font-color-primary,
+    .fs-18,
+    .fw-400,
+    .pt-sans-font-family);
+    margin: 0;
+  }
+  p {
+    &:extend(.font-color-fuscous-grey,
+    .fs-14,
+    .fw-400,
+    .pt-sans-font-family);
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    margin-bottom: 1rem;
+    &:extend(.font-color-secondary,
+    .fs-15,
+    .fw-700,
+    .pt-sans-font-family);
+  }
+  a {
+    &:extend(.font-color-dorado,
+    .fs-14,
+    .fw-400);
+    &:hover {
+      text-decoration: none;
     }
   }
 }
