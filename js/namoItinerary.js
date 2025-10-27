@@ -445,4 +445,8 @@ $(document).ready(function () {
   if ($activeNavLink.length) {
     $activeNavLink.find(".form-check-input").prop("checked", true);
   }
+  $(document).on("click", ".payment-method-btns button", function () {
+    $(".wallet-btns-wrapper button").removeClass("active");
+    $(this).addClass("active");
+  });
 });

@@ -2909,6 +2909,77 @@ textarea {
       }
     }
   }
+  .payment-tab-body {
+    padding: 1rem 0.75rem;
+    .wallet-btns-wrapper {
+      display: flex;
+      gap: 0.563rem;
+      align-items: center;
+      .btn {
+        &:extend(.font-color-secondary,
+        .fs-14,
+        .fw-400,
+        .pt-sans-font-family);
+        min-width: 122px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.563rem;
+        flex-direction: column;
+        border: 1px solid #ededed;
+        img {
+          &.active-img {
+            display: none;
+          }
+        }
+        &.active {
+          background-color: #fff1e480;
+          border-color: @primaryColor;
+          &:extend(.font-color-primary);
+          img {
+            &.default-img {
+              display: none;
+            }
+            &.active-img {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .payment-tab-footer {
+    padding: 0rem 0.75rem 1rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: space-between;
+        border-bottom: 1px solid #ededed;
+        padding: 0.8rem 0;
+        &:last-child {
+          border-bottom: none;
+        }
+        h6 {
+          &:extend(.font-color-secondary,
+          .fs-18,
+          .fw-700);
+          margin: 0;
+        }
+        p {
+          &:extend(.fs-14,
+          .fw-400);
+          color: #595959;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 .about-us-banner-wrapper {
   padding: 6.938rem 0;

@@ -119,6 +119,7 @@ body:has(header.fixed-top) main {
 .review-form-content p,
 .review-form-content h6,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .services-list-wrapper .service-card-wrapper .service-card-content p,
 .services-list-wrapper .service-card-wrapper .service-card-content .btn,
@@ -229,6 +230,8 @@ footer .quick-links-wrapper li a,
 .cancellation-penalty-wrapper ul li,
 .review-form-content h6,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn,
+.payment-options-wrapper .payment-tab-footer ul li p,
 .services-list-wrapper .service-card-wrapper .service-card-content p,
 .services-list-wrapper .service-card-wrapper .service-card-content .btn,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .categories-list li a,
@@ -260,6 +263,7 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .cancellation-penalty-wrapper h4,
+.payment-options-wrapper .payment-tab-footer ul li h6,
 .travel-solutions-wrapper ul li p,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blogs-items-wrapper h6 {
@@ -579,6 +583,8 @@ footer .quick-links-wrapper li a,
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
 .review-form-content p,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn,
+.payment-options-wrapper .payment-tab-footer ul li p,
 .about-us-banner-wrapper h3,
 .travel-solutions-wrapper ul li p,
 .who-we-are-wrapper ul li h6,
@@ -619,6 +625,7 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .cancellation-penalty-wrapper h4,
+.payment-options-wrapper .payment-tab-footer ul li h6,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
@@ -634,6 +641,7 @@ footer .quick-links-wrapper li a,
 .font-color-primary,
 .sort-view-btn.active,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn.active,
 .who-we-are-wrapper ul li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
@@ -671,6 +679,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table thead tr th,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn,
+.payment-options-wrapper .payment-tab-footer ul li h6,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
@@ -3224,6 +3234,63 @@ textarea.form-control {
 }
 .payment-options-wrapper .payment-tab-header .nav .nav-item:last-child .nav-link {
   border-right: 1px solid #eeeeee;
+}
+.payment-options-wrapper .payment-tab-body {
+  padding: 1rem 0.75rem;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper {
+  display: flex;
+  gap: 0.563rem;
+  align-items: center;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn {
+  min-width: 122px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.563rem;
+  flex-direction: column;
+  border: 1px solid #ededed;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn img.active-img {
+  display: none;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn.active {
+  background-color: #fff1e480;
+  border-color: #f28b24;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn.active img.default-img {
+  display: none;
+}
+.payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn.active img.active-img {
+  display: block;
+}
+.payment-options-wrapper .payment-tab-footer {
+  padding: 0rem 0.75rem 1rem;
+}
+.payment-options-wrapper .payment-tab-footer ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.payment-options-wrapper .payment-tab-footer ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  padding: 0.8rem 0;
+}
+.payment-options-wrapper .payment-tab-footer ul li:last-child {
+  border-bottom: none;
+}
+.payment-options-wrapper .payment-tab-footer ul li h6 {
+  margin: 0;
+}
+.payment-options-wrapper .payment-tab-footer ul li p {
+  color: #595959;
+  margin: 0;
 }
 .about-us-banner-wrapper {
   padding: 6.938rem 0;
