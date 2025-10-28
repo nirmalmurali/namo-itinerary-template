@@ -72,7 +72,7 @@ html {
 body {
   font-family: "Roboto", sans-serif !important;
   height: 100%;
-
+  overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
@@ -1136,6 +1136,11 @@ textarea {
 .flight-trip-details-wrapper {
   border: 1px solid #e7e7e7;
   border-radius: 10px;
+  @media screen {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .from-to-details-wrapper {
     display: flex;
     height: 100%;
@@ -1415,7 +1420,7 @@ textarea {
         &::-webkit-scrollbar-button {
           display: none; /* 👈 hides top/bottom arrows */
         }
-        scrollbar-color: #697586 transparent;
+        // scrollbar-color: #697586 transparent;
         li {
           display: flex;
           align-items: center;
@@ -1604,6 +1609,11 @@ textarea {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    @media screen {
+      @media (max-width: 991px) {
+        overflow-y: auto;
+      }
+    }
     .tab-pane {
       &.active {
         display: flex;
@@ -1611,6 +1621,12 @@ textarea {
         height: 100%;
         flex-grow: 1;
         overflow: hidden;
+        @media screen {
+          @media (max-width: 991px) {
+            overflow-y: auto;
+            display: block;
+          }
+        }
       }
     }
     .tab-content-filter-view {
@@ -1619,6 +1635,15 @@ textarea {
       flex-direction: column;
       overflow: hidden;
       &:extend(.bg-color-desert-storm);
+      .container {
+        @media screen {
+          @media (min-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+          }
+        }
+      }
       .tab-content-filter-view-content {
         display: flex;
         flex-grow: 1;
@@ -1633,7 +1658,11 @@ textarea {
           border-radius: 5px;
           display: flex;
           &:extend(.bg-color-white);
-
+          @media screen {
+            @media (max-width: 991px) {
+              display: none;
+            }
+          }
           .filter-side-bar-list-wrapper {
             overflow: hidden;
             overflow-y: auto;
@@ -1961,14 +1990,33 @@ textarea {
       display: flex;
       align-items: stretch;
       justify-content: space-between;
+      column-gap: 1rem;
+      @media screen {
+        @media (max-width: 1399px) {
+          flex-wrap: wrap;
+          padding: 0;
+        }
+      }
       .fare-type-section-one {
         display: flex;
         align-items: center;
         padding: 0.6rem 0;
+        @media screen {
+          @media (max-width: 1399px) {
+            padding: 13px;
+          }
+        }
       }
       .fare-type-section-two {
         display: flex;
         align-items: stretch;
+        @media screen {
+          @media (max-width: 1399px) {
+            border-top: 1px solid @lavenderMist;
+            width: 100%;
+            padding: 13px;
+          }
+        }
       }
       .book-now-fare-type {
         display: flex;
@@ -3462,6 +3510,125 @@ textarea {
     @media screen {
       @media (max-width: 991px) {
         max-width: 100%;
+      }
+    }
+  }
+}
+.litepicker {
+  @media screen {
+    @media (max-width: 576px) {
+      left: 0 !important;
+      right: 0 !important;
+      margin: auto;
+    }
+  }
+
+  .container__main {
+    @media screen {
+      @media (max-width: 576px) {
+        justify-content: center;
+      }
+    }
+    .container__months {
+      box-shadow: 0px 0px 4px 0px #00000040;
+      @media screen {
+        @media (max-width: 991px) {
+          flex-direction: column;
+          max-width: 280px;
+          width: 100%;
+        }
+      }
+      .month-item {
+        .month-item-header {
+          .button-previous-month {
+            &::after {
+              content: "";
+              background-image: url("../assets/images/datepicker_arrow.svg");
+              width: 20px;
+              height: 15px;
+              display: block;
+            }
+            svg {
+              display: none;
+            }
+          }
+          .button-next-month {
+            &::after {
+              content: "";
+              background-image: url("../assets/images/datepicker_arrow.svg");
+              width: 20px;
+              height: 15px;
+              display: block;
+              transform: rotate(180deg);
+            }
+            svg {
+              display: none;
+            }
+          }
+          .month-item-name,
+          .month-item-year {
+            &:extend(.font-color-secondary,
+            .fs-16,
+            .fw-700,
+            .pt-sans-font-family);
+          }
+        }
+        .month-item-weekdays-row {
+          &:extend(.font-color-secondary,
+          .fs-14,
+          .fw-400,
+          .pt-sans-font-family);
+        }
+        .container__days {
+          .day-item {
+            width: 32px;
+            height: 32px;
+            &:extend(.font-color-secondary,
+            .fs-14,
+            .fw-700,
+            .pt-sans-font-family);
+            &:hover,
+            &.is-start-date,
+            &.is-end-date {
+              background-color: @primaryColor;
+              &:extend(.font-color-white);
+              border: none;
+              box-shadow: none;
+              border-radius: 50%;
+            }
+            &.is-in-range {
+              background-color: #f28b2469;
+              border-radius: 0;
+            }
+            &.is-start-date {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+              &.is-flipped {
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+              }
+            }
+            &.is-end-date {
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+              &.is-flipped {
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+            }
+            &.is-locked {
+              &:extend(.font-color-grey-cloud);
+              &:hover {
+                background-color: transparent;
+                &:extend(.font-color-grey-cloud);
+              }
+            }
+          }
+        }
       }
     }
   }

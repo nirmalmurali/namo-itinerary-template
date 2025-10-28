@@ -10,6 +10,7 @@ html {
 body {
   font-family: "Roboto", sans-serif !important;
   height: 100%;
+  overflow-x: hidden;
   /* For Firefox */
 }
 body::-webkit-scrollbar {
@@ -129,7 +130,11 @@ body:has(header.fixed-top) main {
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
 .blogs-items-wrapper h6,
 .blogs-items-wrapper p,
-.blogs-items-wrapper h5 {
+.blogs-items-wrapper h5,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
+.litepicker .container__main .container__months .month-item .month-item-weekdays-row,
+.litepicker .container__main .container__months .month-item .container__days .day-item {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -240,7 +245,9 @@ footer .quick-links-wrapper li a,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
 .blogs-items-wrapper p,
-.blogs-items-wrapper a {
+.blogs-items-wrapper a,
+.litepicker .container__main .container__months .month-item .month-item-weekdays-row,
+.litepicker .container__main .container__months .month-item .container__days .day-item {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -251,7 +258,9 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
-.who-we-are-wrapper ul li p {
+.who-we-are-wrapper ul li p,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-year {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -599,7 +608,8 @@ footer .quick-links-wrapper li a,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
 .blogs-items-wrapper h6,
 .blogs-items-wrapper p,
-.blogs-items-wrapper a {
+.blogs-items-wrapper a,
+.litepicker .container__main .container__months .month-item .month-item-weekdays-row {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -629,7 +639,10 @@ footer .quick-links-wrapper li a,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
-.blogs-items-wrapper h5 {
+.blogs-items-wrapper h5,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
+.litepicker .container__main .container__months .month-item .container__days .day-item {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -684,7 +697,11 @@ footer .quick-links-wrapper li a,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a h6,
-.blogs-items-wrapper h5 {
+.blogs-items-wrapper h5,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
+.litepicker .container__main .container__months .month-item .month-item-weekdays-row,
+.litepicker .container__main .container__months .month-item .container__days .day-item {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -731,7 +748,10 @@ footer .quick-links-wrapper li a,
 .drop-message-wrapper .drop-message-submit-btn:hover,
 .drop-message-wrapper .drop-message-submit-btn:focus,
 .primary-bg-outline-btn:hover,
-.primary-bg-outline-btn:focus {
+.primary-bg-outline-btn:focus,
+.litepicker .container__main .container__months .month-item .container__days .day-item:hover,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -753,7 +773,9 @@ footer .quick-links-wrapper li a,
 .bg-color-vista-white {
   background-color: #fff7f4 !important;
 }
-.font-color-grey-cloud {
+.font-color-grey-cloud,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-locked,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-locked:hover {
   color: #bababa !important;
 }
 .bg-color-grey-cloud {
@@ -1877,6 +1899,11 @@ textarea.form-control {
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
+@media screen and (max-width: 767px) {
+  .flight-trip-details-wrapper {
+    width: 100%;
+  }
+}
 .flight-trip-details-wrapper .from-to-details-wrapper {
   display: flex;
   height: 100%;
@@ -2105,7 +2132,6 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  scrollbar-color: #697586 transparent;
 }
 .select-airline-dropdown .airline-search-dropdown-wrapper .airline-list-check-list ul::-webkit-scrollbar-track {
   background: transparent;
@@ -2264,6 +2290,11 @@ textarea.form-control {
   flex-direction: column;
   overflow: hidden;
 }
+@media screen and (max-width: 991px) {
+  .search-tab-wrapper .search-filter-tab-content {
+    overflow-y: auto;
+  }
+}
 .search-tab-wrapper .search-filter-tab-content .tab-pane.active {
   display: flex;
   flex-direction: column;
@@ -2271,11 +2302,24 @@ textarea.form-control {
   flex-grow: 1;
   overflow: hidden;
 }
+@media screen and (max-width: 991px) {
+  .search-tab-wrapper .search-filter-tab-content .tab-pane.active {
+    overflow-y: auto;
+    display: block;
+  }
+}
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content {
   display: flex;
@@ -2291,6 +2335,11 @@ textarea.form-control {
   padding: 1rem 0.2rem 1rem 0.75rem;
   border-radius: 5px;
   display: flex;
+}
+@media screen and (max-width: 991px) {
+  .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar {
+    display: none;
+  }
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper {
   overflow: hidden;
@@ -2527,15 +2576,34 @@ textarea.form-control {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
+  column-gap: 1rem;
+}
+@media screen and (max-width: 1399px) {
+  .book-now-fare-type-list-wrapper ul li {
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 .book-now-fare-type-list-wrapper ul li .fare-type-section-one {
   display: flex;
   align-items: center;
   padding: 0.6rem 0;
 }
+@media screen and (max-width: 1399px) {
+  .book-now-fare-type-list-wrapper ul li .fare-type-section-one {
+    padding: 13px;
+  }
+}
 .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
   display: flex;
   align-items: stretch;
+}
+@media screen and (max-width: 1399px) {
+  .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
+    border-top: 1px solid #eaeaea;
+    width: 100%;
+    padding: 13px;
+  }
 }
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type {
   display: flex;
@@ -3665,4 +3733,86 @@ textarea.form-control {
   .booking-details-wrapper .booking-details-right-content {
     max-width: 100%;
   }
+}
+@media screen and (max-width: 576px) {
+  .litepicker {
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .litepicker .container__main {
+    justify-content: center;
+  }
+}
+.litepicker .container__main .container__months {
+  box-shadow: 0px 0px 4px 0px #00000040;
+}
+@media screen and (max-width: 991px) {
+  .litepicker .container__main .container__months {
+    flex-direction: column;
+    max-width: 280px;
+    width: 100%;
+  }
+}
+.litepicker .container__main .container__months .month-item .month-item-header .button-previous-month::after {
+  content: "";
+  background-image: url("../assets/images/datepicker_arrow.svg");
+  width: 20px;
+  height: 15px;
+  display: block;
+}
+.litepicker .container__main .container__months .month-item .month-item-header .button-previous-month svg {
+  display: none;
+}
+.litepicker .container__main .container__months .month-item .month-item-header .button-next-month::after {
+  content: "";
+  background-image: url("../assets/images/datepicker_arrow.svg");
+  width: 20px;
+  height: 15px;
+  display: block;
+  transform: rotate(180deg);
+}
+.litepicker .container__main .container__months .month-item .month-item-header .button-next-month svg {
+  display: none;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item {
+  width: 32px;
+  height: 32px;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item:hover,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date {
+  background-color: #f28b24;
+  border: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-in-range {
+  background-color: #f28b2469;
+  border-radius: 0;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date.is-flipped {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date.is-flipped {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-locked:hover {
+  background-color: transparent;
 }

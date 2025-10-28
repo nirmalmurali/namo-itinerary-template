@@ -48,6 +48,10 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
     <link rel="stylesheet" href="css/namoItinerary.css" />
   </head>
   <body>
@@ -365,10 +369,9 @@
                                 <li>
                                   <div class="dropdown">
                                     <a
-                                      class="btn btn-secondary dropdown-toggle"
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
                                       href="#"
                                       role="button"
-                                      data-bs-toggle="dropdown"
                                       aria-expanded="false"
                                     >
                                       Departure
@@ -376,25 +379,18 @@
                                         class="fa fa-angle-down font-color-primary"
                                         aria-hidden="true"
                                       ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        readonly
+                                        style="
+                                          background: #fff;
+                                          cursor: pointer;
+                                        "
+                                        placeholder="Select dates"
+                                        hidden
+                                      />
                                     </a>
-
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Another action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Something else here</a
-                                        >
-                                      </li>
-                                    </ul>
                                   </div>
                                   <h4><b>12</b> May’ 25</h4>
                                   <p>Sunday</p>
@@ -402,10 +398,9 @@
                                 <li>
                                   <div class="dropdown">
                                     <a
-                                      class="btn btn-secondary dropdown-toggle"
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
                                       href="#"
                                       role="button"
-                                      data-bs-toggle="dropdown"
                                       aria-expanded="false"
                                     >
                                       Return
@@ -414,24 +409,6 @@
                                         aria-hidden="true"
                                       ></i>
                                     </a>
-
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Another action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Something else here</a
-                                        >
-                                      </li>
-                                    </ul>
                                   </div>
                                   <h4><b>20</b> May’ 25</h4>
                                   <p>Tuesday</p>
@@ -956,7 +933,589 @@
                       aria-labelledby="roundTripTab"
                       tabindex="0"
                     >
-                      Round trip
+                      <div class="flight-trip-details-wrapper">
+                        <div class="row g-0">
+                          <div class="col-lg-6">
+                            <div class="from-to-details-wrapper">
+                              <div class="from-details">
+                                <h6>From</h6>
+                                <h4>Delhi</h4>
+                                <p>DEL, Delhi Airport india</p>
+                                <img
+                                  src="assets/images/from_to_arrow.svg"
+                                  class="from-to-icon"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="to-details">
+                                <h6>To</h6>
+                                <h4>Mumbai</h4>
+                                <p>[BOM]Chhatrapati Shivaji</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="travel-date-details">
+                              <ul>
+                                <li>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
+                                      href="#"
+                                      role="button"
+                                      aria-expanded="false"
+                                    >
+                                      Departure
+                                      <i
+                                        class="fa fa-angle-down font-color-primary"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        readonly
+                                        style="
+                                          background: #fff;
+                                          cursor: pointer;
+                                        "
+                                        placeholder="Select dates"
+                                        hidden
+                                      />
+                                    </a>
+                                  </div>
+                                  <h4><b>12</b> May’ 25</h4>
+                                  <p>Sunday</p>
+                                </li>
+                                <li>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
+                                      href="#"
+                                      role="button"
+                                      aria-expanded="false"
+                                    >
+                                      Return
+                                      <i
+                                        class="fa fa-angle-down font-color-primary"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </a>
+                                  </div>
+                                  <h4><b>20</b> May’ 25</h4>
+                                  <p>Tuesday</p>
+                                </li>
+                                <li>
+                                  <div class="dropdown">
+                                    <a
+                                      class="btn btn-secondary dropdown-toggle"
+                                      href="#"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                      data-bs-auto-close="outside"
+                                    >
+                                      Travelers & Class
+                                      <i
+                                        class="fa fa-angle-down font-color-primary"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </a>
+
+                                    <div
+                                      class="dropdown-menu chosen-travelers-class-wrapper"
+                                    >
+                                      <div class="travels-number-wrapper">
+                                        <div>
+                                          <label
+                                            class="form-label fw-bold"
+                                            for="adultSelector"
+                                            >Adults (12y+)</label
+                                          >
+                                          <div
+                                            class="btn-group number-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="adultSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <label
+                                            class="form-label fw-bold"
+                                            for="childrenSelector"
+                                            >Children 2 - 12 Years</label
+                                          >
+                                          <div
+                                            class="btn-group children-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="childrenSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="0"
+                                            >
+                                              0
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <label
+                                            class="form-label fw-bold"
+                                            for="infantsSelector"
+                                            >Infants 0 - 23 Months</label
+                                          >
+                                          <div
+                                            class="btn-group infants-btn-group number-btn-group-wrapper"
+                                            role="group"
+                                            id="infantsSelector"
+                                          >
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="0"
+                                            >
+                                              0
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="1"
+                                            >
+                                              1
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="2"
+                                            >
+                                              2
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary active"
+                                              data-value="3"
+                                            >
+                                              3
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="4"
+                                            >
+                                              4
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="5"
+                                            >
+                                              5
+                                            </button>
+                                            <button
+                                              type="button"
+                                              class="btn btn-outline-secondary"
+                                              data-value="6"
+                                            >
+                                              6
+                                            </button>
+                                            <!-- ... -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="choose-travel-class">
+                                        <p>Choose Travel Class</p>
+                                        <div
+                                          class="d-flex flex-wrap align-items-center gap-2"
+                                        >
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="radio"
+                                              name="travelClass"
+                                              id="radioEconomy"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="radioEconomy"
+                                            >
+                                              Economy
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="radio"
+                                              name="travelClass"
+                                              id="radioPremiumEconomy"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="radioPremiumEconomy"
+                                            >
+                                              Premium Economy
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="radio"
+                                              name="travelClass"
+                                              id="radioBusiness"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="radioBusiness"
+                                            >
+                                              Business
+                                            </label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="radio"
+                                              name="travelClass"
+                                              id="radioFirstClass"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="radioFirstClass"
+                                            >
+                                              First Class
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <h4><b>2</b> Travelers</h4>
+                                  <p>Tuesday</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="airline-preference-wrapper">
+                          <div class="row gx-0 gy-2">
+                            <div class="col-md-3 col-xl-2">
+                              <div class="airline-preference-title">
+                                <p>Airline Preference</p>
+                              </div>
+                            </div>
+                            <div class="col-md-9 col-xl-10">
+                              <div
+                                class="d-flex flex-wrap align-items-center gap-2 p-2"
+                              >
+                                <div class="dropdown select-airline-dropdown">
+                                  <a
+                                    class="text-decoration-none dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                    data-bs-auto-close="outside"
+                                  >
+                                    Select Airlines
+                                    <i
+                                      class="fa fa-angle-down font-color-primary"
+                                      aria-hidden="true"
+                                    ></i>
+                                  </a>
+
+                                  <div
+                                    class="dropdown-menu airline-search-dropdown-wrapper"
+                                  >
+                                    <div class="airline-search-box">
+                                      <i
+                                        class="fa fa-search"
+                                        aria-hidden="true"
+                                      ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search Airlines"
+                                      />
+                                    </div>
+                                    <div class="airline-list-check-list">
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value=""
+                                          id="selectAllCheck"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="selectAllCheck"
+                                        >
+                                          Select All
+                                        </label>
+                                      </div>
+                                      <ul>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck1"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck1"
+                                            >
+                                              Air India
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck2"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck2"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck3"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck3"
+                                            >
+                                              Air India
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck4"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck4"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck5"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck5"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck6"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck6"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <div class="form-check">
+                                            <input
+                                              class="form-check-input"
+                                              type="checkbox"
+                                              value=""
+                                              id="airlineCheck7"
+                                            />
+                                            <label
+                                              class="form-check-label"
+                                              for="airlineCheck7"
+                                            >
+                                              Indigo
+                                            </label>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="airline-preference-check-list d-flex flex-wrap align-items-center gap-3"
+                                >
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="lowCostAirlinesCheckInput"
+                                    />
+                                    <label
+                                      class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                      for="lowCostAirlinesCheckInput"
+                                    >
+                                      Low Cost Airlines
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="gdsAirlinesCheckInput"
+                                    />
+                                    <label
+                                      class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                      for="gdsAirlinesCheckInput"
+                                    >
+                                      GDS Airlines
+                                    </label>
+                                  </div>
+                                </div>
+                                <div
+                                  class="selected-airline-list-wrapper d-flex align-items-center flex-wrap gap-2"
+                                >
+                                  <div class="selected-airline-list-item">
+                                    <p>Air India Express-AX[AX]</p>
+                                    <button class="btn p-0 border-0">
+                                      <img
+                                        src="assets/images/close_icon.svg"
+                                        alt=""
+                                        width="10"
+                                        height="10"
+                                      />
+                                    </button>
+                                  </div>
+                                  <div class="selected-airline-list-item">
+                                    <p>Air India Express-AX[AX]</p>
+                                    <button class="btn p-0 border-0">
+                                      <img
+                                        src="assets/images/close_icon.svg"
+                                        alt=""
+                                        width="10"
+                                        height="10"
+                                      />
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div
                       class="tab-pane fade"
@@ -965,7 +1524,914 @@
                       aria-labelledby="multiCityTab"
                       tabindex="0"
                     >
-                      Multi city
+                      <div class="d-flex flex-column gap-3">
+                        <div class="flight-trip-details-wrapper">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="from-to-details-wrapper">
+                                <div class="from-details">
+                                  <h6>From</h6>
+                                  <h4>Delhi</h4>
+                                  <p>DEL, Delhi Airport india</p>
+                                  <img
+                                    src="assets/images/from_to_arrow.svg"
+                                    class="from-to-icon"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="to-details">
+                                  <h6>To</h6>
+                                  <h4>Mumbai</h4>
+                                  <p>[BOM]Chhatrapati Shivaji</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="travel-date-details">
+                                <ul>
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle flight-date-range"
+                                        href="#"
+                                        role="button"
+                                        aria-expanded="false"
+                                      >
+                                        Departure
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          readonly
+                                          style="
+                                            background: #fff;
+                                            cursor: pointer;
+                                          "
+                                          placeholder="Select dates"
+                                          hidden
+                                        />
+                                      </a>
+                                    </div>
+                                    <h4><b>12</b> May’ 25</h4>
+                                    <p>Sunday</p>
+                                  </li>
+
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        data-bs-auto-close="outside"
+                                      >
+                                        Travelers & Class
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </a>
+
+                                      <div
+                                        class="dropdown-menu chosen-travelers-class-wrapper"
+                                      >
+                                        <div class="travels-number-wrapper">
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="adultSelector"
+                                              >Adults (12y+)</label
+                                            >
+                                            <div
+                                              class="btn-group number-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="adultSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="childrenSelector"
+                                              >Children 2 - 12 Years</label
+                                            >
+                                            <div
+                                              class="btn-group children-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="childrenSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="infantsSelector"
+                                              >Infants 0 - 23 Months</label
+                                            >
+                                            <div
+                                              class="btn-group infants-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="infantsSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="choose-travel-class">
+                                          <p>Choose Travel Class</p>
+                                          <div
+                                            class="d-flex flex-wrap align-items-center gap-2"
+                                          >
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioEconomy"
+                                              >
+                                                Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioPremiumEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioPremiumEconomy"
+                                              >
+                                                Premium Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioBusiness"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioBusiness"
+                                              >
+                                                Business
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioFirstClass"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioFirstClass"
+                                              >
+                                                First Class
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <h4><b>2</b> Travelers</h4>
+                                    <p>Tuesday</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="flight-trip-details-wrapper">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="from-to-details-wrapper">
+                                <div class="from-details">
+                                  <h6>From</h6>
+                                  <h4>Delhi</h4>
+                                  <p>DEL, Delhi Airport india</p>
+                                  <img
+                                    src="assets/images/from_to_arrow.svg"
+                                    class="from-to-icon"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="to-details">
+                                  <h6>To</h6>
+                                  <h4>Mumbai</h4>
+                                  <p>[BOM]Chhatrapati Shivaji</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="travel-date-details">
+                                <ul>
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle flight-date-range"
+                                        href="#"
+                                        role="button"
+                                        aria-expanded="false"
+                                      >
+                                        Departure
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          readonly
+                                          style="
+                                            background: #fff;
+                                            cursor: pointer;
+                                          "
+                                          placeholder="Select dates"
+                                          hidden
+                                        />
+                                      </a>
+                                    </div>
+                                    <h4><b>12</b> May’ 25</h4>
+                                    <p>Sunday</p>
+                                  </li>
+
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        data-bs-auto-close="outside"
+                                      >
+                                        Travelers & Class
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </a>
+
+                                      <div
+                                        class="dropdown-menu chosen-travelers-class-wrapper"
+                                      >
+                                        <div class="travels-number-wrapper">
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="adultSelector"
+                                              >Adults (12y+)</label
+                                            >
+                                            <div
+                                              class="btn-group number-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="adultSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="childrenSelector"
+                                              >Children 2 - 12 Years</label
+                                            >
+                                            <div
+                                              class="btn-group children-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="childrenSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="infantsSelector"
+                                              >Infants 0 - 23 Months</label
+                                            >
+                                            <div
+                                              class="btn-group infants-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="infantsSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="choose-travel-class">
+                                          <p>Choose Travel Class</p>
+                                          <div
+                                            class="d-flex flex-wrap align-items-center gap-2"
+                                          >
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioEconomy"
+                                              >
+                                                Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioPremiumEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioPremiumEconomy"
+                                              >
+                                                Premium Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioBusiness"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioBusiness"
+                                              >
+                                                Business
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioFirstClass"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioFirstClass"
+                                              >
+                                                First Class
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <h4><b>2</b> Travelers</h4>
+                                    <p>Tuesday</p>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-center align-items-center"
+                                  >
+                                    <button
+                                      class="btn primary-bg-outline-btn fs-16 fw-400"
+                                    >
+                                      Add City
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="airline-preference-wrapper">
+                            <div class="row gx-0 gy-2">
+                              <div class="col-md-3 col-xl-2">
+                                <div class="airline-preference-title">
+                                  <p>Airline Preference</p>
+                                </div>
+                              </div>
+                              <div class="col-md-9 col-xl-10">
+                                <div
+                                  class="d-flex flex-wrap align-items-center gap-2 p-2"
+                                >
+                                  <div class="dropdown select-airline-dropdown">
+                                    <a
+                                      class="text-decoration-none dropdown-toggle"
+                                      href="#"
+                                      role="button"
+                                      data-bs-toggle="dropdown"
+                                      aria-expanded="false"
+                                      data-bs-auto-close="outside"
+                                    >
+                                      Select Airlines
+                                      <i
+                                        class="fa fa-angle-down font-color-primary"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </a>
+
+                                    <div
+                                      class="dropdown-menu airline-search-dropdown-wrapper"
+                                    >
+                                      <div class="airline-search-box">
+                                        <i
+                                          class="fa fa-search"
+                                          aria-hidden="true"
+                                        ></i>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder="Search Airlines"
+                                        />
+                                      </div>
+                                      <div class="airline-list-check-list">
+                                        <div class="form-check">
+                                          <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value=""
+                                            id="selectAllCheck"
+                                          />
+                                          <label
+                                            class="form-check-label"
+                                            for="selectAllCheck"
+                                          >
+                                            Select All
+                                          </label>
+                                        </div>
+                                        <ul>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck1"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck1"
+                                              >
+                                                Air India
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck2"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck2"
+                                              >
+                                                Indigo
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck3"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck3"
+                                              >
+                                                Air India
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck4"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck4"
+                                              >
+                                                Indigo
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck5"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck5"
+                                              >
+                                                Indigo
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck6"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck6"
+                                              >
+                                                Indigo
+                                              </label>
+                                            </div>
+                                          </li>
+                                          <li>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                value=""
+                                                id="airlineCheck7"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="airlineCheck7"
+                                              >
+                                                Indigo
+                                              </label>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="airline-preference-check-list d-flex flex-wrap align-items-center gap-3"
+                                  >
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="lowCostAirlinesCheckInput"
+                                      />
+                                      <label
+                                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                        for="lowCostAirlinesCheckInput"
+                                      >
+                                        Low Cost Airlines
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        value=""
+                                        id="gdsAirlinesCheckInput"
+                                      />
+                                      <label
+                                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                        for="gdsAirlinesCheckInput"
+                                      >
+                                        GDS Airlines
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="selected-airline-list-wrapper d-flex align-items-center flex-wrap gap-2"
+                                  >
+                                    <div class="selected-airline-list-item">
+                                      <p>Air India Express-AX[AX]</p>
+                                      <button class="btn p-0 border-0">
+                                        <img
+                                          src="assets/images/close_icon.svg"
+                                          alt=""
+                                          width="10"
+                                          height="10"
+                                        />
+                                      </button>
+                                    </div>
+                                    <div class="selected-airline-list-item">
+                                      <p>Air India Express-AX[AX]</p>
+                                      <button class="btn p-0 border-0">
+                                        <img
+                                          src="assets/images/close_icon.svg"
+                                          alt=""
+                                          width="10"
+                                          height="10"
+                                        />
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1328,6 +2794,37 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script src="js/namoItinerary.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".flight-date-range").forEach(function (el) {
+          new Litepicker({
+            element: el,
+            singleMode: false,
+            numberOfMonths: 2,
+            numberOfColumns: 2,
+            format: "MMM D, YYYY",
+            autoApply: true,
+            showTooltip: true,
+            tooltipText: {
+              one: "day",
+              other: "days",
+            },
+            minDate: new Date(),
+            setup: (picker) => {
+              picker.on("selected", (start, end) => {
+                // Get the selected values as strings
+                const startDate = start ? start.format("YYYY-MM-DD") : "";
+                const endDate = end ? end.format("YYYY-MM-DD") : "";
+                // Example: log to console or use as needed
+                console.log("Selected:", startDate, endDate);
+                // You can also update your UI or send these values to your backend here
+              });
+            },
+          });
+        });
+      });
+    </script>
   </body>
 </html>
