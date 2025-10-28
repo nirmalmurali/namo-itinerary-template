@@ -205,6 +205,44 @@ $(document).ready(function () {
       }
     });
   });
+  $(".content-view-more-wrapper").each(function () {
+    const $section = $(this);
+    const $items = $section.find("ul li");
+    const $button = $section.find(".content-show-more-btn");
+
+    const visibleCount = 4; // ✅ show first 4 items
+
+    // If more than 4 items
+    if ($items.length > visibleCount) {
+      // Hide all items after the first 4
+      $items.slice(visibleCount).hide().addClass("hidden");
+
+      // Show button with remaining count
+      $button.text("+" + ($items.length - visibleCount) + " more").show();
+    } else {
+      $button.hide();
+    }
+
+    // Toggle logic
+    $button.on("click", function () {
+      const isCollapsed = $items.filter(".hidden").length > 0;
+
+      if (isCollapsed) {
+        // Expand all (maintain flex display)
+        $items
+          .slideDown(200)
+          .css("display", "flex") // ✅ Keep flex layout for filters
+          .removeClass("hidden");
+        $button.text("Show less");
+      } else {
+        // Collapse back to first 4 items
+        $items.slice(visibleCount).slideUp(200, function () {
+          $(this).addClass("hidden");
+        });
+        $button.text("+" + ($items.length - visibleCount) + " more");
+      }
+    });
+  });
   // $(".horizontal-scrollbar-wrapper").each(function () {
   //   const $wrapper = $(this);
   //   const $list = $wrapper.find(".scroll-list");

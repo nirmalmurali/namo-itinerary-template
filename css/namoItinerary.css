@@ -3656,3 +3656,13 @@ textarea.form-control {
 .blogs-items-wrapper a:hover {
   text-decoration: none;
 }
+@media screen and (max-width: 991px) {
+  .booking-details-wrapper {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 991px) {
+  .booking-details-wrapper .booking-details-right-content {
+    max-width: 100%;
+  }
+}
