@@ -495,4 +495,16 @@ $(document).ready(function () {
     $(".filter-side-bar").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
+
+  // Initialize Bootstrap tooltips (move this here)
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+  // In your namoItinerary.js
+  $(document).on("click", '[data-bs-title="Share"]', function () {
+    $("#shareModal").modal("show");
+  });
 });

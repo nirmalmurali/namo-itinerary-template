@@ -134,7 +134,8 @@ body:has(header.fixed-top) main {
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
-.litepicker .container__main .container__months .month-item .container__days .day-item {
+.litepicker .container__main .container__months .month-item .container__days .day-item,
+.tooltip .tooltip-inner {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -247,7 +248,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper p,
 .blogs-items-wrapper a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
-.litepicker .container__main .container__months .month-item .container__days .day-item {
+.litepicker .container__main .container__months .month-item .container__days .day-item,
+.tooltip .tooltip-inner {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -609,7 +611,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper h6,
 .blogs-items-wrapper p,
 .blogs-items-wrapper a,
-.litepicker .container__main .container__months .month-item .month-item-weekdays-row {
+.litepicker .container__main .container__months .month-item .month-item-weekdays-row,
+.tooltip .tooltip-inner {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -751,7 +754,8 @@ footer .quick-links-wrapper li a,
 .primary-bg-outline-btn:focus,
 .litepicker .container__main .container__months .month-item .container__days .day-item:hover,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
-.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date {
+.litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date,
+.tooltip .tooltip-inner {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -786,7 +790,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
   color: #269a59 !important;
 }
-.bg-color-sea-green {
+.bg-color-sea-green,
+.tooltip .tooltip-inner {
   background-color: #269a59 !important;
 }
 .font-color-pine-green {
@@ -1992,6 +1997,7 @@ textarea.form-control {
   .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title {
     border: none;
     border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
     justify-content: center;
   }
 }
@@ -2013,7 +2019,7 @@ textarea.form-control {
   display: flex;
   height: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
   .travel-date-details > ul {
     flex-direction: column;
     align-items: center;
@@ -2027,7 +2033,12 @@ textarea.form-control {
 .travel-date-details > ul > li:last-child {
   border-right: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
+  .travel-date-details > ul > li:last-child {
+    border: none;
+  }
+}
+@media screen and (max-width: 576px) {
   .travel-date-details > ul > li {
     border-right: none;
     border-bottom: 1px solid #e7e7e7;
@@ -3828,4 +3839,7 @@ textarea.form-control {
 }
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-locked:hover {
   background-color: transparent;
+}
+.tooltip .tooltip-arrow::before {
+  border-bottom-color: #269a59 !important;
 }
