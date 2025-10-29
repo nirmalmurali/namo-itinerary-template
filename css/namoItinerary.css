@@ -2335,10 +2335,21 @@ textarea.form-control {
   padding: 1rem 0.2rem 1rem 0.75rem;
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar.active {
+  transform: translateX(0);
 }
 @media screen and (max-width: 991px) {
   .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9999;
+    left: 0;
+    transform: translateX(-100%);
   }
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper {
@@ -2347,7 +2358,8 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-right: 0.2rem;
+  padding-right: 1rem;
+  flex-grow: 1;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5 {
   margin-bottom: 11px;
@@ -2588,10 +2600,12 @@ textarea.form-control {
   display: flex;
   align-items: center;
   padding: 0.6rem 0;
+  gap: 0.8rem;
 }
 @media screen and (max-width: 1399px) {
   .book-now-fare-type-list-wrapper ul li .fare-type-section-one {
     padding: 13px;
+    flex-wrap: wrap;
   }
 }
 .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
@@ -2643,7 +2657,6 @@ textarea.form-control {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  padding: 0 1rem;
 }
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
   border-radius: 4px;

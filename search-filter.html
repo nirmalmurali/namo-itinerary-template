@@ -234,7 +234,7 @@
               </li>
 
               <!-- Holidays Tab -->
-              <li class="nav-item" role="presentation">
+              <!-- <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
                   id="searchFilterPillsHolidaysTab"
@@ -248,7 +248,7 @@
                   <img src="assets/images/holidays_tab_icon.svg" alt="" />
                   Holidays
                 </button>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -694,7 +694,7 @@
                       class="d-flex gap-3 flex-wrap flex-lg-nowrap h-100 align-items-center"
                     >
                       <div>
-                        <div class="row g-3">
+                        <div class="row gx-3 gy-2">
                           <div class="col-6">
                             <div class="form-check">
                               <input
@@ -776,6 +776,13 @@
               <div class="container">
                 <div class="tab-content-filter-view-content">
                   <div class="filter-side-bar">
+                    <div
+                      class="d-flex d-lg-none justify-content-end w-100 pe-3"
+                    >
+                      <button class="filter-mob-menu-close btn p-0 border-0">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                      </button>
+                    </div>
                     <div class="filter-side-bar-list-wrapper">
                       <div
                         class="filter-side-bar-options content-view-more-wrapper"
@@ -1089,40 +1096,47 @@
                     </div>
                   </div>
                   <div class="filter-view-content-wrapper">
-                    <ul
-                      class="nav nav-pills mb-3 view-change-nav-wrapper"
-                      id="viewChangeTab"
-                      role="tablist"
-                    >
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link active"
-                          id="combinedViewTab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#combinedView"
-                          type="button"
-                          role="tab"
-                          aria-controls="combinedView"
-                          aria-selected="true"
-                        >
-                          Combined view
-                        </button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link"
-                          id="splitViewTab"
-                          data-bs-toggle="pill"
-                          data-bs-target="#splitView"
-                          type="button"
-                          role="tab"
-                          aria-controls="splitView"
-                          aria-selected="false"
-                        >
-                          Split view
-                        </button>
-                      </li>
-                    </ul>
+                    <div class="d-flex justify-content-between gap-2 mb-3">
+                      <ul
+                        class="nav nav-pills view-change-nav-wrapper"
+                        id="viewChangeTab"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            id="combinedViewTab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#combinedView"
+                            type="button"
+                            role="tab"
+                            aria-controls="combinedView"
+                            aria-selected="true"
+                          >
+                            Combined view
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            id="splitViewTab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#splitView"
+                            type="button"
+                            role="tab"
+                            aria-controls="splitView"
+                            aria-selected="false"
+                          >
+                            Split view
+                          </button>
+                        </li>
+                      </ul>
+                      <button
+                        class="btn d-flex d-lg-none bg-color-primary text-white align-items-center justify-content-center mobile-filter-btn"
+                      >
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                      </button>
+                    </div>
                     <div class="filter-view-content-header">
                       <div class="row">
                         <div class="col-lg-8">

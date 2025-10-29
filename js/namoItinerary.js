@@ -100,11 +100,15 @@ $(document).ready(function () {
     initSlider($(this));
   });
 
-  $(".navbar-toggler,.black-drop,.menu-close").click(function () {
+  $(".navbar-toggler,.menu-close").click(function () {
     $(".mobile-nav-menu").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
-
+  $(".black-drop,.filter-mob-menu-close").click(function () {
+    $(".mobile-nav-menu").removeClass("active");
+    $(".black-drop").removeClass("active");
+    $(".filter-side-bar ").removeClass("active");
+  });
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
       $(this).next("input").focus();
@@ -486,5 +490,9 @@ $(document).ready(function () {
   $(document).on("click", ".payment-method-btns button", function () {
     $(".wallet-btns-wrapper button").removeClass("active");
     $(this).addClass("active");
+  });
+  $(".mobile-filter-btn").on("click", function () {
+    $(".filter-side-bar").toggleClass("active");
+    $(".black-drop").toggleClass("active");
   });
 });
