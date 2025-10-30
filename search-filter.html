@@ -1155,7 +1155,7 @@
                               <h5
                                 class="font-color-secondary fw-700 fs-18 pt-sans-font-family"
                               >
-                                Flights from Mumbai  New Delhi
+                                Flights from Mumbai New Delhi
                               </h5>
                             </div>
                             <div
@@ -1329,6 +1329,11 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
@@ -1338,6 +1343,11 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
@@ -1347,6 +1357,11 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
@@ -1356,6 +1371,11 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
@@ -1365,6 +1385,11 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
@@ -1374,13 +1399,21 @@
                                     <img
                                       src="assets/images/sort_down_arrow.svg"
                                       alt=""
+                                      class="default-img"
+                                    />
+                                    <img
+                                      src="assets/images/sort_down_arrow_active.svg"
+                                      class="active-img"
                                     />
                                   </button>
                                 </li>
                               </ul>
 
-                              <button class="btn sort-view-btn">
+                              <button
+                                class="btn sort-view-btn py-1 flex-shrink-0"
+                              >
                                 <img src="assets/images/sort_arrow_icon.svg" />
+
                                 Sort By
                               </button>
                             </div>
@@ -1484,7 +1517,7 @@
                                         <h5>₹12,886</h5>
                                         <p>Net Fare: ₹ 11,016</p>
                                       </div>
-                                      <div class="active-fare-type mx-3">
+                                      <div class="active-fare-type mx-3 active">
                                         <img
                                           src="assets/images/tick_icon.svg"
                                         />
@@ -2099,11 +2132,88 @@
                 <img src="assets/images/close_round_icon.svg" alt="" />
               </button>
             </div>
-            <div class="modal-body"></div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4 align-items-end">
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="toEmailInput"
+                      placeholder="To Email"
+                    />
+                    <label for="toEmailInput">To Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="replyToEmailInput"
+                      placeholder="Reply to Email"
+                    />
+                    <label for="replyToEmailInput">Reply to Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="displayNameInput"
+                      placeholder="Display Name"
+                    />
+                    <label for="displayNameInput">Display Name</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="includeFareShareCheck"
+                    />
+                    <label
+                      class="form-check-label pt-sans-font-family fs-14 fw-400"
+                      for="includeFareShareCheck"
+                    >
+                      Include Fare
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="col-12 d-flex gap-sm-2 gap-3 align-items-sm-center flex-column flex-sm-row"
+                >
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img src="assets/images/pdf_icon.svg" alt="pdf icon" />
+                    Download PDF
+                    <img
+                      src="assets/images/download_primary_icon.svg"
+                      alt="download icon"
+                    />
+                  </button>
+                  <div class="vr d-none d-sm-block"></div>
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img
+                      src="assets/images/whatsapp_icon.svg"
+                      alt="whatsapp icon"
+                    />
+                    Copy For WhatsApp
+                    <img src="assets/images/copy_icon.svg" alt="copy icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="modal-footer border-0">
               <button
                 type="button"
-                class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16"
+                class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2"
                 data-bs-dismiss="modal"
               >
                 Send Email

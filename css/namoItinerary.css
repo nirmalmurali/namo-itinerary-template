@@ -2500,7 +2500,9 @@ textarea.form-control {
   padding: 0;
   display: none;
   align-items: center;
-  gap: 22px;
+  column-gap: 22px;
+  row-gap: 8px;
+  flex-wrap: wrap;
 }
 .sort-list-wrapper.active {
   display: flex;
@@ -2509,13 +2511,23 @@ textarea.form-control {
 }
 .sort-list-wrapper li {
   padding: 0;
+  flex-shrink: 0;
 }
 .sort-list-wrapper li .btn {
   padding: 0;
   border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
-.sort-list-wrapper li .btn.active img {
-  content: url("../assets/images/sort_down_arrow_active.svg");
+.sort-list-wrapper li .btn img.active-img {
+  display: none;
+}
+.sort-list-wrapper li .btn.active img.default-img {
+  display: none;
+}
+.sort-list-wrapper li .btn.active img.active-img {
+  display: block;
 }
 .sort-view-btn {
   padding: 0;
@@ -2622,6 +2634,7 @@ textarea.form-control {
 .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
   display: flex;
   align-items: stretch;
+  padding-right: 0.5rem;
 }
 @media screen and (max-width: 1399px) {
   .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
