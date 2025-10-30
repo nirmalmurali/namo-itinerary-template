@@ -69,6 +69,13 @@ body:has(header.fixed-top) main {
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li h4,
 .travel-date-details > ul > li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body h6,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier h5,
 .select-airline-dropdown .dropdown-toggle,
 .selected-airline-list-item p,
 .number-btn-group-wrapper .btn,
@@ -167,6 +174,9 @@ body:has(header.fixed-top) main {
   font-size: 0.6875rem !important;
 }
 .fs-12,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier h5,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p,
 .flight-profile-details p,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
@@ -202,6 +212,9 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body h6,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4,
 .select-airline-dropdown .dropdown-toggle,
 .selected-airline-list-item p,
 .number-btn-group-wrapper .btn,
@@ -299,7 +312,8 @@ footer .quick-links-wrapper li a,
   font-size: 1.5rem !important;
 }
 .fs-25,
-.flight-trip-details-wrapper .from-to-details-wrapper h4 {
+.flight-trip-details-wrapper .from-to-details-wrapper h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle {
   font-size: 1.5625rem !important;
 }
 .fs-26 {
@@ -554,6 +568,11 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier h5,
 .select-airline-dropdown .dropdown-toggle,
 .selected-airline-list-item p,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
@@ -627,6 +646,8 @@ footer .quick-links-wrapper li a,
 }
 .fw-700,
 .flight-trip-details-wrapper .from-to-details-wrapper h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body h6,
 .number-btn-group-wrapper .btn,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .sorted-flight-details .time-details h6 b,
@@ -655,6 +676,7 @@ footer .quick-links-wrapper li a,
   font-weight: 900 !important;
 }
 .font-color-primary,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body h6,
 .sort-view-btn.active,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
 .payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn.active,
@@ -678,6 +700,8 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .from-to-details-wrapper h4,
 .flight-trip-details-wrapper .airline-preference-wrapper .airline-preference-title p,
 .travel-date-details > ul > li h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4,
 .select-airline-dropdown .dropdown-toggle,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options h5,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
@@ -786,6 +810,7 @@ footer .quick-links-wrapper li a,
   background-color: #bababa !important;
 }
 .font-color-sea-green,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span,
 .sort-list-wrapper li .btn.active,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
   color: #269a59 !important;
@@ -893,6 +918,9 @@ footer .quick-links-wrapper li a,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
 .travel-date-details > ul > li .dropdown .dropdown-toggle,
 .travel-date-details > ul > li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier h5,
 .selected-airline-list-item .btn,
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p,
 .page-tab-header-wrapper ul li button,
@@ -1046,6 +1074,12 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-white-rock {
   background-color: #e6e6e6 !important;
+}
+.font-color-platinum {
+  color: #e7e7e7 !important;
+}
+.bg-color-platinum {
+  background-color: #e7e7e7 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -1810,7 +1844,6 @@ textarea.form-control {
   position: relative;
   z-index: 0;
   padding: 53px 0 14rem;
-  overflow: hidden;
 }
 .dashboard-banner-wrapper::before {
   content: "";
@@ -1889,10 +1922,19 @@ textarea.form-control {
   align-items: center;
   gap: 0.375rem;
 }
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link img.img-active {
+  display: none;
+}
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link.active {
   background-color: transparent;
 }
-.dashboard-platforms-wrapper .platforms-tab-content {
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link.active img.img-default {
+  display: none;
+}
+.dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link.active img.img-active {
+  display: block;
+}
+.dashboard-platforms-wrapper .platforms-tab-content .dashboard-tab-panel {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 1rem;
@@ -2070,6 +2112,85 @@ textarea.form-control {
   font-size: 1.563rem;
 }
 .travel-date-details > ul > li p {
+  margin-bottom: 0;
+}
+.booking-hotels-wrapper {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper p {
+  margin-bottom: 0;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper {
+  max-width: 276px;
+  width: 100%;
+  height: 330px;
+  padding: 0 !important;
+  gap: 0.5rem;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e7e7e7;
+  gap: 9px;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-header .form-control {
+  border: none !important;
+  padding: 0;
+  height: 30px;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 0.75rem 0.75rem 0.75rem;
+  flex-grow: 1;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body h6 {
+  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+  gap: 14px;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4 {
+  margin-bottom: 0;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p {
+  margin-bottom: 0;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span {
+  border: 1px solid #269a59;
+  background-color: #effff6;
+  border-radius: 1px;
+  padding: 0 5px;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li .country-identifier h5 {
   margin-bottom: 0;
 }
 .dropdown .dropdown-toggle {
@@ -3646,7 +3767,9 @@ textarea.form-control {
   position: relative;
   z-index: 2;
 }
-.text-overflow-ellipsis {
+.text-overflow-ellipsis,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4,
+.booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

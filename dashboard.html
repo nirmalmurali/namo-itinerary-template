@@ -214,7 +214,16 @@
                   aria-controls="pillsFlights"
                   aria-selected="true"
                 >
-                  <img src="assets/images/flight_tab_icon.svg" alt="" />
+                  <img
+                    src="assets/images/flight_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/flight_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
                   Flight
                 </button>
               </li>
@@ -229,11 +238,20 @@
                   aria-controls="pillsHotels"
                   aria-selected="false"
                 >
-                  <img src="assets/images/hotels_tab_icon.svg" alt="" />
+                  <img
+                    src="assets/images/hotels_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/hotels_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
                   Hotels
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <!-- <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
                   id="pillsHolidaysTab"
@@ -247,14 +265,14 @@
                   <img src="assets/images/holidays_tab_icon.svg" alt="" />
                   Holidays
                 </button>
-              </li>
+              </li> -->
             </ul>
             <div
               class="tab-content platforms-tab-content"
               id="pills-tabContent"
             >
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade show active dashboard-tab-panel"
                 id="pillsFlights"
                 role="tabpanel"
                 aria-labelledby="pillsFlightsTab"
@@ -2435,16 +2453,210 @@
                     </div>
                   </div>
                 </div>
+                <div class="trip-fare-check-list">
+                  <ul>
+                    <li>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="directFlightCheckInput"
+                        />
+                        <label
+                          class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                          for="directFlightCheckInput"
+                        >
+                          Direct Flight
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="nearbyAirportsCheckInput"
+                        />
+                        <label
+                          class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                          for="nearbyAirportsCheckInput"
+                        >
+                          Nearby Airports
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="studentFareCheckInput"
+                        />
+                        <label
+                          class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                          for="studentFareCheckInput"
+                        >
+                          Student Fare
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="cityzenFareCheckInput"
+                        />
+                        <label
+                          class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                          for="cityzenFareCheckInput"
+                        >
+                          Sr. Citizen Fare
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="d-flex justify-content-end position-relative">
+                  <a
+                    href="search-filter.html"
+                    class="btn border-0 search-filter-btn rounded-pill bg-color-pale-orange text-white pt-sans-font-family fs-14 fw-700 d-flex align-items-center justify-content-center"
+                  >
+                    Search Flights
+                  </a>
+                </div>
               </div>
 
               <div
-                class="tab-pane fade"
+                class="tab-pane fade dashboard-tab-panel"
                 id="pillsHotels"
                 role="tabpanel"
                 aria-labelledby="pillsHotelsTab"
                 tabindex="0"
               >
-                Hotels
+                <h6
+                  class="mb-0 fs-16 fw-400 pt-sans-font-family font-color-secondary mb-2"
+                >
+                  Book Domestic and International Hotels
+                </h6>
+                <div class="booking-hotels-wrapper">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="hotel-destination-list-wrapper">
+                        <p>City, Property name or Location</p>
+                        <div class="dropdown">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Select Destination
+                          </button>
+                          <div
+                            class="dropdown-menu destination-dropdown-wrapper"
+                          >
+                            <div class="destination-dropdown-header">
+                              <img
+                                src="assets/images/search_fa_Icon.svg"
+                                alt=""
+                              />
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="destinationSearchInput"
+                                placeholder="Search Destination"
+                              />
+                            </div>
+                            <div class="destination-dropdown-body">
+                              <h6>Suggestions</h6>
+                              <ul class="destination-list list-unstyled">
+                                <li>
+                                  <img
+                                    src="assets/images/map_pointer_icon.svg"
+                                    alt=""
+                                  />
+                                  <div
+                                    class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                  >
+                                    <h4>New Delhi</h4>
+                                    <p>
+                                      <span>City</span> National Capital
+                                      Territory of Delhi
+                                    </p>
+                                  </div>
+                                  <div class="country-identifier flex-shrink-0">
+                                    <h5>IN</h5>
+                                    <img
+                                      src="assets/images/indian_flag.svg"
+                                      alt=""
+                                    />
+                                  </div>
+                                </li>
+                                <li>
+                                  <img
+                                    src="assets/images/airport_icon.svg"
+                                    alt=""
+                                  />
+                                  <div
+                                    class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                  >
+                                    <h4>New Delhi</h4>
+                                    <p>
+                                      <span>City</span> National Capital
+                                      Territory of Delhi
+                                    </p>
+                                  </div>
+                                  <div class="country-identifier flex-shrink-0">
+                                    <h5>IN</h5>
+                                    <img
+                                      src="assets/images/indian_flag.svg"
+                                      alt=""
+                                    />
+                                  </div>
+                                </li>
+                                <li>
+                                  <img
+                                    src="assets/images/city_icon.svg"
+                                    alt=""
+                                  />
+                                  <div
+                                    class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                  >
+                                    <h4>New Delhi</h4>
+                                    <p>
+                                      <span>City</span> National Capital
+                                      Territory of Delhi
+                                    </p>
+                                  </div>
+                                  <div class="country-identifier flex-shrink-0">
+                                    <h5>IN</h5>
+                                    <img
+                                      src="assets/images/indian_flag.svg"
+                                      alt=""
+                                    />
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end position-relative">
+                  <a
+                    href="search-filter.html"
+                    class="btn border-0 search-filter-btn rounded-pill bg-color-pale-orange text-white pt-sans-font-family fs-14 fw-700 d-flex align-items-center justify-content-center"
+                  >
+                    Search Hotels
+                  </a>
+                </div>
               </div>
               <div
                 class="tab-pane fade"
@@ -2454,82 +2666,6 @@
                 tabindex="0"
               >
                 Holidays
-              </div>
-              <div class="trip-fare-check-list">
-                <ul>
-                  <li>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="directFlightCheckInput"
-                      />
-                      <label
-                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                        for="directFlightCheckInput"
-                      >
-                        Direct Flight
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="nearbyAirportsCheckInput"
-                      />
-                      <label
-                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                        for="nearbyAirportsCheckInput"
-                      >
-                        Nearby Airports
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="studentFareCheckInput"
-                      />
-                      <label
-                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                        for="studentFareCheckInput"
-                      >
-                        Student Fare
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="cityzenFareCheckInput"
-                      />
-                      <label
-                        class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                        for="cityzenFareCheckInput"
-                      >
-                        Sr. Citizen Fare
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="d-flex justify-content-end position-relative">
-                <a
-                  href="search-filter.html"
-                  class="btn border-0 search-filter-btn rounded-pill bg-color-pale-orange text-white pt-sans-font-family fs-14 fw-700 d-flex align-items-center justify-content-center"
-                >
-                  Search Flights
-                </a>
               </div>
             </div>
           </div>
