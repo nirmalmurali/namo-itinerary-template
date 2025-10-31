@@ -2118,6 +2118,9 @@ textarea.form-control {
   border: 1px solid #e7e7e7;
   border-radius: 10px;
 }
+.booking-hotels-wrapper .hotel-destination-list-wrapper {
+  padding: 12px 14px;
+}
 .booking-hotels-wrapper .hotel-destination-list-wrapper p {
   margin-bottom: 0;
 }
@@ -2174,7 +2177,7 @@ textarea.form-control {
   align-items: flex-start;
 }
 .booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li h4 {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 .booking-hotels-wrapper .hotel-destination-list-wrapper .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p {
   margin-bottom: 0;
