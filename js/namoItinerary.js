@@ -507,4 +507,40 @@ $(document).ready(function () {
   $(document).on("click", '[data-bs-title="Share"]', function () {
     $("#shareModal").modal("show");
   });
+
+  // Handle count increase buttons
+  $(document).on("click", ".count-increase-btn", function (e) {
+    e.preventDefault();
+    const $countView = $(this)
+      .closest(".room-add-count-wrapper")
+      .find(".count-view");
+    let currentCount = parseInt($countView.text()) || 0;
+    const maxCount = 10; // Set maximum limit
+
+    if (currentCount < maxCount) {
+      $countView.text(currentCount + 1);
+    }
+  });
+
+  // Handle count decrease buttons
+  $(document).on("click", ".count-decrease-btn", function (e) {
+    e.preventDefault();
+    const $countView = $(this)
+      .closest(".room-add-count-wrapper")
+      .find(".count-view");
+    let currentCount = parseInt($countView.text()) || 0;
+
+    // Check if this is for adults or children
+    const $listItem = $(this).closest("li");
+    const isAdults = $listItem
+      .find("h5")
+      .text()
+      .toLowerCase()
+      .includes("adult");
+    const minCount = isAdults ? 1 : 0; // Adults minimum 1, Children minimum 0
+
+    if (currentCount > minCount) {
+      $countView.text(currentCount - 1);
+    }
+  });
 });
