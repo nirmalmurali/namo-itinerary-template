@@ -2471,14 +2471,37 @@
                     <div
                       class="d-flex d-lg-none justify-content-end w-100 pe-3"
                     >
-                      <button class="filter-mob-menu-close btn p-0 border-0">
+                      <button
+                        class="hotel-filter-mob-menu-close btn p-0 border-0"
+                      >
                         <i class="fa fa-times" aria-hidden="true"></i>
                       </button>
                     </div>
                     <div class="filter-side-bar-list-wrapper">
-                      <div
-                        class="filter-side-bar-options content-view-more-wrapper"
-                      >
+                      <div class="filter-side-bar-options">
+                        <h5>See Map View</h5>
+                        <div class="map-wrap">
+                          <div id="map"></div>
+                        </div>
+                      </div>
+                      <div class="filter-side-bar-options">
+                        <h5>Hotel name</h5>
+                        <div class="search-input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="customerRatingsRangeInput"
+                            placeholder="Search Hotel Name"
+                          />
+                          <button class="btn border-0">
+                            <img
+                              src="assets/images/search_input_icon.svg"
+                              alt="search icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                      <div class="filter-side-bar-options">
                         <h5>Popular Filters</h5>
                         <ul>
                           <li>
@@ -2486,16 +2509,15 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="nonStopCheckInput"
+                                id="akbarChoiceCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="nonStopCheckInput"
+                                for="akbarChoiceCheckInput"
                               >
-                                Non Stop
+                                Akbar Choice
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 7,667</span>
                           </li>
 
                           <li>
@@ -2503,16 +2525,15 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="hideNearbyAirportsCheckInput"
+                                id="cancellationAvailableCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="hideNearbyAirportsCheckInput"
+                                for="cancellationAvailableCheckInput"
                               >
-                                Hide Nearby Airports
+                                Cancellation Available
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
 
                           <li>
@@ -2520,16 +2541,15 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="refundableFaresCheckInput"
+                                id="breakfastAvailableCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="refundableFaresCheckInput"
+                                for="breakfastAvailableCheckInput"
                               >
-                                Refundable Fares
+                                Breakfast Available
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
 
                           <li>
@@ -2537,46 +2557,36 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="indiGoCheckInput"
+                                id="wifiAvailableCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="indiGoCheckInput"
+                                for="wifiAvailableCheckInput"
                               >
-                                IndiGo
+                                Wifi
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
                         </ul>
-
-                        <button
-                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
-                        >
-                          +5 more
-                        </button>
                       </div>
 
-                      <div
-                        class="filter-side-bar-options content-view-more-wrapper"
-                      >
-                        <h5>Fare Type</h5>
+                      <div class="filter-side-bar-options">
+                        <h5>Customer Ratings</h5>
                         <ul>
                           <li>
                             <div class="form-check">
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="normalFareCheckInput"
+                                id="4.5AboveExcellentCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="normalFareCheckInput"
+                                for="4.5AboveExcellentCheckInput"
                               >
-                                Normal fare
+                                4.5 & Above Excellent
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
 
                           <li>
@@ -2584,16 +2594,15 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="corporateFaresCheckInput"
+                                id="4AboveVeryGoodCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="corporateFaresCheckInput"
+                                for="4AboveVeryGoodCheckInput"
                               >
-                                Corporate fares
+                                4 & Above Very Good
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
 
                           <li>
@@ -2601,80 +2610,20 @@
                               <input
                                 class="form-check-input"
                                 type="checkbox"
-                                id="specialFaresCheckInput"
+                                id="3.5AboveGoodCheckInput"
                               />
                               <label
                                 class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="specialFaresCheckInput"
+                                for="3.5AboveGoodCheckInput"
                               >
-                                Special fares
+                                3.5 & Above Good
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="saverCheckInput"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="saverCheckInput"
-                              >
-                                Saver
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="corporateSelectCheckInput"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="corporateSelectCheckInput"
-                              >
-                                Corporate select
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="flexiCheckInput"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="flexiCheckInput"
-                              >
-                                Flexi
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
                         </ul>
-
-                        <button
-                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
-                        >
-                          + 5 more
-                        </button>
                       </div>
-                      <div
-                        class="filter-side-bar-options content-view-more-wrapper"
-                      >
-                        <h5>Fare Type</h5>
+                      <div class="filter-side-bar-options">
+                        <h5>Star rating</h5>
                         <ul>
                           <li>
                             <div class="form-check">
@@ -2684,118 +2633,38 @@
                                 id="normalFareCheckInput1"
                               />
                               <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary d-flex align-items-center gap-1"
                                 for="normalFareCheckInput1"
                               >
-                                Normal fare
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                (10)
                               </label>
                             </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="corporateFaresCheckInput123"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="corporateFaresCheckInput123"
-                              >
-                                Corporate fares
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="specialFaresCheckInput1"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="specialFaresCheckInput1"
-                              >
-                                Special fares
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="saverCheckInput1"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="saverCheckInput1"
-                              >
-                                Saver
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="corporateSelectCheckInput1"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="corporateSelectCheckInput1"
-                              >
-                                Corporate select
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
-                          </li>
-
-                          <li>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                id="flexiCheckInput1"
-                              />
-                              <label
-                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
-                                for="flexiCheckInput1"
-                              >
-                                Flexi
-                              </label>
-                            </div>
-                            <span class="font-color-secondary">₹ 6,894</span>
                           </li>
                         </ul>
-
-                        <button
-                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
-                        >
-                          + 5 more
-                        </button>
                       </div>
                     </div>
                   </div>
                   <div class="filter-view-content-wrapper">
-                    <div class="d-flex justify-content-between gap-2 mb-3">
-                      <button
-                        class="btn d-flex d-lg-none bg-color-primary text-white align-items-center justify-content-center mobile-filter-btn"
-                      >
-                        <i class="fa fa-filter" aria-hidden="true"></i>
-                      </button>
-                    </div>
-
                     <div class="view-change-tab-content">
                       <div class="filter-view-content-header">
                         <div class="row align-items-center g-3">
@@ -2809,6 +2678,12 @@
                           <div
                             class="col-lg-4 d-flex justify-content-end align-items-center gap-2"
                           >
+                            <button
+                              class="btn d-flex d-lg-none bg-color-primary text-white align-items-center justify-content-center mobile-hotel-filter-btn"
+                            >
+                              <i class="fa fa-filter" aria-hidden="true"></i>
+                            </button>
+
                             <button
                               class="btn p-0 border-0"
                               data-bs-toggle="tooltip"
@@ -3054,11 +2929,13 @@
                                       Price per room/night
                                     </p>
                                   </div>
-                                  <button
+                                  <a
                                     class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
                                   >
                                     Select Room
-                                  </button>
+                                  </a>
                                   <button class="short-list-btn btn">
                                     <i
                                       class="fa fa-heart-o"
@@ -3220,11 +3097,13 @@
                                       Price per room/night
                                     </p>
                                   </div>
-                                  <button
+                                  <a
                                     class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
                                   >
                                     Select Room
-                                  </button>
+                                  </a>
                                   <button class="short-list-btn btn">
                                     <i
                                       class="fa fa-heart-o"
@@ -3372,11 +3251,13 @@
                                       Price per room/night
                                     </p>
                                   </div>
-                                  <button
+                                  <a
                                     class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
                                   >
                                     Select Room
-                                  </button>
+                                  </a>
                                   <button class="short-list-btn btn">
                                     <i
                                       class="fa fa-heart-o"

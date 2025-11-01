@@ -2899,6 +2899,27 @@ textarea.form-control {
   margin-bottom: 0;
   flex-shrink: 0;
 }
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options .search-input-group {
+  position: relative;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options .search-input-group .form-control {
+  padding-left: 0.5rem;
+  padding-right: 2.5rem;
+  height: 30px;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options .search-input-group .btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0.688rem;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-side-bar .filter-side-bar-list-wrapper .filter-side-bar-options .map-wrap {
+  height: 88px;
+}
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper {
   display: flex;
   flex-direction: column;

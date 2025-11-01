@@ -104,11 +104,14 @@ $(document).ready(function () {
     $(".mobile-nav-menu").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
-  $(".black-drop,.filter-mob-menu-close").click(function () {
-    $(".mobile-nav-menu").removeClass("active");
-    $(".black-drop").removeClass("active");
-    $(".flight-filter-side-bar ").removeClass("active");
-  });
+  $(".black-drop,.filter-mob-menu-close,.hotel-filter-mob-menu-close").click(
+    function () {
+      $(".mobile-nav-menu").removeClass("active");
+      $(".black-drop").removeClass("active");
+      $(".flight-filter-side-bar ").removeClass("active");
+      $(".hotel-filter-side-bar ").removeClass("active");
+    }
+  );
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
       $(this).next("input").focus();
@@ -495,6 +498,10 @@ $(document).ready(function () {
     $(".flight-filter-side-bar").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
+  $(".mobile-hotel-filter-btn").on("click", function () {
+    $(".hotel-filter-side-bar").toggleClass("active");
+    $(".black-drop").toggleClass("active");
+  });
 
   // Initialize Bootstrap tooltips (move this here)
   const tooltipTriggerList = document.querySelectorAll(
@@ -575,4 +582,49 @@ $(document).ready(function () {
   $(".short-list-btn").on("click", function () {
     $(this).toggleClass("active");
   });
+
+  // 1) Choose your coordinates (example: near the Bronx, NY)
+  const lat = 40.8467;
+  const lng = -73.8786;
+  const zoom = 12;
+
+  // 2) Init map
+  const map = L.map("map", {
+    center: [lat, lng],
+    zoom: zoom,
+    scrollWheelZoom: false, // nicer for banner sections
+    dragging: true,
+  });
+
+  // 3) Light/gray basemap (similar to your screenshot)
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    {
+      maxZoom: 19,
+      attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+    }
+  ).addTo(map);
+
+  // 4) Custom orange marker (SVG)
+  const orangePin = L.icon({
+    iconUrl:
+      "data:image/svg+xml;utf8," +
+      encodeURIComponent(`
+          <svg width="40" height="56" viewBox="0 0 40 56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M20 0c11 0 20 8.8 20 19.6C40 35 20 56 20 56S0 35 0 19.6C0 8.8 9 0 20 0z" fill="#FF8A00"/>
+              <circle cx="20" cy="20" r="8" fill="#fff"/>
+            </g>
+          </svg>
+        `),
+    iconSize: [40, 56],
+    iconAnchor: [20, 56], // tip of the pin
+    popupAnchor: [0, -50],
+  });
+
+  // 5) Add marker + optional popup
+  L.marker([lat, lng], { icon: orangePin })
+    .addTo(map)
+    .bindPopup("Our location")
+    .openPopup();
 });
