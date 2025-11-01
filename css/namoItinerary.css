@@ -3962,7 +3962,7 @@ textarea.form-control {
 .payment-options-wrapper .payment-tab-body .wallet-btns-wrapper {
   display: flex;
   gap: 0.563rem;
-  align-items: center;
+  align-items: stretch;
 }
 .payment-options-wrapper .payment-tab-body .wallet-btns-wrapper .btn {
   min-width: 122px;
