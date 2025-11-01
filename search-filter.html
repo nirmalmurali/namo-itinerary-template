@@ -48,6 +48,10 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
     <link rel="stylesheet" href="css/namoItinerary.css" />
   </head>
   <body>
@@ -211,7 +215,16 @@
                   aria-controls="searchFilterPillsFlights"
                   aria-selected="true"
                 >
-                  <img src="assets/images/flight_tab_icon.svg" alt="" />
+                  <img
+                    src="assets/images/flight_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/flight_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
                   Flight
                 </button>
               </li>
@@ -228,7 +241,16 @@
                   aria-controls="searchFilterPillsHotels"
                   aria-selected="false"
                 >
-                  <img src="assets/images/hotels_tab_icon.svg" alt="" />
+                  <img
+                    src="assets/images/hotels_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/hotels_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
                   Hotels
                 </button>
               </li>
@@ -273,7 +295,7 @@
                       class="d-flex gap-2 h-100 flex-wrap flex-md-nowrap align-items-center"
                     >
                       <div
-                        class="flight-trip-details-wrapper d-flex flex-column p-3"
+                        class="flight-trip-details-wrapper trip-type-wrapper d-flex flex-column p-3 justify-content-center"
                       >
                         <div class="dropdown global-dropdown">
                           <a
@@ -290,7 +312,7 @@
                             ></i>
                           </a>
 
-                          <ul class="dropdown-menu">
+                          <!-- <ul class="dropdown-menu">
                             <li>
                               <a class="dropdown-item" href="#">Action</a>
                             </li>
@@ -304,7 +326,7 @@
                                 >Something else here</a
                               >
                             </li>
-                          </ul>
+                          </ul> -->
                         </div>
                         <h4
                           class="pt-sans-font-family fs-18 fw-700 font-color-secondary mb-0"
@@ -339,10 +361,9 @@
                                 <li>
                                   <div class="dropdown">
                                     <a
-                                      class="btn btn-secondary dropdown-toggle"
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
                                       href="#"
                                       role="button"
-                                      data-bs-toggle="dropdown"
                                       aria-expanded="false"
                                     >
                                       Departure
@@ -350,25 +371,19 @@
                                         class="fa fa-angle-down font-color-primary"
                                         aria-hidden="true"
                                       ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        readonly
+                                        id="depatureDate"
+                                        style="
+                                          background: #fff;
+                                          cursor: pointer;
+                                        "
+                                        placeholder="Select dates"
+                                        hidden
+                                      />
                                     </a>
-
-                                    <ul class="dropdown-menu">
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Another action</a
-                                        >
-                                      </li>
-                                      <li>
-                                        <a class="dropdown-item" href="#"
-                                          >Something else here</a
-                                        >
-                                      </li>
-                                    </ul>
                                   </div>
                                   <h4><b>12</b> May’ 25</h4>
                                   <p>Sunday</p>
@@ -376,10 +391,9 @@
                                 <li>
                                   <div class="dropdown">
                                     <a
-                                      class="btn btn-secondary dropdown-toggle"
+                                      class="btn btn-secondary dropdown-toggle flight-date-range"
                                       href="#"
                                       role="button"
-                                      data-bs-toggle="dropdown"
                                       aria-expanded="false"
                                     >
                                       Return
@@ -387,6 +401,17 @@
                                         class="fa fa-angle-down font-color-primary"
                                         aria-hidden="true"
                                       ></i>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        readonly
+                                        style="
+                                          background: #fff;
+                                          cursor: pointer;
+                                        "
+                                        placeholder="Select dates"
+                                        hidden
+                                      />
                                     </a>
 
                                     <ul class="dropdown-menu">
@@ -775,7 +800,7 @@
             <div class="tab-content-filter-view">
               <div class="container">
                 <div class="tab-content-filter-view-content">
-                  <div class="filter-side-bar">
+                  <div class="filter-side-bar flight-filter-side-bar">
                     <div
                       class="d-flex d-lg-none justify-content-end w-100 pe-3"
                     >
@@ -2093,7 +2118,1283 @@
             aria-labelledby="searchFilterPillsHotelsTab"
             tabindex="0"
           >
-            Hotels content...
+            <div class="container">
+              <div
+                class="tab-content-search-header tab-content-search-hotels-header"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <div class="hotel-destination-list-wrapper">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Select Destination
+                        </button>
+                        <div class="dropdown-menu destination-dropdown-wrapper">
+                          <div class="destination-dropdown-header">
+                            <img
+                              src="assets/images/search_fa_Icon.svg"
+                              alt=""
+                            />
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="destinationSearchInput"
+                              placeholder="Search Destination"
+                            />
+                          </div>
+                          <div class="destination-dropdown-body">
+                            <h6>Suggestions</h6>
+                            <ul class="destination-list list-unstyled">
+                              <li>
+                                <img
+                                  src="assets/images/map_pointer_icon.svg"
+                                  alt=""
+                                />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                              <li>
+                                <img
+                                  src="assets/images/airport_icon.svg"
+                                  alt=""
+                                />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                              <li>
+                                <img src="assets/images/city_icon.svg" alt="" />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <p>City, Property name or Location</p>
+                    </div>
+                  </li>
+                  <li class="check-in-wrapper">
+                    <div class="dropdown">
+                      <a
+                        class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                        href="#"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        Check In
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          readonly=""
+                          id="depatureDate"
+                          style="background: #fff; cursor: pointer"
+                          placeholder="Select dates"
+                          hidden=""
+                        />
+                      </a>
+                      <h4><b>12</b> May’ 25</h4>
+                    </div>
+                  </li>
+                  <li
+                    class="night-count-wrapper d-flex align-items-center justify-content-center"
+                  >
+                    <h4><b>1</b> Night</h4>
+                  </li>
+                  <li class="check-out-wrapper">
+                    <div class="dropdown">
+                      <a
+                        class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                        href="#"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        Check out
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          readonly=""
+                          id="checkOutDate"
+                          style="background: #fff; cursor: pointer"
+                          placeholder="Select dates"
+                          hidden=""
+                        />
+                      </a>
+                      <h4><b>12</b> May’ 25</h4>
+                    </div>
+                  </li>
+                  <li class="room-and-guest-select">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Rooms & guests
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu room-guest-dropdown-wrapper p-0"
+                      >
+                        <ul class="added-room-list list-unstyled mb-0">
+                          <li>
+                            <div>
+                              <h5>Room 1</h5>
+                              <p>
+                                <span>1</span> Adult <span>3</span> Children
+                              </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                              <button class="btn border-0 p-0 room-remove-btn">
+                                <img
+                                  src="assets/images/room_close_icon.svg"
+                                  alt=""
+                                />
+                              </button>
+                              <button class="btn border-0 p-0 room-edit-btn">
+                                <img
+                                  src="assets/images/room_edit_icon.svg"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="room-guest-dropdown-body">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h4>Room 1</h4>
+                            <button class="btn border-0 p-0 room-remove-btn">
+                              <img
+                                src="assets/images/room_close_icon.svg"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                          <ul class="room-selection-wrapper list-unstyled">
+                            <li>
+                              <h5>Adults</h5>
+                              <div class="room-add-count-wrapper">
+                                <h6 class="count-view">1</h6>
+                                <div class="d-flex align-items-center">
+                                  <button class="btn count-decrease-btn">
+                                    -
+                                  </button>
+                                  <button class="btn count-increase-btn">
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <h5>Children</h5>
+                                <p>0- 12 Years</p>
+                              </div>
+                              <div class="room-add-count-wrapper">
+                                <h6 class="count-view">0</h6>
+                                <div class="d-flex align-items-center">
+                                  <button class="btn count-decrease-btn">
+                                    -
+                                  </button>
+                                  <button class="btn count-increase-btn">
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div
+                          class="room-guest-dropdown-footer d-flex justify-content-between align-items-center"
+                        >
+                          <button
+                            class="btn border-0 p-0 room-add-btn font-color-sea-green d-flex align-items-center gap-1 fs-12 fw-700 pt-sans-font-family"
+                          >
+                            <img
+                              src="assets/images/green_plus_icon.png"
+                              alt=""
+                            />
+                            Add another room
+                          </button>
+                          <button
+                            class="btn done-btn border-0 bg-color-primary text-white rounded-2"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><b>1</b> Room <b>2</b> Guests</h4>
+                  </li>
+                  <li class="nationality-list-item">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Nationality
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div class="dropdown-menu destination-dropdown-wrapper">
+                        <div class="destination-dropdown-header">
+                          <img src="assets/images/search_fa_Icon.svg" alt="" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="destinationSearchInput"
+                            placeholder="Search Destination"
+                          />
+                        </div>
+                        <div class="destination-dropdown-body">
+                          <ul class="destination-list list-unstyled">
+                            <li><h4>New Delhi</h4></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <h5>India</h5>
+                  </li>
+                  <li class="residence-list-item">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Residence 
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div class="dropdown-menu destination-dropdown-wrapper">
+                        <div class="destination-dropdown-header">
+                          <img src="assets/images/search_fa_Icon.svg" alt="" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="destinationSearchInput"
+                            placeholder="Search Destination"
+                          />
+                        </div>
+                        <div class="destination-dropdown-body">
+                          <ul class="destination-list list-unstyled">
+                            <li><h4>New Delhi</h4></li>
+                            <li><h4>India</h4></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <h5>India</h5>
+                  </li>
+                </ul>
+                <button
+                  class="btn bg-color-primary text-white rounded-5 pt-sans-font-family fs-14 fw-700 flex-shrink-0 modify-Search-btn"
+                >
+                  Modify Search
+                </button>
+              </div>
+            </div>
+            <div class="tab-content-filter-view">
+              <div class="container">
+                <div class="tab-content-filter-view-content">
+                  <div class="filter-side-bar hotel-filter-side-bar">
+                    <div
+                      class="d-flex d-lg-none justify-content-end w-100 pe-3"
+                    >
+                      <button class="filter-mob-menu-close btn p-0 border-0">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="filter-side-bar-list-wrapper">
+                      <div
+                        class="filter-side-bar-options content-view-more-wrapper"
+                      >
+                        <h5>Popular Filters</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="nonStopCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="nonStopCheckInput"
+                              >
+                                Non Stop
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 7,667</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="hideNearbyAirportsCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="hideNearbyAirportsCheckInput"
+                              >
+                                Hide Nearby Airports
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="refundableFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="refundableFaresCheckInput"
+                              >
+                                Refundable Fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="indiGoCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="indiGoCheckInput"
+                              >
+                                IndiGo
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
+                        >
+                          +5 more
+                        </button>
+                      </div>
+
+                      <div
+                        class="filter-side-bar-options content-view-more-wrapper"
+                      >
+                        <h5>Fare Type</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="normalFareCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="normalFareCheckInput"
+                              >
+                                Normal fare
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateFaresCheckInput"
+                              >
+                                Corporate fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="specialFaresCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="specialFaresCheckInput"
+                              >
+                                Special fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="saverCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="saverCheckInput"
+                              >
+                                Saver
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateSelectCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateSelectCheckInput"
+                              >
+                                Corporate select
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexiCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="flexiCheckInput"
+                              >
+                                Flexi
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
+                        >
+                          + 5 more
+                        </button>
+                      </div>
+                      <div
+                        class="filter-side-bar-options content-view-more-wrapper"
+                      >
+                        <h5>Fare Type</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="normalFareCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="normalFareCheckInput1"
+                              >
+                                Normal fare
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateFaresCheckInput123"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateFaresCheckInput123"
+                              >
+                                Corporate fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="specialFaresCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="specialFaresCheckInput1"
+                              >
+                                Special fares
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="saverCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="saverCheckInput1"
+                              >
+                                Saver
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="corporateSelectCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="corporateSelectCheckInput1"
+                              >
+                                Corporate select
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexiCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="flexiCheckInput1"
+                              >
+                                Flexi
+                              </label>
+                            </div>
+                            <span class="font-color-secondary">₹ 6,894</span>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="btn p-0 border-0 font-color-primary fw-400 fs-16 pt-sans-font-family content-show-more-btn"
+                        >
+                          + 5 more
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-view-content-wrapper">
+                    <div class="d-flex justify-content-between gap-2 mb-3">
+                      <button
+                        class="btn d-flex d-lg-none bg-color-primary text-white align-items-center justify-content-center mobile-filter-btn"
+                      >
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                      </button>
+                    </div>
+
+                    <div class="view-change-tab-content">
+                      <div class="filter-view-content-header">
+                        <div class="row align-items-center g-3">
+                          <div class="col-lg-8">
+                            <h5
+                              class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                            >
+                              Properties with group deals in Bangaluru
+                            </h5>
+                          </div>
+                          <div
+                            class="col-lg-4 d-flex justify-content-end align-items-center gap-2"
+                          >
+                            <button
+                              class="btn p-0 border-0"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Share"
+                              onclick="openShareModal()"
+                            >
+                              <img
+                                src="assets/images/share_btn_icon.svg"
+                                alt="share icon"
+                                class="img-default"
+                              />
+                              <img
+                                src="assets/images/share_btn_hover_icon.svg"
+                                alt="share icon"
+                                class="img-hover"
+                              />
+                            </button>
+
+                            <button
+                              class="btn p-0 border-0"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Hide Netfare"
+                            >
+                              <img
+                                src="assets/images/eye_btn_icon.svg"
+                                alt="eye icon"
+                                class="img-default"
+                              />
+                              <img
+                                src="assets/images/eye_btn_hover_icon.svg"
+                                alt="eye icon"
+                                class="img-hover"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flilter-sort-wrapper py-2">
+                        <div class="row g-3 g-md-0 align-items-center">
+                          <div class="col-lg-4">
+                            <p
+                              class="fs-14 fw-400 pt-sans-font-family font-color-gravel-grey mb-0"
+                            >
+                              Showing 662 of 662 Fares found
+                            </p>
+                          </div>
+                          <div
+                            class="col-lg-8 d-flex align-items-center justify-content-end gap-3"
+                          >
+                            <ul class="sort-list-wrapper">
+                              <li>
+                                <button class="btn">
+                                  Featured
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+                              <li>
+                                <button class="btn">
+                                  Rating
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+
+                              <li>
+                                <button class="btn">
+                                  Price
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+                            </ul>
+
+                            <button
+                              class="btn sort-view-btn py-1 flex-shrink-0"
+                            >
+                              <img src="assets/images/sort_arrow_icon.svg" />
+
+                              Sort By
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-view-content-body">
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                  >
+                                    Select Room
+                                  </button>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/pool_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Pool</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/parking_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Parking</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                  >
+                                    Select Room
+                                  </button>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <button
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                  >
+                                    Select Room
+                                  </button>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -2371,6 +3672,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
     <script src="js/namoItinerary.js"></script>
   </body>
 </html>

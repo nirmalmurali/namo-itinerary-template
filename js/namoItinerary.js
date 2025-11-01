@@ -107,7 +107,7 @@ $(document).ready(function () {
   $(".black-drop,.filter-mob-menu-close").click(function () {
     $(".mobile-nav-menu").removeClass("active");
     $(".black-drop").removeClass("active");
-    $(".filter-side-bar ").removeClass("active");
+    $(".flight-filter-side-bar ").removeClass("active");
   });
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
@@ -492,7 +492,7 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
   $(".mobile-filter-btn").on("click", function () {
-    $(".filter-side-bar").toggleClass("active");
+    $(".flight-filter-side-bar").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
 
@@ -542,5 +542,37 @@ $(document).ready(function () {
     if (currentCount > minCount) {
       $countView.text(currentCount - 1);
     }
+  });
+  // date range picker
+  $(".flight-date-range").each(function () {
+    const el = this;
+
+    const picker = new Litepicker({
+      element: el,
+      singleMode: false,
+      numberOfMonths: 2,
+      numberOfColumns: 2,
+      format: "MMM D, YYYY",
+      autoApply: true,
+      showTooltip: true,
+      tooltipText: {
+        one: "day",
+        other: "days",
+      },
+      minDate: new Date(),
+      setup: function (picker) {
+        picker.on("selected", function (start, end) {
+          const startDate = start ? start.format("YYYY-MM-DD") : "";
+          const endDate = end ? end.format("YYYY-MM-DD") : "";
+
+          console.log("Selected:", startDate, endDate);
+          // Example: You can also update the UI or send data to backend
+          // $(el).val(startDate + ' to ' + endDate);
+        });
+      },
+    });
+  });
+  $(".short-list-btn").on("click", function () {
+    $(this).toggleClass("active");
   });
 });
