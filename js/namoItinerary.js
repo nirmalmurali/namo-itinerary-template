@@ -1,4 +1,257 @@
+// Website Protection Function - Enhanced version
+function initWebsiteProtection() {
+  // Disable right-click context menu
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // Enhanced keyboard restrictions
+  document.addEventListener("keydown", function (e) {
+    // F12 - Developer Tools
+    if (e.keyCode === 123) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+I - Developer Tools
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+J - Console
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+Shift+C - Element Inspector
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+U - View Source
+    if (e.ctrlKey && e.keyCode === 85) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Enhanced Ctrl+S - Save Page (multiple variations)
+    if (e.ctrlKey && e.keyCode === 83) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return false;
+    }
+
+    // Cmd+S for Mac users
+    if (e.metaKey && e.keyCode === 83) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return false;
+    }
+
+    // Ctrl+A - Select All
+    if (e.ctrlKey && e.keyCode === 65) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+P - Print
+    if (e.ctrlKey && e.keyCode === 80) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Cmd+P for Mac users
+    if (e.metaKey && e.keyCode === 80) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl+H - History
+    if (e.ctrlKey && e.keyCode === 72) {
+      e.preventDefault();
+      return false;
+    }
+
+    // Additional save combinations
+    // Ctrl+Shift+S - Save As
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 83) {
+      e.preventDefault();
+      return false;
+    }
+
+    // F1 - Help (can be used to access developer resources)
+    if (e.keyCode === 112) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Also capture keyup events for save
+  document.addEventListener("keyup", function (e) {
+    // Ctrl+S on keyup (fallback)
+    if (e.ctrlKey && e.keyCode === 83) {
+      e.preventDefault();
+      return false;
+    }
+    // Cmd+S on keyup (Mac fallback)
+    if (e.metaKey && e.keyCode === 83) {
+      e.preventDefault();
+      return false;
+    }
+    // Print Screen
+    if (e.keyCode === 44) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable text selection
+  document.onselectstart = function () {
+    return false;
+  };
+
+  document.onmousedown = function () {
+    return false;
+  };
+
+  // Disable drag and drop
+  document.ondragstart = function () {
+    return false;
+  };
+
+  // Enhanced copy-paste protection
+  document.addEventListener("copy", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+
+  document.addEventListener("cut", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+
+  document.addEventListener("paste", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+
+  // Override window.print function
+  window.print = function () {
+    console.log("Print disabled");
+    return false;
+  };
+
+  // Disable save through File menu (limited effectiveness)
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      // Page is hidden, might be saving
+      console.log("Page visibility changed - potential save attempt");
+    }
+  });
+
+  // Detect DevTools opening
+  let devtools = {
+    open: false,
+    orientation: null,
+  };
+
+  const threshold = 160;
+
+  setInterval(function () {
+    if (
+      window.outerHeight - window.innerHeight > threshold ||
+      window.outerWidth - window.innerWidth > threshold
+    ) {
+      if (!devtools.open) {
+        devtools.open = true;
+        document.body.innerHTML =
+          '<div style="text-align:center;padding:50px;font-family:Arial;"><h1>Access Denied</h1><p>Developer tools are not allowed.</p></div>';
+      }
+    } else {
+      devtools.open = false;
+    }
+  }, 500);
+
+  // Disable console access
+  Object.defineProperty(window, "console", {
+    value: {
+      log: function () {},
+      warn: function () {},
+      error: function () {},
+      info: function () {},
+      debug: function () {},
+      trace: function () {},
+      dir: function () {},
+      group: function () {},
+      groupCollapsed: function () {},
+      groupEnd: function () {},
+      time: function () {},
+      timeEnd: function () {},
+      profile: function () {},
+      profileEnd: function () {},
+      dirxml: function () {},
+      assert: function () {},
+      count: function () {},
+      markTimeline: function () {},
+      timeline: function () {},
+      timelineEnd: function () {},
+      timeStamp: function () {},
+      table: function () {},
+      exception: function () {},
+      clear: function () {},
+    },
+    writable: false,
+    enumerable: false,
+    configurable: false,
+  });
+
+  // Disable zoom
+  document.addEventListener("wheel", function (e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Disable zoom with keyboard
+  document.addEventListener("keydown", function (e) {
+    if (
+      (e.ctrlKey &&
+        (e.keyCode === 61 ||
+          e.keyCode === 107 ||
+          e.keyCode === 173 ||
+          e.keyCode === 109 ||
+          e.keyCode === 187 ||
+          e.keyCode === 189)) ||
+      (e.ctrlKey && e.keyCode === 48) ||
+      (e.metaKey && e.keyCode === 48)
+    ) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // Console warnings
+  console.log("%cStop!", "color: red; font-size: 50px; font-weight: bold;");
+  console.log(
+    "%cThis is a browser feature intended for developers. Content is protected.",
+    "color: red; font-size: 16px;"
+  );
+}
+
 $(document).ready(function () {
+  // Initialize website protection
+  initWebsiteProtection();
+
   // const $wrapper = $(".team-slider-wrapper");
   // const $track = $(".team-track");
   // const $items = $track.find(".team-item");
@@ -533,7 +786,7 @@ $(document).ready(function () {
   $(document).on("click", ".count-decrease-btn", function (e) {
     e.preventDefault();
     const $countView = $(this)
-      .closest(".room-add-count-wrapper")
+      .closest(".room-add_count-wrapper")
       .find(".count-view");
     let currentCount = parseInt($countView.text()) || 0;
 
