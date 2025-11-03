@@ -236,14 +236,426 @@
         </div>
         <div class="selected-room-page-body bg-color-desert-storm">
           <div class="container">
-            <div class="d-flex align-items-center flex-wrap gap-3">
+            <div
+              class="d-flex align-items-center flex-wrap gap-3 justify-content-between py-3"
+            >
               <div class="section-nav-btns">
-                <button class="btn active">Photos</button>
-                <button class="btn">Room & Rates</button>
-                <button class="btn">Hotel Amenities</button>
-                <button class="btn">Nearby Attractions</button>
-                <button class="btn">MAP</button>
+                <a href="#" class="btn active">Photos</a>
+                <a href="#" class="btn">Room & Rates</a>
+                <a href="#" class="btn">Hotel Amenities</a>
+                <a href="#" class="btn">Nearby Attractions</a>
+                <a href="#" class="btn">MAP</a>
               </div>
+              <div class="d-flex align-items-center gap-2">
+                <button
+                  class="modify-search-btn btn border-warm-grey fs-14 fw-400 pt-sans-font-family rounded-5 font-color-warm-grey"
+                >
+                  Modify Search
+                </button>
+                <button
+                  class="btn border-warm-grey fs-14 fw-400 pt-sans-font-family rounded-5 font-color-warm-grey"
+                >
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  Shortlist
+                </button>
+                <button
+                  class="btn bg-color-primary rounded-5 font-color-white fs-14 fw-700 border-0 pt-sans-font-family"
+                >
+                  Choose Room
+                </button>
+                <button
+                  class="btn p-0 border-0"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  data-bs-title="Share"
+                  onclick="openShareModal()"
+                >
+                  <img
+                    src="assets/images/share_btn_icon.svg"
+                    alt="share icon"
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/share_btn_hover_icon.svg"
+                    alt="share icon"
+                    class="img-hover"
+                  />
+                </button>
+
+                <button
+                  class="btn p-0 border-0"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  data-bs-title="Hide Netfare"
+                >
+                  <img
+                    src="assets/images/eye_btn_icon.svg"
+                    alt="eye icon"
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/eye_btn_hover_icon.svg"
+                    alt="eye icon"
+                    class="img-hover"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="room-facility-view-wrapper">
+              <div class="row g-3">
+                <div class="col-lg-8">
+                  <div class="room-gallery-wrapper">
+                    <img src="assets/images/hotel_img.png" alt="" />
+                    <ul class="list-unstyled">
+                      <li>
+                        <img src="assets/images/hotel_room_1.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_2.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_3.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_4.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_5.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_6.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_7.png" alt="" />
+                      </li>
+                      <li>
+                        <img src="assets/images/hotel_room_8.png" alt="" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="selected-room-facilities-wrapper">
+                    <div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <div class="dropdown">
+                          <a
+                            class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                            href="#"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            Check In
+                            <i
+                              class="fa fa-angle-down font-color-primary"
+                              aria-hidden="true"
+                            ></i>
+                            <input
+                              type="text"
+                              class="form-control"
+                              readonly=""
+                              id="depatureDate"
+                              style="background: #fff; cursor: pointer"
+                              placeholder="Select dates"
+                              hidden=""
+                            />
+                          </a>
+                          <h4
+                            class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                          >
+                            <b class="fs-25 fw-700">12</b> May’ 25
+                          </h4>
+                          <p
+                            class="fs-13 fw-400 font-color-gravel-grey mb-0 pt-sans-font-family"
+                          >
+                            sunday
+                          </p>
+                        </div>
+                        <div>
+                          <div class="dropdown-divider"></div>
+                          <h4
+                            class="fs-14 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                          >
+                            1 NIGHT
+                          </h4>
+                        </div>
+                        <div class="dropdown">
+                          <a
+                            class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                            href="#"
+                            role="button"
+                            aria-expanded="false"
+                          >
+                            Check In
+                            <i
+                              class="fa fa-angle-down font-color-primary"
+                              aria-hidden="true"
+                            ></i>
+                            <input
+                              type="text"
+                              class="form-control"
+                              readonly=""
+                              id="depatureDate"
+                              style="background: #fff; cursor: pointer"
+                              placeholder="Select dates"
+                              hidden=""
+                            />
+                          </a>
+                          <h4
+                            class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                          >
+                            <b class="fs-25 fw-700">12</b> May’ 25
+                          </h4>
+                          <p
+                            class="fs-13 fw-400 font-color-gravel-grey mb-0 pt-sans-font-family"
+                          >
+                            sunday
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            data-bs-auto-close="outside"
+                          >
+                            Rooms & guests
+                            <i
+                              class="fa fa-angle-down font-color-primary"
+                              aria-hidden="true"
+                            ></i>
+                          </button>
+                          <div
+                            class="dropdown-menu room-guest-dropdown-wrapper p-0"
+                          >
+                            <ul class="added-room-list list-unstyled mb-0">
+                              <li>
+                                <div>
+                                  <h5>Room 1</h5>
+                                  <p>
+                                    <span>1</span> Adult <span>3</span> Children
+                                  </p>
+                                </div>
+                                <div class="d-flex align-items-center gap-1">
+                                  <button
+                                    class="btn border-0 p-0 room-remove-btn"
+                                  >
+                                    <img
+                                      src="assets/images/room_close_icon.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <button
+                                    class="btn border-0 p-0 room-edit-btn"
+                                  >
+                                    <img
+                                      src="assets/images/room_edit_icon.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="room-guest-dropdown-body">
+                              <div
+                                class="d-flex justify-content-between align-items-center"
+                              >
+                                <h4>Room 1</h4>
+                                <button
+                                  class="btn border-0 p-0 room-remove-btn"
+                                >
+                                  <img
+                                    src="assets/images/room_close_icon.svg"
+                                    alt=""
+                                  />
+                                </button>
+                              </div>
+                              <ul class="room-selection-wrapper list-unstyled">
+                                <li>
+                                  <h5>Adults</h5>
+                                  <div class="room-add-count-wrapper">
+                                    <h6 class="count-view">1</h6>
+                                    <div class="d-flex align-items-center">
+                                      <button class="btn count-decrease-btn">
+                                        -
+                                      </button>
+                                      <button class="btn count-increase-btn">
+                                        +
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div>
+                                    <h5>Children</h5>
+                                    <p>0- 12 Years</p>
+                                  </div>
+                                  <div class="room-add-count-wrapper">
+                                    <h6 class="count-view">0</h6>
+                                    <div class="d-flex align-items-center">
+                                      <button class="btn count-decrease-btn">
+                                        -
+                                      </button>
+                                      <button class="btn count-increase-btn">
+                                        +
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div
+                              class="room-guest-dropdown-footer d-flex justify-content-between align-items-center"
+                            >
+                              <button
+                                class="btn border-0 p-0 room-add-btn font-color-sea-green d-flex align-items-center gap-1 fs-12 fw-700 pt-sans-font-family"
+                              >
+                                <img
+                                  src="assets/images/green_plus_icon.png"
+                                  alt=""
+                                />
+                                Add another room
+                              </button>
+                              <button
+                                class="btn done-btn border-0 bg-color-primary text-white rounded-2"
+                              >
+                                Done
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <h4
+                          class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                        >
+                          <b class="fs-25 fw-700">1</b> Room
+                          <b class="fs-25 fw-700">2</b> Guests
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- share Modal  -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="shareModal"
+        tabindex="-1"
+        aria-labelledby="shareModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Share Itinerary
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4 align-items-end">
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="toEmailInput"
+                      placeholder="To Email"
+                    />
+                    <label for="toEmailInput">To Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="replyToEmailInput"
+                      placeholder="Reply to Email"
+                    />
+                    <label for="replyToEmailInput">Reply to Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="displayNameInput"
+                      placeholder="Display Name"
+                    />
+                    <label for="displayNameInput">Display Name</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="includeFareShareCheck"
+                    />
+                    <label
+                      class="form-check-label pt-sans-font-family fs-14 fw-400"
+                      for="includeFareShareCheck"
+                    >
+                      Include Fare
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="col-12 d-flex gap-sm-2 gap-3 align-items-sm-center flex-column flex-sm-row"
+                >
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img src="assets/images/pdf_icon.svg" alt="pdf icon" />
+                    Download PDF
+                    <img
+                      src="assets/images/download_primary_icon.svg"
+                      alt="download icon"
+                    />
+                  </button>
+                  <div class="vr d-none d-sm-block"></div>
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img
+                      src="assets/images/whatsapp_icon.svg"
+                      alt="whatsapp icon"
+                    />
+                    Copy For WhatsApp
+                    <img src="assets/images/copy_icon.svg" alt="copy icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2"
+                data-bs-dismiss="modal"
+              >
+                Send Email
+              </button>
             </div>
           </div>
         </div>

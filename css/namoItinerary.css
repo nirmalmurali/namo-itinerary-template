@@ -159,7 +159,8 @@ body:has(header.fixed-top) main {
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -307,7 +308,8 @@ footer .quick-links-wrapper li a,
 .modal.fare-change-alert-modal .modal-dialog .modal-content .modal-footer .btn,
 .who-we-are-wrapper ul li p,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
-.litepicker .container__main .container__months .month-item .month-item-header .month-item-year {
+.litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -678,7 +680,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper p,
 .blogs-items-wrapper a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -744,7 +747,8 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-nav-wrapper .nav-item .nav-link.active,
 .book-now-fare-type-list-wrapper ul li .active-fare-type.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link.active,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span {
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -843,7 +847,8 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .container__days .day-item:hover,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -860,7 +865,9 @@ footer .quick-links-wrapper li a,
 .white-bg-with-radius,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
 .competitive-edge-card,
-.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a {
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.room-facility-view-wrapper {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -904,7 +911,8 @@ footer .quick-links-wrapper li a,
 .fare-rules-side-bar-popup .side-bar-popup-body .fare-rules-wrapper .fare-flight-details table tbody tr td,
 .cancellation-penalty-wrapper h4,
 .cancellation-penalty-wrapper ul li,
-.review-form-content h6 {
+.review-form-content h6,
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -1164,11 +1172,23 @@ footer .quick-links-wrapper li a,
 .bg-color-light-pink {
   background-color: #fff3e8 !important;
 }
+.font-color-grey-goose {
+  color: #d3d3d3 !important;
+}
+.bg-color-grey-goose {
+  background-color: #d3d3d3 !important;
+}
 .font-color-frosted-mint {
   color: #dfffed !important;
 }
 .bg-color-frosted-mint {
   background-color: #dfffed !important;
+}
+.font-color-warm-grey {
+  color: #919191 !important;
+}
+.bg-color-warm-grey {
+  background-color: #919191 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -4494,4 +4514,57 @@ textarea.form-control {
 }
 .tooltip .tooltip-arrow::before {
   border-bottom-color: #269a59 !important;
+}
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns {
+  display: flex;
+  align-items: stretch;
+}
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+  border: 1px solid #d3d3d3;
+  border-radius: 0;
+}
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.border-warm-grey {
+  border: 1px solid #919191 !important;
+}
+.room-facility-view-wrapper {
+  padding: 1.125rem;
+}
+.room-facility-view-wrapper .room-gallery-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+@media screen and (max-width: 1399px) {
+  .room-facility-view-wrapper .room-gallery-wrapper {
+    flex-direction: column;
+  }
+}
+.room-facility-view-wrapper .room-gallery-wrapper img {
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+}
+.room-facility-view-wrapper .room-gallery-wrapper ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.room-facility-view-wrapper .room-gallery-wrapper ul li {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.room-facility-view-wrapper .room-gallery-wrapper ul li img {
+  height: 100%;
+}
+.selected-room-facilities-wrapper {
+  border: 1px solid #e7e7e7;
 }

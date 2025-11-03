@@ -45,6 +45,8 @@
 @platinum: #e7e7e7;
 @lightPink: #fff3e8;
 @frostedMint: #dfffed;
+@greyGoose: #d3d3d3;
+@warmGrey: #919191;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -60,7 +62,7 @@
   seashell @seashell, santa-grey @santaGrey, dark-grey @darkGrey, mirage @mirage,
   foggy-grey @foggyGrey, fantasy @fantasy, coral-red @coralRed,
   white-rock @whiteRock, platinum @platinum, light-pink @lightPink,
-  frosted-mint @frostedMint;
+  grey-goose @greyGoose, frosted-mint @frostedMint, warm-grey @warmGrey;
 
 html {
   font-size: 16px;
@@ -4360,4 +4362,70 @@ textarea {
   }
 }
 .selected-room-page-wrapper {
+  .selected-room-page-body {
+    .section-nav-btns {
+      display: flex;
+      align-items: stretch;
+      .btn {
+        &:extend(.fs-16,
+        .font-color-ship-grey,
+        .fw-400,
+        .pt-sans-font-family,
+        .bg-color-white);
+        border: 1px solid @greyGoose;
+        border-radius: 0;
+        &.active {
+          &:extend(.font-color-white,
+          .bg-color-primary);
+        }
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+}
+.border-warm-grey {
+  border: 1px solid @warmGrey !important;
+}
+.room-facility-view-wrapper {
+  &:extend(.bg-color-white);
+  padding: 1.125rem;
+  .room-gallery-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    @media screen {
+      @media (max-width: 1399px) {
+        flex-direction: column;
+      }
+    }
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+      width: 100%;
+      // height: 100%;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      li {
+        flex-grow: 1;
+        flex-shrink: 0;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.selected-room-facilities-wrapper {
+  border: 1px solid @platinum;
 }
