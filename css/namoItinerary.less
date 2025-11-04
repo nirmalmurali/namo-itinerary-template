@@ -4401,7 +4401,7 @@ textarea {
     align-items: stretch;
     gap: 10px;
     @media screen {
-      @media (max-width: 1399px) {
+      @media (max-width: 991px) {
         flex-direction: column;
       }
     }
@@ -4428,4 +4428,102 @@ textarea {
 }
 .selected-room-facilities-wrapper {
   border: 1px solid @platinum;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media screen {
+    @media (max-width: 1399px) {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .selected-room-date-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 1px solid @platinum;
+    @media screen {
+      @media (max-width: 1399px) {
+        border: none;
+        border-right: 1px solid @platinum;
+      }
+      @media (max-width: 768px) {
+        border: none;
+        border-bottom: 1px solid @platinum;
+      }
+    }
+  }
+  .selected-room-amenities-wrapper {
+    padding: 1rem;
+    border-bottom: 1px solid @platinum;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    @media screen {
+      @media (max-width: 1399px) {
+        border: none;
+        border-right: 1px solid @platinum;
+      }
+      @media (max-width: 768px) {
+        border: none;
+        border-bottom: 1px solid @platinum;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 0;
+      li {
+        flex-grow: 1;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-gravel-grey,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+      }
+    }
+  }
+  .selected-room-rating-wrapper {
+    padding: 1rem;
+    display: flex;
+    gap: 8px;
+    @media screen {
+      @media (max-width: 1399px) {
+        align-items: center;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+.selected-room-filter {
+  padding: 1.125rem;
+  .search-input-group {
+    position: relative;
+    .form-control {
+      padding-left: 0.5rem;
+      padding-right: 2.5rem;
+      height: 30px;
+    }
+    .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 0.688rem;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
 }

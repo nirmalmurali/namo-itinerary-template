@@ -303,7 +303,7 @@
             </div>
             <div class="room-facility-view-wrapper">
               <div class="row g-3">
-                <div class="col-lg-8">
+                <div class="col-xxl-8">
                   <div class="room-gallery-wrapper">
                     <img src="assets/images/hotel_img.png" alt="" />
                     <ul class="list-unstyled">
@@ -334,11 +334,11 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-xxl-4">
                   <div class="selected-room-facilities-wrapper">
-                    <div>
+                    <div class="selected-room-date-details">
                       <div
-                        class="d-flex align-items-center justify-content-between"
+                        class="d-flex align-items-center justify-content-between gap-4 flex-column flex-sm-row"
                       >
                         <div class="dropdown">
                           <a
@@ -373,8 +373,8 @@
                             sunday
                           </p>
                         </div>
-                        <div>
-                          <div class="dropdown-divider"></div>
+                        <div class="text-center">
+                          <img src="assets/images/line_icon.svg" alt="" />
                           <h4
                             class="fs-14 fw-400 font-color-secondary pt-sans-font-family mb-0"
                           >
@@ -415,7 +415,9 @@
                           </p>
                         </div>
                       </div>
-                      <div>
+                      <div
+                        class="d-flex flex-column align-items-center align-items-sm-start"
+                      >
                         <div class="dropdown">
                           <button
                             class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
@@ -537,9 +539,160 @@
                         </h4>
                       </div>
                     </div>
+                    <div class="selected-room-amenities-wrapper">
+                      <ul class="list-unstyled">
+                        <li>
+                          <img src="assets/images/bar_icon.svg" alt="" />
+                          <p>Bar</p>
+                        </li>
+                        <li>
+                          <img
+                            src="assets/images/room_service_icon.svg"
+                            alt=""
+                          />
+                          <p>Room Service</p>
+                        </li>
+                        <li>
+                          <img src="assets/images/restaurant_icon.svg" alt="" />
+                          <p>Restaurant</p>
+                        </li>
+                        <li>
+                          <img src="assets/images/wifi_icon.svg" alt="" />
+                          <p>WiFi</p>
+                        </li>
+                        <li>
+                          <img src="assets/images/gym_icon.svg" alt="" />
+                          <p>Gym</p>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="hotel-ratings selected-room-rating-wrapper">
+                      <div
+                        class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                      >
+                        4.5
+                      </div>
+                      <div>
+                        <h5>Good</h5>
+                        <p>71 ratings</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <h4
+              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4"
+            >
+              Rooms & Rates
+            </h4>
+            <div class="bg-color-white selected-room-filter">
+              <div
+                class="row g-3 flex-column-reverse flex-lg-row align-items-end align-items-lg-start"
+              >
+                <div class="col-lg-8 col-xxl-10">
+                  <h5
+                    class="pt-sans-font-family font-color-secondary fw-400 fs-15 mb-3"
+                  >
+                    Filter rooms by
+                  </h5>
+
+                  <ul
+                    class="room-filter-checkboxes mb-0 d-flex flex-wrap gap-3 align-items-center list-unstyled"
+                  >
+                    <li class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="payNowCheck"
+                      />
+                      <label class="form-check-label" for="payNowCheck"
+                        >Pay Now</label
+                      >
+                    </li>
+                    <li class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="breakfastCheck"
+                      />
+                      <label class="form-check-label" for="breakfastCheck"
+                        >Breakfast</label
+                      >
+                    </li>
+                    <li class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="halfBoardCheck"
+                      />
+                      <label class="form-check-label" for="halfBoardCheck"
+                        >Half Board</label
+                      >
+                    </li>
+                    <li class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="cancellationCheck"
+                      />
+                      <label class="form-check-label" for="cancellationCheck"
+                        >Cancellation Available</label
+                      >
+                    </li>
+                    <li class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="noPancardCheck"
+                      />
+                      <label class="form-check-label" for="noPancardCheck"
+                        >No PANCARD Required</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xxl-2">
+                  <div class="search-input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="customerRatingsRangeInput"
+                      placeholder="Search Hotel Name"
+                    />
+                    <button class="btn border-0">
+                      <img
+                        src="assets/images/search_input_icon.svg"
+                        alt="search icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h4
+              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4"
+            >
+              Pay Now Room Rates
+            </h4>
+            <div class="selected-room-rate-wrapper">
+              <ul class="list-unstyled">
+                <li>
+                  <div class="row g-3">
+                    <div class="col-lg-8">
+                      <h5>Deluxe King Room</h5>
+                      <div>
+                        <div>
+                          <img src="assets/images/green_tick_icon.svg" alt="" />
+                          <p> Room Only (EP)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4"></div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

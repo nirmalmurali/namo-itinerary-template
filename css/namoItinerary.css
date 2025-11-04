@@ -160,7 +160,8 @@ body:has(header.fixed-top) main {
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -290,7 +291,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -681,7 +683,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -1020,7 +1023,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .book-now-fare-type p,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p {
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -4542,7 +4546,7 @@ textarea.form-control {
   align-items: stretch;
   gap: 10px;
 }
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 991px) {
   .room-facility-view-wrapper .room-gallery-wrapper {
     flex-direction: column;
   }
@@ -4567,4 +4571,104 @@ textarea.form-control {
 }
 .selected-room-facilities-wrapper {
   border: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@media screen and (max-width: 1399px) {
+  .selected-room-facilities-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+@media screen and (max-width: 768px) {
+  .selected-room-facilities-wrapper {
+    flex-direction: column;
+  }
+}
+.selected-room-facilities-wrapper .selected-room-date-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+@media screen and (max-width: 1399px) {
+  .selected-room-facilities-wrapper .selected-room-date-details {
+    border: none;
+    border-right: 1px solid #e7e7e7;
+  }
+}
+@media screen and (max-width: 768px) {
+  .selected-room-facilities-wrapper .selected-room-date-details {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper {
+  padding: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1399px) {
+  .selected-room-facilities-wrapper .selected-room-amenities-wrapper {
+    border: none;
+    border-right: 1px solid #e7e7e7;
+  }
+}
+@media screen and (max-width: 768px) {
+  .selected-room-facilities-wrapper .selected-room-amenities-wrapper {
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
+  margin: 0;
+}
+.selected-room-facilities-wrapper .selected-room-rating-wrapper {
+  padding: 1rem;
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 1399px) {
+  .selected-room-facilities-wrapper .selected-room-rating-wrapper {
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+.selected-room-filter {
+  padding: 1.125rem;
+}
+.selected-room-filter .search-input-group {
+  position: relative;
+}
+.selected-room-filter .search-input-group .form-control {
+  padding-left: 0.5rem;
+  padding-right: 2.5rem;
+  height: 30px;
+}
+.selected-room-filter .search-input-group .btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0.688rem;
+  border: none;
+  background: none;
+  padding: 0;
 }
