@@ -160,7 +160,7 @@ body:has(header.fixed-top) main {
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.section-nav-btns .btn,
 .selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
 .selected-room-availability-list li p,
 .selected-room-availability-list li a,
@@ -168,7 +168,14 @@ body:has(header.fixed-top) main {
 .selected-room-rate-wrapper .more-rooms-btn,
 .selected-room-info-list li p,
 .selected-room-left-wrapper p,
-.selected-room-rate .btn {
+.selected-room-rate .btn,
+.selected-room-amenities-and-info-wrapper .room-amenities-list li p,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
+.weather-list-view-wrapper ul li h4,
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
+.weather-list-view-wrapper ul li .weather-footer p,
+.weather-list-view-wrapper ul li .weather-footer h6 {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -216,7 +223,7 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .review-form-content p,
 .comments-view-wrapper ul li .reply-btn,
-.selected-room-info-list li p.room-more-info {
+.selected-room-info-list li .room-more-info {
   font-size: 0.75rem !important;
 }
 .fs-13,
@@ -306,7 +313,11 @@ footer .quick-links-wrapper li a,
 .selected-room-rate-wrapper .more-rooms-btn,
 .selected-room-info-list li p,
 .selected-room-left-wrapper p,
-.selected-room-rate .btn {
+.selected-room-rate .btn,
+.selected-room-amenities-and-info-wrapper .room-amenities-list li p,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
+.weather-list-view-wrapper ul li .weather-footer p,
+.weather-list-view-wrapper ul li .weather-footer h6 {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -325,7 +336,9 @@ footer .quick-links-wrapper li a,
 .who-we-are-wrapper ul li p,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+.section-nav-btns .btn,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
+.weather-list-view-wrapper ul li h4 {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -343,7 +356,8 @@ footer .quick-links-wrapper li a,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
 .blogs-items-wrapper h6,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
-.selected-room-rate h6 {
+.selected-room-rate h6,
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -699,13 +713,17 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.section-nav-btns .btn,
 .selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
 .selected-room-availability-list li p,
 .selected-room-availability-list li a,
 .selected-room-rate-wrapper .more-rooms-btn,
 .selected-room-info-list li p,
-.selected-room-left-wrapper p {
+.selected-room-left-wrapper p,
+.selected-room-amenities-and-info-wrapper .room-amenities-list li p,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
+.weather-list-view-wrapper ul li .weather-footer p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -747,7 +765,10 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
 .selected-room-rate h6,
-.selected-room-rate .btn {
+.selected-room-rate .btn,
+.weather-list-view-wrapper ul li h4,
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
+.weather-list-view-wrapper ul li .weather-footer h6 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -775,7 +796,7 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .active-fare-type.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link.active,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active,
+.section-nav-btns .btn.active,
 .selected-room-rate-wrapper .more-rooms-btn {
   background-color: #f28b24 !important;
 }
@@ -824,8 +845,13 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
-.selected-room-info-list li p.room-more-info,
-.selected-room-rate h6 {
+.selected-room-info-list li .room-more-info,
+.selected-room-rate h6,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
+.weather-list-view-wrapper ul li h4,
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5:first-child,
+.weather-list-view-wrapper ul li .weather-footer p,
+.weather-list-view-wrapper ul li .weather-footer h6 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -879,7 +905,7 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active,
+.section-nav-btns .btn.active,
 .selected-room-rate-wrapper .more-rooms-btn {
   color: #ffffff !important;
 }
@@ -898,7 +924,7 @@ footer .quick-links-wrapper li a,
 .payment-options-wrapper .payment-tab-header .nav .nav-item .nav-link,
 .competitive-edge-card,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
+.section-nav-btns .btn,
 .room-facility-view-wrapper,
 .selected-room-rate-wrapper .selected-room-rate-list > li {
   background-color: #ffffff !important;
@@ -947,7 +973,7 @@ footer .quick-links-wrapper li a,
 .cancellation-penalty-wrapper h4,
 .cancellation-penalty-wrapper ul li,
 .review-form-content h6,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+.section-nav-btns .btn {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -1057,7 +1083,9 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
-.selected-room-availability-list li p {
+.selected-room-availability-list li p,
+.selected-room-amenities-and-info-wrapper .room-amenities-list li p,
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1100,7 +1128,7 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-merino,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
-.selected-room-info-list li p.room-more-info {
+.selected-room-info-list li .room-more-info {
   background-color: #ffeede !important;
 }
 .font-color-lavender-mist {
@@ -1146,10 +1174,10 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .add-addons-item {
   background-color: #3cb878 !important;
 }
-.font-color-seashell {
+.font-color-sea-shell {
   color: #f4efef !important;
 }
-.bg-color-seashell {
+.bg-color-sea-shell {
   background-color: #f4efef !important;
 }
 .font-color-santa-grey {
@@ -4559,19 +4587,22 @@ textarea.form-control {
 .tooltip .tooltip-arrow::before {
   border-bottom-color: #269a59 !important;
 }
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns {
+.selected-room-page-wrapper .selected-room-page-body {
+  padding-bottom: 2.5rem;
+}
+.section-nav-btns {
   display: flex;
   align-items: stretch;
 }
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn {
+.section-nav-btns .btn {
   border: 1px solid #d3d3d3;
   border-radius: 0;
 }
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn:first-child {
+.section-nav-btns .btn:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn:last-child {
+.section-nav-btns .btn:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -4732,7 +4763,7 @@ textarea.form-control {
   text-decoration: none;
 }
 .selected-room-rate-wrapper {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 .selected-room-rate-wrapper .selected-room-rate-list {
   margin-bottom: 1rem;
@@ -4762,7 +4793,7 @@ textarea.form-control {
 .selected-room-info-list li p {
   margin: 0;
 }
-.selected-room-info-list li p.room-more-info {
+.selected-room-info-list li .room-more-info {
   padding: 5px 10px;
   border-radius: 4px;
 }
@@ -4792,4 +4823,110 @@ textarea.form-control {
 }
 .selected-room-rate .btn {
   padding: 4px 16px;
+}
+.selected-room-amenities-and-info-wrapper {
+  padding: 1.125rem;
+}
+.selected-room-amenities-and-info-wrapper .room-amenities-list {
+  border: 1px solid #f4efef;
+  background: #fff7ef;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-bottom: 0;
+  align-items: center;
+}
+.selected-room-amenities-and-info-wrapper .room-amenities-list li {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.selected-room-amenities-and-info-wrapper .room-amenities-list li p {
+  margin: 0;
+}
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f4efef;
+}
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6 {
+  margin-bottom: 0.8rem;
+}
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item .gray-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #b9b6b6;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p {
+  margin: 0;
+}
+.selected-room-amenities-and-info-wrapper .map-wrap {
+  height: 400px;
+  margin-top: 1rem;
+}
+.weather-list-view-wrapper {
+  padding: 1.125rem;
+}
+.weather-list-view-wrapper ul {
+  display: flex;
+  gap: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.weather-list-view-wrapper ul li {
+  text-align: center;
+  border: 1px solid #d6d6d6;
+  max-width: 167px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+.weather-list-view-wrapper ul li .weather-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 5px;
+}
+.weather-list-view-wrapper ul li h4 {
+  margin: 0;
+}
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6d6d6;
+  border-left: none;
+  border-right: none;
+}
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5 {
+  color: #b9b6b6;
+  margin: 0;
+  padding: 9px;
+}
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5:first-child {
+  border-right: 1px solid #d6d6d6;
+}
+.weather-list-view-wrapper ul li .weather-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 5px;
+}
+.weather-list-view-wrapper ul li .weather-footer p {
+  margin: 0;
+}
+.weather-list-view-wrapper ul li .weather-footer h6 {
+  margin: 0;
 }
