@@ -161,7 +161,14 @@ body:has(header.fixed-top) main {
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .tooltip .tooltip-inner,
 .selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
-.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
+.selected-room-availability-list li p,
+.selected-room-availability-list li a,
+.selected-room-rate-wrapper .selected-room-rate-list > li h5,
+.selected-room-rate-wrapper .more-rooms-btn,
+.selected-room-info-list li p,
+.selected-room-left-wrapper p,
+.selected-room-rate .btn {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -208,7 +215,8 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .review-form-content p,
-.comments-view-wrapper ul li .reply-btn {
+.comments-view-wrapper ul li .reply-btn,
+.selected-room-info-list li p.room-more-info {
   font-size: 0.75rem !important;
 }
 .fs-13,
@@ -292,7 +300,13 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .litepicker .container__main .container__months .month-item .container__days .day-item,
 .tooltip .tooltip-inner,
-.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
+.selected-room-availability-list li p,
+.selected-room-availability-list li a,
+.selected-room-rate-wrapper .more-rooms-btn,
+.selected-room-info-list li p,
+.selected-room-left-wrapper p,
+.selected-room-rate .btn {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -327,7 +341,9 @@ footer .quick-links-wrapper li a,
 .payment-options-wrapper .payment-tab-footer ul li h6,
 .travel-solutions-wrapper ul li p,
 .services-list-wrapper .service-card-wrapper .service-card-content h5,
-.blogs-items-wrapper h6 {
+.blogs-items-wrapper h6,
+.selected-room-rate-wrapper .selected-room-rate-list > li h5,
+.selected-room-rate h6 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -684,7 +700,12 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
 .tooltip .tooltip-inner,
 .selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
-.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
+.selected-room-availability-list li p,
+.selected-room-availability-list li a,
+.selected-room-rate-wrapper .more-rooms-btn,
+.selected-room-info-list li p,
+.selected-room-left-wrapper p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -723,7 +744,10 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper h5,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
-.litepicker .container__main .container__months .month-item .container__days .day-item {
+.litepicker .container__main .container__months .month-item .container__days .day-item,
+.selected-room-rate-wrapper .selected-room-rate-list > li h5,
+.selected-room-rate h6,
+.selected-room-rate .btn {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -751,7 +775,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .active-fare-type.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link.active,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active {
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active,
+.selected-room-rate-wrapper .more-rooms-btn {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -797,7 +822,10 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-name,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
 .litepicker .container__main .container__months .month-item .month-item-weekdays-row,
-.litepicker .container__main .container__months .month-item .container__days .day-item {
+.litepicker .container__main .container__months .month-item .container__days .day-item,
+.selected-room-rate-wrapper .selected-room-rate-list > li h5,
+.selected-room-info-list li p.room-more-info,
+.selected-room-rate h6 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -851,7 +879,8 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-start-date,
 .litepicker .container__main .container__months .month-item .container__days .day-item.is-end-date,
 .tooltip .tooltip-inner,
-.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active {
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn.active,
+.selected-room-rate-wrapper .more-rooms-btn {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -870,7 +899,8 @@ footer .quick-links-wrapper li a,
 .competitive-edge-card,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
 .selected-room-page-wrapper .selected-room-page-body .section-nav-btns .btn,
-.room-facility-view-wrapper {
+.room-facility-view-wrapper,
+.selected-room-rate-wrapper .selected-room-rate-list > li {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -891,7 +921,9 @@ footer .quick-links-wrapper li a,
 .dropdown .destination-dropdown-wrapper .destination-dropdown-body .destination-list li p span,
 .hotel-rate-details-wrapper .short-list-btn,
 .sort-list-wrapper li .btn.active,
-.book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
+.book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
+.selected-room-availability-list li a,
+.selected-room-left-wrapper p {
   color: #269a59 !important;
 }
 .bg-color-sea-green,
@@ -1024,7 +1056,8 @@ footer .quick-links-wrapper li a,
 .book-now-fare-type-list-wrapper ul li .seats-wrapper p,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
-.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p {
+.selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
+.selected-room-availability-list li p {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1066,7 +1099,8 @@ footer .quick-links-wrapper li a,
   color: #ffeede !important;
 }
 .bg-color-merino,
-.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn {
+.book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
+.selected-room-info-list li p.room-more-info {
   background-color: #ffeede !important;
 }
 .font-color-lavender-mist {
@@ -1193,6 +1227,12 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-warm-grey {
   background-color: #919191 !important;
+}
+.font-color-red-orange {
+  color: #ff4848 !important;
+}
+.bg-color-red-orange {
+  background-color: #ff4848 !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -4671,4 +4711,85 @@ textarea.form-control {
   border: none;
   background: none;
   padding: 0;
+}
+.selected-room-availability-list {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.selected-room-availability-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.selected-room-availability-list li p {
+  margin: 0;
+}
+.selected-room-availability-list li a:hover {
+  text-decoration: none;
+}
+.selected-room-rate-wrapper {
+  padding-bottom: 2rem;
+}
+.selected-room-rate-wrapper .selected-room-rate-list {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.selected-room-rate-wrapper .selected-room-rate-list > li {
+  padding: 1.125rem;
+}
+.selected-room-rate-wrapper .selected-room-rate-list > li h5 {
+  margin-bottom: 0;
+}
+.selected-room-rate-wrapper .more-rooms-btn {
+  border-radius: 6px;
+}
+.selected-room-info-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.selected-room-info-list li {
+  padding: 0;
+}
+.selected-room-info-list li p {
+  margin: 0;
+}
+.selected-room-info-list li p.room-more-info {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.selected-room-left-wrapper {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+.selected-room-left-wrapper p {
+  margin: 0;
+}
+.selected-room-left-wrapper p.room-left-wrapper {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #269a59;
+}
+.selected-room-rate {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  justify-content: end;
+}
+.selected-room-rate h6 {
+  margin-bottom: 0;
+}
+.selected-room-rate .btn {
+  padding: 4px 16px;
 }
