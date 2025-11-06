@@ -48,6 +48,7 @@
 @greyGoose: #d3d3d3;
 @warmGrey: #919191;
 @redOrange: #ff4848;
+@fireEngineRed: #d32f2f;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -64,7 +65,7 @@
   mirage @mirage, foggy-grey @foggyGrey, fantasy @fantasy, coral-red @coralRed,
   white-rock @whiteRock, platinum @platinum, light-pink @lightPink,
   grey-goose @greyGoose, frosted-mint @frostedMint, warm-grey @warmGrey,
-  red-orange @redOrange;
+  red-orange @redOrange, fire-engine-red @fireEngineRed;
 
 html {
   font-size: 16px;
@@ -4366,6 +4367,13 @@ textarea {
 .selected-room-page-wrapper {
   .selected-room-page-body {
     padding-bottom: 2.5rem;
+    .section-nav-btns-wrapper {
+      overflow: hidden;
+      overflow-x: auto;
+      .btn {
+        flex-shrink: 0;
+      }
+    }
   }
 }
 .section-nav-btns {
@@ -4628,6 +4636,14 @@ textarea {
       border: 1px solid @seaGreen;
     }
   }
+  &.non-refundable {
+    p {
+      &:extend(.font-color-red-orange);
+      &.room-left-wrapper {
+        border: 1px solid @redOrange;
+      }
+    }
+  }
 }
 .selected-room-rate {
   display: flex;
@@ -4710,6 +4726,14 @@ textarea {
     height: 400px;
     margin-top: 1rem;
   }
+  .section-nav-btns {
+    padding: 0 2px 6px;
+    overflow: hidden;
+    overflow-x: auto;
+    .btn {
+      flex-shrink: 0;
+    }
+  }
 }
 .weather-list-view-wrapper {
   padding: 1.125rem;
@@ -4780,6 +4804,183 @@ textarea {
           margin: 0;
         }
       }
+    }
+  }
+}
+.cancellation-policy-side-bar-popup {
+  .cancellation-policy-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    ul {
+      li {
+        padding: 0;
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+        border: 1px solid @seashell;
+        border-left: 2px solid @seaGreen;
+        @media screen {
+          @media (max-width: 576px) {
+            flex-direction: column;
+          }
+        }
+        &.active-charges {
+          border-left: 2px solid @fireEngineRed;
+          img {
+            content: url("../assets/images/calender_red_icon.svg");
+          }
+        }
+        .policy-description-wrapper {
+          display: flex;
+          align-items: center;
+          column-gap: 1rem;
+          row-gap: 0.5rem;
+          padding: 16px 10px;
+          border-right: 1px solid @seashell;
+          flex-grow: 1;
+          @media screen {
+            @media (max-width: 576px) {
+              border: none;
+              border-bottom: 1px solid @seashell;
+            }
+          }
+        }
+        p {
+          &:extend(.fs-12,
+          .fw-400,
+          .font-color-secondary,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+        h6 {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-secondary,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+        h5 {
+          &:extend(.fs-16,
+          .fw-700,
+          .font-color-secondary);
+          margin: 0;
+        }
+        .cancellation-charges-wrapper {
+          padding: 16px 10px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+.essential-info-side-bar-popup {
+  .essential-info-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 0;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        &::before {
+          width: 4px;
+          height: 4px;
+          background-color: @gravelGrey;
+          border-radius: 50%;
+          content: "";
+          display: inline-block;
+          flex-shrink: 0;
+        }
+        p {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-santa-grey,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+      }
+    }
+    p {
+      &:extend(.fs-14,
+      .fw-400,
+      .font-color-black-cat,
+      .pt-sans-font-family);
+      margin: 0;
+    }
+  }
+}
+.room-info-side-bar-popup {
+  .room-info-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 0;
+      li {
+        h6 {
+          &:extend(.fs-16,
+          .fw-400,
+          .font-color-secondary,
+          .pt-sans-font-family);
+          margin-bottom: 2px;
+        }
+        p {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-gravel-grey,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.inclusions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    p {
+      &:extend(.fs-14,
+      .fw-400,
+      .font-color-gravel-grey,
+      .pt-sans-font-family);
+      margin: 0;
+    }
+  }
+}
+.details-changed-body {
+  h5 {
+    &:extend(.fs-14,
+    .fw-700,
+    .font-color-gravel-grey,
+    .pt-sans-font-family);
+    margin-bottom: 0.5rem;
+  }
+  h6 {
+    &:extend(.fs-16,
+    .fw-400,
+    .font-color-secondary,
+    .pt-sans-font-family);
+    margin: 0;
+    span {
+      &:extend(.font-color-sea-green);
     }
   }
 }

@@ -237,14 +237,14 @@
         <div class="selected-room-page-body bg-color-desert-storm">
           <div class="container">
             <div
-              class="d-flex align-items-center flex-wrap gap-3 justify-content-between py-3"
+              class="d-flex align-items-center flex-wrap gap-3 justify-content-between py-3 section-nav-btns-wrapper"
             >
               <div class="section-nav-btns">
-                <a href="#" class="btn active">Photos</a>
-                <a href="#" class="btn">Room & Rates</a>
-                <a href="#" class="btn">Hotel Amenities</a>
-                <a href="#" class="btn">Nearby Attractions</a>
-                <a href="#" class="btn">MAP</a>
+                <a href="#photosGallery" class="btn active">Photos</a>
+                <a href="#roomRates" class="btn">Room & Rates</a>
+                <a href="#hotelAmenities" class="btn">Hotel Amenities</a>
+                <a href="#nearbyAttractions" class="btn">Nearby Attractions</a>
+                <a href="#locationMap" class="btn">MAP</a>
               </div>
               <div class="d-flex align-items-center gap-2">
                 <button
@@ -301,7 +301,7 @@
                 </button>
               </div>
             </div>
-            <div class="room-facility-view-wrapper">
+            <div class="room-facility-view-wrapper" id="photsGallery">
               <div class="row g-3">
                 <div class="col-xxl-8">
                   <div class="room-gallery-wrapper">
@@ -582,729 +582,811 @@
                 </div>
               </div>
             </div>
-            <h4
-              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4"
-            >
-              Rooms & Rates
-            </h4>
-            <div class="bg-color-white selected-room-filter">
-              <div
-                class="row g-3 flex-column-reverse flex-lg-row align-items-end align-items-lg-start"
+            <div id="roomRates">
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4"
               >
-                <div class="col-lg-8 col-xxl-10">
-                  <h5
-                    class="pt-sans-font-family font-color-secondary fw-400 fs-15 mb-3"
-                  >
-                    Filter rooms by
-                  </h5>
-
-                  <ul
-                    class="room-filter-checkboxes mb-0 d-flex flex-wrap gap-3 align-items-center list-unstyled"
-                  >
-                    <li class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="payNowCheck"
-                      />
-                      <label class="form-check-label" for="payNowCheck"
-                        >Pay Now</label
-                      >
-                    </li>
-                    <li class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="breakfastCheck"
-                      />
-                      <label class="form-check-label" for="breakfastCheck"
-                        >Breakfast</label
-                      >
-                    </li>
-                    <li class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="halfBoardCheck"
-                      />
-                      <label class="form-check-label" for="halfBoardCheck"
-                        >Half Board</label
-                      >
-                    </li>
-                    <li class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="cancellationCheck"
-                      />
-                      <label class="form-check-label" for="cancellationCheck"
-                        >Cancellation Available</label
-                      >
-                    </li>
-                    <li class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="noPancardCheck"
-                      />
-                      <label class="form-check-label" for="noPancardCheck"
-                        >No PANCARD Required</label
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xxl-2">
-                  <div class="search-input-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="customerRatingsRangeInput"
-                      placeholder="Search Hotel Name"
-                    />
-                    <button class="btn border-0">
-                      <img
-                        src="assets/images/search_input_icon.svg"
-                        alt="search icon"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h4
-              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
-            >
-              Pay Now Room Rates
-            </h4>
-            <div class="selected-room-rate-wrapper">
-              <ul class="list-unstyled selected-room-rate-list">
-                <li>
-                  <div class="row g-3 align-items-center">
-                    <div class="col-lg-8">
-                      <h5>Deluxe King Room</h5>
-
-                      <ul class="list-unstyled selected-room-availability-list">
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p> Room Only (EP)</p>
-                        </li>
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p>
-                            Early Check-in & Late Checkout are subject to
-                            Availability
-                          </p>
-                        </li>
-                      </ul>
-                      <ul class="list-unstyled selected-room-info-list">
-                        <li>
-                          <p class="font-color-red-orange">
-                            Pan card not applicable
-                          </p>
-                        </li>
-                        <li>
-                          <p class="font-color-pale-orange">
-                            Free cancellation till 10 Aug 2025
-                          </p>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Cancellation Policy
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Essential Info
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">Room Info</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="selected-room-left-wrapper text-end">
-                        <p>Refundable</p>
-                        <p class="room-left-wrapper">10+ Room left</p>
-                      </div>
-                      <div class="selected-room-rate">
-                        <h6>₹12,886</h6>
-                        <a href="#" class="btn primary-bg-outline-btn"
-                          >Book Now</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row g-3 align-items-center">
-                    <div class="col-lg-8">
-                      <h5>Deluxe King Room</h5>
-
-                      <ul class="list-unstyled selected-room-availability-list">
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p> Room Only (EP)</p>
-                        </li>
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p>
-                            Early Check-in & Late Checkout are subject to
-                            Availability
-                          </p>
-                        </li>
-                        <li>
-                          <a href="#">More Inclusions</a>
-                        </li>
-                      </ul>
-                      <ul class="list-unstyled selected-room-info-list">
-                        <li>
-                          <p class="font-color-red-orange">
-                            Pan card not applicable
-                          </p>
-                        </li>
-                        <li>
-                          <p class="font-color-pale-orange">
-                            Free cancellation till 10 Aug 2025
-                          </p>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Cancellation Policy
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Essential Info
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">Room Info</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="selected-room-left-wrapper text-end">
-                        <p>Refundable</p>
-                        <p class="room-left-wrapper">10+ Room left</p>
-                      </div>
-                      <div class="selected-room-rate">
-                        <h6>₹12,886</h6>
-                        <a href="#" class="btn primary-bg-outline-btn"
-                          >Book Now</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="row g-3 align-items-center">
-                    <div class="col-lg-8">
-                      <h5>Deluxe King Room</h5>
-
-                      <ul class="list-unstyled selected-room-availability-list">
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p> Room Only (EP)</p>
-                        </li>
-                        <li>
-                          <img src="assets/images/green_tick_icon.svg" alt="" />
-                          <p>
-                            Early Check-in & Late Checkout are subject to
-                            Availability
-                          </p>
-                        </li>
-                        <li>
-                          <a href="#">More Inclusions</a>
-                        </li>
-                      </ul>
-                      <ul class="list-unstyled selected-room-info-list">
-                        <li>
-                          <p class="font-color-red-orange">
-                            Pan card not applicable
-                          </p>
-                        </li>
-                        <li>
-                          <p class="font-color-pale-orange">
-                            Free cancellation till 10 Aug 2025
-                          </p>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Cancellation Policy
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">
-                            Essential Info
-                          </button>
-                        </li>
-                        <li>
-                          <button class="room-more-info btn">Room Info</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="selected-room-left-wrapper text-end">
-                        <p>Refundable</p>
-                        <p class="room-left-wrapper">10+ Room left</p>
-                      </div>
-                      <div class="selected-room-rate">
-                        <h6>₹12,886</h6>
-                        <a href="#" class="btn primary-bg-outline-btn"
-                          >Book Now</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <a href="#" class="btn more-rooms-btn"> More Rooms </a>
-            </div>
-            <h4
-              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mb-3"
-            >
-              Amenities & Info
-            </h4>
-            <div
-              class="selected-room-amenities-and-info-wrapper bg-color-white"
-            >
-              <ul class="list-unstyled room-amenities-list">
-                <li>
-                  <img src="assets/images/room_service_icon.svg" alt="" />
-                  <p>Room Service</p>
-                </li>
-                <li>
-                  <img src="assets/images/restaurant_icon.svg" alt="" />
-                  <p>Restaurant</p>
-                </li>
-                <li>
-                  <img src="assets/images/wifi_icon.svg" alt="" />
-                  <p>WiFi</p>
-                </li>
-                <li>
-                  <img src="assets/images/gym_icon.svg" alt="" />
-                  <p>Gym</p>
-                </li>
-              </ul>
-              <ul class="list-unstyled selected-room-amenities-and-info-list">
-                <li>
-                  <h6>General</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Air Conditioning</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Well-lit path to entrance</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Tours/ticket assistance</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Express check-in</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Braille or raised signage</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Express check-out</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Wheelchair-accessible registration desk</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Bicycle rentals nearby</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Ecotours nearby</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Designated smoking areas</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <h6>Elevator</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Wheelchair-accessible path to elevator</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Elevator</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <h6>Parking</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Free self parking</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Free valet parking</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <h6>Safe deposit box</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Safe-deposit box at front desk</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <h6>Business Facilities</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Business center</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Meeting rooms</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Conference facilities</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <h6>Internet Access</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Free WiFi in public areas</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Free WiFi in rooms</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <h6>Food & Beverage</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Restaurant on-site</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Bar/lounge</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>24-hour room service</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Coffee shop</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <h6>Fitness & Recreation</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Fitness center</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Spa services</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Swimming pool</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Sauna</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <h6>Guest Services</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>24-hour front desk</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Concierge services</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Luggage storage</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Laundry service</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <h6>Transportation</h6>
-                  <div class="row g-3">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Airport shuttle (surcharge)</p>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                      <div class="selected-room-amenities-and-info-list-item">
-                        <img src="assets/images/gray_tick_icon.svg" alt="" />
-                        <p>Car rental service</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <h4 class="fs-18 fw-700 font-color-secondary pt-sans-font-family">
-                About the hotel
+                Rooms & Rates
               </h4>
-              <p
-                class="fs-12 fw-400 font-color-black-cat pt-sans-font-family mb-0"
-              >
-                Enjoy recreation amenities such as a health club or take in the
-                view from a terrace. Additional amenities at this hotel include
-                complimentary wireless internet access, concierge services, and
-                a banquet hall.Grab a bite at Cafe Treat, one of the hotel's 3
-                restaurants, or stay in and take advantage of the 24-hour room
-                service. Snacks are also available at the coffee shop/cafe. Wrap
-                up your day with a drink at the bar/lounge. Buffet breakfasts
-                are available daily from 7 AM to 10 AM for a fee.Featured
-                amenities include complimentary wired internet access, a 24-hour
-                business center, and express check-in. Event facilities at this
-                hotel consist of conference space and a meeting room. A
-                roundtrip airport shuttle is provided for a surcharge (available
-                24 hours), and free valet parking is available onsite.Make
-                yourself at home in one of the 98 individually furnished
-                guestrooms, featuring minibars and LCD televisions. Your Select
-                Comfort bed comes with premium bedding. Satellite programming
-                provi des entertainment, and wired and wireless internet access
-                is available for a surcharge. Private bathrooms with showers
-                feature complimentary toiletries and bathrobes.With a stay at
-                The Pride Hotel, you'll be centrally located in Bengaluru,
-                within a 5-minute drive of Cubbon Park and UB City. This luxury
-                hotel is 1.2 mi (2 km) from M.G. Road and 3.8 mi (6.2 km) from
-                Bangalore Palace.Hindi, EnglishVisa, Debit cards, Cash, American
-                Express, Mastercard
-              </p>
-            </div>
-            <h4
-              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
-            >
-              Nearby Attractions
-            </h4>
-            <div
-              class="selected-room-amenities-and-info-wrapper bg-color-white"
-            >
-              <div class="row g-3">
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Cisco Systems Bengaluru (0.7 km)</p>
+              <div class="bg-color-white selected-room-filter">
+                <div
+                  class="row g-3 flex-column-reverse flex-lg-row align-items-end align-items-lg-start"
+                >
+                  <div class="col-lg-8 col-xxl-10">
+                    <h5
+                      class="pt-sans-font-family font-color-secondary fw-400 fs-15 mb-3"
+                    >
+                      Filter rooms by
+                    </h5>
+
+                    <ul
+                      class="room-filter-checkboxes mb-0 d-flex flex-wrap gap-3 align-items-center list-unstyled"
+                    >
+                      <li class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="payNowCheck"
+                        />
+                        <label class="form-check-label" for="payNowCheck"
+                          >Pay Now</label
+                        >
+                      </li>
+                      <li class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="breakfastCheck"
+                        />
+                        <label class="form-check-label" for="breakfastCheck"
+                          >Breakfast</label
+                        >
+                      </li>
+                      <li class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="halfBoardCheck"
+                        />
+                        <label class="form-check-label" for="halfBoardCheck"
+                          >Half Board</label
+                        >
+                      </li>
+                      <li class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="cancellationCheck"
+                        />
+                        <label class="form-check-label" for="cancellationCheck"
+                          >Cancellation Available</label
+                        >
+                      </li>
+                      <li class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="noPancardCheck"
+                        />
+                        <label class="form-check-label" for="noPancardCheck"
+                          >No PANCARD Required</label
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 col-xxl-2">
+                    <div class="search-input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="customerRatingsRangeInput"
+                        placeholder="Search Hotel Name"
+                      />
+                      <button class="btn border-0">
+                        <img
+                          src="assets/images/search_input_icon.svg"
+                          alt="search icon"
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>UB City (1.3 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Visvesvaraya Industrial and Technological</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Vidhana Soudha (2.4 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Brigade Road (1 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Church Street (1.5 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>M Chinnaswamy Stadium (1.9 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>1 MG-Lido Mall (2.6 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Cubbon Park (1.3 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Garuda Mall (1.6 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>M.G. Road (2 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Commercial Street (3 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>HCG Cancer Hospital (1.3 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Sree Kanteerava Stadium (1.6 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>Lalbagh Botanical Gardens (2.4 km)</p>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="selected-room-amenities-and-info-list-item">
-                    <div class="gray-dot"></div>
-                    <p>The preferred airport for The Pride Hotel is</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h4
-              class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
-            >
-              Location Map
-            </h4>
-            <div
-              class="selected-room-amenities-and-info-wrapper bg-color-white"
-            >
-              <div class="section-nav-btns">
-                <a href="#" class="btn active">Photos</a>
-                <a href="#" class="btn">Room & Rates</a>
-                <a href="#" class="btn">Hotel Amenities</a>
-                <a href="#" class="btn">Nearby Attractions</a>
-                <a href="#" class="btn">MAP</a>
               </div>
 
-              <div class="map-wrap">
-                <div id="map"></div>
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Pay Now Room Rates
+              </h4>
+              <div class="selected-room-rate-wrapper">
+                <ul class="list-unstyled selected-room-rate-list">
+                  <li>
+                    <div class="row g-3 align-items-center">
+                      <div class="col-lg-8">
+                        <h5>Deluxe King Room</h5>
+
+                        <ul
+                          class="list-unstyled selected-room-availability-list"
+                        >
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p> Room Only (EP)</p>
+                          </li>
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p>
+                              Early Check-in & Late Checkout are subject to
+                              Availability
+                            </p>
+                          </li>
+                        </ul>
+                        <ul class="list-unstyled selected-room-info-list">
+                          <li>
+                            <p class="font-color-red-orange">
+                              Pan card not applicable
+                            </p>
+                          </li>
+                          <li>
+                            <p class="font-color-pale-orange">
+                              Free cancellation till 10 Aug 2025
+                            </p>
+                          </li>
+                          <li>
+                            <button
+                              class="show-cancellation-policy border-0 btn room-more-info"
+                            >
+                              Cancellation Policy
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-essential-info border-0 btn room-more-info"
+                            >
+                              Essential Info
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-room-info border-0 btn room-more-info"
+                            >
+                              Room Info
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="selected-room-left-wrapper text-end">
+                          <p>Refundable</p>
+                          <p class="room-left-wrapper">10+ Room left</p>
+                        </div>
+                        <div class="selected-room-rate">
+                          <h6>₹12,886</h6>
+                          <button
+                            class="btn primary-bg-outline-btn"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#detailsChangeModal"
+                          >
+                            Book Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row g-3 align-items-center">
+                      <div class="col-lg-8">
+                        <h5>Deluxe King Room</h5>
+
+                        <ul
+                          class="list-unstyled selected-room-availability-list"
+                        >
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p> Room Only (EP)</p>
+                          </li>
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p>
+                              Early Check-in & Late Checkout are subject to
+                              Availability
+                            </p>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#moreInstructionsModal"
+                              >More Inclusions</a
+                            >
+                          </li>
+                        </ul>
+                        <ul class="list-unstyled selected-room-info-list">
+                          <li>
+                            <p class="font-color-red-orange">
+                              Pan card not applicable
+                            </p>
+                          </li>
+                          <li>
+                            <p class="font-color-pale-orange">
+                              Free cancellation till 10 Aug 2025
+                            </p>
+                          </li>
+                          <li>
+                            <button
+                              class="show-cancellation-policy border-0 btn room-more-info"
+                            >
+                              Cancellation Policy
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-essential-info border-0 btn room-more-info"
+                            >
+                              Essential Info
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-room-info border-0 btn room-more-info"
+                            >
+                              Room Info
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4">
+                        <div
+                          class="selected-room-left-wrapper text-end non-refundable"
+                        >
+                          <p>Refundable</p>
+                          <p class="room-left-wrapper">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i> 1
+                            Room left
+                          </p>
+                        </div>
+                        <div class="selected-room-rate">
+                          <h6>₹12,886</h6>
+                          <a href="#" class="btn primary-bg-outline-btn"
+                            >Book Now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row g-3 align-items-center">
+                      <div class="col-lg-8">
+                        <h5>Deluxe King Room</h5>
+
+                        <ul
+                          class="list-unstyled selected-room-availability-list"
+                        >
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p> Room Only (EP)</p>
+                          </li>
+                          <li>
+                            <img
+                              src="assets/images/green_tick_icon.svg"
+                              alt=""
+                            />
+                            <p>
+                              Early Check-in & Late Checkout are subject to
+                              Availability
+                            </p>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#moreInstructionsModal"
+                              >More Inclusions</a
+                            >
+                          </li>
+                        </ul>
+                        <ul class="list-unstyled selected-room-info-list">
+                          <li>
+                            <p class="font-color-red-orange">
+                              Pan card not applicable
+                            </p>
+                          </li>
+                          <li>
+                            <p class="font-color-pale-orange">
+                              Free cancellation till 10 Aug 2025
+                            </p>
+                          </li>
+                          <li>
+                            <button
+                              class="show-cancellation-policy border-0 btn room-more-info"
+                            >
+                              Cancellation Policy
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-essential-info border-0 btn room-more-info"
+                            >
+                              Essential Info
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              class="show-room-info border-0 btn room-more-info"
+                            >
+                              Room Info
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="selected-room-left-wrapper text-end">
+                          <p>Refundable</p>
+                          <p class="room-left-wrapper">10+ Room left</p>
+                        </div>
+                        <div class="selected-room-rate">
+                          <h6>₹12,886</h6>
+                          <a href="#" class="btn primary-bg-outline-btn"
+                            >Book Now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="btn more-rooms-btn"> More Rooms </a>
+              </div>
+            </div>
+            <div id="hotelAmenities">
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mb-3"
+              >
+                Amenities & Info
+              </h4>
+              <div
+                class="selected-room-amenities-and-info-wrapper bg-color-white"
+              >
+                <ul class="list-unstyled room-amenities-list">
+                  <li>
+                    <img src="assets/images/room_service_icon.svg" alt="" />
+                    <p>Room Service</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/restaurant_icon.svg" alt="" />
+                    <p>Restaurant</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/wifi_icon.svg" alt="" />
+                    <p>WiFi</p>
+                  </li>
+                  <li>
+                    <img src="assets/images/gym_icon.svg" alt="" />
+                    <p>Gym</p>
+                  </li>
+                </ul>
+                <ul class="list-unstyled selected-room-amenities-and-info-list">
+                  <li>
+                    <h6>General</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Air Conditioning</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Well-lit path to entrance</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Tours/ticket assistance</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Express check-in</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Braille or raised signage</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Express check-out</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Wheelchair-accessible registration desk</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Bicycle rentals nearby</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Ecotours nearby</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Designated smoking areas</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h6>Elevator</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Wheelchair-accessible path to elevator</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Elevator</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h6>Parking</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Free self parking</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Free valet parking</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h6>Safe deposit box</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Safe-deposit box at front desk</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h6>Business Facilities</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Business center</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Meeting rooms</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Conference facilities</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h6>Internet Access</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Free WiFi in public areas</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Free WiFi in rooms</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h6>Food & Beverage</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Restaurant on-site</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Bar/lounge</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>24-hour room service</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Coffee shop</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h6>Fitness & Recreation</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Fitness center</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Spa services</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Swimming pool</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Sauna</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h6>Guest Services</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>24-hour front desk</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Concierge services</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Luggage storage</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Laundry service</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <h6>Transportation</h6>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Airport shuttle (surcharge)</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="selected-room-amenities-and-info-list-item">
+                          <img src="assets/images/gray_tick_icon.svg" alt="" />
+                          <p>Car rental service</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h4
+                  class="fs-18 fw-700 font-color-secondary pt-sans-font-family"
+                >
+                  About the hotel
+                </h4>
+                <p
+                  class="fs-12 fw-400 font-color-black-cat pt-sans-font-family mb-0"
+                >
+                  Enjoy recreation amenities such as a health club or take in
+                  the view from a terrace. Additional amenities at this hotel
+                  include complimentary wireless internet access, concierge
+                  services, and a banquet hall.Grab a bite at Cafe Treat, one of
+                  the hotel's 3 restaurants, or stay in and take advantage of
+                  the 24-hour room service. Snacks are also available at the
+                  coffee shop/cafe. Wrap up your day with a drink at the
+                  bar/lounge. Buffet breakfasts are available daily from 7 AM to
+                  10 AM for a fee.Featured amenities include complimentary wired
+                  internet access, a 24-hour business center, and express
+                  check-in. Event facilities at this hotel consist of conference
+                  space and a meeting room. A roundtrip airport shuttle is
+                  provided for a surcharge (available 24 hours), and free valet
+                  parking is available onsite.Make yourself at home in one of
+                  the 98 individually furnished guestrooms, featuring minibars
+                  and LCD televisions. Your Select Comfort bed comes with
+                  premium bedding. Satellite programming provi des
+                  entertainment, and wired and wireless internet access is
+                  available for a surcharge. Private bathrooms with showers
+                  feature complimentary toiletries and bathrobes.With a stay at
+                  The Pride Hotel, you'll be centrally located in Bengaluru,
+                  within a 5-minute drive of Cubbon Park and UB City. This
+                  luxury hotel is 1.2 mi (2 km) from M.G. Road and 3.8 mi (6.2
+                  km) from Bangalore Palace.Hindi, EnglishVisa, Debit cards,
+                  Cash, American Express, Mastercard
+                </p>
+              </div>
+            </div>
+            <div id="nearbyAttractions">
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Nearby Attractions
+              </h4>
+              <div
+                class="selected-room-amenities-and-info-wrapper bg-color-white"
+              >
+                <div class="row g-3">
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Cisco Systems Bengaluru (0.7 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>UB City (1.3 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Visvesvaraya Industrial and Technological</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Vidhana Soudha (2.4 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Brigade Road (1 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Church Street (1.5 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>M Chinnaswamy Stadium (1.9 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>1 MG-Lido Mall (2.6 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Cubbon Park (1.3 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Garuda Mall (1.6 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>M.G. Road (2 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Commercial Street (3 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>HCG Cancer Hospital (1.3 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Sree Kanteerava Stadium (1.6 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>Lalbagh Botanical Gardens (2.4 km)</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="selected-room-amenities-and-info-list-item">
+                      <div class="gray-dot"></div>
+                      <p>The preferred airport for The Pride Hotel is</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="locationMap">
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Location Map
+              </h4>
+              <div
+                class="selected-room-amenities-and-info-wrapper bg-color-white"
+              >
+                <div class="section-nav-btns">
+                  <a href="#photosGallery" class="btn active">Photos</a>
+                  <a href="#roomRates" class="btn">Room & Rates</a>
+                  <a href="#hotelAmenities" class="btn">Hotel Amenities</a>
+                  <a href="#nearbyAttractions" class="btn"
+                    >Nearby Attractions</a
+                  >
+                  <a href="#locationMap" class="btn">MAP</a>
+                </div>
+
+                <div class="map-wrap">
+                  <div id="map"></div>
+                </div>
               </div>
             </div>
             <h4
@@ -1599,6 +1681,369 @@
           </div>
         </div>
       </div>
+      <!-- Cancellation Policy popup start -->
+      <div class="draggable-side-bar-popup cancellation-policy-side-bar-popup">
+        <div
+          class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+        >
+          <h4
+            class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+          >
+            Cancellation Policy
+          </h4>
+          <button class="btn close-btn p-0 border-0">
+            <img src="assets/images/close_round_icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="side-bar-popup-body p-3">
+          <div class="cancellation-policy-wrapper">
+            <h5 class="fs-18 fw-400 pt-sans-font-family font-color-secondary">
+              Deluxe King Room
+            </h5>
+            <ul class="list-unstyled">
+              <li>
+                <div class="policy-description-wrapper">
+                  <img src="assets/images/calender_green_icon.svg" alt="" />
+                  <div>
+                    <p>From</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                  <div>
+                    <p>To</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                </div>
+                <div class="cancellation-charges-wrapper">
+                  <p>Cancellation Charges</p>
+                  <h5>₹ 0</h5>
+                </div>
+              </li>
+              <li class="active-charges">
+                <div class="policy-description-wrapper">
+                  <img src="assets/images/calender_green_icon.svg" alt="" />
+                  <div>
+                    <p>From</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                  <div>
+                    <p>To</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                </div>
+                <div class="cancellation-charges-wrapper">
+                  <p>Cancellation Charges</p>
+                  <h5>₹ 15000</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Cancellation Policy popup end -->
+      <!-- Cancellation Policy popup start -->
+      <div class="draggable-side-bar-popup essential-info-side-bar-popup">
+        <div
+          class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+        >
+          <h4
+            class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+          >
+            Essential Information
+          </h4>
+          <button class="btn close-btn p-0 border-0">
+            <img src="assets/images/close_round_icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="side-bar-popup-body p-3">
+          <div class="essential-info-content-wrapper">
+            <h5 class="fs-18 fw-400 pt-sans-font-family font-color-secondary">
+              Checkin Instruction
+            </h5>
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  Extra-person charges may apply and vary depending on property
+                  policy
+                </p>
+              </li>
+              <li>
+                <p>
+                  Government-issued photo identification and a cash deposit may
+                  be required at check-in for incidental charges
+                </p>
+              </li>
+              <li>
+                <p>
+                  Special requests are subject to availability upon check-in and
+                  may incur additional charges; special requests cannot be
+                  guaranteed
+                </p>
+              </li>
+              <li>
+                <p>This property accepts credit cards, debit cards, and cash</p>
+              </li>
+              <li>
+                <p>
+                  Only bookings from non-local guests are accepted; guests whose
+                  residence is within the same city as the property will not be
+                  allowed to check in
+                </p>
+              </li>
+              <li>
+                <p>
+                  Please note that cultural norms and guest policies may differ
+                  by country and by property; the policies listed are provided
+                  by the property
+                </p>
+              </li>
+            </ul>
+            <h5
+              class="fs-18 fw-400 pt-sans-font-family font-color-secondary mt-4"
+            >
+              Checkin Special Instructions
+            </h5>
+            <p>
+              Front desk staff will greet guests on arrival at the property. At
+              check-in, guests must provide a negative PCR COVID-19 test result.
+              Guests providing a negative COVID-19 test result must have been
+              tested no more than 72 hours prior to check-in. For any questions,
+              please contact the property using the information on the booking
+              confirmation. To register at this property, guests who are Indian
+              citizens must provide a valid photo identity card issued by the
+              Government of India; travelers who are not citizens of India must
+              present a valid passport and visa.<br />
+              We never guarantee on Extra Bed for Extra Adult, It will be
+              subject to availability and may be Chargeable also. During
+              Christmas & New year ,Hotel May Request You to pay for Gala Dinner
+              Charges at the time of Check-inn. These additional charge are not
+              included in the booking amount and will be collected directly at
+              the hotel. Tourism Taxes, City Taxes, Resort Fee, Etc Hotel May
+              request You to pay at the time of Check-inn(Local Currency). As
+              per the hotel policy, there might be peak season and long weekend
+              surcharges, which would be payable by guest directly at the
+              hotel.<br />
+              In case of peak dates or technical issues causing the hotel to be
+              sold out, an alternative hotel of equal booking value or a full
+              refund will be provided.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Cancellation Policy popup end -->
+      <!-- Cancellation Policy popup start -->
+      <div class="draggable-side-bar-popup room-info-side-bar-popup">
+        <div
+          class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+        >
+          <h4
+            class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+          >
+            Description
+          </h4>
+          <button class="btn close-btn p-0 border-0">
+            <img src="assets/images/close_round_icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="side-bar-popup-body p-3">
+          <div class="room-info-content-wrapper">
+            <ul class="list-unstyled selected-room-details-list">
+              <li>
+                <h6>1 Double Bed</h6>
+                <p>290-sq-foot room with courtyard views</p>
+              </li>
+              <li>
+                <h6>Internet</h6>
+                <p>Free WiFi 25+ Mbps and wired internet access</p>
+              </li>
+              <li>
+                <h6>Entertainment</h6>
+                <p>32-inch LCD TV with premium channels and pay movies</p>
+              </li>
+              <li>
+                <h6>Food &amp; Drink</h6>
+                <p>
+                  Refrigerator, coffee/tea maker, electric kettle, and room
+                  service (limited hours) Sleep - Pillowtop bed, a down duvet
+                </p>
+              </li>
+              <li>
+                <h6>Bathroom</h6>
+                <p>Private bathroom, shower, and rainfall showerhead</p>
+              </li>
+              <li>
+                <h6>Practical</h6>
+
+                <p>
+                  Day bed, free local calls, and safe; rollaway/extra beds
+                  available on request
+                </p>
+              </li>
+              <li>
+                <h6>Comfort</h6>
+                <p>
+                  Air conditioning, daily housekeeping, fresh towels every 2
+                  days, fresh bed sheets every 2 days
+                </p>
+              </li>
+              <li>
+                <h6>Accessibility</h6>
+                <p>
+                  Wheelchair-accessible doorway width (inches): 36 Non-Smoking
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Cancellation Policy popup end -->
+      <!-- add on popup start -->
+      <!-- more instructions popup start -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="moreInstructionsModal"
+        tabindex="-1"
+        aria-labelledby="moreInstructionsModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Inclusions
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-unstyled mb-0 inclusions-list">
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  <p>
+                    late checkout subject to availability|free stay for the
+                    kid|room only
+                  </p>
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  <p>Late Checkout Subject to Availability</p>
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  <p>Free stay for the kid</p>
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  <p>Room Only</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- more instructions popup start -->
+      <!-- details changed popup start -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="detailsChangeModal"
+        tabindex="-1"
+        aria-labelledby="detailsChangeModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Details Changed
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="details-changed-body">
+                <div class="mb-3 d-flex gap-3 flex-column">
+                  <div>
+                    <h5>Details Changed</h5>
+                    <h6>
+                      From "The Pride Hotel" to <span
+                        >"The Pride Hotel Bangalore"</span
+                      >
+                    </h6>
+                  </div>
+                  <div>
+                    <h5>Change in Hotel Address</h5>
+                    <h6>
+                      From "93, Richmond Road" , to
+                      <span
+                        >"93, Richmond Rd, Langford Gardens, Bengaluru,
+                        Karnataka 560025",</span
+                      >
+                    </h6>
+                  </div>
+                </div>
+                <p>
+                  There is some mismatch in hotel name / address you searched
+                  and the one you are booking. This may be due to the supplier
+                  hotel naming policy. Please make sure that these hotels are
+                  same. Please accept the Hotel Name / address change to proceed
+                  the booking.
+                </p>
+                <div class="table-responsive">
+                  <table class="table details-changed-table mb-0">
+                    <tbody>
+                      <tr>
+                        <td>Room 1</td>
+                        <td>Deluxe Twin Room</td>
+                      </tr>
+                      <tr>
+                        <td>Room 2</td>
+                        <td>Deluxe Twin Room</td>
+                      </tr>
+                      <tr>
+                        <td>Cancellation Policy</td>
+                        <td>NonRefundable</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="acceptDetailsChangeCheck"
+                  />
+                  <label
+                    class="form-check-label pt-sans-font-family fs-14 fw-400"
+                    for="acceptDetailsChangeCheck"
+                  >
+                    I have accepted the details change / Fare change
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0"></div>
+          </div>
+        </div>
+      </div>
+      <!-- details changed popup end -->
     </main>
     <footer>
       <div class="container">

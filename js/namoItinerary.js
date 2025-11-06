@@ -567,6 +567,15 @@ $(document).ready(function () {
   $(".open-fare-rules-btn").on("click", function () {
     $(".fare-rules-side-bar-popup").addClass("active");
   });
+  $(".show-cancellation-policy").on("click", function () {
+    $(".cancellation-policy-side-bar-popup").addClass("active");
+  });
+  $(".show-essential-info").on("click", function () {
+    $(".essential-info-side-bar-popup").addClass("active");
+  });
+  $(".show-room-info").on("click", function () {
+    $(".room-info-side-bar-popup").addClass("active");
+  });
   // Close sidebar
   $(".draggable-side-bar-popup .close-btn").on("click", function () {
     $(".draggable-side-bar-popup").removeClass("active");
@@ -786,7 +795,7 @@ $(document).ready(function () {
   $(document).on("click", ".count-decrease-btn", function (e) {
     e.preventDefault();
     const $countView = $(this)
-      .closest(".room-add_count-wrapper")
+      .closest(".room_add_count-wrapper")
       .find(".count-view");
     let currentCount = parseInt($countView.text()) || 0;
 
@@ -880,4 +889,18 @@ $(document).ready(function () {
     .addTo(map)
     .bindPopup("Our location")
     .openPopup();
+
+  $(".section-nav-btns .btn").on("click", function (e) {
+    e.preventDefault();
+    const targetSection = $(this).attr("href");
+    const offset = $(targetSection).offset().top - 100; // Adjust for fixed header
+
+    $("html, body").animate(
+      {
+        scrollTop: offset,
+      },
+      500
+    );
+    $(this).addClass("active").siblings().removeClass("active");
+  });
 });

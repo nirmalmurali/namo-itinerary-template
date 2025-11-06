@@ -175,7 +175,16 @@ body:has(header.fixed-top) main {
 .weather-list-view-wrapper ul li h4,
 .weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
 .weather-list-view-wrapper ul li .weather-footer p,
-.weather-list-view-wrapper ul li .weather-footer h6 {
+.weather-list-view-wrapper ul li .weather-footer h6,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h6,
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li p,
+.essential-info-side-bar-popup .essential-info-content-wrapper p,
+.room-info-side-bar-popup .room-info-content-wrapper ul li h6,
+.room-info-side-bar-popup .room-info-content-wrapper ul li p,
+.inclusions-list li p,
+.details-changed-body h5,
+.details-changed-body h6 {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -223,7 +232,8 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .review-form-content p,
 .comments-view-wrapper ul li .reply-btn,
-.selected-room-info-list li .room-more-info {
+.selected-room-info-list li .room-more-info,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p {
   font-size: 0.75rem !important;
 }
 .fs-13,
@@ -317,7 +327,13 @@ footer .quick-links-wrapper li a,
 .selected-room-amenities-and-info-wrapper .room-amenities-list li p,
 .selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
 .weather-list-view-wrapper ul li .weather-footer p,
-.weather-list-view-wrapper ul li .weather-footer h6 {
+.weather-list-view-wrapper ul li .weather-footer h6,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h6,
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li p,
+.essential-info-side-bar-popup .essential-info-content-wrapper p,
+.room-info-side-bar-popup .room-info-content-wrapper ul li p,
+.inclusions-list li p,
+.details-changed-body h5 {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -338,7 +354,10 @@ footer .quick-links-wrapper li a,
 .litepicker .container__main .container__months .month-item .month-item-header .month-item-year,
 .section-nav-btns .btn,
 .selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
-.weather-list-view-wrapper ul li h4 {
+.weather-list-view-wrapper ul li h4,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
+.room-info-side-bar-popup .room-info-content-wrapper ul li h6,
+.details-changed-body h6 {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -723,7 +742,15 @@ footer .quick-links-wrapper li a,
 .selected-room-amenities-and-info-wrapper .room-amenities-list li p,
 .selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list li h6,
 .selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
-.weather-list-view-wrapper ul li .weather-footer p {
+.weather-list-view-wrapper ul li .weather-footer p,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h6,
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li p,
+.essential-info-side-bar-popup .essential-info-content-wrapper p,
+.room-info-side-bar-popup .room-info-content-wrapper ul li h6,
+.room-info-side-bar-popup .room-info-content-wrapper ul li p,
+.inclusions-list li p,
+.details-changed-body h6 {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -768,7 +795,9 @@ footer .quick-links-wrapper li a,
 .selected-room-rate .btn,
 .weather-list-view-wrapper ul li h4,
 .weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
-.weather-list-view-wrapper ul li .weather-footer h6 {
+.weather-list-view-wrapper ul li .weather-footer h6,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
+.details-changed-body h5 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -851,7 +880,12 @@ footer .quick-links-wrapper li a,
 .weather-list-view-wrapper ul li h4,
 .weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5:first-child,
 .weather-list-view-wrapper ul li .weather-footer p,
-.weather-list-view-wrapper ul li .weather-footer h6 {
+.weather-list-view-wrapper ul li .weather-footer h6,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h6,
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
+.room-info-side-bar-popup .room-info-content-wrapper ul li h6,
+.details-changed-body h6 {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -872,7 +906,8 @@ footer .quick-links-wrapper li a,
 .bg-color-cloudy-grey {
   background-color: #726e6e !important;
 }
-.font-color-black-cat {
+.font-color-black-cat,
+.essential-info-side-bar-popup .essential-info-content-wrapper p {
   color: #3f3f3f !important;
 }
 .bg-color-black-cat {
@@ -949,7 +984,8 @@ footer .quick-links-wrapper li a,
 .sort-list-wrapper li .btn.active,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .selected-room-availability-list li a,
-.selected-room-left-wrapper p {
+.selected-room-left-wrapper p,
+.details-changed-body h6 span {
   color: #269a59 !important;
 }
 .bg-color-sea-green,
@@ -1085,7 +1121,10 @@ footer .quick-links-wrapper li a,
 .selected-room-facilities-wrapper .selected-room-amenities-wrapper ul li p,
 .selected-room-availability-list li p,
 .selected-room-amenities-and-info-wrapper .room-amenities-list li p,
-.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p {
+.selected-room-amenities-and-info-wrapper .selected-room-amenities-and-info-list-item p,
+.room-info-side-bar-popup .room-info-content-wrapper ul li p,
+.inclusions-list li p,
+.details-changed-body h5 {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1180,7 +1219,8 @@ footer .quick-links-wrapper li a,
 .bg-color-sea-shell {
   background-color: #f4efef !important;
 }
-.font-color-santa-grey {
+.font-color-santa-grey,
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li p {
   color: #a6a6a6 !important;
 }
 .bg-color-santa-grey {
@@ -1256,11 +1296,18 @@ footer .quick-links-wrapper li a,
 .bg-color-warm-grey {
   background-color: #919191 !important;
 }
-.font-color-red-orange {
+.font-color-red-orange,
+.selected-room-left-wrapper.non-refundable p {
   color: #ff4848 !important;
 }
 .bg-color-red-orange {
   background-color: #ff4848 !important;
+}
+.font-color-fire-engine-red {
+  color: #d32f2f !important;
+}
+.bg-color-fire-engine-red {
+  background-color: #d32f2f !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -4590,6 +4637,13 @@ textarea.form-control {
 .selected-room-page-wrapper .selected-room-page-body {
   padding-bottom: 2.5rem;
 }
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns-wrapper {
+  overflow: hidden;
+  overflow-x: auto;
+}
+.selected-room-page-wrapper .selected-room-page-body .section-nav-btns-wrapper .btn {
+  flex-shrink: 0;
+}
 .section-nav-btns {
   display: flex;
   align-items: stretch;
@@ -4812,6 +4866,9 @@ textarea.form-control {
   border-radius: 20px;
   border: 1px solid #269a59;
 }
+.selected-room-left-wrapper.non-refundable p.room-left-wrapper {
+  border: 1px solid #ff4848;
+}
 .selected-room-rate {
   display: flex;
   gap: 11px;
@@ -4874,6 +4931,14 @@ textarea.form-control {
   height: 400px;
   margin-top: 1rem;
 }
+.selected-room-amenities-and-info-wrapper .section-nav-btns {
+  padding: 0 2px 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.selected-room-amenities-and-info-wrapper .section-nav-btns .btn {
+  flex-shrink: 0;
+}
 .weather-list-view-wrapper {
   padding: 1.125rem;
 }
@@ -4928,5 +4993,127 @@ textarea.form-control {
   margin: 0;
 }
 .weather-list-view-wrapper ul li .weather-footer h6 {
+  margin: 0;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li {
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  border: 1px solid #f4efef;
+  border-left: 2px solid #269a59;
+}
+@media screen and (max-width: 576px) {
+  .cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li {
+    flex-direction: column;
+  }
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li.active-charges {
+  border-left: 2px solid #d32f2f;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li.active-charges img {
+  content: url("../assets/images/calender_red_icon.svg");
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li .policy-description-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  padding: 16px 10px;
+  border-right: 1px solid #f4efef;
+  flex-grow: 1;
+}
+@media screen and (max-width: 576px) {
+  .cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li .policy-description-wrapper {
+    border: none;
+    border-bottom: 1px solid #f4efef;
+  }
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p {
+  margin: 0;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h6 {
+  margin: 0;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5 {
+  margin: 0;
+}
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li .cancellation-charges-wrapper {
+  padding: 16px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li::before {
+  width: 4px;
+  height: 4px;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper ul li p {
+  margin: 0;
+}
+.essential-info-side-bar-popup .essential-info-content-wrapper p {
+  margin: 0;
+}
+.room-info-side-bar-popup .room-info-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.room-info-side-bar-popup .room-info-content-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.room-info-side-bar-popup .room-info-content-wrapper ul li h6 {
+  margin-bottom: 2px;
+}
+.room-info-side-bar-popup .room-info-content-wrapper ul li p {
+  margin: 0;
+}
+.inclusions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.inclusions-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.inclusions-list li p {
+  margin: 0;
+}
+.details-changed-body h5 {
+  margin-bottom: 0.5rem;
+}
+.details-changed-body h6 {
   margin: 0;
 }
