@@ -250,7 +250,7 @@ function initWebsiteProtection() {
 
 $(document).ready(function () {
   // Initialize website protection
-  // initWebsiteProtection();
+  initWebsiteProtection();
 
   // const $wrapper = $(".team-slider-wrapper");
   // const $track = $(".team-track");
