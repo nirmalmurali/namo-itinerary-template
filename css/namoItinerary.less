@@ -3588,6 +3588,12 @@ textarea {
       .modal-content {
       }
     }
+    &.details-changed-modal {
+      .modal-dialog {
+        max-width: 687px;
+        width: 100%;
+      }
+    }
   }
 }
 .vr {
@@ -4609,14 +4615,14 @@ textarea {
       .pt-sans-font-family);
       margin: 0;
     }
-    .room-more-info {
-      &:extend(.font-color-secondary,
-      .fs-12,
-      .bg-color-merino);
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
   }
+}
+.room-more-info {
+  &:extend(.font-color-secondary,
+  .fs-12,
+  .bg-color-merino);
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 .selected-room-left-wrapper {
   display: flex;
@@ -4965,22 +4971,138 @@ textarea {
     }
   }
 }
-.details-changed-body {
-  h5 {
-    &:extend(.fs-14,
-    .fw-700,
-    .font-color-gravel-grey,
-    .pt-sans-font-family);
-    margin-bottom: 0.5rem;
+.details-changed-modal {
+  .details-changed-body {
+    h5 {
+      &:extend(.fs-14,
+      .fw-700,
+      .font-color-gravel-grey,
+      .pt-sans-font-family);
+      margin-bottom: 0.5rem;
+    }
+    h6 {
+      &:extend(.fs-16,
+      .fw-400,
+      .font-color-secondary,
+      .pt-sans-font-family);
+      margin: 0;
+      span {
+        &:extend(.font-color-sea-green);
+      }
+    }
+    p {
+      &:extend(.fs-14,
+      .fw-400,
+      .font-color-gravel-grey,
+      .pt-sans-font-family);
+      margin: 0;
+    }
+    .table-responsive {
+      padding: 1rem 0;
+      table {
+        tbody {
+          tr {
+            td {
+              &:extend(.fs-14,
+              .fw-400,
+              .font-color-secondary,
+              .pt-sans-font-family);
+              border: 1px solid @seashell;
+              border-left: none;
+              border-right: none;
+              &:first-child {
+                &:extend(.fw-700);
+              }
+            }
+          }
+        }
+      }
+    }
   }
-  h6 {
-    &:extend(.fs-16,
-    .fw-400,
-    .font-color-secondary,
-    .pt-sans-font-family);
-    margin: 0;
-    span {
-      &:extend(.font-color-sea-green);
+  .modal-footer {
+    justify-content: end;
+    .btn {
+      &:extend(.fs-14,
+      .fw-400,
+      .pt-sans-font-family);
+      text-transform: uppercase;
+      &.back-to-search-btn {
+        &:extend(.bg-color-light-grey,
+        .font-color-dorado);
+      }
+      &.accept-details-change-btn {
+        &:extend(.bg-color-primary,
+        .font-color-white);
+      }
+    }
+  }
+}
+.review-hotel-booking-wrapper {
+  display: flex;
+  gap: 13px;
+  padding: 22px 0;
+  .review-hotel-booking-content {
+    flex-grow: 1;
+    width: 100%;
+    .review-hotel-details-wrapper {
+      padding: 1.125rem;
+    }
+  }
+  .review-hotel-fare-details-wrapper {
+    max-width: 267px;
+    width: 100%;
+  }
+}
+.review-taveller-details-wrapper {
+  padding: 1.125rem;
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .accordion-item {
+      border: 1px solid @platinum;
+      border-radius: 5px;
+      .accordion-header {
+        .accordion-button {
+          position: relative;
+          &:extend(.bg-color-white);
+          box-shadow: none;
+          border-bottom: 1px solid @platinum;
+          &.collapsed {
+            &::after {
+              transform: rotate(0deg);
+            }
+          }
+          &:after {
+            content: "\f107";
+            font-family: "FontAwesome";
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            position: absolute;
+            right: 1rem;
+            background: none;
+            transform: none;
+            transition: transform 0.3s ease;
+            transform: rotate(180deg);
+            width: fit-content;
+            height: fit-content;
+          }
+        }
+      }
+      .accordion-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        p {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-secondary,
+          .pt-sans-font-family);
+          margin: 0;
+        }
+      }
     }
   }
 }
