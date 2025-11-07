@@ -49,6 +49,7 @@
 @warmGrey: #919191;
 @redOrange: #ff4848;
 @fireEngineRed: #d32f2f;
+@dawnPink: #ededed;
 @colors: primary @primaryColor, secondary @secondaryColor,
   smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
   fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
@@ -65,7 +66,7 @@
   mirage @mirage, foggy-grey @foggyGrey, fantasy @fantasy, coral-red @coralRed,
   white-rock @whiteRock, platinum @platinum, light-pink @lightPink,
   grey-goose @greyGoose, frosted-mint @frostedMint, warm-grey @warmGrey,
-  red-orange @redOrange, fire-engine-red @fireEngineRed;
+  red-orange @redOrange, fire-engine-red @fireEngineRed, dawn-pink @dawnPink;
 
 html {
   font-size: 16px;
@@ -5101,6 +5102,37 @@ textarea {
           .font-color-secondary,
           .pt-sans-font-family);
           margin: 0;
+        }
+      }
+    }
+  }
+}
+.bg-white-section-padding {
+  padding: 1.125rem;
+}
+.essential-info-content-wrapper {
+  .essential-info-content-header {
+    border-bottom: 1px solid @dawnPink;
+  }
+  .essential-info-content {
+    ul {
+      li {
+        h4 {
+          &:extend(.fs-18,
+          .fw-400,
+          .font-color-primary,
+          .pt-sans-font-family);
+          span {
+            &:extend(.fs-14,
+            .font-color-gravel-grey);
+          }
+        }
+        p {
+          &:extend(.fs-13,
+          .fw-400,
+          .font-color-black-cat,
+          .pt-sans-font-family);
+          margin-bottom: 0;
         }
       }
     }

@@ -188,7 +188,9 @@ body:has(header.fixed-top) main {
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
-.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p {
+.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
+.essential-info-content-wrapper .essential-info-content ul li h4,
+.essential-info-content-wrapper .essential-info-content ul li p {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -245,7 +247,8 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .seat-identify-view ul li p,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
-.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a {
+.blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
+.essential-info-content-wrapper .essential-info-content ul li p {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -341,7 +344,8 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
-.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p {
+.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
+.essential-info-content-wrapper .essential-info-content ul li h4 span {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -384,7 +388,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper h6,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
 .selected-room-rate h6,
-.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5 {
+.weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
+.essential-info-content-wrapper .essential-info-content ul li h4 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -762,7 +767,9 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
-.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p {
+.review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
+.essential-info-content-wrapper .essential-info-content ul li h4,
+.essential-info-content-wrapper .essential-info-content ul li p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -827,7 +834,8 @@ footer .quick-links-wrapper li a,
 .who-we-are-wrapper ul li h6,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
-.blogs-items-wrapper h6 {
+.blogs-items-wrapper h6,
+.essential-info-content-wrapper .essential-info-content ul li h4 {
   color: #f28b24 !important;
 }
 .bg-color-primary,
@@ -923,7 +931,8 @@ footer .quick-links-wrapper li a,
   background-color: #726e6e !important;
 }
 .font-color-black-cat,
-.essential-info-side-bar-popup .essential-info-content-wrapper p {
+.essential-info-side-bar-popup .essential-info-content-wrapper p,
+.essential-info-content-wrapper .essential-info-content ul li p {
   color: #3f3f3f !important;
 }
 .bg-color-black-cat {
@@ -1144,7 +1153,8 @@ footer .quick-links-wrapper li a,
 .room-info-side-bar-popup .room-info-content-wrapper ul li p,
 .inclusions-list li p,
 .details-changed-modal .details-changed-body h5,
-.details-changed-modal .details-changed-body p {
+.details-changed-modal .details-changed-body p,
+.essential-info-content-wrapper .essential-info-content ul li h4 span {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -1329,6 +1339,12 @@ footer .quick-links-wrapper li a,
 }
 .bg-color-fire-engine-red {
   background-color: #d32f2f !important;
+}
+.font-color-dawn-pink {
+  color: #ededed !important;
+}
+.bg-color-dawn-pink {
+  background-color: #ededed !important;
 }
 .w-fit-content {
   width: fit-content !important;
@@ -5218,4 +5234,13 @@ textarea.form-control {
 }
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p {
   margin: 0;
+}
+.bg-white-section-padding {
+  padding: 1.125rem;
+}
+.essential-info-content-wrapper .essential-info-content-header {
+  border-bottom: 1px solid #ededed;
+}
+.essential-info-content-wrapper .essential-info-content ul li p {
+  margin-bottom: 0;
 }
