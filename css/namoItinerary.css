@@ -189,8 +189,9 @@ body:has(header.fixed-top) main {
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
-.essential-info-content-wrapper .essential-info-content ul li h4,
-.essential-info-content-wrapper .essential-info-content ul li p {
+.essential-info-content-wrapper .essential-info-content > ul > li h4,
+.essential-info-content-wrapper .essential-info-content > ul > li p,
+.essential-info-content-wrapper .essential-info-content > ul > li ul li {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -248,7 +249,7 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .tags-list li a,
-.essential-info-content-wrapper .essential-info-content ul li p {
+.essential-info-content-wrapper .essential-info-content > ul > li p {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -345,7 +346,8 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
-.essential-info-content-wrapper .essential-info-content ul li h4 span {
+.essential-info-content-wrapper .essential-info-content > ul > li h4 span,
+.essential-info-content-wrapper .essential-info-content > ul > li ul li {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -389,7 +391,7 @@ footer .quick-links-wrapper li a,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
 .selected-room-rate h6,
 .weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
-.essential-info-content-wrapper .essential-info-content ul li h4 {
+.essential-info-content-wrapper .essential-info-content > ul > li h4 {
   font-size: 1.125rem !important;
 }
 .fs-19 {
@@ -768,8 +770,9 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
-.essential-info-content-wrapper .essential-info-content ul li h4,
-.essential-info-content-wrapper .essential-info-content ul li p {
+.essential-info-content-wrapper .essential-info-content > ul > li h4,
+.essential-info-content-wrapper .essential-info-content > ul > li p,
+.essential-info-content-wrapper .essential-info-content > ul > li ul li {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -835,7 +838,7 @@ footer .quick-links-wrapper li a,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
 .blogs-items-wrapper h6,
-.essential-info-content-wrapper .essential-info-content ul li h4 {
+.essential-info-content-wrapper .essential-info-content > ul > li h4 {
   color: #f28b24 !important;
 }
 .bg-color-primary,
@@ -932,7 +935,8 @@ footer .quick-links-wrapper li a,
 }
 .font-color-black-cat,
 .essential-info-side-bar-popup .essential-info-content-wrapper p,
-.essential-info-content-wrapper .essential-info-content ul li p {
+.essential-info-content-wrapper .essential-info-content > ul > li p,
+.essential-info-content-wrapper .essential-info-content > ul > li ul li {
   color: #3f3f3f !important;
 }
 .bg-color-black-cat {
@@ -1154,7 +1158,7 @@ footer .quick-links-wrapper li a,
 .inclusions-list li p,
 .details-changed-modal .details-changed-body h5,
 .details-changed-modal .details-changed-body p,
-.essential-info-content-wrapper .essential-info-content ul li h4 span {
+.essential-info-content-wrapper .essential-info-content > ul > li h4 span {
   color: #4a4a4a !important;
 }
 .bg-color-gravel-grey {
@@ -5241,6 +5245,27 @@ textarea.form-control {
 .essential-info-content-wrapper .essential-info-content-header {
   border-bottom: 1px solid #ededed;
 }
-.essential-info-content-wrapper .essential-info-content ul li p {
+.essential-info-content-wrapper .essential-info-content > ul > li {
+  border-bottom: 1px solid #ededed;
+  padding: 0.875rem 0;
+}
+.essential-info-content-wrapper .essential-info-content > ul > li p {
   margin-bottom: 0;
+}
+.essential-info-content-wrapper .essential-info-content > ul > li ul {
+  padding-left: 8px;
+}
+.essential-info-content-wrapper .essential-info-content > ul > li ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.essential-info-content-wrapper .essential-info-content > ul > li ul li::before {
+  width: 4px;
+  height: 4px;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  flex-shrink: 0;
 }

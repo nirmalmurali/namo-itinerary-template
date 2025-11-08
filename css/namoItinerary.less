@@ -5115,8 +5115,10 @@ textarea {
     border-bottom: 1px solid @dawnPink;
   }
   .essential-info-content {
-    ul {
-      li {
+    & > ul {
+      & > li {
+        border-bottom: 1px solid @dawnPink;
+        padding: 0.875rem 0;
         h4 {
           &:extend(.fs-18,
           .fw-400,
@@ -5133,6 +5135,27 @@ textarea {
           .font-color-black-cat,
           .pt-sans-font-family);
           margin-bottom: 0;
+        }
+        ul {
+          padding-left: 8px;
+          li {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            &:extend(.fs-14,
+            .fw-400,
+            .font-color-black-cat,
+            .pt-sans-font-family);
+            &::before {
+              width: 4px;
+              height: 4px;
+              background-color: @gravelGrey;
+              border-radius: 50%;
+              content: "";
+              display: inline-block;
+              flex-shrink: 0;
+            }
+          }
         }
       }
     }
