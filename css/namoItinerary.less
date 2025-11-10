@@ -5042,16 +5042,94 @@ textarea {
   display: flex;
   gap: 13px;
   padding: 22px 0;
+  @media screen {
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
   .review-hotel-booking-content {
     flex-grow: 1;
     width: 100%;
     .review-hotel-details-wrapper {
       padding: 1.125rem;
+      .selected-room-facilities-wrapper {
+        flex-direction: column;
+
+        .selected-room-date-details {
+          flex-direction: row;
+          align-items: center;
+          padding: 0;
+          border: none;
+          border-bottom: 1px solid @platinum;
+          @media screen {
+            @media (max-width: 1199px) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+          }
+          .review-hotel-room-guest {
+            border-left: 1px solid @platinum;
+            height: 100%;
+            padding: 1rem;
+            @media screen {
+              @media (max-width: 1199px) {
+                border: none;
+                border-top: 1px solid @platinum;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .selected-room-rating-wrapper {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+      }
+      .room-count-table-wrapper {
+        table {
+          width: 100%;
+          tbody {
+            tr {
+              td {
+                border: 1px solid @platinum;
+                border-left: none;
+                border-right: none;
+                padding: 1rem 0;
+                h4 {
+                  &:extend(.fs-18,
+                  .fw-700,
+                  .font-color-secondary,
+                  .pt-sans-font-family);
+                  margin-bottom: 0;
+                }
+                p {
+                  &:extend(.fs-14,
+                  .fw-400,
+                  .font-color-secondary,
+                  .pt-sans-font-family);
+                  margin: 0;
+                  span {
+                    &:extend(.fw-700,
+                    .fs-18);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   .review-hotel-fare-details-wrapper {
     max-width: 267px;
     width: 100%;
+    @media screen {
+      @media (max-width: 991px) {
+        max-width: 100%;
+      }
+    }
   }
 }
 .review-taveller-details-wrapper {

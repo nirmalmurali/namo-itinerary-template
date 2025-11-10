@@ -188,6 +188,8 @@ body:has(header.fixed-top) main {
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
 .essential-info-content-wrapper .essential-info-content > ul > li h4,
 .essential-info-content-wrapper .essential-info-content > ul > li p,
@@ -345,6 +347,7 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
 .essential-info-content-wrapper .essential-info-content > ul > li h4 span,
 .essential-info-content-wrapper .essential-info-content > ul > li ul li {
@@ -391,6 +394,8 @@ footer .quick-links-wrapper li a,
 .selected-room-rate-wrapper .selected-room-rate-list > li h5,
 .selected-room-rate h6,
 .weather-list-view-wrapper ul li .degree-celsius-count-wrapper h5,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p span,
 .essential-info-content-wrapper .essential-info-content > ul > li h4 {
   font-size: 1.125rem !important;
 }
@@ -769,6 +774,7 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body p,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
 .details-changed-modal .modal-footer .btn,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p,
 .essential-info-content-wrapper .essential-info-content > ul > li h4,
 .essential-info-content-wrapper .essential-info-content > ul > li p,
@@ -820,7 +826,9 @@ footer .quick-links-wrapper li a,
 .weather-list-view-wrapper ul li .weather-footer h6,
 .cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
 .details-changed-modal .details-changed-body h5,
-.details-changed-modal .details-changed-body .table-responsive table tbody tr td:first-child {
+.details-changed-modal .details-changed-body .table-responsive table tbody tr td:first-child,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p span {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -912,6 +920,8 @@ footer .quick-links-wrapper li a,
 .room-info-side-bar-popup .room-info-content-wrapper ul li h6,
 .details-changed-modal .details-changed-body h6,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-body p {
   color: #000000 !important;
 }
@@ -5184,6 +5194,11 @@ textarea.form-control {
   gap: 13px;
   padding: 22px 0;
 }
+@media screen and (max-width: 991px) {
+  .review-hotel-booking-wrapper {
+    flex-direction: column;
+  }
+}
 .review-hotel-booking-wrapper .review-hotel-booking-content {
   flex-grow: 1;
   width: 100%;
@@ -5191,9 +5206,63 @@ textarea.form-control {
 .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper {
   padding: 1.125rem;
 }
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper {
+  flex-direction: column;
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper .selected-room-date-details {
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+@media screen and (max-width: 1199px) {
+  .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper .selected-room-date-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper .selected-room-date-details .review-hotel-room-guest {
+  border-left: 1px solid #e7e7e7;
+  height: 100%;
+  padding: 1rem;
+}
+@media screen and (max-width: 1199px) {
+  .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper .selected-room-date-details .review-hotel-room-guest {
+    border: none;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+  }
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .selected-room-facilities-wrapper .selected-room-rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table {
+  width: 100%;
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td {
+  border: 1px solid #e7e7e7;
+  border-left: none;
+  border-right: none;
+  padding: 1rem 0;
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4 {
+  margin-bottom: 0;
+}
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p {
+  margin: 0;
+}
 .review-hotel-booking-wrapper .review-hotel-fare-details-wrapper {
   max-width: 267px;
   width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .review-hotel-booking-wrapper .review-hotel-fare-details-wrapper {
+    max-width: 100%;
+  }
 }
 .review-taveller-details-wrapper {
   padding: 1.125rem;
