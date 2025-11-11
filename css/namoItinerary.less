@@ -5239,3 +5239,65 @@ textarea {
     }
   }
 }
+.review-hotel-fare-sidebar {
+  &:extend(.bg-color-white);
+  border-radius: 5px;
+  padding: 1rem 1rem 0.563rem;
+  .accordion-item {
+    border-radius: 0px;
+    border: none;
+    .accordion-header {
+      border: none;
+      .accordion-button {
+        position: relative;
+        &:extend(.bg-color-white,
+        .fs-14,
+        .fw-400,
+        .font-color-secondary);
+        span {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-secondary);
+        }
+        padding: 0;
+        box-shadow: none;
+        &.collapsed {
+          &::before {
+            transform: rotate(0deg);
+          }
+        }
+        &::before {
+          content: "\f107";
+          font-family: "FontAwesome";
+          top: 0;
+          bottom: 0;
+          margin: 0 0.5rem 0 0;
+          display: block;
+          position: static;
+          right: 1rem;
+          background: none;
+          transform: none;
+          transition: transform 0.3s ease;
+          transform: rotate(180deg);
+          width: fit-content;
+          height: fit-content;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .accordion-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      p {
+        &:extend(.fs-14,
+        .fw-400,
+        .font-color-secondary,
+        .pt-sans-font-family);
+        margin: 0;
+      }
+    }
+  }
+}
