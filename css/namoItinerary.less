@@ -5096,7 +5096,8 @@ textarea {
                 border: 1px solid @platinum;
                 border-left: none;
                 border-right: none;
-                padding: 1rem 0;
+                padding: 1rem 5px;
+                white-space: nowrap;
                 h4 {
                   &:extend(.fs-18,
                   .fw-700,
@@ -5243,6 +5244,14 @@ textarea {
   &:extend(.bg-color-white);
   border-radius: 5px;
   padding: 1rem 1rem 0.563rem;
+  .total-fare-accordion {
+    .accordion-item {
+      border-bottom: 1px solid @platinum;
+      &:last-child {
+        padding-top: 8px;
+      }
+    }
+  }
   .accordion-item {
     border-radius: 0px;
     border: none;
@@ -5258,8 +5267,9 @@ textarea {
           &:extend(.fs-14,
           .fw-400,
           .font-color-secondary);
+          font-family: "roboto", sans-serif !important;
         }
-        padding: 0;
+        padding: 0px 0 8px;
         box-shadow: none;
         &.collapsed {
           &::before {
@@ -5291,12 +5301,79 @@ textarea {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      p {
-        &:extend(.fs-14,
-        .fw-400,
-        .font-color-secondary,
-        .pt-sans-font-family);
-        margin: 0;
+      padding: 2px 0 4px 1rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 0;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          justify-content: space-between;
+          h6 {
+            &:extend(.fs-13,
+            .fw-400,
+            .font-color-dorado,
+            .pt-sans-font-family);
+            margin-bottom: 0;
+          }
+          p {
+            &:extend(.fs-13,
+            .fw-400,
+            .font-color-dorado);
+            margin: 0;
+          }
+        }
+      }
+      textarea {
+        &.form-control {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+.checkin-details-table {
+  border-top: 1px solid @platinum;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  table {
+    width: 100%;
+    border-collapse: separate; /* 👈 important for border-radius to work */
+    border-spacing: 0;
+    border-radius: 5px; /* 👈 rounded corners */
+    overflow: hidden;
+    tbody {
+      tr {
+        td {
+          border: 1px solid @platinum;
+          white-space: nowrap;
+          padding: 0.5rem;
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-gravel-grey,
+          .pt-sans-font-family);
+          margin: 0;
+          b {
+            &:extend(.font-color-secondary,
+            .fw-700 .fs-18);
+          }
+          span {
+            padding: 0 5px;
+            &:extend(.font-color-secondary,
+            .fs-18);
+          }
+          &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+          &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
       }
     }
   }
