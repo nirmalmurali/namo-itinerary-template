@@ -576,6 +576,9 @@ $(document).ready(function () {
   $(".show-room-info").on("click", function () {
     $(".room-info-side-bar-popup").addClass("active");
   });
+  // $(".essential-info-btn").on("click", function () {
+  //   $(".essential-information-side-bar-popup").addClass("active");
+  // });
   // Close sidebar
   $(".draggable-side-bar-popup .close-btn").on("click", function () {
     $(".draggable-side-bar-popup").removeClass("active");

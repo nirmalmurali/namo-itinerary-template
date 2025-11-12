@@ -5378,3 +5378,33 @@ textarea {
     }
   }
 }
+.traveller-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  border-right: 1px solid @platinum;
+  @media screen {
+    @media (max-width: 992px) {
+      border: none;
+    }
+  }
+  p {
+    &:extend(.fs-14,
+    .fw-400,
+    .font-color-primary,
+    .pt-sans-font-family);
+    margin: 0;
+    border: 1px solid @primaryColor;
+    border-radius: 20px;
+    padding: 3px 10px;
+  }
+}
+.traveller-email-wrapper {
+  border-left: 1px solid @platinum;
+  @media screen {
+    @media (max-width: 992px) {
+      border: none;
+    }
+  }
+}

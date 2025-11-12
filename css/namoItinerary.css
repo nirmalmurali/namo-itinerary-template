@@ -195,7 +195,8 @@ body:has(header.fixed-top) main {
 .essential-info-content-wrapper .essential-info-content > ul > li p,
 .essential-info-content-wrapper .essential-info-content > ul > li ul li,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
-.checkin-details-table table tbody tr td {
+.checkin-details-table table tbody tr td,
+.traveller-name-wrapper p {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -357,7 +358,8 @@ footer .quick-links-wrapper li a,
 .essential-info-content-wrapper .essential-info-content > ul > li ul li,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
-.checkin-details-table table tbody tr td {
+.checkin-details-table table tbody tr td,
+.traveller-name-wrapper p {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -791,7 +793,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
-.checkin-details-table table tbody tr td {
+.checkin-details-table table tbody tr td,
+.traveller-name-wrapper p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -859,7 +862,8 @@ footer .quick-links-wrapper li a,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list li p,
 .blog-sidebar-wrapper > li .blog-sidebar-list-body .recent-posts-list a p,
 .blogs-items-wrapper h6,
-.essential-info-content-wrapper .essential-info-content > ul > li h4 {
+.essential-info-content-wrapper .essential-info-content > ul > li h4,
+.traveller-name-wrapper p {
   color: #f28b24 !important;
 }
 .bg-color-primary,
@@ -5465,4 +5469,30 @@ textarea.form-control {
 .checkin-details-table table tbody tr td:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.traveller-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  border-right: 1px solid #e7e7e7;
+}
+@media screen and (max-width: 992px) {
+  .traveller-name-wrapper {
+    border: none;
+  }
+}
+.traveller-name-wrapper p {
+  margin: 0;
+  border: 1px solid #f28b24;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.traveller-email-wrapper {
+  border-left: 1px solid #e7e7e7;
+}
+@media screen and (max-width: 992px) {
+  .traveller-email-wrapper {
+    border: none;
+  }
 }
