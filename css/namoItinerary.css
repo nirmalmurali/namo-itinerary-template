@@ -50,6 +50,16 @@ body .back-drop {
 body:has(header.fixed-top) main {
   padding-top: 71px;
 }
+.roboto-font-family,
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper .scroll-list li p span,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
+.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
+.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-header .addon-selected-items ul li p span,
+.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
+.review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span {
+  font-family: "Roboto", sans-serif !important;
+}
 .anton-font-family,
 .about-us-banner-wrapper h3,
 .who-we-are-wrapper ul li h6,
@@ -116,11 +126,8 @@ body:has(header.fixed-top) main {
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6,
 .book-now-fare-type-list-wrapper ul li .refund-wrapper p,
 .book-now-fare-type-list-wrapper ul li .change-booking-btns-wrapper .btn,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper h5,
-.book-now-fare-type-list-wrapper ul li .filter-fare-wrapper p,
 .book-now-fare-type-list-wrapper ul li .filter-book-now-btn,
 .booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li h5,
-.booking-details-right-content .tab-content .tab-pane.active.fare-details-tab-panel .fare-list-nav .fare-list-item ul li p,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .optional-accordion-wrapper .accordion .accordion-item .accordion-button,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-header .accordion-button p,
@@ -132,7 +139,6 @@ body:has(header.fixed-top) main {
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper > button,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper.seat-items-wrapper .table-responsive table tbody tr td,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
-.draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn h6,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer h5,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-footer p,
@@ -196,7 +202,8 @@ body:has(header.fixed-top) main {
 .essential-info-content-wrapper .essential-info-content > ul > li ul li,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
 .checkin-details-table table tbody tr td,
-.traveller-name-wrapper p {
+.traveller-name-wrapper p,
+.inclusions-list-wrapper li {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -359,7 +366,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
 .checkin-details-table table tbody tr td,
-.traveller-name-wrapper p {
+.traveller-name-wrapper p,
+.inclusions-list-wrapper li {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -794,7 +802,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
 .checkin-details-table table tbody tr td,
-.traveller-name-wrapper p {
+.traveller-name-wrapper p,
+.inclusions-list-wrapper li {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -943,7 +952,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
 .checkin-details-table table tbody tr td b,
-.checkin-details-table table tbody tr td span {
+.checkin-details-table table tbody tr td span,
+.inclusions-list-wrapper li {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -5387,9 +5397,6 @@ textarea.form-control {
   padding: 0px 0 8px;
   box-shadow: none;
 }
-.review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span {
-  font-family: "roboto", sans-serif !important;
-}
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button.collapsed::before {
   transform: rotate(0deg);
 }
@@ -5495,4 +5502,15 @@ textarea.form-control {
   .traveller-email-wrapper {
     border: none;
   }
+}
+.inclusions-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inclusions-list-wrapper li {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

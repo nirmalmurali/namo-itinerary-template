@@ -284,11 +284,14 @@
                             >
                               Essential info
                             </button>
-                            <p
-                              class="fs-14 fw-400 font-color-gravel-grey bg-color-frosted-mint pt-sans-font-family mb-0 p-1 rounded-1"
+                            <button
+                              type="button"
+                              class="fs-14 btn border-0 fw-400 font-color-gravel-grey bg-color-frosted-mint pt-sans-font-family mb-0 p-1 rounded-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#inclusionsModal"
                             >
                               Inclusions
-                            </p>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -309,11 +312,15 @@
                             >
                               Essential info
                             </button>
-                            <p
-                              class="fs-14 fw-400 font-color-gravel-grey bg-color-frosted-mint pt-sans-font-family mb-0 p-1 rounded-1"
+
+                            <button
+                              type="button"
+                              class="fs-14 btn border-0 fw-400 font-color-gravel-grey bg-color-frosted-mint pt-sans-font-family mb-0 p-1 rounded-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#inclusionsModal"
                             >
                               Inclusions
-                            </p>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -693,11 +700,12 @@
                     </li>
                   </ul>
                   <div class="d-flex justify-content-end pb-3">
-                    <button
+                    <a
+                      href="hotel-booking-confirmation-voucher.html"
                       class="btn proceed-to-pay-btn rounded-5 bg-color-primary text-white fw-700 fs-14 pt-sans-font-family ms-auto"
                     >
                       Total Payable Amount ₹12,886
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1024,6 +1032,58 @@
         </div>
       </div>
       <!-- Essential Information popup end -->
+
+      <!-- inclusions modal start -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="inclusionsModal"
+        tabindex="-1"
+        aria-labelledby="inclusionsModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Inclusions
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-unstyled mb-0 inclusions-list-wrapper">
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  late checkout subject to availability|free stay for the
+                  kid|room only
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  Late Checkout Subject to Availability
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  Free Stay for the Kid
+                </li>
+                <li>
+                  <img src="assets/images/gray_tick_icon.svg" alt="" />
+                  Room Only
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- inclusions modal end -->
     </main>
     <footer>
       <div class="container">

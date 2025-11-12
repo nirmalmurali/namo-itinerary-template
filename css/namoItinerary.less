@@ -126,6 +126,9 @@ body {
     }
   }
 }
+.roboto-font-family {
+  font-family: "Roboto", sans-serif !important;
+}
 .anton-font-family {
   font-family: "Anton", sans-serif !important;
   font-weight: 400;
@@ -2360,6 +2363,7 @@ textarea {
                         flex-direction: column;
                         span {
                           &:extend(.fs-14,
+                          .roboto-font-family,
                           .fw-500,
                           .font-color-secondary);
                         }
@@ -2814,14 +2818,14 @@ textarea {
           &:extend(.font-color-secondary,
           .fs-18,
           .fw-700,
-          .pt-sans-font-family);
+          .roboto-font-family);
         }
         p {
           margin: 0;
           &:extend(.font-color-gravel-grey,
           .fs-12,
           .fw-400,
-          .pt-sans-font-family);
+          .roboto-font-family);
         }
       }
       .active-fare-type {
@@ -2915,7 +2919,7 @@ textarea {
                     &:extend(.font-color-dorado,
                     .fs-13,
                     .fw-400,
-                    .pt-sans-font-family);
+                    .roboto-font-family);
                   }
                 }
               }
@@ -3182,6 +3186,9 @@ textarea {
                                 .pt-sans-font-family);
                                 margin: 0;
                                 line-height: 1;
+                                span {
+                                  &:extend(.roboto-font-family);
+                                }
                               }
                             }
                           }
@@ -3319,7 +3326,7 @@ textarea {
                                   &:extend(.font-color-secondary,
                                   .fs-16,
                                   .fw-400,
-                                  .pt-sans-font-family);
+                                  .roboto-font-family);
                                 }
                                 span {
                                   margin: 0;
@@ -5266,8 +5273,8 @@ textarea {
         span {
           &:extend(.fs-14,
           .fw-400,
-          .font-color-secondary);
-          font-family: "roboto", sans-serif !important;
+          .font-color-secondary,
+          .roboto-font-family);
         }
         padding: 0px 0 8px;
         box-shadow: none;
@@ -5406,5 +5413,20 @@ textarea {
     @media (max-width: 992px) {
       border: none;
     }
+  }
+}
+.inclusions-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  li {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &:extend(.fs-14,
+    .fw-400,
+    .font-color-secondary,
+    .pt-sans-font-family);
   }
 }
