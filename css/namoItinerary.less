@@ -2600,7 +2600,7 @@ textarea {
   flex-grow: 1;
   overflow: hidden;
   overflow-y: auto;
-  & > ul {
+  .filtered-list-item-wrapper {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -5428,5 +5428,16 @@ textarea {
     .fw-400,
     .font-color-secondary,
     .pt-sans-font-family);
+  }
+}
+.split-view-filter-view-wrapper {
+  .sorted-list-wrapper {
+    .filtered-list-item-wrapper {
+      & > li {
+        .sorted-flight-details {
+          column-gap: 5px;
+        }
+      }
+    }
   }
 }

@@ -1023,7 +1023,7 @@ footer .quick-links-wrapper li a,
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper .flight-rate-list-wrapper,
 .filter-view-content-body > ul > li,
 .hotel-rate-details-wrapper .short-list-btn,
-.sorted-list-wrapper > ul > li,
+.sorted-list-wrapper .filtered-list-item-wrapper > li,
 .booking-details-right-content .tab-content .tab-pane.active,
 .primary-tab-nav-wrapper .nav .nav-item .nav-link,
 .white-bg-with-radius,
@@ -3401,7 +3401,7 @@ textarea.form-control {
   overflow: hidden;
   overflow-y: auto;
 }
-.sorted-list-wrapper > ul {
+.sorted-list-wrapper .filtered-list-item-wrapper {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -3409,7 +3409,7 @@ textarea.form-control {
   flex-direction: column;
   gap: 10px;
 }
-.sorted-list-wrapper > ul > li {
+.sorted-list-wrapper .filtered-list-item-wrapper > li {
   padding: 1rem;
   border: 1px solid #f4efef;
   width: 100%;
@@ -5513,4 +5513,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.split-view-filter-view-wrapper .sorted-list-wrapper .filtered-list-item-wrapper > li .sorted-flight-details {
+  column-gap: 5px;
 }
