@@ -695,7 +695,21 @@ $(document).ready(function () {
   $(".horizontal-scrollbar-wrapper").each(function () {
     initHorizontalScrollbar($(this));
   });
-
+  // Re-initialize horizontal scrollbar when Bootstrap tabs are shown
+  $(document).on("shown.bs.tab", 'a[data-bs-toggle="tab"]', function (e) {
+    // Find all horizontal scrollbar wrappers in the newly shown tab
+    const targetPane = $($(this).attr("data-bs-target"));
+    targetPane.find(".horizontal-scrollbar-wrapper").each(function () {
+      initHorizontalScrollbar($(this));
+    });
+  });
+  // Also handle Bootstrap pills
+  $(document).on("shown.bs.tab", 'button[data-bs-toggle="pill"]', function (e) {
+    const targetPane = $($(this).attr("data-bs-target"));
+    targetPane.find(".horizontal-scrollbar-wrapper").each(function () {
+      initHorizontalScrollbar($(this));
+    });
+  });
   // Payment tab checkbox synchronization
 
   // When nav-link is clicked, check/uncheck corresponding checkbox and show tab
