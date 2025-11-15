@@ -862,50 +862,53 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // 1) Choose your coordinates (example: near the Bronx, NY)
-  const lat = 40.8467;
-  const lng = -73.8786;
-  const zoom = 12;
+  // Initialize Leaflet map only if the map container exists
+  if ($("#map").length && typeof L !== "undefined") {
+    // 1) Choose your coordinates (example: near the Bronx, NY)
+    const lat = 40.8467;
+    const lng = -73.8786;
+    const zoom = 12;
 
-  // 2) Init map
-  const map = L.map("map", {
-    center: [lat, lng],
-    zoom: zoom,
-    scrollWheelZoom: false, // nicer for banner sections
-    dragging: true,
-  });
+    // 2) Init map
+    const map = L.map("map", {
+      center: [lat, lng],
+      zoom: zoom,
+      scrollWheelZoom: false, // nicer for banner sections
+      dragging: true,
+    });
 
-  // 3) Light/gray basemap (similar to your screenshot)
-  L.tileLayer(
-    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-    {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
-    }
-  ).addTo(map);
+    // 3) Light/gray basemap (similar to your screenshot)
+    L.tileLayer(
+      "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+      }
+    ).addTo(map);
 
-  // 4) Custom orange marker (SVG)
-  const orangePin = L.icon({
-    iconUrl:
-      "data:image/svg+xml;utf8," +
-      encodeURIComponent(`
-          <svg width="40" height="56" viewBox="0 0 40 56" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" fill-rule="evenodd">
-              <path d="M20 0c11 0 20 8.8 20 19.6C40 35 20 56 20 56S0 35 0 19.6C0 8.8 9 0 20 0z" fill="#FF8A00"/>
-              <circle cx="20" cy="20" r="8" fill="#fff"/>
-            </g>
-          </svg>
-        `),
-    iconSize: [40, 56],
-    iconAnchor: [20, 56], // tip of the pin
-    popupAnchor: [0, -50],
-  });
+    // 4) Custom orange marker (SVG)
+    const orangePin = L.icon({
+      iconUrl:
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(`
+            <svg width="40" height="56" viewBox="0 0 40 56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M20 0c11 0 20 8.8 20 19.6C40 35 20 56 20 56S0 35 0 19.6C0 8.8 9 0 20 0z" fill="#FF8A00"/>
+                <circle cx="20" cy="20" r="8" fill="#fff"/>
+              </g>
+            </svg>
+          `),
+      iconSize: [40, 56],
+      iconAnchor: [20, 56], // tip of the pin
+      popupAnchor: [0, -50],
+    });
 
-  // 5) Add marker + optional popup
-  L.marker([lat, lng], { icon: orangePin })
-    .addTo(map)
-    .bindPopup("Our location")
-    .openPopup();
+    // 5) Add marker + optional popup
+    L.marker([lat, lng], { icon: orangePin })
+      .addTo(map)
+      .bindPopup("Our location")
+      .openPopup();
+  }
 
   $(".section-nav-btns .btn").on("click", function (e) {
     e.preventDefault();
@@ -919,5 +922,49 @@ $(document).ready(function () {
       500
     );
     $(this).addClass("active").siblings().removeClass("active");
+  });
+
+  // Handle submenu toggle - using event delegation
+  $(document).on(
+    "click",
+    ".dashboard-nav-list .nav-item.has-submenu > .nav-link",
+    function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const $parentItem = $(this).closest(".nav-item");
+      const $submenu = $parentItem.find(".submenu-list");
+      const isCurrentlyActive = $parentItem.hasClass("active");
+
+      // Close other open submenus and remove their active class
+      $(".dashboard-nav-list .nav-item.has-submenu")
+        .not($parentItem)
+        .removeClass("active");
+      $(".dashboard-nav-list .submenu-list").not($submenu).slideUp(300);
+
+      // Toggle current submenu with explicit active class handling
+      if (isCurrentlyActive) {
+        // If already active, close it and remove active class
+        $parentItem.removeClass("active");
+        $submenu.slideUp(300);
+      } else {
+        // If not active, open it and add active class
+        $parentItem.addClass("active");
+        $submenu.slideDown(300);
+      }
+    }
+  );
+
+  // Handle submenu item click - using event delegation
+  $(document).on("click", ".submenu-list a", function (e) {
+    // Remove active class from all submenu items
+    $(".submenu-list a").removeClass("active");
+    // Add active class to clicked item
+    $(this).addClass("active");
+  });
+
+  // Mobile menu toggle (if needed)
+  $(document).on("click", ".dashboard-menu-toggle", function () {
+    $(".smart-dashboard-aside-wrapper").toggleClass("active");
   });
 });

@@ -1,5 +1,6 @@
 @primaryColor: #f28b24;
 @secondaryColor: #000000;
+@mangoOrange: #ff813a;
 @smokyBlack: #0c0c0c;
 @cloudyGrey: #726e6e;
 @blackCat: #3f3f3f;
@@ -51,22 +52,23 @@
 @fireEngineRed: #d32f2f;
 @dawnPink: #ededed;
 @colors: primary @primaryColor, secondary @secondaryColor,
-  smoky-black @smokyBlack, cloudy-grey @cloudyGrey, black-cat @blackCat,
-  fuel-yellow @fuelYellow, white @white, vista-white @vistaWhite,
-  grey-cloud @greyCloud, sea-green @seaGreen, pine-green @pineGreen,
-  ship-grey @shipGrey, davy-grey @davyGrey, sandy-beach @sandyBeach,
-  night @night, milk-white @milkWhite, light-grey @lightGrey,
-  fuscous-grey @fuscousGrey, quill-grey @quillGrey, charcoal-grey @charcoalGrey,
-  heavy-metal @heavyMetal, ecru-white @ecruWhite, catskill-white @catskillWhite,
-  gravel-grey @gravelGrey, baltic-sea @balticSea, pale-orange @paleOrange,
-  old-lace @oldLace, desert-storm @desertStorm, wood-smoke @woodSmoke,
-  merino @merino, lavender-mist @lavenderMist, dorado @dorado, amour @amour,
-  green-white @greenWhite, nice-blue @niceBlue, dark-mint @darkMint,
-  sea-shell @seashell, santa-grey @santaGrey, dark-grey @darkGrey,
-  mirage @mirage, foggy-grey @foggyGrey, fantasy @fantasy, coral-red @coralRed,
-  white-rock @whiteRock, platinum @platinum, light-pink @lightPink,
-  grey-goose @greyGoose, frosted-mint @frostedMint, warm-grey @warmGrey,
-  red-orange @redOrange, fire-engine-red @fireEngineRed, dawn-pink @dawnPink;
+  mango-orange @mangoOrange, smoky-black @smokyBlack, cloudy-grey @cloudyGrey,
+  black-cat @blackCat, fuel-yellow @fuelYellow, white @white,
+  vista-white @vistaWhite, grey-cloud @greyCloud, sea-green @seaGreen,
+  pine-green @pineGreen, ship-grey @shipGrey, davy-grey @davyGrey,
+  sandy-beach @sandyBeach, night @night, milk-white @milkWhite,
+  light-grey @lightGrey, fuscous-grey @fuscousGrey, quill-grey @quillGrey,
+  charcoal-grey @charcoalGrey, heavy-metal @heavyMetal, ecru-white @ecruWhite,
+  catskill-white @catskillWhite, gravel-grey @gravelGrey, baltic-sea @balticSea,
+  pale-orange @paleOrange, old-lace @oldLace, desert-storm @desertStorm,
+  wood-smoke @woodSmoke, merino @merino, lavender-mist @lavenderMist,
+  dorado @dorado, amour @amour, green-white @greenWhite, nice-blue @niceBlue,
+  dark-mint @darkMint, sea-shell @seashell, santa-grey @santaGrey,
+  dark-grey @darkGrey, mirage @mirage, foggy-grey @foggyGrey, fantasy @fantasy,
+  coral-red @coralRed, white-rock @whiteRock, platinum @platinum,
+  light-pink @lightPink, grey-goose @greyGoose, frosted-mint @frostedMint,
+  warm-grey @warmGrey, red-orange @redOrange, fire-engine-red @fireEngineRed,
+  dawn-pink @dawnPink;
 
 html {
   font-size: 16px;
@@ -2683,6 +2685,21 @@ textarea {
     .pt-sans-font-family);
     margin: 0;
     line-height: 1.2;
+  }
+}
+.flight-profile-details-duration-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  @media screen {
+    @media (max-width: 767px) {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
   }
 }
 .book-now-fare-type-list-wrapper {
@@ -5454,5 +5471,136 @@ textarea {
         }
       }
     }
+    .flight-profile-details-duration-wrapper {
+      @media screen {
+        @media (min-width: 992px) {
+          @media (max-width: 1199px) {
+            width: 100%;
+            flex-direction: column;
+            row-gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+.smart-dashboard-wrapper {
+  &:extend(.bg-color-desert-storm);
+  height: calc(100dvh - 71px);
+  display: flex;
+  overflow: hidden;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  .smart-dashboard-aside-wrapper {
+    padding: 1.125rem 0.5rem;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 10px;
+    &:extend(.bg-color-primary);
+    max-width: 230px;
+    width: 100%;
+    .dashboard-aside-nav {
+      .dashboard-nav-list {
+        margin: 0;
+        padding: 0;
+        .nav-item {
+          margin-bottom: 0.25rem;
+          &.has-submenu {
+            .nav-link {
+              justify-content: space-between;
+              .submenu-arrow {
+                font-size: 12px;
+                transition: transform 0.3s ease;
+              }
+            }
+
+            &.active {
+              .nav-link {
+                .submenu-arrow {
+                  transform: rotate(180deg);
+                }
+              }
+              .submenu-list {
+                display: block;
+              }
+            }
+          }
+          .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.875rem 1.5rem;
+            &:extend(.fs-16,
+            .fw-400,
+            .font-color-white,
+            .pt-sans-font-family);
+            text-decoration: none;
+            transition: all 0.2s;
+            position: relative;
+
+            .nav-icon {
+              width: 20px;
+              height: 20px;
+              opacity: 0.7;
+            }
+
+            &:hover {
+              &:extend(.bg-color-mango-orange);
+              .nav-icon {
+                opacity: 1;
+              }
+            }
+          }
+
+          &.active {
+            .nav-link {
+              &:extend(.bg-color-mango-orange,
+              .fw-600);
+              .nav-icon {
+                opacity: 1;
+              }
+            }
+          }
+
+          // Submenu styles
+          .submenu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+
+            li {
+              margin-bottom: 0;
+
+              a {
+                display: block;
+                padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+                text-decoration: none;
+                &:extend(.fs-14,
+                .fw-400,
+                .font-color-white,
+                .pt-sans-font-family);
+                transition: all 0.2s;
+
+                // &.active {
+                //   background: @vistaWhite;
+                //   color: @primaryColor;
+                //   font-weight: 600;
+                // }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .smart-dashboard-content-wrapper {
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    &:extend(.bg-color-white);
+    padding: 1rem;
   }
 }

@@ -203,7 +203,9 @@ body:has(header.fixed-top) main {
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
 .checkin-details-table table tbody tr td,
 .traveller-name-wrapper p,
-.inclusions-list-wrapper li {
+.inclusions-list-wrapper li,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -367,7 +369,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
 .checkin-details-table table tbody tr td,
 .traveller-name-wrapper p,
-.inclusions-list-wrapper li {
+.inclusions-list-wrapper li,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -391,7 +394,8 @@ footer .quick-links-wrapper li a,
 .weather-list-view-wrapper ul li h4,
 .cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
 .room-info-side-bar-popup .room-info-content-wrapper ul li h6,
-.details-changed-modal .details-changed-body h6 {
+.details-changed-modal .details-changed-body h6,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -803,7 +807,9 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
 .checkin-details-table table tbody tr td,
 .traveller-name-wrapper p,
-.inclusions-list-wrapper li {
+.inclusions-list-wrapper li,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -813,7 +819,8 @@ footer .quick-links-wrapper li a,
 .review-form-content h6 {
   font-weight: 500 !important;
 }
-.fw-600 {
+.fw-600,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link {
   font-weight: 600 !important;
 }
 .fw-700,
@@ -885,7 +892,8 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .section-nav-btns .btn.active,
 .selected-room-rate-wrapper .more-rooms-btn,
-.details-changed-modal .modal-footer .btn.accept-details-change-btn {
+.details-changed-modal .modal-footer .btn.accept-details-change-btn,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -959,6 +967,14 @@ footer .quick-links-wrapper li a,
 .bg-color-secondary {
   background-color: #000000 !important;
 }
+.font-color-mango-orange {
+  color: #ff813a !important;
+}
+.bg-color-mango-orange,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link:hover,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link {
+  background-color: #ff813a !important;
+}
 .font-color-smoky-black {
   color: #0c0c0c !important;
 }
@@ -1012,7 +1028,9 @@ footer .quick-links-wrapper li a,
 .tooltip .tooltip-inner,
 .section-nav-btns .btn.active,
 .selected-room-rate-wrapper .more-rooms-btn,
-.details-changed-modal .modal-footer .btn.accept-details-change-btn {
+.details-changed-modal .modal-footer .btn.accept-details-change-btn,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -1035,7 +1053,8 @@ footer .quick-links-wrapper li a,
 .selected-room-rate-wrapper .selected-room-rate-list > li,
 .review-taveller-details-wrapper .accordion .accordion-item .accordion-header .accordion-button,
 .review-hotel-fare-sidebar,
-.review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button {
+.review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button,
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper {
   background-color: #ffffff !important;
 }
 .font-color-vista-white {
@@ -1230,7 +1249,8 @@ footer .quick-links-wrapper li a,
   color: #f6f6f6 !important;
 }
 .bg-color-desert-storm,
-.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view {
+.search-tab-wrapper .search-filter-tab-content .tab-content-filter-view,
+.smart-dashboard-wrapper {
   background-color: #f6f6f6 !important;
 }
 .font-color-wood-smoke,
@@ -3456,6 +3476,23 @@ textarea.form-control {
   margin: 0;
   line-height: 1.2;
 }
+.flight-profile-details-duration-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+@media screen and (max-width: 767px) {
+  .flight-profile-details-duration-wrapper {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .flight-profile-details-duration-wrapper {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
 .book-now-fare-type-list-wrapper ul {
   padding: 0;
   margin: 0;
@@ -5527,4 +5564,89 @@ textarea.form-control {
 }
 .split-view-filter-view-wrapper .sorted-list-wrapper .filtered-list-item-wrapper > li .book-now-fare-type-list-wrapper ul li .fare-type-section-two {
   gap: 0.5rem;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .split-view-filter-view-wrapper .sorted-list-wrapper .flight-profile-details-duration-wrapper {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
+.smart-dashboard-wrapper {
+  height: calc(100dvh - 71px);
+  display: flex;
+  overflow: hidden;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper {
+  padding: 1.125rem 0.5rem;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  max-width: 230px;
+  width: 100%;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list {
+  margin: 0;
+  padding: 0;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item {
+  margin-bottom: 0.25rem;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.has-submenu .nav-link {
+  justify-content: space-between;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.has-submenu .nav-link .submenu-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.has-submenu.active .nav-link .submenu-arrow {
+  transform: rotate(180deg);
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.has-submenu.active .submenu-list {
+  display: block;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link .nav-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link:hover .nav-icon {
+  opacity: 1;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link .nav-icon {
+  opacity: 1;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li {
+  margin-bottom: 0;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
+  display: block;
+  padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper {
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 1rem;
 }
