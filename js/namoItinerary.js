@@ -910,20 +910,34 @@ $(document).ready(function () {
       .openPopup();
   }
 
-  $(".section-nav-btns .btn").on("click", function (e) {
+  // With this:
+  $(document).on("click", ".section-nav-btns .btn", function (e) {
     e.preventDefault();
-    const targetSection = $(this).attr("href");
-    const offset = $(targetSection).offset().top - 100; // Adjust for fixed header
 
-    $("html, body").animate(
-      {
-        scrollTop: offset,
-      },
-      500
-    );
+    const targetSection = $(this).attr("href");
+
+    // Check if target section exists
+    if ($(targetSection).length) {
+      const offset = $(targetSection).offset().top - 100;
+
+      $("html, body").animate(
+        {
+          scrollTop: offset,
+        },
+        500
+      );
+    }
+
+    // Update active state regardless
     $(this).addClass("active").siblings().removeClass("active");
   });
-
+  $(document).on(
+    "click",
+    ".smart-dashboard-search-wrapper .section-nav-btns .btn",
+    function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    }
+  );
   // Handle submenu toggle - using event delegation
   $(document).on(
     "click",

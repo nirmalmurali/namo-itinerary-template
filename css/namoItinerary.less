@@ -5497,13 +5497,16 @@ textarea {
     overflow: hidden;
     overflow-y: auto;
     border-radius: 10px;
-    &:extend(.bg-color-primary);
+    &:extend(.bg-color-pale-orange);
     max-width: 230px;
     width: 100%;
     .dashboard-aside-nav {
       .dashboard-nav-list {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         .nav-item {
           margin-bottom: 0.25rem;
           &.has-submenu {
@@ -5530,15 +5533,19 @@ textarea {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 0.875rem 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
             &:extend(.fs-16,
             .fw-400,
             .font-color-white,
             .pt-sans-font-family);
             text-decoration: none;
-            transition: all 0.2s;
             position: relative;
-
+            span {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+            }
             .nav-icon {
               width: 20px;
               height: 20px;
@@ -5575,7 +5582,7 @@ textarea {
 
               a {
                 display: block;
-                padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+                padding: 0.5rem 1.5rem 0.5rem 3.5rem;
                 text-decoration: none;
                 &:extend(.fs-14,
                 .fw-400,
@@ -5588,6 +5595,16 @@ textarea {
                 //   color: @primaryColor;
                 //   font-weight: 600;
                 // }
+                &::before {
+                  content: "";
+                  width: 4px;
+                  height: 4px;
+                  background-color: @white;
+                  border-radius: 50%;
+                  display: inline-block;
+                  margin-right: 8px;
+                  flex-shrink: 0;
+                }
               }
             }
           }
@@ -5602,5 +5619,226 @@ textarea {
     border-radius: 10px;
     &:extend(.bg-color-white);
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .smart-dashboard-content-header {
+      h4 {
+        &:extend(.fs-20,
+        .fw-700,
+        .font-color-secondary,
+        .pt-sans-font-family);
+        margin: 0;
+      }
+    }
+    .smart-dashboard-content-body {
+      flex-grow: 1;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+}
+.breadcrumb-wrapper {
+  ol {
+    .breadcrumb-item {
+      a {
+        &:extend(.fs-14,
+        .fw-400,
+        .font-color-secondary,
+        .pt-sans-font-family);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &.active {
+        &:extend(.fs-14,
+        .fw-400,
+        .font-color-secondary,
+        .pt-sans-font-family);
+      }
+      & + .breadcrumb-item {
+        &::before {
+          content: ">";
+        }
+      }
+    }
+  }
+}
+.search-input-with-icon {
+  .search-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+  }
+}
+.smart-dashboard-search-wrapper {
+  border: 1px solid @platinum;
+  border-radius: 6px;
+  margin-top: 23px;
+  padding: 1rem;
+  .section-nav-btns {
+    justify-content: center;
+    margin-top: -35px;
+    .btn {
+      &.active {
+        &:extend(.bg-color-sea-green,
+        .font-color-white);
+      }
+      &:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      &:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+  .smart-dashboard-search-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    @media screen {
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+.booking-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+  li {
+    border: 1px solid @platinum;
+    border-radius: 10px;
+    padding: 1rem;
+    .agency-details-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .table-responsive {
+        flex-grow: 1;
+        table {
+          border: none;
+          border-radius: 5px;
+          width: 100%;
+          border-collapse: collapse;
+
+          tbody {
+            tr {
+              td {
+                border: none;
+                background-color: #fbf5f5;
+                padding: 0.5rem 1rem;
+                &:extend(.fs-14,
+                .fw-400,
+                .font-color-secondary,
+                .pt-sans-font-family);
+                position: relative;
+                min-width: 150px;
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  margin: auto;
+                  right: 0;
+                  width: 1px;
+                  height: 70%;
+                  background-color: @platinum;
+                }
+                &:first-child {
+                  border-top-left-radius: 5px;
+                  border-bottom-left-radius: 5px;
+                }
+                &:last-child {
+                  border-top-right-radius: 5px;
+                  border-bottom-right-radius: 5px;
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    h5 {
+      &:extend(.fs-16,
+      .fw-700,
+      .font-color-secondary,
+      .pt-sans-font-family);
+      margin: 0.5rem 0;
+    }
+  }
+}
+.booking-details-table-wrapper {
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid @platinum;
+    border-radius: 5px;
+    overflow: hidden;
+
+    tbody {
+      tr {
+        td {
+          border: none;
+          border-bottom: 1px solid @platinum; /* 👈 Move border here */
+          padding: 0.5rem 1rem;
+          position: relative;
+          min-width: 150px;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 0;
+            width: 1px;
+            height: 70%;
+            background-color: @platinum;
+          }
+
+          &:last-child {
+            &::after {
+              display: none;
+            }
+          }
+
+          h6 {
+            &:extend(.fs-14,
+            .fw-400,
+            .font-color-fuscous-grey,
+            .pt-sans-font-family);
+            margin-bottom: 5px;
+          }
+
+          p {
+            &:extend(.fs-16,
+            .fw-400,
+            .font-color-secondary,
+            .pt-sans-font-family);
+            margin: 0;
+          }
+        }
+
+        /* 👈 Remove border from last row cells */
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
   }
 }

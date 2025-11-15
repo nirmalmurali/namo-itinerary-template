@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>Booking History</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <link rel="stylesheet" href="css/namoItinerary.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/namo_logo.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler btn p-0 border-0 shadow-none"
+            type="button"
+          >
+            <i
+              class="fa fa-bars font-color-primary fw-500"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center"
+            id="navbarNavAltMarkup"
+          >
+            <!-- <div class="flex-grow-1 d-flex justify-content-center">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact US</a>
+              </div>
+            </div>
+            <a href="/login.html" class="btn fw-400 fs-13">LOGIN / SIGNUP</a> -->
+            <div class="dropdown ms-auto profile-header-dropdown-wrapper">
+              <div
+                class="btn border-0 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div>
+                  <h6 class="fw-400 font-color-heavy-metal fs-16 mb-0 text-end">
+                    Jhone Dou
+                  </h6>
+                  <p
+                    class="fw-400 font-color-charcoal-grey mb-0 text-end fs-12"
+                  >
+                    Agent Code : 64605
+                  </p>
+                </div>
+                <img
+                  src="assets/images/profile_avathar.png"
+                  alt=""
+                  class="profile-img"
+                  width="35"
+                  height="35"
+                />
+                <i
+                  class="fa fa-ellipsis-v font-color-charcoal-grey"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />
+                    Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/my_booking_icon.svg" alt="" />My
+                    booking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/markup_settings_icon.svg"
+                      alt=""
+                    />Markup Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/settings_icon.svg" alt="" /> User
+                    Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/accounts_panel_icon.svg"
+                      alt=""
+                    />Accounts Panel</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/admin_panel_icon.svg"
+                      alt=""
+                    />Admin Panel</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/admin_panel_icon.svg"
+                      alt=""
+                    />Master Setup</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/logout_icon.svg" alt="" />Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-nav-menu">
+          <div class="d-flex justify-content-end w-100">
+            <button class="menu-close btn p-0 border-0">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#">About Us</a>
+              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Contact US</a>
+            </div>
+          </div>
+          <a href="/login.html" class="btn fw-400 fs-13 view-more-btn"
+            >LOGIN / SIGNUP</a
+          >
+        </div>
+        <div class="black-drop"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="smart-dashboard-wrapper">
+        <div class="smart-dashboard-aside-wrapper">
+          <nav class="dashboard-aside-nav">
+            <ul class="list-unstyled dashboard-nav-list">
+              <li class="nav-item">
+                <a href="dashboard.html" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/dashboard_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Dashboard
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item has-submenu">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/my_booking_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    My Bookings
+                  </span>
+                  <i class="fa fa-chevron-down submenu-arrow"></i>
+                </a>
+                <ul class="submenu-list">
+                  <li><a href="#">Booking History</a></li>
+                  <li><a href="#">Import Pnr</a></li>
+                  <li><a href="#">Import Offline</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/markup_settings_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Markup Settings
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/settings_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    User Settings
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/accounts_panel_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Accounts Panel
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/admin_panel_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Admin Panel
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/admin_panel_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Master Setup
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item logout-item">
+                <a href="#" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/logout_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Logout
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="smart-dashboard-content-wrapper">
+          <div class="smart-dashboard-content-header">
+            <h4>Booking History</h4>
+            <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">My booking</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Booking History
+                </li>
+              </ol>
+            </nav>
+            <div class="smart-dashboard-search-wrapper">
+              <div class="section-nav-btns">
+                <button class="btn active">All</button>
+                <button class="btn">Ticketed</button>
+                <button class="btn">On Hold</button>
+              </div>
+              <div class="smart-dashboard-search-actions">
+                <div class="row g-3 flex-grow-1">
+                  <div class="col-lg-4">
+                    <div class="form-floating">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="establishmentYearInput"
+                      />
+                      <label for="establishmentYearInput">Booking From</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-floating">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="establishmentYearInput"
+                      />
+                      <label for="establishmentYearInput">Booking Till</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-floating search-input-with-icon">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="addressInput"
+                        placeholder="Enter Search Text"
+                      />
+                      <label for="addressInput">Search</label>
+                      <img
+                        src="assets/images/search_input_icon.svg"
+                        class="search-icon"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn border-0 p-0">
+                    <img
+                      src="assets/images/search_primary_btn_icon.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="btn border-0 p-0">
+                    <img
+                      src="assets/images/filter_primary_btn_icon.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="smart-dashboard-content-body">
+            <ul class="list-unstyled booking-history-list">
+              <li>
+                <div class="agency-details-wrapper">
+                  <div class="table-responsive">
+                    <table class="table mb-0">
+                      <tbody>
+                        <tr>
+                          <td>Agency: Sai Mobile & Travels</td>
+                          <td>Supplier Id : TBO COK</td>
+                          <td>Journey Type: Domestic</td>
+                          <td>Itinerary Type: Onward</td>
+                          <td>Payment Mode: WALLET</td>
+                          <td>Convenience Fee: 0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <button
+                    class="btn bg-color-primary text-white fs-14 fw-700 rounded-5 px-3 flex-shrink-0"
+                  >
+                    Lock
+                  </button>
+                </div>
+                <h5>Traveller Details</h5>
+                <div class="table-responsive booking-details-table-wrapper">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h6>Lead Pax Name</h6>
+                          <p>SHANMUGAM M</p>
+                        </td>
+                        <td>
+                          <h6>Total Pax</h6>
+                          <p>2</p>
+                        </td>
+                        <td>
+                          <h6>Baggage</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Meal</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Seat</h6>
+                          <p>25-04-1992</p>
+                        </td>
+                        <td>
+                          <h6>Sector</h6>
+                          <p>TRZ/VTZ</p>
+                        </td>
+                        <td>
+                          <h6>Airline</h6>
+                          <p>TRZ/VTZ</p>
+                        </td>
+                        <td>
+                          <h6>IsOnHold</h6>
+                          <p>No</p>
+                        </td>
+                        <td>
+                          <h6>IsTicketed</h6>
+                          <p>Yes</p>
+                        </td>
+                        <td>
+                          <h6>Com Received:</h6>
+                          <p>129.64</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>IsInvoiced:</h6>
+                          <p>Yes</p>
+                        </td>
+                        <td>
+                          <h6>Com Parted</h6>
+                          <p>129.64</p>
+                        </td>
+                        <td>
+                          <h6>Channel</h6>
+                          <p>B2B</p>
+                        </td>
+                        <td>
+                          <h6>Travel Date</h6>
+                          <p>01-11-2025</p>
+                        </td>
+                        <td>
+                          <h6>Return Date:</h6>
+                          <p>N/A</p>
+                        </td>
+                        <td>
+                          <h6>Admin Markup</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Customer Markup</h6>
+                          <p>0.00</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h5>Booking Details</h5>
+                <div class="table-responsive booking-details-table-wrapper">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h6>Airline PNR</h6>
+                          <p>W392TI</p>
+                        </td>
+                        <td>
+                          <h6>GDS PNR</h6>
+                          <p>W392TI</p>
+                        </td>
+                        <td>
+                          <h6>Cabin</h6>
+                          <p>Economy</p>
+                        </td>
+                        <td>
+                          <h6>Booking Id</h6>
+                          <p>MGZJ5RMAE0</p>
+                        </td>
+                        <td>
+                          <h6>Status</h6>
+                          <p>Confirmed</p>
+                        </td>
+                        <td>
+                          <h6>Booking Date</h6>
+                          <p>30-10-2025 11:41</p>
+                        </td>
+                        <td>
+                          <h6>Last Ticket Date</h6>
+                          <p>30-10-2025 00:00</p>
+                        </td>
+                        <td>
+                          <h6>Booking Amount</h6>
+                          <p>13142.96</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+              <li>
+                <div class="agency-details-wrapper">
+                  <div class="table-responsive">
+                    <table class="table mb-0">
+                      <tbody>
+                        <tr>
+                          <td>Agency: Sai Mobile & Travels</td>
+                          <td>Supplier Id : TBO COK</td>
+                          <td>Journey Type: Domestic</td>
+                          <td>Itinerary Type: Onward</td>
+                          <td>Payment Mode: WALLET</td>
+                          <td>Convenience Fee: 0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <button
+                    class="btn bg-color-primary text-white fs-14 fw-700 rounded-5 px-3 flex-shrink-0"
+                  >
+                    Lock
+                  </button>
+                </div>
+                <h5>Traveller Details</h5>
+                <div class="table-responsive booking-details-table-wrapper">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h6>Lead Pax Name</h6>
+                          <p>SHANMUGAM M</p>
+                        </td>
+                        <td>
+                          <h6>Total Pax</h6>
+                          <p>2</p>
+                        </td>
+                        <td>
+                          <h6>Baggage</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Meal</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Seat</h6>
+                          <p>25-04-1992</p>
+                        </td>
+                        <td>
+                          <h6>Sector</h6>
+                          <p>TRZ/VTZ</p>
+                        </td>
+                        <td>
+                          <h6>Airline</h6>
+                          <p>TRZ/VTZ</p>
+                        </td>
+                        <td>
+                          <h6>IsOnHold</h6>
+                          <p>No</p>
+                        </td>
+                        <td>
+                          <h6>IsTicketed</h6>
+                          <p>Yes</p>
+                        </td>
+                        <td>
+                          <h6>Com Received:</h6>
+                          <p>129.64</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>IsInvoiced:</h6>
+                          <p>Yes</p>
+                        </td>
+                        <td>
+                          <h6>Com Parted</h6>
+                          <p>129.64</p>
+                        </td>
+                        <td>
+                          <h6>Channel</h6>
+                          <p>B2B</p>
+                        </td>
+                        <td>
+                          <h6>Travel Date</h6>
+                          <p>01-11-2025</p>
+                        </td>
+                        <td>
+                          <h6>Return Date:</h6>
+                          <p>N/A</p>
+                        </td>
+                        <td>
+                          <h6>Admin Markup</h6>
+                          <p>0.00</p>
+                        </td>
+                        <td>
+                          <h6>Customer Markup</h6>
+                          <p>0.00</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h5>Booking Details</h5>
+                <div class="table-responsive booking-details-table-wrapper">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h6>Airline PNR</h6>
+                          <p>W392TI</p>
+                        </td>
+                        <td>
+                          <h6>GDS PNR</h6>
+                          <p>W392TI</p>
+                        </td>
+                        <td>
+                          <h6>Cabin</h6>
+                          <p>Economy</p>
+                        </td>
+                        <td>
+                          <h6>Booking Id</h6>
+                          <p>MGZJ5RMAE0</p>
+                        </td>
+                        <td>
+                          <h6>Status</h6>
+                          <p>Confirmed</p>
+                        </td>
+                        <td>
+                          <h6>Booking Date</h6>
+                          <p>30-10-2025 11:41</p>
+                        </td>
+                        <td>
+                          <h6>Last Ticket Date</h6>
+                          <p>30-10-2025 00:00</p>
+                        </td>
+                        <td>
+                          <h6>Booking Amount</h6>
+                          <p>13142.96</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="js/namoItinerary.js"></script>
+  </body>
+</html>

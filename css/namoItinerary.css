@@ -205,7 +205,14 @@ body:has(header.fixed-top) main {
 .traveller-name-wrapper p,
 .inclusions-list-wrapper li,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4,
+.breadcrumb-wrapper ol .breadcrumb-item a,
+.breadcrumb-wrapper ol .breadcrumb-item.active,
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td,
+.booking-history-list li h5,
+.booking-details-table-wrapper table tbody tr td h6,
+.booking-details-table-wrapper table tbody tr td p {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -370,7 +377,11 @@ footer .quick-links-wrapper li a,
 .checkin-details-table table tbody tr td,
 .traveller-name-wrapper p,
 .inclusions-list-wrapper li,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.breadcrumb-wrapper ol .breadcrumb-item a,
+.breadcrumb-wrapper ol .breadcrumb-item.active,
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td,
+.booking-details-table-wrapper table tbody tr td h6 {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -395,7 +406,9 @@ footer .quick-links-wrapper li a,
 .cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li h5,
 .room-info-side-bar-popup .room-info-content-wrapper ul li h6,
 .details-changed-modal .details-changed-body h6,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
+.booking-history-list li h5,
+.booking-details-table-wrapper table tbody tr td p {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -424,7 +437,8 @@ footer .quick-links-wrapper li a,
 .fs-19 {
   font-size: 1.1875rem !important;
 }
-.fs-20 {
+.fs-20,
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4 {
   font-size: 1.25rem !important;
 }
 .fs-21 {
@@ -809,7 +823,12 @@ footer .quick-links-wrapper li a,
 .traveller-name-wrapper p,
 .inclusions-list-wrapper li,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.breadcrumb-wrapper ol .breadcrumb-item a,
+.breadcrumb-wrapper ol .breadcrumb-item.active,
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td,
+.booking-details-table-wrapper table tbody tr td h6,
+.booking-details-table-wrapper table tbody tr td p {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -860,7 +879,9 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body h5,
 .details-changed-modal .details-changed-body .table-responsive table tbody tr td:first-child,
 .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
-.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p span {
+.review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p span,
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4,
+.booking-history-list li h5 {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -892,8 +913,7 @@ footer .quick-links-wrapper li a,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn span,
 .section-nav-btns .btn.active,
 .selected-room-rate-wrapper .more-rooms-btn,
-.details-changed-modal .modal-footer .btn.accept-details-change-btn,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper {
+.details-changed-modal .modal-footer .btn.accept-details-change-btn {
   background-color: #f28b24 !important;
 }
 .font-color-secondary,
@@ -961,7 +981,13 @@ footer .quick-links-wrapper li a,
 .review-hotel-fare-sidebar .accordion-item .accordion-header .accordion-button span,
 .checkin-details-table table tbody tr td b,
 .checkin-details-table table tbody tr td span,
-.inclusions-list-wrapper li {
+.inclusions-list-wrapper li,
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4,
+.breadcrumb-wrapper ol .breadcrumb-item a,
+.breadcrumb-wrapper ol .breadcrumb-item.active,
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td,
+.booking-history-list li h5,
+.booking-details-table-wrapper table tbody tr td p {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1030,7 +1056,8 @@ footer .quick-links-wrapper li a,
 .selected-room-rate-wrapper .more-rooms-btn,
 .details-changed-modal .modal-footer .btn.accept-details-change-btn,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.smart-dashboard-search-wrapper .section-nav-btns .btn.active {
   color: #ffffff !important;
 }
 .bg-color-white,
@@ -1084,7 +1111,8 @@ footer .quick-links-wrapper li a,
 .bg-color-sea-green,
 .hotel-rate-details-wrapper .short-list-btn:hover,
 .hotel-rate-details-wrapper .short-list-btn.active,
-.tooltip .tooltip-inner {
+.tooltip .tooltip-inner,
+.smart-dashboard-search-wrapper .section-nav-btns .btn.active {
   background-color: #269a59 !important;
 }
 .font-color-pine-green {
@@ -1144,7 +1172,8 @@ footer .quick-links-wrapper li a,
 .font-color-fuscous-grey,
 .draggable-side-bar-popup.addons-side-bar-popup .side-bar-popup-body .baggage-wrapper .accordion .accordion-item .accordion-collapse .accordion-body .addons-passenger-list li .addons-passenger-content-wrapper .addons-passenger-content-body .addons-items-wrapper .scroll-list li .btn p,
 .review-form-content p,
-.blogs-items-wrapper p {
+.blogs-items-wrapper p,
+.booking-details-table-wrapper table tbody tr td h6 {
   color: #525252 !important;
 }
 .bg-color-fuscous-grey {
@@ -1236,7 +1265,8 @@ footer .quick-links-wrapper li a,
 .font-color-pale-orange {
   color: #fd985f !important;
 }
-.bg-color-pale-orange {
+.bg-color-pale-orange,
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper {
   background-color: #fd985f !important;
 }
 .font-color-old-lace {
@@ -5591,6 +5621,9 @@ textarea.form-control {
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item {
   margin-bottom: 0.25rem;
@@ -5612,10 +5645,15 @@ textarea.form-control {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.875rem 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
   text-decoration: none;
-  transition: all 0.2s;
   position: relative;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link .nav-icon {
   width: 20px;
@@ -5639,9 +5677,19 @@ textarea.form-control {
 }
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a {
   display: block;
-  padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 3.5rem;
   text-decoration: none;
   transition: all 0.2s;
+}
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .submenu-list li a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
 .smart-dashboard-wrapper .smart-dashboard-content-wrapper {
   flex-grow: 1;
@@ -5649,4 +5697,157 @@ textarea.form-control {
   overflow: hidden;
   border-radius: 10px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4 {
+  margin: 0;
+}
+.smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-body {
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.breadcrumb-wrapper ol .breadcrumb-item a:hover {
+  text-decoration: none;
+}
+.breadcrumb-wrapper ol .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+.search-input-with-icon .search-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+}
+.smart-dashboard-search-wrapper {
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+  margin-top: 23px;
+  padding: 1rem;
+}
+.smart-dashboard-search-wrapper .section-nav-btns {
+  justify-content: center;
+  margin-top: -35px;
+}
+.smart-dashboard-search-wrapper .section-nav-btns .btn:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.smart-dashboard-search-wrapper .section-nav-btns .btn:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.smart-dashboard-search-wrapper .smart-dashboard-search-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+@media screen and (max-width: 576px) {
+  .smart-dashboard-search-wrapper .smart-dashboard-search-actions {
+    flex-direction: column;
+  }
+}
+.booking-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+.booking-history-list li {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.booking-history-list li .agency-details-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive {
+  flex-grow: 1;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table {
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td {
+  border: none;
+  background-color: #fbf5f5;
+  padding: 0.5rem 1rem;
+  position: relative;
+  min-width: 150px;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  width: 1px;
+  height: 70%;
+  background-color: #e7e7e7;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td:last-child::after {
+  display: none;
+}
+.booking-history-list li h5 {
+  margin: 0.5rem 0;
+}
+.booking-details-table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.booking-details-table-wrapper table tbody tr {
+  /* 👈 Remove border from last row cells */
+}
+.booking-details-table-wrapper table tbody tr td {
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  /* 👈 Move border here */
+  padding: 0.5rem 1rem;
+  position: relative;
+  min-width: 150px;
+}
+.booking-details-table-wrapper table tbody tr td::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  width: 1px;
+  height: 70%;
+  background-color: #e7e7e7;
+}
+.booking-details-table-wrapper table tbody tr td:last-child::after {
+  display: none;
+}
+.booking-details-table-wrapper table tbody tr td h6 {
+  margin-bottom: 5px;
+}
+.booking-details-table-wrapper table tbody tr td p {
+  margin: 0;
+}
+.booking-details-table-wrapper table tbody tr:last-child td {
+  border-bottom: none;
 }
