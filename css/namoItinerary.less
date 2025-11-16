@@ -51,6 +51,8 @@
 @redOrange: #ff4848;
 @fireEngineRed: #d32f2f;
 @dawnPink: #ededed;
+@mercury: #e4e4e4;
+@snowDrift: #fbfbfb;
 @colors: primary @primaryColor, secondary @secondaryColor,
   mango-orange @mangoOrange, smoky-black @smokyBlack, cloudy-grey @cloudyGrey,
   black-cat @blackCat, fuel-yellow @fuelYellow, white @white,
@@ -68,7 +70,7 @@
   coral-red @coralRed, white-rock @whiteRock, platinum @platinum,
   light-pink @lightPink, grey-goose @greyGoose, frosted-mint @frostedMint,
   warm-grey @warmGrey, red-orange @redOrange, fire-engine-red @fireEngineRed,
-  dawn-pink @dawnPink;
+  dawn-pink @dawnPink, mercury @mercury, snow-drift @snowDrift;
 
 html {
   font-size: 16px;
@@ -5500,6 +5502,23 @@ textarea {
     &:extend(.bg-color-pale-orange);
     max-width: 230px;
     width: 100%;
+    transition: transform 0.3s ease-in-out;
+    @media screen {
+      @media (max-width: 991px) {
+        position: fixed;
+        padding: 1rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        transform: translateX(-110%);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+    &.active {
+      transform: translateX(0);
+    }
     .dashboard-aside-nav {
       .dashboard-nav-list {
         margin: 0;
@@ -5721,8 +5740,19 @@ textarea {
       display: flex;
       align-items: center;
       gap: 10px;
+      @media screen {
+        @media (max-width: 576px) {
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      }
       .table-responsive {
         flex-grow: 1;
+        @media screen {
+          @media (max-width: 576px) {
+            width: 100%;
+          }
+        }
         table {
           border: none;
           border-radius: 5px;
@@ -5837,6 +5867,108 @@ textarea {
           td {
             border-bottom: none;
           }
+        }
+      }
+    }
+  }
+}
+.navbar-brand {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.smart-content-wrapper {
+  border: 1px solid @platinum;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.smart-data-grid-table-wrapper {
+  border: 1px solid @platinum;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .smart-data-grid-table-header {
+    padding: 10px;
+    border-bottom: 1px solid @platinum;
+    .search-input-wrapper {
+      .form-control {
+        height: 32px;
+        padding-left: 25px;
+      }
+      .search-input-btn {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 10px;
+        position: absolute;
+      }
+    }
+  }
+  .smart-data-grid-table-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 100%;
+    .table-responsive {
+      table {
+        thead {
+          position: sticky;
+          top: 0;
+          z-index: 10;
+          background: @catskillWhite;
+
+          th {
+            &:extend(.fs-15,
+            .fw-400,
+            .pt-sans-font-family,
+            .font-color-secondary,
+            .bg-color-mercury);
+            border-bottom: 1px solid @platinum;
+            padding: 0.75rem 1rem; // Ensure background covers content below
+            min-width: 125px;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 2px;
+              background: @platinum;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              &:extend(.pt-sans-font-family,
+              .fw-400,
+              .fs-13,
+              .font-color-ship-grey,
+              .bg-color-white);
+              padding: 0.5rem 1rem;
+              vertical-align: middle;
+            }
+            &:nth-child(even) {
+              td {
+                background: @snowDrift !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .smart-data-grid-table-footer {
+    border-top: 1px solid @platinum;
+    padding: 10px;
+    .btn-group {
+      .btn {
+        border: none;
+        &:extend(.fs-14,
+        .fw-400,
+        .pt-sans-font-family,
+        .font-color-secondary);
+        &:hover {
+          background: @catskillWhite;
         }
       }
     }

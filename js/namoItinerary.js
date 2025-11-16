@@ -357,14 +357,15 @@ $(document).ready(function () {
     $(".mobile-nav-menu").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
-  $(".black-drop,.filter-mob-menu-close,.hotel-filter-mob-menu-close").click(
-    function () {
-      $(".mobile-nav-menu").removeClass("active");
-      $(".black-drop").removeClass("active");
-      $(".flight-filter-side-bar ").removeClass("active");
-      $(".hotel-filter-side-bar ").removeClass("active");
-    }
-  );
+  $(
+    ".black-drop,.filter-mob-menu-close,.hotel-filter-mob-menu-close,.dashboard-menu-close"
+  ).click(function () {
+    $(".mobile-nav-menu").removeClass("active");
+    $(".black-drop").removeClass("active");
+    $(".flight-filter-side-bar ").removeClass("active");
+    $(".hotel-filter-side-bar ").removeClass("active");
+    $(".smart-dashboard-aside-wrapper").removeClass("active");
+  });
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
       $(this).next("input").focus();
@@ -980,5 +981,10 @@ $(document).ready(function () {
   // Mobile menu toggle (if needed)
   $(document).on("click", ".dashboard-menu-toggle", function () {
     $(".smart-dashboard-aside-wrapper").toggleClass("active");
+  });
+
+  $(document).on("click", ".show-dashboard-menu", function () {
+    $(".smart-dashboard-aside-wrapper").addClass("active");
+    $(".black-drop").addClass("active");
   });
 });
