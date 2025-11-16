@@ -5551,7 +5551,7 @@ textarea {
           .nav-link {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
             padding: 0.5rem 1.5rem;
             border-radius: 4px;
             &:extend(.fs-16,
@@ -5563,7 +5563,7 @@ textarea {
             span {
               display: flex;
               align-items: center;
-              gap: 1rem;
+              gap: 0.5rem;
             }
             .nav-icon {
               width: 20px;
@@ -5601,14 +5601,15 @@ textarea {
 
               a {
                 display: block;
-                padding: 0.5rem 1.5rem 0.5rem 3.5rem;
+                padding: 0.5rem 1.5rem 0.5rem 2.5rem;
                 text-decoration: none;
                 &:extend(.fs-14,
                 .fw-400,
                 .font-color-white,
                 .pt-sans-font-family);
                 transition: all 0.2s;
-
+                display: flex;
+                align-items: baseline;
                 // &.active {
                 //   background: @vistaWhite;
                 //   color: @primaryColor;
@@ -5908,6 +5909,7 @@ textarea {
     overflow-y: auto;
     height: 100%;
     .table-responsive {
+      height: 100%;
       table {
         thead {
           position: sticky;
@@ -5946,6 +5948,21 @@ textarea {
               .bg-color-white);
               padding: 0.5rem 1rem;
               vertical-align: middle;
+              .dropdown {
+                .dropdown-menu {
+                  gap: 0.5rem;
+                  li {
+                    padding: 0;
+                    .dropdown-item {
+                      &:extend(.font-color-secondary);
+                      &:hover,
+                      &:focus {
+                        background: @catskillWhite;
+                      }
+                    }
+                  }
+                }
+              }
             }
             &:nth-child(even) {
               td {
@@ -5971,6 +5988,57 @@ textarea {
           background: @catskillWhite;
         }
       }
+    }
+  }
+}
+.dashboard-payment-options {
+  .payment-options-wrapper {
+    border: 1px solid @platinum;
+    border-radius: 10px;
+    overflow: hidden;
+    .payment-tab-header {
+      .nav {
+        padding: 0 1rem;
+        li {
+          border: none;
+          .nav-link {
+            border: none !important;
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            &.active {
+              &:extend(.font-color-primary);
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: @primaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+    .payment-tab-body {
+      padding: 1rem;
+      h6 {
+        &:extend(.fs-35);
+      }
+    }
+    .payment-tab-footer {
+      padding: 1rem;
+    }
+  }
+}
+.agency-balance-separator {
+  border-right: 1px solid @platinum;
+  @media screen {
+    @media (max-width: 991px) {
+      border-right: none;
+      border-bottom: 1px solid @platinum;
+      padding-bottom: 1rem;
     }
   }
 }

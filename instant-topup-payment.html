@@ -296,6 +296,7 @@
                     />
                     Admin Panel
                   </span>
+                  <i class="fa fa-chevron-down submenu-arrow"></i>
                 </a>
                 <ul class="submenu-list">
                   <li>
@@ -414,7 +415,7 @@
                 <div class="col-md-4">
                   <button
                     type="button"
-                    class="btn bg-color-pine-green font-color-white pt-sans-font-family fw-400 fs-16 py-1 px-4"
+                    class="btn bg-color-sea-green font-color-white pt-sans-font-family fw-400 fs-16 py-1 px-4"
                   >
                     View Statement
                   </button>
@@ -446,9 +447,11 @@
                     </button>
                   </div>
                   <button
-                    class="btn bg-color-sea-green px-4 text-white fs-14 fw-400"
+                    class="btn bg-color-sea-green px-4 text-white fs-14 fw-400 pt-sans-font-family"
+                    data-bs-toggle="modal"
+                    data-bs-target="#topUpPayModal"
                   >
-                    Export to Excel
+                    Topup Or Pay Now
                   </button>
                 </div>
               </div>
@@ -457,174 +460,210 @@
                   <table class="table mb-0">
                     <thead>
                       <tr>
-                        <th>Invoice Number</th>
-                        <th>Invoice Date</th>
-                        <th>Narration</th>
-                        <th>Opening Balance</th>
-                        <th>Basic</th>
-                        <th>YQ</th>
-                        <th>Other Taxes</th>
+                        <th>Topup Date</th>
+                        <th>Order Id</th>
+                        <th>Agency</th>
+                        <th>ReceiptNo</th>
+                        <th>Conv Fee</th>
                         <th>Commission</th>
-                        <th>Total</th>
-                        <th>Total</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>I Club Online Services</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                       <tr>
-                        <td>AS18S28F8</td>
                         <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
+                        <td>TP21948495</td>
+                        <td>Avion Network</td>
+                        <td>ERK-RC-25-N04055</td>
+                        <td>1125.00</td>
+                        <td>50000.00</td>
+                        <td>
+                          <span
+                            class="badge fs-12 fw-400 pt-sans-font-family bg-color-dark-mint text-white px-2 py-1"
+                          >
+                            Success
+                          </span>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -693,6 +732,59 @@
           </div>
         </div>
       </div>
+      <!-- Top Up Payment Modal Start -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="topUpPayModal"
+        tabindex="-1"
+        aria-labelledby="topUpPayModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Enter Amount
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4">
+                <div class="col-lg-12">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="firstNameInput"
+                      placeholder="Enter Amount"
+                    />
+                    <label for="firstNameInput">Enter Amount</label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mt-3">
+                <a
+                  href="payment.html"
+                  class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2 px-4"
+                >
+                  Create
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Up Payment  Modal End -->
     </main>
 
     <script

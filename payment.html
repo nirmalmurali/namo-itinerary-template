@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1 user-scalable=no"
     />
-    <title>View Statement</title>
+    <title>Payment</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -364,18 +364,11 @@
             <div
               class="d-flex align-items-center gap-1 justify-content-between"
             >
-              <div>
-                <h4>Account Statement</h4>
-                <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
-                  <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item">
-                      <a href="#">Account Panel</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                      View Statement
-                    </li>
-                  </ol>
-                </nav>
+              <div class="d-flex align-items-center gap-2">
+                <a href="javascript:history.back()" class="btn p-0 border-0">
+                  <img src="assets/images/back_arrow_icon.svg" alt="" />
+                </a>
+                <h4>Payment</h4>
               </div>
               <button
                 class="show-dashboard-menu btn p-0 border-0 shadow-none d-flex d-lg-none"
@@ -387,312 +380,337 @@
                 ></i>
               </button>
             </div>
-            <div class="smart-content-wrapper mt-3">
-              <div class="row g-3 align-items-end">
-                <div class="col-md-4">
-                  <div class="form-floating">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="fromDateInput"
-                      placeholder="From Date"
-                    />
-                    <label for="fromDateInput">From Date</label>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-floating">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="toDateInput"
-                      placeholder="To Date"
-                    />
-                    <label for="toDateInput">To Date</label>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <button
-                    type="button"
-                    class="btn bg-color-pine-green font-color-white pt-sans-font-family fw-400 fs-16 py-1 px-4"
-                  >
-                    View Statement
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
-          <div class="smart-dashboard-content-body overflow-hidden d-flex">
-            <div class="smart-data-grid-table-wrapper">
-              <div
-                class="d-flex align-items-center justify-content-between smart-data-grid-table-header"
-              >
-                <p class="mb-0 fs-14 fw-400 font-color-charcoal-grey">
-                  35 record(s) found.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <div class="search-input-wrapper position-relative">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Search"
-                    />
-                    <button class="btn p-0 border-0 search-input-btn">
-                      <img
-                        src="assets/images/search_input_icon.svg"
-                        class="search-icon"
-                        alt=""
-                      />
-                    </button>
-                  </div>
-                  <button
-                    class="btn bg-color-sea-green px-4 text-white fs-14 fw-400 pt-sans-font-family"
-                  >
-                    Export to Excel
-                  </button>
+          <div class="smart-dashboard-content-body">
+            <div class="dashboard-payment-options">
+              <div class="payment-options-wrapper mb-3">
+                <div class="payment-tab-header">
+                  <ul class="nav nav-pills m-0" id="payment-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-wallet-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-wallet"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-wallet"
+                        aria-selected="true"
+                      >
+                        Wallet
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-debit-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-debit"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-debit"
+                        aria-selected="false"
+                      >
+                        Debit Card
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-credit-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-credit"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-credit"
+                        aria-selected="false"
+                      >
+                        Credit Card
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-netbanking-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-netbanking"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-netbanking"
+                        aria-selected="false"
+                      >
+                        Net Banking
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-upi-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-upi"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-upi"
+                        aria-selected="false"
+                      >
+                        UPI
+                      </button>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div class="smart-data-grid-table-body">
-                <div class="table-responsive">
-                  <table class="table mb-0">
-                    <thead>
-                      <tr>
-                        <th>Invoice Number</th>
-                        <th>Invoice Date</th>
-                        <th>Narration</th>
-                        <th>Opening Balance</th>
-                        <th>Basic</th>
-                        <th>YQ</th>
-                        <th>Other Taxes</th>
-                        <th>Commission</th>
-                        <th>Total</th>
-                        <th>Total</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                      <tr>
-                        <td>AS18S28F8</td>
-                        <td>03-10-2025</td>
-                        <td>Narration</td>
-                        <td>OpeningBalance</td>
-                        <td>Basic</td>
-                        <td>YQ</td>
-                        <td>OthTaxes</td>
-                        <td>Commission</td>
-                        <td>Total</td>
-                        <td>Total</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div
-                class="d-flex align-items-center justify-content-between smart-data-grid-table-footer"
-              >
-                <div class="d-flex align-items-center gap-2">
-                  <span class="fs-14 fw-400 font-color-charcoal-grey"
-                    >Show rows per page</span
-                  >
-                  <select
-                    class="form-select form-select-sm"
-                    style="width: auto"
-                  >
-                    <option selected>15</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                  </select>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <span class="fs-14 fw-400 font-color-charcoal-grey"
-                    >Page</span
-                  >
-                  <input
-                    type="number"
-                    class="form-control form-control-sm text-center"
-                    value="1"
-                    style="width: 60px"
-                  />
-                  <span class="fs-14 fw-400 font-color-charcoal-grey"
-                    >of 1</span
-                  >
-                  <div class="btn-group" role="group">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
+                <div class="payment-tab-body">
+                  <div class="tab-content" id="paymentTabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-wallet"
+                      role="tabpanel"
+                      aria-labelledby="pills-wallet-tab"
                     >
-                      <i class="fa fa-angle-double-left"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
+                      <h6
+                        class="font-color-secondary mb-3 pt-sans-font-family fs-18 fw-400"
+                      >
+                        Wallet or Hold
+                      </h6>
+                      <div class="wallet-btns-wrapper payment-method-btns">
+                        <button class="active btn">
+                          <img
+                            src="assets/images/wallet_icon.svg"
+                            alt=""
+                            class="default-img"
+                          />
+                          <img
+                            src="assets/images/wallet_active_icon.svg"
+                            alt=""
+                            class="active-img"
+                          />
+                          Wallet
+                        </button>
+                        <button class="btn">
+                          <img
+                            src="assets/images/wallet_icon.svg"
+                            alt=""
+                            class="default-img"
+                          />
+                          <img
+                            src="assets/images/wallet_active_icon.svg"
+                            alt=""
+                            class="active-img"
+                          />
+                          Free Hold
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-debit"
+                      role="tabpanel"
+                      aria-labelledby="pills-debit-tab"
                     >
-                      <i class="fa fa-angle-left"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
+                      <h6
+                        class="font-color-secondary mb-3 pt-sans-font-family fs-18 fw-400"
+                      >
+                        Select Debit Card
+                      </h6>
+                      <div class="wallet-btns-wrapper payment-method-btns">
+                        <button class="active btn">
+                          <img src="assets/images/visa_logo.svg" alt="" />
+                        </button>
+                        <button class="btn">
+                          <img
+                            src="assets/images/master_card_logo.svg"
+                            alt=""
+                          />
+                        </button>
+                        <button class="btn">
+                          <img src="assets/images/rupay_logo.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-credit"
+                      role="tabpanel"
+                      aria-labelledby="pills-credit-tab"
                     >
-                      <i class="fa fa-angle-right"></i>
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-outline-secondary"
+                      <h6
+                        class="font-color-secondary mb-3 pt-sans-font-family fs-18 fw-400"
+                      >
+                        Select Credit Card
+                      </h6>
+                      <div class="wallet-btns-wrapper payment-method-btns">
+                        <button class="active btn">
+                          <img src="assets/images/visa_logo.svg" alt="" />
+                        </button>
+                        <button class="btn">
+                          <img
+                            src="assets/images/master_card_logo.svg"
+                            alt=""
+                          />
+                        </button>
+                        <button class="btn">
+                          <img src="assets/images/rupay_logo.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-netbanking"
+                      role="tabpanel"
+                      aria-labelledby="pills-netbanking-tab"
                     >
-                      <i class="fa fa-angle-double-right"></i>
-                    </button>
+                      <h6
+                        class="font-color-secondary mb-3 pt-sans-font-family fs-18 fw-400"
+                      >
+                        Select Net Banking
+                      </h6>
+                      <div class="wallet-btns-wrapper payment-method-btns">
+                        <button class="active btn">
+                          <img
+                            src="assets/images/wallet_icon.svg"
+                            alt=""
+                            class="default-img"
+                          />
+                          <img
+                            src="assets/images/net_banking_icon.svg"
+                            alt=""
+                            class="active-img"
+                          />
+                          All Net Banking
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-upi"
+                      role="tabpanel"
+                      aria-labelledby="pills-upi-tab"
+                    >
+                      <h6
+                        class="font-color-secondary mb-3 pt-sans-font-family fs-18 fw-400"
+                      >
+                        Select UPI
+                      </h6>
+                      <div class="wallet-btns-wrapper payment-method-btns">
+                        <button class="active btn">
+                          <img
+                            src="assets/images/wallet_icon.svg"
+                            alt=""
+                            class="default-img"
+                          />
+                          <img
+                            src="assets/images/upi_icon.svg"
+                            alt=""
+                            class="active-img"
+                          />
+                          All UPI
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="payment-tab-footer">
+                  <p
+                    class="font-color-ship-grey mb-0 pt-sans-font-family fs-14 fw-400"
+                  >
+                    Please note: You may be redirected to the bank page to
+                    complete your transaction. By making this booking, you agree
+                    to our Terms of Use and Privacy Policy.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <p class="pt-sans-font-family">Convenience Fee</p>
+                      <p>₹00.00</p>
+                    </li>
+                    <li>
+                      <h6 class="pt-sans-font-family">Net Fare</h6>
+                      <h6>₹12,000</h6>
+                    </li>
+                    <li>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefaultAgreeTerms"
+                        />
+                        <label
+                          class="form-check-label font-color-secondary fs-14 fw-400 pt-sans-font-family"
+                          for="flexCheckDefaultAgreeTerms"
+                        >
+                          I Accept the
+                          <a href="#" class="font-color-sea-green"
+                            >Terms and Conditions</a
+                          >
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end pb-3">
+                <button
+                  class="btn proceed-to-pay-btn rounded-5 bg-color-primary text-white fw-700 fs-14 pt-sans-font-family ms-auto"
+                >
+                  Total Payable Amount ₹12,886
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Create User Modal  -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="topUpPayModal"
+        tabindex="-1"
+        aria-labelledby="topUpPayModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Enter Amount
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4">
+                <div class="col-lg-12">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="firstNameInput"
+                      placeholder="Enter Amount"
+                    />
+                    <label for="firstNameInput">Enter Amount</label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mt-3">
+                <button
+                  type="button"
+                  class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2 px-4"
+                >
+                  Create
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Create User Modal End -->
     </main>
 
     <script

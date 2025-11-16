@@ -987,4 +987,17 @@ $(document).ready(function () {
     $(".smart-dashboard-aside-wrapper").addClass("active");
     $(".black-drop").addClass("active");
   });
+  $(".agency-lock-proceed-btn").on("click", function () {
+    // Close the confirmation modal
+    $("#lockAgencyModal").modal("hide");
+
+    // Wait for the first modal to fully close before opening the success modal
+    $("#lockAgencyModal").on("hidden.bs.modal", function () {
+      // Show success modal
+      $("#lockAgencySuccessModal").modal("show");
+
+      // Unbind the event to prevent multiple triggers
+      $(this).off("hidden.bs.modal");
+    });
+  });
 });
