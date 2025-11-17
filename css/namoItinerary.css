@@ -4626,20 +4626,23 @@ textarea.form-control {
   background: #f28b24;
 }
 .services-list-wrapper .service-list-row > div:nth-child(even) .service-card-wrapper .service-card-content {
-  background-image: url("../assets/images/service_card_content_even_bg.png");
+  background-color: #fff7f0;
+  border: none;
 }
 .services-list-wrapper .service-card-wrapper .service-card-content {
-  background-image: url("../assets/images/service_card_content_bg.png");
-  min-height: 245px;
-  max-width: 259px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
   width: 100%;
-  padding: 76px 20px 20px;
+  padding: 20px 20px 20px;
   background-size: contain;
 }
 .services-list-wrapper .service-card-wrapper .service-card-content h5 {
   margin-bottom: 0.5rem;
 }
 .services-list-wrapper .service-card-wrapper .service-card-content p {
+  margin-bottom: 1rem;
+}
+.services-list-wrapper .service-card-wrapper .service-card-content .icon-wrapper {
   margin-bottom: 1rem;
 }
 .blog-banner-wrapper {

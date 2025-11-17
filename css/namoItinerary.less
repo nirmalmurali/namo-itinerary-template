@@ -4063,7 +4063,9 @@ textarea {
       &:nth-child(even) {
         .service-card-wrapper {
           .service-card-content {
-            background-image: url("../assets/images/service_card_content_even_bg.png");
+            // background-image: url("../assets/images/service_card_content_even_bg.png");
+            background-color: #fff7f0;
+            border: none;
           }
         }
       }
@@ -4071,12 +4073,15 @@ textarea {
   }
   .service-card-wrapper {
     .service-card-content {
-      background-image: url("../assets/images/service_card_content_bg.png");
+      // background-image: url("../assets/images/service_card_content_bg.png");
+      border: 1px solid #d7d7d7;
+      border-radius: 10px;
       &:extend(.image-bg);
-      min-height: 245px;
-      max-width: 259px;
+      // min-height: 245px;
+      // max-width: 259px;
       width: 100%;
-      padding: 76px 20px 20px;
+      // padding: 76px 20px 20px;
+      padding: 20px 20px 20px;
       background-size: contain;
       h5 {
         &:extend(.font-color-secondary,
@@ -4096,6 +4101,9 @@ textarea {
         &:extend(.fs-14,
         .fw-400,
         .pt-sans-font-family);
+      }
+      .icon-wrapper{
+        margin-bottom: 1rem;
       }
     }
   }
