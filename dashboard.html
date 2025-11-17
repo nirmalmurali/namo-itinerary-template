@@ -83,92 +83,299 @@
               </div>
             </div>
             <a href="/login.html" class="btn fw-400 fs-13">LOGIN / SIGNUP</a> -->
-            <div class="dropdown ms-auto profile-header-dropdown-wrapper">
-              <div
-                class="btn border-0 dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <div>
-                  <h6 class="fw-400 font-color-heavy-metal fs-16 mb-0 text-end">
-                    Jhone Dou
-                  </h6>
-                  <p
-                    class="fw-400 font-color-charcoal-grey mb-0 text-end fs-12"
-                  >
-                    Agent Code : 64605
-                  </p>
+            <div class="ms-auto d-flex align-items-center gap-2">
+              <div class="dropdown">
+                <div
+                  class="btn border-0 dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-bs-auto-close="outside"
+                >
+                  <h4 class="fw-400 font-color-dorado fs-14 mb-0">
+                    Wallet : <b class="font-color-secondary">₹ 20000</b>
+                    <i
+                      class="fa fa-angle-down font-color-dorado"
+                      aria-hidden="true"
+                    ></i>
+                  </h4>
                 </div>
-                <img
-                  src="assets/images/profile_avathar.png"
-                  alt=""
-                  class="profile-img"
-                  width="35"
-                  height="35"
-                />
-                <i
-                  class="fa fa-ellipsis-v font-color-charcoal-grey"
-                  aria-hidden="true"
-                ></i>
+                <ul class="dropdown-menu wallet-dropdown-menu">
+                  <li class="wallet-info-item">
+                    <span class="wallet-label">Credit</span>
+                    <span class="wallet-value">: 20000.00</span>
+                  </li>
+                  <li class="wallet-info-item">
+                    <span class="wallet-label">Available</span>
+                    <span class="wallet-value">: 20000.00</span>
+                  </li>
+                  <li class="wallet-info-item">
+                    <span class="wallet-label">Outstanding</span>
+                    <span class="wallet-value">: 20000.00</span>
+                  </li>
+                  <li class="wallet-info-item">
+                    <span class="wallet-label">Next Payment</span>
+                    <span class="wallet-value">: 14-11-2025</span>
+                  </li>
+                  <li class="wallet-info-item">
+                    <span class="wallet-label">Bang Details</span>
+                    <span class="wallet-value">
+                      :
+                      <a href="#" class="font-color-sea-green fs-14 fw-400"
+                        >Payment Schedule and QR</a
+                      >
+                    </span>
+                  </li>
+                  <li class="wallet-action-item">
+                    <button
+                      class="btn bg-color-pale-orange text-white pt-sans-font-family fw-400 fs-14 py-2 px-4 border-0"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#topUpPayModal"
+                    >
+                      Topup or Pay Now
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item active" href="#"
-                    ><img src="assets/images/dashboard_icon.svg" alt="" />
-                    Dashboard</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="booking-history.html"
-                    ><img src="assets/images/my_booking_icon.svg" alt="" />My
-                    booking</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img
-                      src="assets/images/markup_settings_icon.svg"
-                      alt=""
-                    />Markup Settings</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img src="assets/images/settings_icon.svg" alt="" /> User
-                    Settings</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img
-                      src="assets/images/accounts_panel_icon.svg"
-                      alt=""
-                    />Accounts Panel</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img
-                      src="assets/images/admin_panel_icon.svg"
-                      alt=""
-                    />Admin Panel</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img
-                      src="assets/images/admin_panel_icon.svg"
-                      alt=""
-                    />Master Setup</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    ><img src="assets/images/logout_icon.svg" alt="" />Logout</a
-                  >
-                </li>
-              </ul>
+              <div class="vr"></div>
+              <div class="dropdown profile-header-dropdown-wrapper">
+                <div
+                  class="btn border-0 dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-bs-auto-close="outside"
+                >
+                  <div>
+                    <h6
+                      class="fw-400 font-color-heavy-metal fs-16 mb-0 text-end"
+                    >
+                      Jhone Dou
+                    </h6>
+                    <p
+                      class="fw-400 font-color-charcoal-grey mb-0 text-end fs-12"
+                    >
+                      Agent Code : 64605
+                    </p>
+                  </div>
+                  <img
+                    src="assets/images/profile_avathar.png"
+                    alt=""
+                    class="profile-img"
+                    width="35"
+                    height="35"
+                  />
+                  <i
+                    class="fa fa-ellipsis-v font-color-charcoal-grey"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item active" href="#"
+                      ><img src="assets/images/dashboard_icon.svg" alt="" />
+                      Dashboard</a
+                    >
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                    >
+                      <img src="assets/images/my_booking_icon.svg" alt="" />
+                      My booking
+                    </a>
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a class="dropdown-item" href="booking-history.html">
+                          Booking History
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Import Pnr </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Import Offline </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                    >
+                      <img
+                        src="assets/images/markup_settings_icon.svg"
+                        alt=""
+                      />
+                      Markup Settings
+                    </a>
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a class="dropdown-item" href="#"> Flight Markup </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                    >
+                      <img src="assets/images/settings_icon.svg" alt="" /> User
+                      Settings</a
+                    >
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a class="dropdown-item" href="manage-users.html">
+                          Manage Users
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      ><img
+                        src="assets/images/accounts_panel_icon.svg"
+                        alt=""
+                      />Accounts Panel</a
+                    >
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a class="dropdown-item" href="view-statement.html">
+                          View Statement
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="instant-topup-payment.html"
+                        >
+                          Instant Topup & Payment
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      ><img
+                        src="assets/images/admin_panel_icon.svg"
+                        alt=""
+                      />Admin Panel</a
+                    >
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="agency-registrations.html"
+                        >
+                          Agency Registrations
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="manage-supplier-api.html"
+                        >
+                          Manage Supplier Api
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Manage Flight Deals
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Admin Markup </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Payment Provider Settings
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Map Supplier Faretypes
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                    >
+                      <img src="assets/images/master_setup_icon.svg" alt="" />
+                      Master Setup
+                    </a>
+                    <ul class="dropdown-menu dropdown-submenu-menu">
+                      <li>
+                        <a class="dropdown-item" href="airlines.html">
+                          Airlines
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="currencies.html">
+                          Currencies
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Countries </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> States </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Cities </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Airports </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Deal Templates </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Change Payment Date
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Customer Group </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Sales Person </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"> Fare Types </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><img
+                        src="assets/images/logout_icon.svg"
+                        alt=""
+                      />Logout</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -178,17 +385,185 @@
               <i class="fa fa-times" aria-hidden="true"></i>
             </button>
           </div>
-          <div class="d-flex justify-content-center">
-            <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#">About Us</a>
-              <a class="nav-link" href="#">Services</a>
-              <a class="nav-link" href="#">Blog</a>
-              <a class="nav-link" href="#">Contact US</a>
+          <div class="d-flex align-items-center gap-2">
+            <img
+              src="assets/images/profile_avathar.png"
+              alt=""
+              class="profile-img"
+              width="35"
+              height="35"
+            />
+            <div>
+              <h6 class="fw-400 font-color-heavy-metal fs-16 mb-0">
+                Jhone Dou
+              </h6>
+              <p class="fw-400 font-color-charcoal-grey mb-0 fs-12">
+                Agent Code : 64605
+              </p>
             </div>
           </div>
-          <a href="/login.html" class="btn fw-400 fs-13 view-more-btn"
-            >LOGIN / SIGNUP</a
-          >
+          <div class="d-flex w-100 flex-column flex-grow-1 overflow-y-auto">
+            <div class="navbar-nav dashboard-mobile-nav">
+              <ul class="list-unstyled dashboard-nav-list">
+                <li class="nav-item">
+                  <a href="dashboard.html" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/dashboard_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Dashboard
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/my_booking_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      My Bookings
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li><a href="booking-history.html">Booking History</a></li>
+                    <li><a href="import-PNR.html">Import Pnr</a></li>
+                    <li><a href="import-offline.html">Import Offline</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/markup_settings_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Markup Settings
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li><a href="markup-settings.html">Flight Markup</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/settings_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      User Settings
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li><a href="manage-users.html">Manage Users</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/accounts_panel_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Accounts Panel
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li><a href="view-statement.html">View Statement</a></li>
+                    <li>
+                      <a href="instant-topup-payment.html"
+                        >Instant Topup & Payment</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/admin_panel_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Admin Panel
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li>
+                      <a href="agency-registrations.html"
+                        >Agency Registrations</a
+                      >
+                    </li>
+                    <li>
+                      <a href="manage-supplier-api.html">Manage Supplier Api</a>
+                    </li>
+                    <li>
+                      <a href="manage-flight-details.html"
+                        >Manage Flight Details</a
+                      >
+                    </li>
+                    <li><a href="admin-markup.html">Admin Markup</a></li>
+                    <li>
+                      <a href="payment-provider-settings.html"
+                        >Payment Provider Settings</a
+                      >
+                    </li>
+                    <li>
+                      <a href="map-supplier-faretypes.html"
+                        >Map Supplier Faretypes</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item has-submenu">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/admin_panel_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Master Setup
+                    </span>
+                    <i class="fa fa-chevron-down submenu-arrow"></i>
+                  </a>
+                  <ul class="submenu-list">
+                    <li><a href="airlines.html">Airlines</a></li>
+                    <li><a href="currencies.html">Currencies</a></li>
+                    <li><a href="countries.html">Countries</a></li>
+                    <li><a href="states.html">States</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="airports.html">Airports</a></li>
+                    <li><a href="deal-templates.html">Deal Templates</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item logout-item">
+                  <a href="#" class="nav-link">
+                    <span>
+                      <img
+                        src="assets/images/logout_icon.svg"
+                        alt=""
+                        class="nav-icon"
+                      />
+                      Logout
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="black-drop"></div>
       </nav>
@@ -3059,6 +3434,59 @@
           </div>
         </div>
       </div>
+      <!-- Top Up Payment Modal Start -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="topUpPayModal"
+        tabindex="-1"
+        aria-labelledby="topUpPayModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Enter Amount
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4">
+                <div class="col-lg-12">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="firstNameInput"
+                      placeholder="Enter Amount"
+                    />
+                    <label for="firstNameInput">Enter Amount</label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mt-3">
+                <a
+                  href="payment.html"
+                  class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2 px-4"
+                >
+                  Create
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Up Payment  Modal End -->
     </main>
     <footer>
       <div class="container">

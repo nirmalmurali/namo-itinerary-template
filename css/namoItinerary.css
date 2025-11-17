@@ -72,6 +72,7 @@ body:has(header.fixed-top) main {
   font-weight: 400;
 }
 .pt-sans-font-family,
+.profile-header-dropdown-wrapper .dropdown-menu li a,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
 .flight-trip-details-wrapper .from-to-details-wrapper h4,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
@@ -215,7 +216,13 @@ body:has(header.fixed-top) main {
 .booking-details-table-wrapper table tbody tr td p,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table thead th,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
-.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn {
+.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn,
+.airline-modal-wrapper table thead tr th,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.wallet-dropdown-menu .wallet-info-item .wallet-label,
+.wallet-dropdown-menu .wallet-info-item .wallet-value,
+.password-requirements ul li {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -225,7 +232,8 @@ body:has(header.fixed-top) main {
   font-family: "PT Mono", monospace !important;
   font-weight: 400;
 }
-.fs-5 {
+.fs-5,
+.password-requirements ul li i {
   font-size: 0.3125rem !important;
 }
 .fs-6 {
@@ -276,7 +284,8 @@ body:has(header.fixed-top) main {
 .essential-info-content-wrapper .essential-info-content > ul > li p,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
-.smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td {
+.smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
+.password-requirements ul li {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -288,6 +297,7 @@ footer .quick-links-wrapper li a,
 .form-label,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
+.profile-header-dropdown-wrapper .dropdown-menu li a,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
@@ -386,7 +396,11 @@ footer .quick-links-wrapper li a,
 .breadcrumb-wrapper ol .breadcrumb-item.active,
 .booking-history-list li .agency-details-wrapper .table-responsive table tbody tr td,
 .booking-details-table-wrapper table tbody tr td h6,
-.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn {
+.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn,
+.airline-modal-wrapper table thead tr th,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.wallet-dropdown-menu .wallet-info-item .wallet-label,
+.wallet-dropdown-menu .wallet-info-item .wallet-value {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -414,7 +428,8 @@ footer .quick-links-wrapper li a,
 .details-changed-modal .details-changed-body h6,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
 .booking-history-list li h5,
-.booking-details-table-wrapper table tbody tr td p {
+.booking-details-table-wrapper table tbody tr td p,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -711,6 +726,7 @@ footer .quick-links-wrapper li a,
 .form-label,
 .form-check input[type="radio"]:checked + label,
 .form-check input[type="radio"]:not(:checked) + label,
+.profile-header-dropdown-wrapper .dropdown-menu li a,
 .dashboard-platforms-wrapper .platforms-nav-pills .nav-item .nav-link,
 .flight-trip-details-wrapper .from-to-details-wrapper h6,
 .flight-trip-details-wrapper .from-to-details-wrapper p,
@@ -838,7 +854,12 @@ footer .quick-links-wrapper li a,
 .booking-details-table-wrapper table tbody tr td p,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table thead th,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
-.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn {
+.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn,
+.airline-modal-wrapper table thead tr th,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.wallet-dropdown-menu .wallet-info-item .wallet-label,
+.password-requirements ul li {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -849,7 +870,9 @@ footer .quick-links-wrapper li a,
   font-weight: 500 !important;
 }
 .fw-600,
-.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link {
+.smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.active .nav-link,
+.wallet-dropdown-menu .wallet-info-item .wallet-value {
   font-weight: 600 !important;
 }
 .fw-700,
@@ -1001,7 +1024,12 @@ footer .quick-links-wrapper li a,
 .booking-details-table-wrapper table tbody tr td p,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table thead th,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td .dropdown .dropdown-menu li .dropdown-item,
-.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn {
+.smart-data-grid-table-wrapper .smart-data-grid-table-footer .btn-group .btn,
+.airline-modal-wrapper table thead tr th,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
+.wallet-dropdown-menu .wallet-info-item .wallet-label,
+.wallet-dropdown-menu .wallet-info-item .wallet-value {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1152,7 +1180,8 @@ footer .quick-links-wrapper li a,
 .bg-color-ship-grey {
   background-color: #444444 !important;
 }
-.font-color-davy-grey {
+.font-color-davy-grey,
+.password-requirements ul li {
   color: #605b5b !important;
 }
 .bg-color-davy-grey {
@@ -1466,7 +1495,10 @@ footer .quick-links-wrapper li a,
   color: #e4e4e4 !important;
 }
 .bg-color-mercury,
-.smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table thead th {
+.smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table thead th,
+.airline-modal-wrapper table thead tr th,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link:hover,
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.active .nav-link {
   background-color: #e4e4e4 !important;
 }
 .font-color-snow-drift {
@@ -2232,6 +2264,24 @@ textarea.form-control {
 .profile-header-dropdown-wrapper .dropdown-menu li a.active,
 .profile-header-dropdown-wrapper .dropdown-menu li a:active {
   background: transparent;
+}
+.profile-header-dropdown-wrapper .dropdown-menu li.dropdown-submenu {
+  position: relative;
+}
+.profile-header-dropdown-wrapper .dropdown-menu li.dropdown-submenu .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  margin-top: 0;
+  min-width: 180px;
+}
+.profile-header-dropdown-wrapper .dropdown-menu li.dropdown-submenu .dropdown-menu li a::before {
+  width: 4px;
+  height: 4px;
+  content: "";
+  background-color: #4a4a4a;
+  display: inline-block;
+  border-radius: 50%;
 }
 .dashboard-banner-wrapper {
   background-color: #fff2e4;
@@ -6035,4 +6085,140 @@ textarea.form-control {
     border-bottom: 1px solid #e7e7e7;
     padding-bottom: 1rem;
   }
+}
+.airline-modal-wrapper table thead tr th {
+  padding: 0.75rem 1rem;
+  min-width: 115px;
+}
+.airline-modal-wrapper table tbody tr td {
+  border-color: #e4e4e4;
+}
+.airline-modal-wrapper table tbody tr td:first-child {
+  border-left: 1px solid #e4e4e4;
+}
+.airline-modal-wrapper table tbody tr td:last-child {
+  border-right: 1px solid #e4e4e4;
+}
+.dashboard-mobile-nav .dashboard-nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item {
+  margin-bottom: 0rem;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.has-submenu .nav-link {
+  justify-content: space-between;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.has-submenu .nav-link .submenu-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.has-submenu.active .nav-link .submenu-arrow {
+  transform: rotate(180deg);
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.has-submenu.active .submenu-list {
+  display: block;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link .nav-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link:hover .nav-icon {
+  opacity: 1;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item.active .nav-link .nav-icon {
+  opacity: 1;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li {
+  margin-bottom: 0;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a {
+  display: block;
+  padding: 0.5rem 1.5rem 0.5rem 2.5rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  align-items: baseline;
+}
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.wallet-dropdown-menu {
+  min-width: 300px;
+  padding: 1rem !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.wallet-dropdown-menu .wallet-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+.wallet-dropdown-menu .wallet-info-item:last-of-type {
+  border-bottom: none;
+}
+.wallet-dropdown-menu .wallet-info-item .wallet-label {
+  min-width: 90px;
+}
+.wallet-dropdown-menu .wallet-info-item .wallet-value {
+  flex: 1;
+}
+.wallet-dropdown-menu .wallet-action-item .btn {
+  width: 100%;
+  border-radius: 6px;
+}
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  background: transparent;
+}
+.password-toggle-btn .eye-icon {
+  width: 20px;
+  height: 20px;
+}
+.password-requirements ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.password-requirements ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }

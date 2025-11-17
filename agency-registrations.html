@@ -207,7 +207,7 @@
                 <a href="dashboard.html" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/dashboard_icon.svg"
+                      src="assets/images/dashboard_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -219,7 +219,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/my_booking_icon.svg"
+                      src="assets/images/my_booking_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -237,7 +237,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/markup_settings_icon.svg"
+                      src="assets/images/markup_settings_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -253,7 +253,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/settings_icon.svg"
+                      src="assets/images/settings_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -269,7 +269,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/accounts_panel_icon.svg"
+                      src="assets/images/accounts_panel_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -290,7 +290,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/admin_panel_icon.svg"
+                      src="assets/images/admin_panel_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -327,7 +327,7 @@
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/admin_panel_icon.svg"
+                      src="assets/images/master_setup_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -345,11 +345,23 @@
                   <li><a href="deal-templates.html">Deal Templates</a></li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="change-password.html" class="nav-link">
+                  <span>
+                    <img
+                      src="assets/images/change_password_white_icon.svg"
+                      alt=""
+                      class="nav-icon"
+                    />
+                    Change Password
+                  </span>
+                </a>
+              </li>
               <li class="nav-item logout-item">
                 <a href="#" class="nav-link">
                   <span>
                     <img
-                      src="assets/images/logout_icon.svg"
+                      src="assets/images/logout_white_icon.svg"
                       alt=""
                       class="nav-icon"
                     />
@@ -465,11 +477,11 @@
                     <tbody>
                       <tr>
                         <td>03-10-2025</td>
-                        <td>faroektvts@gmail.com</td>
+                        <td>verseholidays@gmail.com</td>
                         <td>AG49396782</td>
-                        <td>Avion Network</td>
+                        <td>I Club Online Services</td>
                         <td>Kerala</td>
-                        <td>Malappuram</td>
+                        <td>Kochi</td>
                         <td>Jhon Due</td>
                         <td>No</td>
                         <td>No</td>
@@ -481,7 +493,7 @@
                               data-bs-toggle="modal"
                               data-bs-target="#lockAgencyModal"
                             >
-                              Block
+                              Unblock
                             </button>
                             <div class="dropdown">
                               <button
@@ -508,18 +520,24 @@
                                   >
                                 </li>
                                 <li>
-                                  <a
+                                  <button
                                     class="dropdown-item"
-                                    href="check-limit.html"
-                                    >Check Limit</a
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
                                   >
+                                    Check Limit
+                                  </button>
                                 </li>
                                 <li>
-                                  <a
+                                  <button
                                     class="dropdown-item"
-                                    href="disable-booking.html"
-                                    >Disable Booking</a
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
                                   >
+                                    Disable Booking
+                                  </button>
                                 </li>
                               </ul>
                             </div>
@@ -581,11 +599,497 @@
                                   </button>
                                 </li>
                                 <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
                                   <a
                                     class="dropdown-item"
-                                    href="disable-booking.html"
-                                    >Disable Booking</a
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
                                   >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03-10-2025</td>
+                        <td>verseholidays@gmail.com</td>
+                        <td>AG49396782</td>
+                        <td>I Club Online Services</td>
+                        <td>Kerala</td>
+                        <td>Kochi</td>
+                        <td>Jhon Due</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>NO RETENTION</td>
+                        <td>
+                          <div class="d-flex align-items-stretch gap-2">
+                            <button
+                              class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 border-0 py-1 px-3"
+                              data-bs-toggle="modal"
+                              data-bs-target="#lockAgencyModal"
+                            >
+                              Unblock
+                            </button>
+                            <div class="dropdown">
+                              <button
+                                class="btn dropdown-toggle p-0 px-1 h-100 border-0 bg-color-primary text-white pt-sans-font-family fw-400 fs-14 rounded-2 py-1 d-flex align-items-center justify-content-center"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="fa fa-chevron-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="view-agency-profile.html"
+                                    >View Profile</a
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="edit-agency-profile.html"
+                                    >Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#checkLimitModal"
+                                  >
+                                    Check Limit
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    class="dropdown-item"
+                                    type="button"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#disableBookingModal"
+                                  >
+                                    Disable Booking
+                                  </button>
                                 </li>
                               </ul>
                             </div>
@@ -738,7 +1242,7 @@
               >
                 <button
                   type="button"
-                  class="btn close-btn"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
                   data-bs-dismiss="modal"
                 >
                   Ok
@@ -899,6 +1403,99 @@
         </div>
       </div>
       <!-- Top Up Payment  Modal End -->
+
+      <!-- Block Agency Modal start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="disableBookingModal"
+        tabindex="-1"
+        aria-labelledby="disableBookingModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/modal_like_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Please confirm!
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Are you sure to allow booking for the agency?
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  No
+                </button>
+                <button
+                  type="button"
+                  href="#"
+                  class="btn agency-lock-proceed-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                  data-bs-target="#disableBookingSuccessModal"
+                  data-bs-toggle="modal"
+                >
+                  Yes, proceed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Agency Modal End -->
+      <!-- Block Agency Success Modal start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="disableBookingSuccessModal"
+        tabindex="-1"
+        aria-labelledby="disableBookingSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Bookings for the agency is now disabled successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Agency Success Modal End -->
     </main>
 
     <script

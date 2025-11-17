@@ -1000,4 +1000,18 @@ $(document).ready(function () {
       $(this).off("hidden.bs.modal");
     });
   });
+  window.togglePassword = function (inputId, button) {
+    const input = document.getElementById(inputId);
+    const eyeIcon = button.querySelector(".eye-icon");
+
+    if (input.type === "password") {
+      input.type = "text";
+      eyeIcon.src = "assets/images/eye_slash_icon.svg";
+      eyeIcon.alt = "Hide";
+    } else {
+      input.type = "password";
+      eyeIcon.src = "assets/images/eye_icon.svg";
+      eyeIcon.alt = "Show";
+    }
+  };
 });
