@@ -4102,7 +4102,7 @@ textarea {
         .fw-400,
         .pt-sans-font-family);
       }
-      .icon-wrapper{
+      .icon-wrapper {
         margin-bottom: 1rem;
       }
     }
@@ -6278,6 +6278,46 @@ textarea {
       .pt-sans-font-family);
       i {
         &:extend(.fs-5);
+      }
+    }
+  }
+}
+.applied-convenience-modal-wrapper {
+  table {
+    thead {
+      tr {
+        th {
+          &:extend(.bg-color-mercury,
+          .fs-14,
+          .fw-400,
+          .pt-sans-font-family,
+          .font-color-secondary);
+          padding: 0.75rem 1rem;
+          min-width: 115px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:nth-child(even) {
+          td {
+            background: @snowDrift !important;
+          }
+        }
+        td {
+          border-color: @mercury;
+          padding: 0.75rem 1rem;
+          &:extend(.font-color-ship-grey,
+          .fs-13,
+          .fw-400,
+          .pt-sans-font-family);
+          &:first-child {
+            border-left: 1px solid @mercury;
+          }
+          &:last-child {
+            border-right: 1px solid @mercury;
+          }
+        }
       }
     }
   }
