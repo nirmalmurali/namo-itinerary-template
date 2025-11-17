@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>Review your Hotel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <link rel="stylesheet" href="css/namoItinerary.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/namo_logo.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler btn p-0 border-0 shadow-none"
+            type="button"
+          >
+            <i
+              class="fa fa-bars font-color-primary fw-500"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center"
+            id="navbarNavAltMarkup"
+          >
+            <!-- <div class="flex-grow-1 d-flex justify-content-center">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact US</a>
+              </div>
+            </div>
+            <a href="/login.html" class="btn fw-400 fs-13">LOGIN / SIGNUP</a> -->
+            <div class="dropdown ms-auto profile-header-dropdown-wrapper">
+              <div
+                class="btn border-0 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div>
+                  <h6 class="fw-400 font-color-heavy-metal fs-16 mb-0 text-end">
+                    Jhone Dou
+                  </h6>
+                  <p
+                    class="fw-400 font-color-charcoal-grey mb-0 text-end fs-12"
+                  >
+                    Agent Code : 64605
+                  </p>
+                </div>
+                <img
+                  src="assets/images/profile_avathar.png"
+                  alt=""
+                  class="profile-img"
+                  width="35"
+                  height="35"
+                />
+                <i
+                  class="fa fa-ellipsis-v font-color-charcoal-grey"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />
+                    Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />My
+                    booking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/dashboard_icon.svg"
+                      alt=""
+                    />Wallet</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />Markup
+                    Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/dashboard_icon.svg"
+                      alt=""
+                    />Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/dashboard_icon.svg"
+                      alt=""
+                    />Accounts Panel</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />My
+                    profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/dashboard_icon.svg"
+                      alt=""
+                    />Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-nav-menu">
+          <div class="d-flex justify-content-end w-100">
+            <button class="menu-close btn p-0 border-0">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#">About Us</a>
+              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Contact US</a>
+            </div>
+          </div>
+          <a href="/login.html" class="btn fw-400 fs-13 view-more-btn"
+            >LOGIN / SIGNUP</a
+          >
+        </div>
+        <div class="black-drop"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="bg-color-desert-storm">
+        <div class="container">
+          <div class="review-hotel-booking-wrapper">
+            <div class="review-hotel-booking-content">
+              <h3 class="font-color-secondary fw-700 fs-18 pt-sans-font-family">
+                Review your Hotel
+              </h3>
+              <div class="review-hotel-details-wrapper bg-color-white">
+                <div class="row g-3">
+                  <div class="col-lg-8">
+                    <div class="hotel-details-header overflow-hidden">
+                      <div
+                        class="d-flex align-items-center flex-wrap column-gap-3 row-gap-1"
+                      >
+                        <h5
+                          class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                        >
+                          The Pride Hotel
+                        </h5>
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="assets/images/star_rate_img.svg" alt="" />
+                          <img src="assets/images/star_rate_img.svg" alt="" />
+                          <img src="assets/images/star_rate_img.svg" alt="" />
+                          <img src="assets/images/star_rate_img.svg" alt="" />
+                          <img src="assets/images/star_rate_img.svg" alt="" />
+                        </div>
+                      </div>
+                      <p
+                        class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 text-overflow-ellipsis"
+                      >
+                        <img
+                          src="assets/images/hotel_address_icon.svg"
+                          alt=""
+                        />
+                        93, Richmond Road, Bengaluru, Karnataka, IN 560025
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 text-end d-flex justify-content-end align-items-center gap-2"
+                  >
+                    <p
+                      class="font-color-sea-green fs-14 fw-400 mb-0 pt-sans-font-family"
+                    >
+                      Refundable
+                    </p>
+                    <button
+                      class="show-cancellation-policy border-0 btn room-more-info flex-shrink-0"
+                    >
+                      Cancellation Policy
+                    </button>
+                  </div>
+                </div>
+                <div class="row g-3 pt-3">
+                  <div class="col-lg-4">
+                    <img
+                      src="assets/images/hotel_img.png"
+                      alt=""
+                      class="rounded-2 h-100 w-100 object-fit-cover"
+                    />
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="selected-room-facilities-wrapper">
+                      <div class="selected-room-date-details">
+                        <div
+                          class="d-flex align-items-center justify-content-between gap-4 flex-column flex-sm-row p-3 w-100"
+                        >
+                          <div class="dropdown">
+                            <a
+                              class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                              href="#"
+                              role="button"
+                              aria-expanded="false"
+                            >
+                              Check In
+                              <i
+                                class="fa fa-angle-down font-color-primary"
+                                aria-hidden="true"
+                              ></i>
+                              <input
+                                type="text"
+                                class="form-control"
+                                readonly=""
+                                id="depatureDate"
+                                style="background: #fff; cursor: pointer"
+                                placeholder="Select dates"
+                                hidden=""
+                              />
+                            </a>
+                            <h4
+                              class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                            >
+                              <b class="fs-25 fw-700">12</b> May’ 25
+                            </h4>
+                            <p
+                              class="fs-13 fw-400 font-color-gravel-grey mb-0 pt-sans-font-family"
+                            >
+                              sunday
+                            </p>
+                          </div>
+                          <div class="text-center">
+                            <img src="assets/images/line_icon.svg" alt="" />
+                            <h4
+                              class="fs-14 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                            >
+                              1 NIGHT
+                            </h4>
+                          </div>
+                          <div class="dropdown">
+                            <a
+                              class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                              href="#"
+                              role="button"
+                              aria-expanded="false"
+                            >
+                              Check In
+                              <i
+                                class="fa fa-angle-down font-color-primary"
+                                aria-hidden="true"
+                              ></i>
+                              <input
+                                type="text"
+                                class="form-control"
+                                readonly=""
+                                id="depatureDate"
+                                style="background: #fff; cursor: pointer"
+                                placeholder="Select dates"
+                                hidden=""
+                              />
+                            </a>
+                            <h4
+                              class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                            >
+                              <b class="fs-25 fw-700">12</b> May’ 25
+                            </h4>
+                            <p
+                              class="fs-13 fw-400 font-color-gravel-grey mb-0 pt-sans-font-family"
+                            >
+                              sunday
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex flex-column align-items-center align-items-sm-start review-hotel-room-guest justify-content-center flex-shrink-0"
+                        >
+                          <div class="dropdown">
+                            <button
+                              class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              data-bs-auto-close="outside"
+                            >
+                              Rooms &amp; guests
+                              <i
+                                class="fa fa-angle-down font-color-primary"
+                                aria-hidden="true"
+                              ></i>
+                            </button>
+                            <div
+                              class="dropdown-menu room-guest-dropdown-wrapper p-0"
+                            >
+                              <ul class="added-room-list list-unstyled mb-0">
+                                <li>
+                                  <div>
+                                    <h5>Room 1</h5>
+                                    <p>
+                                      <span>1</span> Adult
+                                      <span>3</span> Children
+                                    </p>
+                                  </div>
+                                  <div class="d-flex align-items-center gap-1">
+                                    <button
+                                      class="btn border-0 p-0 room-remove-btn"
+                                    >
+                                      <img
+                                        src="assets/images/room_close_icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <button
+                                      class="btn border-0 p-0 room-edit-btn"
+                                    >
+                                      <img
+                                        src="assets/images/room_edit_icon.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                  </div>
+                                </li>
+                              </ul>
+                              <div class="room-guest-dropdown-body">
+                                <div
+                                  class="d-flex justify-content-between align-items-center"
+                                >
+                                  <h4>Room 1</h4>
+                                  <button
+                                    class="btn border-0 p-0 room-remove-btn"
+                                  >
+                                    <img
+                                      src="assets/images/room_close_icon.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                </div>
+                                <ul
+                                  class="room-selection-wrapper list-unstyled"
+                                >
+                                  <li>
+                                    <h5>Adults</h5>
+                                    <div class="room-add-count-wrapper">
+                                      <h6 class="count-view">1</h6>
+                                      <div class="d-flex align-items-center">
+                                        <button class="btn count-decrease-btn">
+                                          -
+                                        </button>
+                                        <button class="btn count-increase-btn">
+                                          +
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div>
+                                      <h5>Children</h5>
+                                      <p>0- 12 Years</p>
+                                    </div>
+                                    <div class="room-add-count-wrapper">
+                                      <h6 class="count-view">0</h6>
+                                      <div class="d-flex align-items-center">
+                                        <button class="btn count-decrease-btn">
+                                          -
+                                        </button>
+                                        <button class="btn count-increase-btn">
+                                          +
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div
+                                class="room-guest-dropdown-footer d-flex justify-content-between align-items-center"
+                              >
+                                <button
+                                  class="btn border-0 p-0 room-add-btn font-color-sea-green d-flex align-items-center gap-1 fs-12 fw-700 pt-sans-font-family"
+                                >
+                                  <img
+                                    src="assets/images/green_plus_icon.png"
+                                    alt=""
+                                  />
+                                  Add another room
+                                </button>
+                                <button
+                                  class="btn done-btn border-0 bg-color-primary text-white rounded-2"
+                                >
+                                  Done
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <h4
+                            class="fs-15 fw-400 font-color-secondary pt-sans-font-family mb-0"
+                          >
+                            <b class="fs-25 fw-700">1</b> Room
+                            <b class="fs-25 fw-700">2</b> Guests
+                          </h4>
+                        </div>
+                      </div>
+
+                      <div class="hotel-ratings selected-room-rating-wrapper">
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                          <p
+                            class="fs-14 fw-400 font-color-gravel-grey bg-color-merino pt-sans-font-family mb-0 p-1 rounded-1"
+                          >
+                            Breakfast Available
+                          </p>
+                          <p
+                            class="fs-14 fw-400 font-color-gravel-grey bg-color-frosted-mint pt-sans-font-family mb-0 p-1 rounded-1"
+                          >
+                            Cancellation Available
+                          </p>
+                        </div>
+                        <a
+                          href="#"
+                          class="btn bg-color-primary text-white rounded-1 pt-sans-font-family fs-14 fw-400"
+                          >Change Room</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive room-count-table-wrapper mt-4">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><h4>Deluxe Twin Room</h4></td>
+                        <td>
+                          <div class="d-flex align-items-center gap-3">
+                            <p><span>2</span> Adults</p>
+                            <p><span>1</span> Child</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><h4>Deluxe Twin Room</h4></td>
+                        <td>
+                          <div class="d-flex align-items-center gap-3">
+                            <p><span>2</span> Adults</p>
+                            <p><span>1</span> Child</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Traveller Details
+              </h4>
+              <div class="bg-color-white review-taveller-details-wrapper">
+                <div class="accordion" id="travellerDetailsAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button fw-700 font-color-secondary pt-sans-font-family fs-16"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Room 1
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#travellerDetailsAccordion"
+                    >
+                      <div class="accordion-body">
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>ADULT 1</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="adultOneFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="adultOneFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultOneFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="adultOneFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultOneLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="adultOneLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>ADULT 2</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="adultTwoFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="adultTwoFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultTwoFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="adultTwoFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultTwoLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="adultTwoLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>Child</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="childFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="childFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="childFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="childFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="childLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="childLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button fw-700 font-color-secondary pt-sans-font-family fs-16"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
+                      >
+                        Room 2
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#travellerDetailsAccordion"
+                    >
+                      <div class="accordion-body">
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>ADULT 1</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="adultOneFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="adultOneFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultOneFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="adultOneFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultOneLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="adultOneLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>ADULT 2</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="adultTwoFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="adultTwoFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultTwoFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="adultTwoFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="adultTwoLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="adultTwoLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row g-3 align-items-center">
+                          <div class="col-lg-2">
+                            <p>Child</p>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="form-floating">
+                              <select
+                                class="form-select"
+                                id="childFirstNameTitle"
+                                aria-label="Floating label select example"
+                              >
+                                <option selected>MR</option>
+                                <option value="1">MRS</option>
+                              </select>
+                              <label for="childFirstNameTitle">Title</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="childFirstName"
+                                placeholder="First Name"
+                              />
+                              <label for="childFirstName">First Name</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="form-floating">
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="childLastName"
+                                placeholder="Last Name"
+                              />
+                              <label for="childLastName">Last Name</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Special Request
+              </h4>
+              <div class="bg-white-section-padding bg-color-white">
+                <p
+                  class="font-color-primary fs-14 fw-400 pt-sans-font-family mb-2 d-flex gap-2"
+                >
+                  <img src="assets/images/info_icon.svg" />
+                  Special requests are subject to each hotel's availability, may
+                  be chargeable and can't be guaranteed
+                </p>
+                <div class="">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="Enter Your Special Request"
+                  ></textarea>
+                </div>
+              </div>
+              <h4
+                class="fs-18 fw-700 font-color-secondary pt-sans-font-family mt-4 mb-3"
+              >
+                Essential Information
+              </h4>
+              <div class="essential-info-content-wrapper bg-color-white">
+                <div
+                  class="essential-info-content-header bg-white-section-padding"
+                >
+                  Inclusions
+                </div>
+                <div
+                  class="essential-info-content body bg-white-section-padding"
+                >
+                  <ul class="list-unstyled mb-0">
+                    <li class="">
+                      <h4>
+                        Room 1
+                        <span
+                          >Free stay for the kid Room Only free stay for the kid
+                          | room only</span
+                        >
+                      </h4>
+                    </li>
+                    <li class="">
+                      <h4>
+                        Room 2
+                        <span
+                          >Free stay for the kid Room Only free stay for the kid
+                          | room only</span
+                        >
+                      </h4>
+                    </li>
+                    <li class="">
+                      <h4>
+                        Room 1
+                        <span>(Room Policy)</span>
+                      </h4>
+                      <p>
+                        Aadhar, Passport, Drivers License and Government IDs are
+                        acceptable ID Proofs Certain hotels may have mandatory
+                        gala dinner charges for Christmas and New Year’s Eve,
+                        which, if applicable, are payable directly at the
+                        property during check-in. Gym will be under maintenance
+                        from 27th April till 5th May 2024 SPA will be closed
+                        till 25th May 2024
+                      </p>
+                    </li>
+                    <li class="">
+                      <h4>
+                        Room 2
+                        <span>(Room Policy)</span>
+                      </h4>
+                      <p>
+                        Aadhar, Passport, Drivers License and Government IDs are
+                        acceptable ID Proofs Certain hotels may have mandatory
+                        gala dinner charges for Christmas and New Year’s Eve,
+                        which, if applicable, are payable directly at the
+                        property during check-in. Gym will be under maintenance
+                        from 27th April till 5th May 2024 SPA will be closed
+                        till 25th May 2024
+                      </p>
+                    </li>
+                    <li>
+                      <h5
+                        class="fw-400 fs-18 pt-sans-font-family font-color-secondary"
+                      >
+                        Checkin Special Instructions
+                      </h5>
+                      <ul class="list-unstyled">
+                        <li>
+                          We never guarantee on Extra Bed for Extra Adult, It
+                          will be subject to availability and may be Chargeable
+                          also.
+                        </li>
+                        <li>
+                          During Christmas &amp; New year, Hotel May Request You
+                          to pay for Gala Dinner Charges at the time of
+                          Check-inn.
+                        </li>
+                        <li>
+                          These additional charge are not included in the
+                          booking amount and will be collected directly at the
+                          hotel.
+                        </li>
+                        <li>
+                          Tourism Taxes, City Taxes, Resort Fee, Etc Hotel May
+                          request You to pay at the time of Check-inn (Local
+                          Currency).
+                        </li>
+                        <li>
+                          As per the hotel policy, there might be peak season
+                          and long weekend surcharges, which would be payable by
+                          guest directly at the hotel.
+                        </li>
+                        <li>
+                          In case of peak dates or technical issues causing the
+                          hotel to be sold out, an alternative hotel of equal
+                          booking value or a full refund will be provided.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row justify-content-end pt-3">
+                <div class="col-md-5 col-xl-4">
+                  <a
+                    href="review-hotel-details.html"
+                    class="btn bg-color-primary text-white fs-14 fw-700 pt-sans-font-family w-100"
+                    >Continue to Payment</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="review-hotel-fare-details-wrapper">
+              <h3 class="font-color-secondary fw-700 fs-18 pt-sans-font-family">
+                Fare Details
+              </h3>
+              <div class="d-flex flex-column gap-3">
+                <div class="review-hotel-fare-sidebar">
+                  <div
+                    class="accordion total-fare-accordion"
+                    id="totalFareAccordion"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button pt-sans-font-family"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#roomRatesCollapse"
+                          aria-expanded="true"
+                          aria-controls="roomRatesCollapse"
+                        >
+                          Room Rates
+                          <span class="ms-auto">₹ 32,140</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="roomRatesCollapse"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#totalFareAccordion"
+                      >
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <h6>Room 1</h6>
+                              <p>₹ 16,070</p>
+                            </li>
+                            <li>
+                              <h6>Room 2</h6>
+                              <p>₹ 16,070</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button pt-sans-font-family collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#taxChargesCollapse"
+                          aria-expanded="false"
+                          aria-controls="taxChargesCollapse"
+                        >
+                          Tax & Charges
+                          <span class="ms-auto">₹ 2,724</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="taxChargesCollapse"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#totalFareAccordion"
+                      >
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <h6>Taxes and Charges</h6>
+                              <p>₹ 1,845</p>
+                            </li>
+                            <li>
+                              <h6>Other Charges</h6>
+                              <p>₹ 880</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex align-items-center justify-content-between gap-2 py-2"
+                  >
+                    <h6
+                      class="fw-400 pt-sans-font-family font-color-secondary fs-16 mb-0"
+                    >
+                      Total Fare
+                    </h6>
+                    <h6 class="fw-700 mb-0 font-color-secondary fs-16">
+                      ₹ 34,864
+                    </h6>
+                  </div>
+                </div>
+                <div class="review-hotel-fare-sidebar">
+                  <div class="accordion" id="netDisplayAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button pt-sans-font-family collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#netDisplayCollapse"
+                          aria-expanded="false"
+                          aria-controls="netDisplayCollapse"
+                        >
+                          Net Display
+                          <span class="ms-auto">₹ 32,140</span>
+                        </button>
+                      </h2>
+                      <div
+                        id="netDisplayCollapse"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#netDisplayAccordion"
+                      >
+                        <div class="accordion-body">
+                          <ul class="list-unstyled">
+                            <li>
+                              <h6>Net Deductable/Payable</h6>
+                              <p>₹ 16,070</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="review-hotel-fare-sidebar">
+                  <div class="accordion" id="moreDetailsAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button pt-sans-font-family collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#moreDetailsCollapse"
+                          aria-expanded="false"
+                          aria-controls="moreDetailsCollapse"
+                        >
+                          More Details
+                        </button>
+                      </h2>
+                      <div
+                        id="moreDetailsCollapse"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#moreDetailsAccordion"
+                      >
+                        <div class="accordion-body">
+                          <div>
+                            <label for="enterMarkup" class="form-label"
+                              >Apply Markup</label
+                            >
+                            <textarea
+                              id="enterMarkup"
+                              type="text"
+                              class="form-control"
+                              placeholder=" Enter Markup"
+                              rows="2"
+                            ></textarea>
+                            <div class="w-100 d-flex justify-content-end mt-1">
+                              <button
+                                class="btn rounded-2 bg-color-primary text-white pt-sans-font-family fs-14 fw-400 mt-2 ms-auto"
+                              >
+                                Apply
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cancellation Policy popup start -->
+      <div class="draggable-side-bar-popup cancellation-policy-side-bar-popup">
+        <div
+          class="side-bar-popup-header d-flex justify-content-between align-items-center p-3"
+        >
+          <h4
+            class="fs-16 fw-700 mb-0 font-color-secondary pt-sans-font-family"
+          >
+            Cancellation Policy
+          </h4>
+          <button class="btn close-btn p-0 border-0">
+            <img src="assets/images/close_round_icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="side-bar-popup-body p-3">
+          <div class="cancellation-policy-wrapper">
+            <h5 class="fs-18 fw-400 pt-sans-font-family font-color-secondary">
+              Deluxe King Room
+            </h5>
+            <ul class="list-unstyled">
+              <li>
+                <div class="policy-description-wrapper">
+                  <img src="assets/images/calender_green_icon.svg" alt="" />
+                  <div>
+                    <p>From</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                  <div>
+                    <p>To</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                </div>
+                <div class="cancellation-charges-wrapper">
+                  <p>Cancellation Charges</p>
+                  <h5>₹ 0</h5>
+                </div>
+              </li>
+              <li class="active-charges">
+                <div class="policy-description-wrapper">
+                  <img src="assets/images/calender_green_icon.svg" alt="" />
+                  <div>
+                    <p>From</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                  <div>
+                    <p>To</p>
+                    <h6>24 Sep 2025 12:00:00 am</h6>
+                  </div>
+                </div>
+                <div class="cancellation-charges-wrapper">
+                  <p>Cancellation Charges</p>
+                  <h5>₹ 15000</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Cancellation Policy popup end -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 footer-company-info">
+            <img src="assets/images/footer_logo.svg" alt="" />
+            <p class="pt-sans-font-family fs-14 fw-400 text-white mt-2 mb-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <div class="social-media-wrapper">
+              <p class="fs-15 fw-400 text-white pt-sans-font-family mb-0">
+                Follow us
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/facebook_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/twitter_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/instagram_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/linkedin_icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 d-flex col-sm-6 justify-content-sm-center first-quick-link"
+          >
+            <div>
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Quick Links
+              </h5>
+              <ul class="quick-links-wrapper">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About US</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 d-flex col-sm-6 justify-content-lg-center second-quick-link"
+          >
+            <div>
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Quick Links
+              </h5>
+              <ul class="quick-links-wrapper">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About US</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 d-flex justify-content-sm-center">
+            <div class="ps-lg-5 ps-sm-3">
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Contact Info
+              </h5>
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-3">
+                201, 2nd Floor, Antariksh Thakoor House <br />
+                Makwana Road, Marol, Andheri(E) <br />
+                Mumbai, Maharashtra 400059
+              </p>
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-2">
+                9958377492, 9958377493
+              </p>
+              <a
+                href="mailto:ajish44@gmail.com"
+                class="pt-sans-font-family fs-14 fw-400 text-white text-decoration-none"
+                >ajish44@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrapper flex-column flex-sm-row">
+          <p class="fs-14 fw-400 text-white pt-sans-font-family mb-0">
+            © 2024 Travel. All rights reserved.
+          </p>
+          <a
+            href="#"
+            class="fs-14 fw-400 text-white pt-sans-font-family mb-0 text-decoration-none"
+          >
+            Privacy Policy Terms of Use
+          </a>
+        </div>
+      </div>
+      <div class="back-drop"></div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="js/namoItinerary.js"></script>
+  </body>
+</html>

@@ -357,14 +357,15 @@ $(document).ready(function () {
     $(".mobile-nav-menu").toggleClass("active");
     $(".black-drop").toggleClass("active");
   });
-  $(".black-drop,.filter-mob-menu-close,.hotel-filter-mob-menu-close").click(
-    function () {
-      $(".mobile-nav-menu").removeClass("active");
-      $(".black-drop").removeClass("active");
-      $(".flight-filter-side-bar ").removeClass("active");
-      $(".hotel-filter-side-bar ").removeClass("active");
-    }
-  );
+  $(
+    ".black-drop,.filter-mob-menu-close,.hotel-filter-mob-menu-close,.dashboard-menu-close"
+  ).click(function () {
+    $(".mobile-nav-menu").removeClass("active");
+    $(".black-drop").removeClass("active");
+    $(".flight-filter-side-bar ").removeClass("active");
+    $(".hotel-filter-side-bar ").removeClass("active");
+    $(".smart-dashboard-aside-wrapper").removeClass("active");
+  });
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
       $(this).next("input").focus();
@@ -567,6 +568,18 @@ $(document).ready(function () {
   $(".open-fare-rules-btn").on("click", function () {
     $(".fare-rules-side-bar-popup").addClass("active");
   });
+  $(".show-cancellation-policy").on("click", function () {
+    $(".cancellation-policy-side-bar-popup").addClass("active");
+  });
+  $(".show-essential-info").on("click", function () {
+    $(".essential-info-side-bar-popup").addClass("active");
+  });
+  $(".show-room-info").on("click", function () {
+    $(".room-info-side-bar-popup").addClass("active");
+  });
+  // $(".essential-info-btn").on("click", function () {
+  //   $(".essential-information-side-bar-popup").addClass("active");
+  // });
   // Close sidebar
   $(".draggable-side-bar-popup .close-btn").on("click", function () {
     $(".draggable-side-bar-popup").removeClass("active");
@@ -683,7 +696,21 @@ $(document).ready(function () {
   $(".horizontal-scrollbar-wrapper").each(function () {
     initHorizontalScrollbar($(this));
   });
-
+  // Re-initialize horizontal scrollbar when Bootstrap tabs are shown
+  $(document).on("shown.bs.tab", 'a[data-bs-toggle="tab"]', function (e) {
+    // Find all horizontal scrollbar wrappers in the newly shown tab
+    const targetPane = $($(this).attr("data-bs-target"));
+    targetPane.find(".horizontal-scrollbar-wrapper").each(function () {
+      initHorizontalScrollbar($(this));
+    });
+  });
+  // Also handle Bootstrap pills
+  $(document).on("shown.bs.tab", 'button[data-bs-toggle="pill"]', function (e) {
+    const targetPane = $($(this).attr("data-bs-target"));
+    targetPane.find(".horizontal-scrollbar-wrapper").each(function () {
+      initHorizontalScrollbar($(this));
+    });
+  });
   // Payment tab checkbox synchronization
 
   // When nav-link is clicked, check/uncheck corresponding checkbox and show tab
@@ -786,7 +813,7 @@ $(document).ready(function () {
   $(document).on("click", ".count-decrease-btn", function (e) {
     e.preventDefault();
     const $countView = $(this)
-      .closest(".room-add_count-wrapper")
+      .closest(".room_add_count-wrapper")
       .find(".count-view");
     let currentCount = parseInt($countView.text()) || 0;
 
@@ -836,48 +863,155 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // 1) Choose your coordinates (example: near the Bronx, NY)
-  const lat = 40.8467;
-  const lng = -73.8786;
-  const zoom = 12;
+  // Initialize Leaflet map only if the map container exists
+  if ($("#map").length && typeof L !== "undefined") {
+    // 1) Choose your coordinates (example: near the Bronx, NY)
+    const lat = 40.8467;
+    const lng = -73.8786;
+    const zoom = 12;
 
-  // 2) Init map
-  const map = L.map("map", {
-    center: [lat, lng],
-    zoom: zoom,
-    scrollWheelZoom: false, // nicer for banner sections
-    dragging: true,
-  });
+    // 2) Init map
+    const map = L.map("map", {
+      center: [lat, lng],
+      zoom: zoom,
+      scrollWheelZoom: false, // nicer for banner sections
+      dragging: true,
+    });
 
-  // 3) Light/gray basemap (similar to your screenshot)
-  L.tileLayer(
-    "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-    {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+    // 3) Light/gray basemap (similar to your screenshot)
+    L.tileLayer(
+      "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+      {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+      }
+    ).addTo(map);
+
+    // 4) Custom orange marker (SVG)
+    const orangePin = L.icon({
+      iconUrl:
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(`
+            <svg width="40" height="56" viewBox="0 0 40 56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M20 0c11 0 20 8.8 20 19.6C40 35 20 56 20 56S0 35 0 19.6C0 8.8 9 0 20 0z" fill="#FF8A00"/>
+                <circle cx="20" cy="20" r="8" fill="#fff"/>
+              </g>
+            </svg>
+          `),
+      iconSize: [40, 56],
+      iconAnchor: [20, 56], // tip of the pin
+      popupAnchor: [0, -50],
+    });
+
+    // 5) Add marker + optional popup
+    L.marker([lat, lng], { icon: orangePin })
+      .addTo(map)
+      .bindPopup("Our location")
+      .openPopup();
+  }
+
+  // With this:
+  $(document).on("click", ".section-nav-btns .btn", function (e) {
+    e.preventDefault();
+
+    const targetSection = $(this).attr("href");
+
+    // Check if target section exists
+    if ($(targetSection).length) {
+      const offset = $(targetSection).offset().top - 100;
+
+      $("html, body").animate(
+        {
+          scrollTop: offset,
+        },
+        500
+      );
     }
-  ).addTo(map);
 
-  // 4) Custom orange marker (SVG)
-  const orangePin = L.icon({
-    iconUrl:
-      "data:image/svg+xml;utf8," +
-      encodeURIComponent(`
-          <svg width="40" height="56" viewBox="0 0 40 56" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" fill-rule="evenodd">
-              <path d="M20 0c11 0 20 8.8 20 19.6C40 35 20 56 20 56S0 35 0 19.6C0 8.8 9 0 20 0z" fill="#FF8A00"/>
-              <circle cx="20" cy="20" r="8" fill="#fff"/>
-            </g>
-          </svg>
-        `),
-    iconSize: [40, 56],
-    iconAnchor: [20, 56], // tip of the pin
-    popupAnchor: [0, -50],
+    // Update active state regardless
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+  $(document).on(
+    "click",
+    ".smart-dashboard-search-wrapper .section-nav-btns .btn",
+    function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    }
+  );
+  // Handle submenu toggle - using event delegation
+  $(document).on(
+    "click",
+    ".dashboard-nav-list .nav-item.has-submenu > .nav-link",
+    function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const $parentItem = $(this).closest(".nav-item");
+      const $submenu = $parentItem.find(".submenu-list");
+      const isCurrentlyActive = $parentItem.hasClass("active");
+
+      // Close other open submenus and remove their active class
+      $(".dashboard-nav-list .nav-item.has-submenu")
+        .not($parentItem)
+        .removeClass("active");
+      $(".dashboard-nav-list .submenu-list").not($submenu).slideUp(300);
+
+      // Toggle current submenu with explicit active class handling
+      if (isCurrentlyActive) {
+        // If already active, close it and remove active class
+        $parentItem.removeClass("active");
+        $submenu.slideUp(300);
+      } else {
+        // If not active, open it and add active class
+        $parentItem.addClass("active");
+        $submenu.slideDown(300);
+      }
+    }
+  );
+
+  // Handle submenu item click - using event delegation
+  $(document).on("click", ".submenu-list a", function (e) {
+    // Remove active class from all submenu items
+    $(".submenu-list a").removeClass("active");
+    // Add active class to clicked item
+    $(this).addClass("active");
   });
 
-  // 5) Add marker + optional popup
-  L.marker([lat, lng], { icon: orangePin })
-    .addTo(map)
-    .bindPopup("Our location")
-    .openPopup();
+  // Mobile menu toggle (if needed)
+  $(document).on("click", ".dashboard-menu-toggle", function () {
+    $(".smart-dashboard-aside-wrapper").toggleClass("active");
+  });
+
+  $(document).on("click", ".show-dashboard-menu", function () {
+    $(".smart-dashboard-aside-wrapper").addClass("active");
+    $(".black-drop").addClass("active");
+  });
+  $(".agency-lock-proceed-btn").on("click", function () {
+    // Close the confirmation modal
+    $("#lockAgencyModal").modal("hide");
+
+    // Wait for the first modal to fully close before opening the success modal
+    $("#lockAgencyModal").on("hidden.bs.modal", function () {
+      // Show success modal
+      $("#lockAgencySuccessModal").modal("show");
+
+      // Unbind the event to prevent multiple triggers
+      $(this).off("hidden.bs.modal");
+    });
+  });
+  window.togglePassword = function (inputId, button) {
+    const input = document.getElementById(inputId);
+    const eyeIcon = button.querySelector(".eye-icon");
+
+    if (input.type === "password") {
+      input.type = "text";
+      eyeIcon.src = "assets/images/eye_slash_icon.svg";
+      eyeIcon.alt = "Hide";
+    } else {
+      input.type = "password";
+      eyeIcon.src = "assets/images/eye_icon.svg";
+      eyeIcon.alt = "Show";
+    }
+  };
 });
