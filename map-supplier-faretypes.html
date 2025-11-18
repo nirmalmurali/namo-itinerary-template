@@ -343,6 +343,12 @@
                   <li><a href="cities.html">Cities</a></li>
                   <li><a href="airports.html">Airports</a></li>
                   <li><a href="deal-templates.html">Deal Templates</a></li>
+                  <li>
+                    <a href="change-payment-date.html">Change Payment Date</a>
+                  </li>
+                  <li><a href="customer-group.html">Customer Group</a></li>
+                  <li><a href="sales-person.html">Sales Person</a></li>
+                  <li><a href="fare-types.html">Fare Types</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -996,9 +1002,10 @@
 
                 <div class="row g-3 mt-2">
                   <div class="col-12">
-                    <h6 class="font-color-secondary fw-600 fs-14 mb-3">
+                    <h6 class="font-color-secondary fw-400 fs-14 mb-0">
                       Mandatory Fields
                     </h6>
+                    <hr class="mb-0 mt-2" />
                   </div>
                   <div class="col-md-4">
                     <div class="form-check">
@@ -1046,12 +1053,13 @@
                     </div>
                   </div>
                 </div>
-
+                <hr class="mb-0" />
                 <div class="row g-3 mt-1">
                   <div class="col-12">
-                    <h6 class="font-color-secondary fw-600 fs-14 mb-3">
+                    <h6 class="font-color-secondary fw-400 fs-14 mb-0">
                       Bundled Fare Fields
                     </h6>
+                    <hr class="mb-0 mt-3" />
                   </div>
                   <div class="col-md-4">
                     <div class="form-check">
@@ -1099,7 +1107,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hr"></div>
+                <hr class="mb-0 mt-3" />
                 <div class="row g-3 mt-1">
                   <div class="col-md-4">
                     <div class="form-check">
@@ -1132,6 +1140,7 @@
                     </div>
                   </div>
                 </div>
+                <hr class="mb-0 mt-3" />
               </form>
 
               <div class="d-flex justify-content-end mt-4">
@@ -1185,8 +1194,8 @@
                       >Supplier Id</label
                     >
                     <select class="form-select">
-                      <option>Select</option>
-                      <option value="TJACK" selected>TJACK</option>
+                      <option selected>Select</option>
+                      <option value="TJACK">TJACK</option>
                       <option value="AMADEUS">AMADEUS</option>
                       <option value="SABRE">SABRE</option>
                     </select>
@@ -1196,7 +1205,11 @@
                       class="form-label fs-14 fw-400 font-color-charcoal-grey"
                       >Supplier Fare Text</label
                     >
-                    <input type="text" class="form-control" value="Published" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Supplier Fare Text"
+                    />
                   </div>
                   <div class="col-md-4">
                     <label
@@ -1204,8 +1217,8 @@
                       >Fare Text</label
                     >
                     <select class="form-select">
-                      <option>Select</option>
-                      <option value="Published" selected>Published</option>
+                      <option selected>Select</option>
+                      <option value="Published">Published</option>
                       <option value="SME">SME</option>
                       <option value="Corporate">Corporate</option>
                       <option value="Flexi">Namo Flexi</option>
@@ -1216,20 +1229,21 @@
 
                 <div class="row g-3 mt-2">
                   <div class="col-12">
-                    <h6 class="font-color-secondary fw-600 fs-14 mb-3">
+                    <h6 class="font-color-secondary fw-400 fs-14 mb-0">
                       Mandatory Fields
                     </h6>
+                    <hr class="mb-0 mt-2" />
                   </div>
                   <div class="col-md-4">
                     <div class="form-check">
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editDobRequired"
+                        id="dobRequired"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editDobRequired"
+                        for="dobRequired"
                       >
                         Dob Required
                       </label>
@@ -1240,11 +1254,11 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editPassportRequired"
+                        id="passportRequired"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editPassportRequired"
+                        for="passportRequired"
                       >
                         Passport Required
                       </label>
@@ -1255,34 +1269,35 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editPanRequired"
+                        id="panRequired"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editPanRequired"
+                        for="panRequired"
                       >
                         Pan Required
                       </label>
                     </div>
                   </div>
                 </div>
-
+                <hr class="mb-0" />
                 <div class="row g-3 mt-1">
                   <div class="col-12">
-                    <h6 class="font-color-secondary fw-600 fs-14 mb-3">
+                    <h6 class="font-color-secondary fw-400 fs-14 mb-0">
                       Bundled Fare Fields
                     </h6>
+                    <hr class="mb-0 mt-3" />
                   </div>
                   <div class="col-md-4">
                     <div class="form-check">
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editSeatMandatory"
+                        id="seatMandatory"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editSeatMandatory"
+                        for="seatMandatory"
                       >
                         Seat Mandatory
                       </label>
@@ -1293,11 +1308,11 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editMealMandatory"
+                        id="mealMandatory"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editMealMandatory"
+                        for="mealMandatory"
                       >
                         Meal Mandatory
                       </label>
@@ -1308,29 +1323,29 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editBaggageMandatory"
+                        id="baggageMandatory"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editBaggageMandatory"
+                        for="baggageMandatory"
                       >
                         Bag Mandatory
                       </label>
                     </div>
                   </div>
                 </div>
-
+                <hr class="mb-0 mt-3" />
                 <div class="row g-3 mt-1">
                   <div class="col-md-4">
                     <div class="form-check">
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editForDomestic"
+                        id="forDomestic"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editForDomestic"
+                        for="forDomestic"
                       >
                         For Domestic
                       </label>
@@ -1341,17 +1356,18 @@
                       <input
                         class="form-check-input"
                         type="checkbox"
-                        id="editForInternational"
+                        id="forInternational"
                       />
                       <label
                         class="form-check-label fs-14 font-color-charcoal-grey"
-                        for="editForInternational"
+                        for="forInternational"
                       >
                         For International
                       </label>
                     </div>
                   </div>
                 </div>
+                <hr class="mb-0 mt-3" />
               </form>
 
               <div class="d-flex justify-content-end mt-4">

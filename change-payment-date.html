@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1 user-scalable=no"
     />
-    <title>Booking History</title>
+    <title>Change Payment Date</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -384,12 +384,14 @@
               class="d-flex align-items-center gap-1 justify-content-between"
             >
               <div>
-                <h4>Booking History</h4>
+                <h4>Change Payment Date</h4>
                 <nav aria-label="breadcrumb" class="breadcrumb-wrapper">
                   <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">My booking</a></li>
+                    <li class="breadcrumb-item">
+                      <a href="#">Master Setup</a>
+                    </li>
                     <li class="breadcrumb-item active" aria-current="page">
-                      Booking History
+                      Change Payment Date
                     </li>
                   </ol>
                 </nav>
@@ -404,362 +406,78 @@
                 ></i>
               </button>
             </div>
-            <div class="smart-dashboard-search-wrapper">
-              <div class="section-nav-btns">
-                <button class="btn active">All</button>
-                <button class="btn">Ticketed</button>
-                <button class="btn">On Hold</button>
-              </div>
-              <div class="smart-dashboard-search-actions">
-                <div class="row g-3 flex-grow-1">
-                  <div class="col-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="establishmentYearInput"
-                      />
-                      <label for="establishmentYearInput">Booking From</label>
-                    </div>
+          </div>
+          <div class="smart-dashboard-content-body">
+            <div class="smart-content-wrapper">
+              <div class="row align-items-end">
+                <div class="col-lg-4">
+                  <div class="form-floating">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="paymentDateInput"
+                      placeholder="dd-mm-yyyy"
+                    />
+                    <label for="paymentDateInput">Date</label>
                   </div>
-                  <div class="col-6 col-md-4">
-                    <div class="form-floating">
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="establishmentYearInput"
-                      />
-                      <label for="establishmentYearInput">Booking Till</label>
-                    </div>
-                  </div>
-                  <div class="col-md-4 d-flex align-items-end gap-3">
-                    <div
-                      class="form-floating search-input-with-icon flex-grow-1"
-                    >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="addressInput"
-                        placeholder="Enter Search Text"
-                      />
-                      <label for="addressInput">Search</label>
-                      <img
-                        src="assets/images/search_input_icon.svg"
-                        class="search-icon"
-                        alt=""
-                      />
-                    </div>
-                    <div class="flex-shrink-0">
-                      <button class="btn border-0 p-0">
-                        <img
-                          src="assets/images/search_primary_btn_icon.svg"
-                          alt=""
-                        />
-                      </button>
-                      <button class="btn border-0 p-0">
-                        <img
-                          src="assets/images/filter_primary_btn_icon.svg"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    type="button"
+                    class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-1 px-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#changeDateSuccessModal"
+                  >
+                    Change Date
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="smart-dashboard-content-body">
-            <ul class="list-unstyled booking-history-list">
-              <li>
-                <div class="agency-details-wrapper">
-                  <div class="table-responsive">
-                    <table class="table mb-0">
-                      <tbody>
-                        <tr>
-                          <td>Agency: Sai Mobile & Travels</td>
-                          <td>Supplier Id : TBO COK</td>
-                          <td>Journey Type: Domestic</td>
-                          <td>Itinerary Type: Onward</td>
-                          <td>Payment Mode: WALLET</td>
-                          <td>Convenience Fee: 0.00</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <button
-                    class="btn bg-color-primary text-white fs-14 fw-700 rounded-5 px-3 flex-shrink-0"
-                  >
-                    Lock
-                  </button>
-                </div>
-                <h5>Traveller Details</h5>
-                <div class="table-responsive booking-details-table-wrapper">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h6>Lead Pax Name</h6>
-                          <p>SHANMUGAM M</p>
-                        </td>
-                        <td>
-                          <h6>Total Pax</h6>
-                          <p>2</p>
-                        </td>
-                        <td>
-                          <h6>Baggage</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Meal</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Seat</h6>
-                          <p>25-04-1992</p>
-                        </td>
-                        <td>
-                          <h6>Sector</h6>
-                          <p>TRZ/VTZ</p>
-                        </td>
-                        <td>
-                          <h6>Airline</h6>
-                          <p>TRZ/VTZ</p>
-                        </td>
-                        <td>
-                          <h6>IsOnHold</h6>
-                          <p>No</p>
-                        </td>
-                        <td>
-                          <h6>IsTicketed</h6>
-                          <p>Yes</p>
-                        </td>
-                        <td>
-                          <h6>Com Received:</h6>
-                          <p>129.64</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h6>IsInvoiced:</h6>
-                          <p>Yes</p>
-                        </td>
-                        <td>
-                          <h6>Com Parted</h6>
-                          <p>129.64</p>
-                        </td>
-                        <td>
-                          <h6>Channel</h6>
-                          <p>B2B</p>
-                        </td>
-                        <td>
-                          <h6>Travel Date</h6>
-                          <p>01-11-2025</p>
-                        </td>
-                        <td>
-                          <h6>Return Date:</h6>
-                          <p>N/A</p>
-                        </td>
-                        <td>
-                          <h6>Admin Markup</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Customer Markup</h6>
-                          <p>0.00</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <h5>Booking Details</h5>
-                <div class="table-responsive booking-details-table-wrapper">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h6>Airline PNR</h6>
-                          <p>W392TI</p>
-                        </td>
-                        <td>
-                          <h6>GDS PNR</h6>
-                          <p>W392TI</p>
-                        </td>
-                        <td>
-                          <h6>Cabin</h6>
-                          <p>Economy</p>
-                        </td>
-                        <td>
-                          <h6>Booking Id</h6>
-                          <p>MGZJ5RMAE0</p>
-                        </td>
-                        <td>
-                          <h6>Status</h6>
-                          <p>Confirmed</p>
-                        </td>
-                        <td>
-                          <h6>Booking Date</h6>
-                          <p>30-10-2025 11:41</p>
-                        </td>
-                        <td>
-                          <h6>Last Ticket Date</h6>
-                          <p>30-10-2025 00:00</p>
-                        </td>
-                        <td>
-                          <h6>Booking Amount</h6>
-                          <p>13142.96</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-              <li>
-                <div class="agency-details-wrapper">
-                  <div class="table-responsive">
-                    <table class="table mb-0">
-                      <tbody>
-                        <tr>
-                          <td>Agency: Sai Mobile & Travels</td>
-                          <td>Supplier Id : TBO COK</td>
-                          <td>Journey Type: Domestic</td>
-                          <td>Itinerary Type: Onward</td>
-                          <td>Payment Mode: WALLET</td>
-                          <td>Convenience Fee: 0.00</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <button
-                    class="btn bg-color-primary text-white fs-14 fw-700 rounded-5 px-3 flex-shrink-0"
-                  >
-                    Lock
-                  </button>
-                </div>
-                <h5>Traveller Details</h5>
-                <div class="table-responsive booking-details-table-wrapper">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h6>Lead Pax Name</h6>
-                          <p>SHANMUGAM M</p>
-                        </td>
-                        <td>
-                          <h6>Total Pax</h6>
-                          <p>2</p>
-                        </td>
-                        <td>
-                          <h6>Baggage</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Meal</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Seat</h6>
-                          <p>25-04-1992</p>
-                        </td>
-                        <td>
-                          <h6>Sector</h6>
-                          <p>TRZ/VTZ</p>
-                        </td>
-                        <td>
-                          <h6>Airline</h6>
-                          <p>TRZ/VTZ</p>
-                        </td>
-                        <td>
-                          <h6>IsOnHold</h6>
-                          <p>No</p>
-                        </td>
-                        <td>
-                          <h6>IsTicketed</h6>
-                          <p>Yes</p>
-                        </td>
-                        <td>
-                          <h6>Com Received:</h6>
-                          <p>129.64</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h6>IsInvoiced:</h6>
-                          <p>Yes</p>
-                        </td>
-                        <td>
-                          <h6>Com Parted</h6>
-                          <p>129.64</p>
-                        </td>
-                        <td>
-                          <h6>Channel</h6>
-                          <p>B2B</p>
-                        </td>
-                        <td>
-                          <h6>Travel Date</h6>
-                          <p>01-11-2025</p>
-                        </td>
-                        <td>
-                          <h6>Return Date:</h6>
-                          <p>N/A</p>
-                        </td>
-                        <td>
-                          <h6>Admin Markup</h6>
-                          <p>0.00</p>
-                        </td>
-                        <td>
-                          <h6>Customer Markup</h6>
-                          <p>0.00</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <h5>Booking Details</h5>
-                <div class="table-responsive booking-details-table-wrapper">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <h6>Airline PNR</h6>
-                          <p>W392TI</p>
-                        </td>
-                        <td>
-                          <h6>GDS PNR</h6>
-                          <p>W392TI</p>
-                        </td>
-                        <td>
-                          <h6>Cabin</h6>
-                          <p>Economy</p>
-                        </td>
-                        <td>
-                          <h6>Booking Id</h6>
-                          <p>MGZJ5RMAE0</p>
-                        </td>
-                        <td>
-                          <h6>Status</h6>
-                          <p>Confirmed</p>
-                        </td>
-                        <td>
-                          <h6>Booking Date</h6>
-                          <p>30-10-2025 11:41</p>
-                        </td>
-                        <td>
-                          <h6>Last Ticket Date</h6>
-                          <p>30-10-2025 00:00</p>
-                        </td>
-                        <td>
-                          <h6>Booking Amount</h6>
-                          <p>13142.96</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-            </ul>
+        </div>
+      </div>
+
+      <!-- Add City Success Modal start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="changeDateSuccessModal"
+        tabindex="-1"
+        aria-labelledby="changeDateSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Next payment date is changed successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Add City Success Modal End -->
     </main>
 
     <script
