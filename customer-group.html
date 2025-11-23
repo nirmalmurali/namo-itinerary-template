@@ -449,263 +449,681 @@
                   <table class="table mb-0">
                     <thead>
                       <tr>
-                        <th>Airline Code</th>
-                        <th>Name</th>
-                        <th>Ticket Designator</th>
+                        <th>Id</th>
+                        <th>Group Name</th>
+                        <th>Apply Booking Lock</th>
+                        <th>Next Payment Date</th>
                         <th class="text-center">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>GB</td>
-                        <td>ABX Air</td>
-                        <td>832</td>
+                        <td>3</td>
+                        <td>7 Days Credit</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>4</td>
+                        <td>3 Days Credit</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>5</td>
+                        <td>15 Days Credit</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>8</td>
+                        <td>Good Agent</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>8</td>
+                        <td>Bad Agent</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>6</td>
+                        <td>slow agents under 50%</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>1</td>
+                        <td>FY BLOCKING</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
                               alt=""
                             />
                           </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
-                        <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn p-0 border-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
                           >
                             <img
-                              src="assets/images/table_edit_icon.svg"
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
                         </td>
                       </tr>
                       <tr>
-                        <td>GB</td>
-                        <td>Aerolineas Argentinas</td>
-                        <td>832</td>
+                        <td>8</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
                         <td class="text-center">
                           <button
-                            class="btn border-0 p-0"
+                            class="btn border-0 p-0 me-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#editNewAirlineModal"
+                            data-bs-target="#editNewCustomerGroupModal"
                           >
                             <img
                               src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>63306</td>
+                        <td>True</td>
+                        <td>28-03-2025 00:00:00</td>
+                        <td class="text-center">
+                          <button
+                            class="btn border-0 p-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editNewCustomerGroupModal"
+                          >
+                            <img
+                              src="assets/images/table_edit_icon.svg"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#blockBookingConfirmModal"
+                          >
+                            <img src="assets/images/lock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0 me-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#unblockBookingConfirmModal"
+                          >
+                            <img src="assets/images/unlock_icon.svg" alt="" />
+                          </button>
+                          <button
+                            class="btn p-0 border-0"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteCustomerGroupConfirmModal"
+                          >
+                            <img
+                              src="assets/images/table_delete_icon.svg"
                               alt=""
                             />
                           </button>
@@ -921,6 +1339,428 @@
           </div>
         </div>
       </div>
+      <!-- ...existing code... -->
+
+      <!-- Block Booking Confirmation Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="blockBookingConfirmModal"
+        tabindex="-1"
+        aria-labelledby="blockBookingConfirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/modal_like_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Please confirm!
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Are you sure to block booking for this customer group?
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  No
+                </button>
+                <button
+                  type="button"
+                  class="btn agency-lock-proceed-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                  data-bs-target="#blockBookingSuccessModal"
+                  data-bs-toggle="modal"
+                >
+                  Yes, proceed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Booking Confirmation Modal End -->
+      <!-- Block Booking Success Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="blockBookingSuccessModal"
+        tabindex="-1"
+        aria-labelledby="blockBookingSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                1 Record has been deleted successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Booking Success Modal end -->
+
+      <!-- Unblock Booking Confirmation Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="unblockBookingConfirmModal"
+        tabindex="-1"
+        aria-labelledby="unblockBookingConfirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/modal_like_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Please confirm!
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Are you sure to unblock booking for this customer group?
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-white font-color-primary border-color-primary pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  No
+                </button>
+                <button
+                  type="button"
+                  class="btn agency-lock-proceed-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-target="#unblockBookingSuccessModal"
+                  data-bs-toggle="modal"
+                >
+                  Yes, proceed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Unblock Booking Confirmation Modal End -->
+
+      <!-- Unblock Booking Success Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="unblockBookingSuccessModal"
+        tabindex="-1"
+        aria-labelledby="unblockBookingSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                All agencies bookings are now unlocked successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Unblock Booking Success Modal end -->
+      <!-- Delete Customer Group Confirmation Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="deleteCustomerGroupConfirmModal"
+        tabindex="-1"
+        aria-labelledby="deleteCustomerGroupConfirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/modal_like_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Please confirm!
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Are you sure to delete the deal template?
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-white font-color-primary border-color-primary pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  No
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-target="#deleteCustomerGroupSuccessModal"
+                  data-bs-toggle="modal"
+                >
+                  Yes, proceed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Customer Group Confirmation Modal End -->
+
+      <!-- Delete Customer Group Success Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="deleteCustomerGroupSuccessModal"
+        tabindex="-1"
+        aria-labelledby="deleteCustomerGroupSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                1 Record has been deleted successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Delete Customer Group Success Modal End -->
+
+      <!-- Edit Customer Group Modal Start -->
+      <div
+        class="modal fade main-modal-wrapper airline-modal-wrapper"
+        id="editNewCustomerGroupModal"
+        tabindex="-1"
+        aria-labelledby="editNewCustomerGroupModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Edit Customer Group
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4">
+                <!-- Name -->
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editCustomerGroupNameInput"
+                      placeholder="Name"
+                      value="7 Days Credit"
+                    />
+                    <label for="editCustomerGroupNameInput">Name</label>
+                  </div>
+                </div>
+
+                <!-- Apply Booking Lock -->
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <select
+                      class="form-select form-control"
+                      id="editApplyBookingLockSelect"
+                      aria-label="Apply Booking Lock"
+                    >
+                      <option value="yes" selected>Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <label for="editApplyBookingLockSelect"
+                      >Apply Booking Lock</label
+                    >
+                  </div>
+                </div>
+
+                <!-- ref-num-name -->
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editRefNumNameInput"
+                      placeholder="ref-num-name"
+                      value="7-days-credit"
+                    />
+                    <label for="editRefNumNameInput">ref-num-name</label>
+                  </div>
+                </div>
+
+                <!-- Search Index -->
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="editSearchIndexInput"
+                      placeholder="Search Index"
+                      value="1"
+                    />
+                    <label for="editSearchIndexInput">Search Index</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end mt-3">
+                <button
+                  type="button"
+                  class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2 px-4"
+                  data-bs-target="#editCustomerGroupSuccessModal"
+                  data-bs-toggle="modal"
+                >
+                  Update
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Edit Customer Group Modal End -->
+
+      <!-- Edit Customer Group Success Modal Start -->
+      <div
+        class="modal fade fare-change-alert-modal"
+        id="editCustomerGroupSuccessModal"
+        tabindex="-1"
+        aria-labelledby="editCustomerGroupSuccessModalLabel"
+        aria-modal="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="assets/images/success_icon.svg" />
+              <h3
+                class="font-color-secondary fw-700 fs-16 my-2 pt-sans-font-family"
+              >
+                Success
+              </h3>
+              <p
+                class="mb-2 fw-400 fs-14 font-color-fuscous-grey text-center pt-sans-font-family"
+              >
+                Customer group updated successfully
+              </p>
+            </div>
+
+            <div class="modal-footer">
+              <div
+                class="d-flex align-items-center justify-content-center gap-2"
+              >
+                <button
+                  type="button"
+                  class="btn close-btn bg-color-primary text-white pt-sans-font-family fw-400 fs-16"
+                  data-bs-dismiss="modal"
+                >
+                  ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Edit Customer Group Success Modal End -->
     </main>
 
     <script
