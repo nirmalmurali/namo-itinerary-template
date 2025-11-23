@@ -2335,6 +2335,7 @@ textarea {
                 height: 100%;
                 flex-grow: 1;
                 overflow: hidden;
+                overflow-y: auto;
               }
               .flight-filter-list-result-wrapper {
                 padding-top: 0.5rem;
@@ -2628,8 +2629,8 @@ textarea {
 }
 .sorted-list-wrapper {
   flex-grow: 1;
-  overflow: hidden;
-  overflow-y: auto;
+  // overflow: hidden;
+  // overflow-y: auto;
   .filtered-list-item-wrapper {
     padding: 0;
     margin: 0;
@@ -3085,6 +3086,7 @@ textarea {
   flex-direction: column;
   &.active {
     right: 0;
+    display: flex;
   }
 
   .side-bar-popup-header {

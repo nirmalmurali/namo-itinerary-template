@@ -3318,6 +3318,7 @@ textarea.form-control {
   height: 100%;
   flex-grow: 1;
   overflow: hidden;
+  overflow-y: auto;
 }
 .search-tab-wrapper .search-filter-tab-content .tab-content-filter-view .tab-content-filter-view-content .filter-view-content-wrapper .view-change-tab-content .tab-pane .flight-filter-list-result-wrapper {
   padding-top: 0.5rem;
@@ -3536,8 +3537,6 @@ textarea.form-control {
 }
 .sorted-list-wrapper {
   flex-grow: 1;
-  overflow: hidden;
-  overflow-y: auto;
 }
 .sorted-list-wrapper .filtered-list-item-wrapper {
   padding: 0;
@@ -3877,6 +3876,7 @@ textarea.form-control {
 }
 .draggable-side-bar-popup.active {
   right: 0;
+  display: flex;
 }
 .draggable-side-bar-popup .side-bar-popup-header {
   border-bottom: 1px solid #eef2f6;
