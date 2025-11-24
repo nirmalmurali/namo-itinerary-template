@@ -224,7 +224,8 @@ body:has(header.fixed-top) main {
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
 .password-requirements ul li,
 .applied-convenience-modal-wrapper table thead tr th,
-.applied-convenience-modal-wrapper table tbody tr td {
+.applied-convenience-modal-wrapper table tbody tr td,
+.qr-card-wrapper table tbody tr td {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -404,7 +405,8 @@ footer .quick-links-wrapper li a,
 .dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-label,
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
-.applied-convenience-modal-wrapper table thead tr th {
+.applied-convenience-modal-wrapper table thead tr th,
+.qr-card-wrapper table tbody tr td {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -865,7 +867,8 @@ footer .quick-links-wrapper li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-label,
 .password-requirements ul li,
 .applied-convenience-modal-wrapper table thead tr th,
-.applied-convenience-modal-wrapper table tbody tr td {
+.applied-convenience-modal-wrapper table tbody tr td,
+.qr-card-wrapper table tbody tr td {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -1182,7 +1185,8 @@ footer .quick-links-wrapper li a,
 .review-form-content h6,
 .section-nav-btns .btn,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
-.applied-convenience-modal-wrapper table tbody tr td {
+.applied-convenience-modal-wrapper table tbody tr td,
+.qr-card-wrapper table tbody tr td {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -6250,4 +6254,21 @@ textarea.form-control {
 }
 .applied-convenience-modal-wrapper table tbody tr td:last-child {
   border-right: 1px solid #e4e4e4;
+}
+.qr-card-wrapper {
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+.qr-card-wrapper table tbody tr td {
+  margin: 0;
+  padding: 4px;
+  word-break: break-all;
+}
+.qr-card-wrapper table tbody tr td:first-child {
+  min-width: 108px;
 }

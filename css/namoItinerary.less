@@ -6324,3 +6324,30 @@ textarea {
     }
   }
 }
+.qr-card-wrapper {
+  border: 1px solid @platinum;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.3rem;
+  table {
+    tbody {
+      tr {
+        td {
+          &:extend(.fs-14,
+          .fw-400,
+          .font-color-ship-grey,
+          .pt-sans-font-family);
+          margin: 0;
+          padding: 4px;
+          word-break: break-all;
+          &:first-child {
+            min-width: 108px;
+          }
+        }
+      }
+    }
+  }
+}
