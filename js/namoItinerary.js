@@ -365,6 +365,7 @@ $(document).ready(function () {
     $(".flight-filter-side-bar ").removeClass("active");
     $(".hotel-filter-side-bar ").removeClass("active");
     $(".smart-dashboard-aside-wrapper").removeClass("active");
+    $(".mobile-drawer-wrapper").removeClass("active");
   });
   $(".otp-input-wrapper input").on("input", function () {
     if (this.value.length === 1) {
@@ -1014,4 +1015,8 @@ $(document).ready(function () {
       eyeIcon.alt = "Show";
     }
   };
+  $(".show-mobile-chosen-travelers .btn").on("click", function () {
+    $(".mobile-drawer-wrapper").toggleClass("active");
+    $(".black-drop").toggleClass("active");
+  });
 });

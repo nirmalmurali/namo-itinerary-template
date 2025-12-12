@@ -2299,6 +2299,16 @@ textarea.form-control {
   z-index: 0;
   padding: 53px 0 14rem;
 }
+@media screen and (max-width: 767px) {
+  .dashboard-banner-wrapper {
+    padding: 20px 0 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dashboard-banner-wrapper {
+    padding: 20px 0 1rem;
+  }
+}
 .dashboard-banner-wrapper::before {
   content: "";
   background-image: url("../assets/images/dashboard_map.png");
@@ -3097,6 +3107,40 @@ textarea.form-control {
 }
 .travel-date-details .chosen-travelers-class-wrapper .choose-travel-class p {
   margin-bottom: 10px;
+}
+@media screen and (max-width: 576px) {
+  .travel-date-details.mobile-choose-travelers .chosen-travelers-class-wrapper {
+    min-width: inherit;
+    overflow: hidden;
+  }
+}
+.travel-date-details.mobile-choose-travelers .chosen-travelers-class-wrapper .travels-number-wrapper {
+  padding: 0 0 23px;
+}
+.travel-date-details.mobile-choose-travelers .chosen-travelers-class-wrapper .choose-travel-class {
+  padding: 1rem 0;
+}
+.mobile-drawer-wrapper {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  height: fit-content;
+}
+.mobile-drawer-wrapper.active {
+  transform: translateY(0);
+}
+@media screen and (max-width: 767px) {
+  .show-mobile-chosen-travelers .dropdown-menu {
+    display: none !important;
+  }
 }
 .page-tab-header-wrapper {
   padding: 8px 0;
