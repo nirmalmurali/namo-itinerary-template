@@ -5727,6 +5727,11 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    @media screen {
+      @media (max-width: 767px) {
+        overflow-y: auto;
+      }
+    }
     .smart-dashboard-content-header {
       h4 {
         &:extend(.fs-20,
@@ -5740,6 +5745,12 @@ textarea {
       flex-grow: 1;
       overflow: hidden;
       overflow-y: auto;
+      @media screen {
+        @media (max-width: 767px) {
+          overflow: inherit !important;
+          display: block !important;
+        }
+      }
     }
   }
 }
@@ -5975,6 +5986,8 @@ textarea {
   .smart-data-grid-table-header {
     padding: 10px;
     border-bottom: 1px solid @platinum;
+    flex-wrap: wrap;
+    gap: 1rem;
     .search-input-wrapper {
       .form-control {
         height: 32px;
@@ -6062,6 +6075,8 @@ textarea {
   .smart-data-grid-table-footer {
     border-top: 1px solid @platinum;
     padding: 10px;
+    flex-wrap: wrap;
+    gap: 1rem;
     .btn-group {
       .btn {
         border: none;
