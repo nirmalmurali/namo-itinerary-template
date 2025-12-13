@@ -1227,7 +1227,7 @@ textarea {
       flex-grow: 1;
     }
     h6 {
-      margin-bottom: 0.625rem;
+      margin-bottom: 0;
       &:extend(.pt-sans-font-family,
       .fs-14,
       .fw-400,
@@ -1375,7 +1375,7 @@ textarea {
           background: transparent;
           border-radius: 0;
           border: none;
-          margin-bottom: 0.563rem;
+          margin-bottom: 0;
           &:extend(.fs-14,
           .fw-400,
           .font-color-gravel-grey,
@@ -6089,6 +6089,14 @@ textarea {
         }
       }
     }
+  }
+}
+.search-filter-checkbox-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & > div {
+    flex-shrink: 0;
   }
 }
 .dashboard-payment-options {
