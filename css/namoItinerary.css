@@ -2413,24 +2413,9 @@ textarea.form-control {
 .flight-trip-details-wrapper.trip-type-wrapper {
   justify-content: center;
 }
-@media screen and (min-width: 768px) {
-  .flight-trip-details-wrapper.trip-type-wrapper {
-    height: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .flight-trip-details-wrapper {
-    width: 100%;
-  }
-}
 .flight-trip-details-wrapper .from-to-details-wrapper {
   display: flex;
   height: 100%;
-}
-@media screen and (max-width: 567px) {
-  .flight-trip-details-wrapper .from-to-details-wrapper {
-    flex-direction: column;
-  }
 }
 .flight-trip-details-wrapper .from-to-details-wrapper > div {
   flex-grow: 1;
@@ -2441,21 +2426,19 @@ textarea.form-control {
 .flight-trip-details-wrapper .from-to-details-wrapper h4 {
   margin-bottom: 0rem;
 }
+@media screen and (max-width: 991px) {
+  .flight-trip-details-wrapper .from-to-details-wrapper h4 {
+    font-size: 1rem !important;
+  }
+}
 .flight-trip-details-wrapper .from-to-details-wrapper p {
   margin-bottom: 0;
+  word-break: break-all;
 }
 .flight-trip-details-wrapper .from-to-details-wrapper .from-details {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 2rem 0.438rem 0.875rem;
   position: relative;
-}
-@media screen and (max-width: 567px) {
-  .flight-trip-details-wrapper .from-to-details-wrapper .from-details {
-    padding: 1rem 2rem 2rem;
-    border: none;
-    border-bottom: 1px solid #e7e7e7;
-    text-align: center;
-  }
 }
 .flight-trip-details-wrapper .from-to-details-wrapper .from-details .from-to-icon {
   position: absolute;
@@ -2465,28 +2448,15 @@ textarea.form-control {
   margin: auto;
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 567px) {
-  .flight-trip-details-wrapper .from-to-details-wrapper .from-details .from-to-icon {
-    right: 0;
-    left: 0;
-    top: inherit;
-    bottom: -20px;
-    transform: rotate(90deg);
-  }
-}
 .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
   border-right: 1px solid #e7e7e7;
   padding: 0.438rem 0.875rem 0.438rem 2rem;
 }
+@media screen {
+}
 @media screen and (max-width: 991px) {
   .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
     border: none;
-  }
-}
-@media screen and (max-width: 567px) {
-  .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
-    padding: 2rem 2rem 1rem;
-    text-align: center;
   }
 }
 .flight-trip-details-wrapper .airline-preference-wrapper {
@@ -2521,23 +2491,12 @@ textarea.form-control {
 .travel-date-details {
   height: 100%;
 }
-@media screen and (max-width: 991px) {
-  .travel-date-details {
-    border-top: 1px solid #e7e7e7;
-  }
-}
 .travel-date-details > ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   height: 100%;
-}
-@media screen and (max-width: 576px) {
-  .travel-date-details > ul {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 .travel-date-details > ul > li {
   padding: 0.438rem 0.625rem;
@@ -2546,21 +2505,6 @@ textarea.form-control {
 }
 .travel-date-details > ul > li:last-child {
   border-right: none;
-}
-@media screen and (max-width: 576px) {
-  .travel-date-details > ul > li:last-child {
-    border: none;
-  }
-}
-@media screen and (max-width: 576px) {
-  .travel-date-details > ul > li {
-    border-right: none;
-    border-bottom: 1px solid #e7e7e7;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 .travel-date-details > ul > li .dropdown .dropdown-toggle {
   display: flex;
@@ -2579,8 +2523,19 @@ textarea.form-control {
   margin-bottom: 0rem;
   font-size: 1rem;
 }
+@media screen and (max-width: 991px) {
+  .travel-date-details > ul > li h4 {
+    font-size: 0.875rem;
+  }
+}
 .travel-date-details > ul > li h4 b {
   font-size: 1.563rem;
+}
+@media screen and (max-width: 991px) {
+  .travel-date-details > ul > li h4 b {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
 .travel-date-details > ul > li p {
   margin-bottom: 0;
@@ -3198,6 +3153,11 @@ textarea.form-control {
 }
 .tab-content-search-header .search-btn {
   height: 32px;
+}
+@media screen and (max-width: 576px) {
+  .tab-content-search-header .search-btn {
+    width: 100%;
+  }
 }
 .search-tab-wrapper {
   height: calc(100dvh - 71px);

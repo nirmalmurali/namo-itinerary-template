@@ -1,286 +1,2642 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>Search Filter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <link rel="stylesheet" href="css/namoItinerary.css" />
   </head>
   <body>
     <main>
-      <div
-        style="
-          height: calc(90dvh - 71px);
-          overflow: hidden;
-          background: red;
-          display: flex;
-          flex-direction: column;
-        "
-      >
-        <div>content header</div>
-        <div
-          style="
-            flex-grow: 1;
+      <div class="search-tab-wrapper">
+        <div class="page-tab-header-wrapper bg-color-old-lace">
+          <div class="container">
+            <ul
+              class="nav nav-pills search-filter-nav-pills"
+              id="search-filters-tab"
+              role="tablist"
+            >
+              <!-- Flight Tab -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="searchFilterPillsFlightsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsFlights"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsFlights"
+                  aria-selected="true"
+                >
+                  <img
+                    src="assets/images/flight_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/flight_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
+                  Flight
+                </button>
+              </li>
 
-            padding: 50px;
-          "
+              <!-- Hotels Tab -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="searchFilterPillsHotelsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsHotels"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsHotels"
+                  aria-selected="false"
+                >
+                  <img
+                    src="assets/images/hotels_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/hotels_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
+                  Hotels
+                </button>
+              </li>
+
+              <!-- Holidays Tab -->
+              <!-- <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="searchFilterPillsHolidaysTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsHolidays"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsHolidays"
+                  aria-selected="false"
+                >
+                  <img src="assets/images/holidays_tab_icon.svg" alt="" />
+                  Holidays
+                </button>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div
+          class="tab-content search-filter-tab-content"
+          id="search-filters-pills-tabContent"
         >
-          <div>inner header</div>
-          <div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
+          <div
+            class="tab-pane fade show active"
+            id="searchFilterPillsFlights"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsFlightsTab"
+            tabindex="0"
+          >
+            <div class="container">
+              <div class="tab-content-search-header py-3">
+                <div
+                  class="search-header-mobile-wrapper d-flex flex-column gap-3"
+                >
+                  <div class="d-flex gap-2 h-100 align-items-stretch">
+                    <div
+                      class="flight-trip-details-wrapper trip-type-wrapper d-flex flex-column p-3 justify-content-center"
+                    >
+                      <div class="dropdown global-dropdown">
+                        <a
+                          class="btn btn-secondary dropdown-toggle"
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Trip Type
+                          <i
+                            class="fa fa-angle-down font-color-primary"
+                            aria-hidden="true"
+                          ></i>
+                        </a>
+
+                        <!-- <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul> -->
+                      </div>
+                      <h4
+                        class="pt-sans-font-family fs-16 fw-700 font-color-secondary mb-0"
+                      >
+                        One Way
+                      </h4>
+                    </div>
+                    <div class="flight-trip-details-wrapper flex-grow-1">
+                      <div class="row g-0">
+                        <div class="col-lg-6">
+                          <div class="from-to-details-wrapper">
+                            <div class="from-details">
+                              <h6>From</h6>
+                              <h4 class="fs-16">Delhi</h4>
+                              <p>DEL, Delhi Airport india</p>
+                              <img
+                                src="assets/images/from_to_arrow.svg"
+                                class="from-to-icon"
+                                alt=""
+                              />
+                            </div>
+                            <div class="to-details">
+                              <h6>To</h6>
+                              <h4>Mumbai</h4>
+                              <p>[BOM]Chhatrapati Shivaji</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flight-trip-details-wrapper">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="travel-date-details">
+                          <ul>
+                            <li>
+                              <div class="dropdown">
+                                <a
+                                  class="btn btn-secondary dropdown-toggle flight-date-range"
+                                  href="#"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Departure
+                                  <i
+                                    class="fa fa-angle-down font-color-primary"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    readonly
+                                    id="depatureDate"
+                                    style="background: #fff; cursor: pointer"
+                                    placeholder="Select dates"
+                                    hidden
+                                  />
+                                </a>
+                              </div>
+                              <h4><b>12</b> May’ 25</h4>
+                              <p>Sunday</p>
+                            </li>
+                            <li>
+                              <div class="dropdown">
+                                <a
+                                  class="btn btn-secondary dropdown-toggle flight-date-range"
+                                  href="#"
+                                  role="button"
+                                  aria-expanded="false"
+                                >
+                                  Return
+                                  <i
+                                    class="fa fa-angle-down font-color-primary"
+                                    aria-hidden="true"
+                                  ></i>
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    readonly
+                                    style="background: #fff; cursor: pointer"
+                                    placeholder="Select dates"
+                                    hidden
+                                  />
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#"
+                                      >Another action</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a class="dropdown-item" href="#"
+                                      >Something else here</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <h4><b>20</b> May’ 25</h4>
+                              <p>Tuesday</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flight-trip-details-wrapper">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="travel-date-details">
+                          <ul>
+                            <li>
+                              <div
+                                class="dropdown show-mobile-chosen-travelers"
+                              >
+                                <a
+                                  class="btn btn-secondary dropdown-toggle"
+                                  href="#"
+                                  role="button"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  data-bs-auto-close="outside"
+                                >
+                                  Travelers & Class
+                                  <i
+                                    class="fa fa-angle-down font-color-primary"
+                                    aria-hidden="true"
+                                  ></i>
+                                </a>
+
+                                <div
+                                  class="dropdown-menu chosen-travelers-class-wrapper"
+                                >
+                                  <div class="travels-number-wrapper">
+                                    <div>
+                                      <label
+                                        class="form-label fw-bold"
+                                        for="adultSelector"
+                                        >Adults (12y+)</label
+                                      >
+                                      <div
+                                        class="btn-group number-btn-group number-btn-group-wrapper"
+                                        role="group"
+                                        id="adultSelector"
+                                      >
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="1"
+                                        >
+                                          1
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="2"
+                                        >
+                                          2
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary active"
+                                          data-value="3"
+                                        >
+                                          3
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="4"
+                                        >
+                                          4
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="5"
+                                        >
+                                          5
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="6"
+                                        >
+                                          6
+                                        </button>
+                                        <!-- ... -->
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label
+                                        class="form-label fw-bold"
+                                        for="childrenSelector"
+                                        >Children 2 - 12 Years</label
+                                      >
+                                      <div
+                                        class="btn-group children-btn-group number-btn-group-wrapper"
+                                        role="group"
+                                        id="childrenSelector"
+                                      >
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="0"
+                                        >
+                                          0
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="1"
+                                        >
+                                          1
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="2"
+                                        >
+                                          2
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary active"
+                                          data-value="3"
+                                        >
+                                          3
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="4"
+                                        >
+                                          4
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="5"
+                                        >
+                                          5
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="6"
+                                        >
+                                          6
+                                        </button>
+                                        <!-- ... -->
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label
+                                        class="form-label fw-bold"
+                                        for="infantsSelector"
+                                        >Infants 0 - 23 Months</label
+                                      >
+                                      <div
+                                        class="btn-group infants-btn-group number-btn-group-wrapper"
+                                        role="group"
+                                        id="infantsSelector"
+                                      >
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="0"
+                                        >
+                                          0
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="1"
+                                        >
+                                          1
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="2"
+                                        >
+                                          2
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary active"
+                                          data-value="3"
+                                        >
+                                          3
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="4"
+                                        >
+                                          4
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="5"
+                                        >
+                                          5
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn btn-outline-secondary"
+                                          data-value="6"
+                                        >
+                                          6
+                                        </button>
+                                        <!-- ... -->
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="choose-travel-class">
+                                    <p>Choose Travel Class</p>
+                                    <div
+                                      class="d-flex flex-wrap align-items-center gap-2"
+                                    >
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="radio"
+                                          name="travelClass"
+                                          id="radioEconomy"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="radioEconomy"
+                                        >
+                                          Economy
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="radio"
+                                          name="travelClass"
+                                          id="radioPremiumEconomy"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="radioPremiumEconomy"
+                                        >
+                                          Premium Economy
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="radio"
+                                          name="travelClass"
+                                          id="radioBusiness"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="radioBusiness"
+                                        >
+                                          Business
+                                        </label>
+                                      </div>
+                                      <div class="form-check">
+                                        <input
+                                          class="form-check-input"
+                                          type="radio"
+                                          name="travelClass"
+                                          id="radioFirstClass"
+                                        />
+                                        <label
+                                          class="form-check-label"
+                                          for="radioFirstClass"
+                                        >
+                                          First Class
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <h4><b>2</b> Travelers</h4>
+                              <p>Tuesday</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="search-header-desktop-wrapper d-none">
+                  <div class="row g-3">
+                    <div class="col-12 col-xxl-8">
+                      <div
+                        class="d-flex gap-2 h-100 flex-wrap flex-md-nowrap align-items-center"
+                      >
+                        <div
+                          class="flight-trip-details-wrapper trip-type-wrapper d-flex flex-column p-3 justify-content-center"
+                        >
+                          <div class="dropdown global-dropdown">
+                            <a
+                              class="btn btn-secondary dropdown-toggle"
+                              href="#"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              Trip Type
+                              <i
+                                class="fa fa-angle-down font-color-primary"
+                                aria-hidden="true"
+                              ></i>
+                            </a>
+
+                            <!-- <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul> -->
+                          </div>
+                          <h4
+                            class="pt-sans-font-family fs-18 fw-700 font-color-secondary mb-0"
+                          >
+                            One Way
+                          </h4>
+                        </div>
+                        <div class="flight-trip-details-wrapper flex-grow-1">
+                          <div class="row g-0">
+                            <div class="col-lg-6">
+                              <div class="from-to-details-wrapper">
+                                <div class="from-details">
+                                  <h6>From</h6>
+                                  <h4 class="fs-18">Delhi</h4>
+                                  <p>DEL, Delhi Airport india</p>
+                                  <img
+                                    src="assets/images/from_to_arrow.svg"
+                                    class="from-to-icon"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="to-details">
+                                  <h6>To</h6>
+                                  <h4>Mumbai</h4>
+                                  <p>[BOM]Chhatrapati Shivaji</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="travel-date-details">
+                                <ul>
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle flight-date-range"
+                                        href="#"
+                                        role="button"
+                                        aria-expanded="false"
+                                      >
+                                        Departure
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          readonly
+                                          id="depatureDate"
+                                          style="
+                                            background: #fff;
+                                            cursor: pointer;
+                                          "
+                                          placeholder="Select dates"
+                                          hidden
+                                        />
+                                      </a>
+                                    </div>
+                                    <h4><b>12</b> May’ 25</h4>
+                                    <p>Sunday</p>
+                                  </li>
+                                  <li>
+                                    <div class="dropdown">
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle flight-date-range"
+                                        href="#"
+                                        role="button"
+                                        aria-expanded="false"
+                                      >
+                                        Return
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          readonly
+                                          style="
+                                            background: #fff;
+                                            cursor: pointer;
+                                          "
+                                          placeholder="Select dates"
+                                          hidden
+                                        />
+                                      </a>
+
+                                      <ul class="dropdown-menu">
+                                        <li>
+                                          <a class="dropdown-item" href="#"
+                                            >Action</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a class="dropdown-item" href="#"
+                                            >Another action</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a class="dropdown-item" href="#"
+                                            >Something else here</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <h4><b>20</b> May’ 25</h4>
+                                    <p>Tuesday</p>
+                                  </li>
+                                  <li>
+                                    <div
+                                      class="dropdown show-mobile-chosen-travelers"
+                                    >
+                                      <a
+                                        class="btn btn-secondary dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        data-bs-auto-close="outside"
+                                      >
+                                        Travelers & Class
+                                        <i
+                                          class="fa fa-angle-down font-color-primary"
+                                          aria-hidden="true"
+                                        ></i>
+                                      </a>
+
+                                      <div
+                                        class="dropdown-menu chosen-travelers-class-wrapper"
+                                      >
+                                        <div class="travels-number-wrapper">
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="adultSelector"
+                                              >Adults (12y+)</label
+                                            >
+                                            <div
+                                              class="btn-group number-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="adultSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="childrenSelector"
+                                              >Children 2 - 12 Years</label
+                                            >
+                                            <div
+                                              class="btn-group children-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="childrenSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                          <div>
+                                            <label
+                                              class="form-label fw-bold"
+                                              for="infantsSelector"
+                                              >Infants 0 - 23 Months</label
+                                            >
+                                            <div
+                                              class="btn-group infants-btn-group number-btn-group-wrapper"
+                                              role="group"
+                                              id="infantsSelector"
+                                            >
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="0"
+                                              >
+                                                0
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="1"
+                                              >
+                                                1
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="2"
+                                              >
+                                                2
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary active"
+                                                data-value="3"
+                                              >
+                                                3
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="4"
+                                              >
+                                                4
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="5"
+                                              >
+                                                5
+                                              </button>
+                                              <button
+                                                type="button"
+                                                class="btn btn-outline-secondary"
+                                                data-value="6"
+                                              >
+                                                6
+                                              </button>
+                                              <!-- ... -->
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="choose-travel-class">
+                                          <p>Choose Travel Class</p>
+                                          <div
+                                            class="d-flex flex-wrap align-items-center gap-2"
+                                          >
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioEconomy"
+                                              >
+                                                Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioPremiumEconomy"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioPremiumEconomy"
+                                              >
+                                                Premium Economy
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioBusiness"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioBusiness"
+                                              >
+                                                Business
+                                              </label>
+                                            </div>
+                                            <div class="form-check">
+                                              <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="travelClass"
+                                                id="radioFirstClass"
+                                              />
+                                              <label
+                                                class="form-check-label"
+                                                for="radioFirstClass"
+                                              >
+                                                First Class
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <h4><b>2</b> Travelers</h4>
+                                    <p>Tuesday</p>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4">
+                      <div
+                        class="d-flex gap-3 flex-wrap flex-lg-nowrap h-100 align-items-center"
+                      >
+                        <div>
+                          <div class="search-filter-checkbox-wrapper">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="directFlightCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="directFlightCheckInput"
+                              >
+                                Direct Flight
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="nearbyAirportsCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="nearbyAirportsCheckInput"
+                              >
+                                Nearby Airports
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="studentFareCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="studentFareCheckInput"
+                              >
+                                Student Fare
+                              </label>
+                            </div>
+
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cityzenFareCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="cityzenFareCheckInput"
+                              >
+                                Sr. Citizen Fare
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          href="search-filter.html"
+                          class="btn border-0 py-1 px-4 search-btn flex-shrink-0 rounded-pill bg-color-pale-orange text-white pt-sans-font-family fs-14 fw-700 d-flex align-items-center justify-content-center"
+                        >
+                          Search
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="searchFilterPillsHotels"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsHotelsTab"
+            tabindex="0"
+          >
+            <div class="container">
+              <div
+                class="tab-content-search-header tab-content-search-hotels-header"
+              >
+                <ul class="list-unstyled">
+                  <li>
+                    <div class="hotel-destination-list-wrapper">
+                      <div class="dropdown">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Select Destination
+                        </button>
+                        <div class="dropdown-menu destination-dropdown-wrapper">
+                          <div class="destination-dropdown-header">
+                            <img
+                              src="assets/images/search_fa_Icon.svg"
+                              alt=""
+                            />
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="destinationSearchInput"
+                              placeholder="Search Destination"
+                            />
+                          </div>
+                          <div class="destination-dropdown-body">
+                            <h6>Suggestions</h6>
+                            <ul class="destination-list list-unstyled">
+                              <li>
+                                <img
+                                  src="assets/images/map_pointer_icon.svg"
+                                  alt=""
+                                />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                              <li>
+                                <img
+                                  src="assets/images/airport_icon.svg"
+                                  alt=""
+                                />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                              <li>
+                                <img src="assets/images/city_icon.svg" alt="" />
+                                <div
+                                  class="flex-grow-1 d-flex flex-column overflow-hidden"
+                                >
+                                  <h4>New Delhi</h4>
+                                  <p>
+                                    <span>City</span> National Capital Territory
+                                    of Delhi
+                                  </p>
+                                </div>
+                                <div class="country-identifier flex-shrink-0">
+                                  <h5>IN</h5>
+                                  <img
+                                    src="assets/images/indian_flag.svg"
+                                    alt=""
+                                  />
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <p>City, Property name or Location</p>
+                    </div>
+                  </li>
+                  <li class="check-in-wrapper">
+                    <div class="dropdown">
+                      <a
+                        class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                        href="#"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        Check In
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          readonly=""
+                          id="depatureDate"
+                          style="background: #fff; cursor: pointer"
+                          placeholder="Select dates"
+                          hidden=""
+                        />
+                      </a>
+                      <h4><b>12</b> May’ 25</h4>
+                    </div>
+                  </li>
+                  <li
+                    class="night-count-wrapper d-flex align-items-center justify-content-center"
+                  >
+                    <h4><b>1</b> Night</h4>
+                  </li>
+                  <li class="check-out-wrapper">
+                    <div class="dropdown">
+                      <a
+                        class="btn btn-secondary dropdown-toggle flight-date-range global-dropdown-toggle"
+                        href="#"
+                        role="button"
+                        aria-expanded="false"
+                      >
+                        Check out
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          readonly=""
+                          id="checkOutDate"
+                          style="background: #fff; cursor: pointer"
+                          placeholder="Select dates"
+                          hidden=""
+                        />
+                      </a>
+                      <h4><b>12</b> May’ 25</h4>
+                    </div>
+                  </li>
+                  <li class="room-and-guest-select">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Rooms & guests
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu room-guest-dropdown-wrapper p-0"
+                      >
+                        <ul class="added-room-list list-unstyled mb-0">
+                          <li>
+                            <div>
+                              <h5>Room 1</h5>
+                              <p>
+                                <span>1</span> Adult <span>3</span> Children
+                              </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                              <button class="btn border-0 p-0 room-remove-btn">
+                                <img
+                                  src="assets/images/room_close_icon.svg"
+                                  alt=""
+                                />
+                              </button>
+                              <button class="btn border-0 p-0 room-edit-btn">
+                                <img
+                                  src="assets/images/room_edit_icon.svg"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="room-guest-dropdown-body">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <h4>Room 1</h4>
+                            <button class="btn border-0 p-0 room-remove-btn">
+                              <img
+                                src="assets/images/room_close_icon.svg"
+                                alt=""
+                              />
+                            </button>
+                          </div>
+                          <ul class="room-selection-wrapper list-unstyled">
+                            <li>
+                              <h5>Adults</h5>
+                              <div class="room-add-count-wrapper">
+                                <h6 class="count-view">1</h6>
+                                <div class="d-flex align-items-center">
+                                  <button class="btn count-decrease-btn">
+                                    -
+                                  </button>
+                                  <button class="btn count-increase-btn">
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div>
+                                <h5>Children</h5>
+                                <p>0- 12 Years</p>
+                              </div>
+                              <div class="room-add-count-wrapper">
+                                <h6 class="count-view">0</h6>
+                                <div class="d-flex align-items-center">
+                                  <button class="btn count-decrease-btn">
+                                    -
+                                  </button>
+                                  <button class="btn count-increase-btn">
+                                    +
+                                  </button>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div
+                          class="room-guest-dropdown-footer d-flex justify-content-between align-items-center"
+                        >
+                          <button
+                            class="btn border-0 p-0 room-add-btn font-color-sea-green d-flex align-items-center gap-1 fs-12 fw-700 pt-sans-font-family"
+                          >
+                            <img
+                              src="assets/images/green_plus_icon.png"
+                              alt=""
+                            />
+                            Add another room
+                          </button>
+                          <button
+                            class="btn done-btn border-0 bg-color-primary text-white rounded-2"
+                          >
+                            Done
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <h4><b>1</b> Room <b>2</b> Guests</h4>
+                  </li>
+                  <li class="nationality-list-item">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Nationality
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div class="dropdown-menu destination-dropdown-wrapper">
+                        <div class="destination-dropdown-header">
+                          <img src="assets/images/search_fa_Icon.svg" alt="" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="destinationSearchInput"
+                            placeholder="Search Destination"
+                          />
+                        </div>
+                        <div class="destination-dropdown-body">
+                          <ul class="destination-list list-unstyled">
+                            <li><h4>New Delhi</h4></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <h5>India</h5>
+                  </li>
+                  <li class="residence-list-item">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        data-bs-auto-close="outside"
+                      >
+                        Residence 
+                        <i
+                          class="fa fa-angle-down font-color-primary"
+                          aria-hidden="true"
+                        ></i>
+                      </button>
+                      <div class="dropdown-menu destination-dropdown-wrapper">
+                        <div class="destination-dropdown-header">
+                          <img src="assets/images/search_fa_Icon.svg" alt="" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="destinationSearchInput"
+                            placeholder="Search Destination"
+                          />
+                        </div>
+                        <div class="destination-dropdown-body">
+                          <ul class="destination-list list-unstyled">
+                            <li><h4>New Delhi</h4></li>
+                            <li><h4>India</h4></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <h5>India</h5>
+                  </li>
+                </ul>
+                <button
+                  class="btn bg-color-primary text-white rounded-5 pt-sans-font-family fs-14 fw-700 flex-shrink-0 modify-Search-btn"
+                >
+                  Modify Search
+                </button>
+              </div>
+            </div>
+            <div class="tab-content-filter-view">
+              <div class="container">
+                <div class="tab-content-filter-view-content">
+                  <div class="filter-side-bar hotel-filter-side-bar">
+                    <div
+                      class="d-flex d-lg-none justify-content-end w-100 pe-3"
+                    >
+                      <button
+                        class="hotel-filter-mob-menu-close btn p-0 border-0"
+                      >
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div class="filter-side-bar-list-wrapper">
+                      <div class="filter-side-bar-options">
+                        <h5>See Map View</h5>
+                        <div class="map-wrap">
+                          <div id="map"></div>
+                        </div>
+                      </div>
+                      <div class="filter-side-bar-options">
+                        <h5>Hotel name</h5>
+                        <div class="search-input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="customerRatingsRangeInput"
+                            placeholder="Search Hotel Name"
+                          />
+                          <button class="btn border-0">
+                            <img
+                              src="assets/images/search_input_icon.svg"
+                              alt="search icon"
+                            />
+                          </button>
+                        </div>
+                      </div>
+                      <div class="filter-side-bar-options">
+                        <h5>Popular Filters</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="akbarChoiceCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="akbarChoiceCheckInput"
+                              >
+                                Akbar Choice
+                              </label>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="cancellationAvailableCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="cancellationAvailableCheckInput"
+                              >
+                                Cancellation Available
+                              </label>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="breakfastAvailableCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="breakfastAvailableCheckInput"
+                              >
+                                Breakfast Available
+                              </label>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="wifiAvailableCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="wifiAvailableCheckInput"
+                              >
+                                Wifi
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="filter-side-bar-options">
+                        <h5>Customer Ratings</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="4.5AboveExcellentCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="4.5AboveExcellentCheckInput"
+                              >
+                                4.5 & Above Excellent
+                              </label>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="4AboveVeryGoodCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="4AboveVeryGoodCheckInput"
+                              >
+                                4 & Above Very Good
+                              </label>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="3.5AboveGoodCheckInput"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary"
+                                for="3.5AboveGoodCheckInput"
+                              >
+                                3.5 & Above Good
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="filter-side-bar-options">
+                        <h5>Star rating</h5>
+                        <ul>
+                          <li>
+                            <div class="form-check">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="normalFareCheckInput1"
+                              />
+                              <label
+                                class="form-check-label pt-sans-font-family fs-14 fw-400 font-color-secondary d-flex align-items-center gap-1"
+                                for="normalFareCheckInput1"
+                              >
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                <img
+                                  src="assets/images/star_rate_img.svg"
+                                  alt=""
+                                />
+                                (10)
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-view-content-wrapper">
+                    <div class="view-change-tab-content">
+                      <div class="filter-view-content-header">
+                        <div class="row align-items-center g-3">
+                          <div class="col-lg-8">
+                            <h5
+                              class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                            >
+                              Properties with group deals in Bangaluru
+                            </h5>
+                          </div>
+                          <div
+                            class="col-lg-4 d-flex justify-content-end align-items-center gap-2"
+                          >
+                            <button
+                              class="btn d-flex d-lg-none bg-color-primary text-white align-items-center justify-content-center mobile-hotel-filter-btn"
+                            >
+                              <i class="fa fa-filter" aria-hidden="true"></i>
+                            </button>
+
+                            <button
+                              class="btn p-0 border-0"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Share"
+                              onclick="openShareModal()"
+                            >
+                              <img
+                                src="assets/images/share_btn_icon.svg"
+                                alt="share icon"
+                                class="img-default"
+                              />
+                              <img
+                                src="assets/images/share_btn_hover_icon.svg"
+                                alt="share icon"
+                                class="img-hover"
+                              />
+                            </button>
+
+                            <button
+                              class="btn p-0 border-0"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              data-bs-title="Hide Netfare"
+                            >
+                              <img
+                                src="assets/images/eye_btn_icon.svg"
+                                alt="eye icon"
+                                class="img-default"
+                              />
+                              <img
+                                src="assets/images/eye_btn_hover_icon.svg"
+                                alt="eye icon"
+                                class="img-hover"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flilter-sort-wrapper py-2">
+                        <div class="row g-3 g-md-0 align-items-center">
+                          <div class="col-lg-4">
+                            <p
+                              class="fs-14 fw-400 pt-sans-font-family font-color-gravel-grey mb-0"
+                            >
+                              Showing 662 of 662 Fares found
+                            </p>
+                          </div>
+                          <div
+                            class="col-lg-8 d-flex align-items-center justify-content-end gap-3"
+                          >
+                            <ul class="sort-list-wrapper">
+                              <li>
+                                <button class="btn">
+                                  Featured
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+                              <li>
+                                <button class="btn">
+                                  Rating
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+
+                              <li>
+                                <button class="btn">
+                                  Price
+                                  <img
+                                    src="assets/images/sort_down_arrow.svg"
+                                    alt=""
+                                    class="default-img"
+                                  />
+                                  <img
+                                    src="assets/images/sort_down_arrow_active.svg"
+                                    class="active-img"
+                                  />
+                                </button>
+                              </li>
+                            </ul>
+
+                            <button
+                              class="btn sort-view-btn py-1 flex-shrink-0"
+                            >
+                              <img src="assets/images/sort_arrow_icon.svg" />
+
+                              Sort By
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filter-view-content-body">
+                        <ul class="list-unstyled">
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <a
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
+                                  >
+                                    Select Room
+                                  </a>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/pool_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Pool</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/parking_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Parking</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <a
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
+                                  >
+                                    Select Room
+                                  </a>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="row g-3">
+                              <div class="col-md-3">
+                                <img
+                                  src="assets/images/hotel_img_1.png"
+                                  alt=""
+                                  class="hotel-img"
+                                />
+                              </div>
+                              <div class="col-md-6">
+                                <div class="hotel-details-wrapper">
+                                  <div class="hotel-details-header">
+                                    <div
+                                      class="d-flex align-items-center flex-wrap gap-3"
+                                    >
+                                      <h5
+                                        class="font-color-secondary fw-700 fs-18 pt-sans-font-family mb-0"
+                                      >
+                                        The Pride Hotel
+                                      </h5>
+                                      <div
+                                        class="d-flex align-items-center gap-1"
+                                      >
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                        <img
+                                          src="assets/images/star_rate_img.svg"
+                                          alt=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0 d-flex align-items-center gap-1"
+                                    >
+                                      <img
+                                        src="assets/images/hotel_address_icon.svg"
+                                        alt=""
+                                      />
+                                      93, Richmond Road, Bengaluru, Karnataka,
+                                      IN 560025
+                                    </p>
+                                  </div>
+                                  <div class="hotel-details-body">
+                                    <ul
+                                      class="hotel-amenities-list list-unstyled"
+                                    >
+                                      <li>
+                                        <img
+                                          src="assets/images/bar_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Bar</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/room_service_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Room Service</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/restaurant_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Restaurant</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/wifi_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>WiFi</p>
+                                      </li>
+                                      <li>
+                                        <img
+                                          src="assets/images/gym_icon.svg"
+                                          alt=""
+                                        />
+                                        <p>Gym</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="hotel-details-footer">
+                                    <ul
+                                      class="hotel-availability-list list-unstyled"
+                                    >
+                                      <li class="bg-color-merino">
+                                        Breakfast Available
+                                      </li>
+                                      <li class="bg-color-frosted-mint">
+                                        Cancellation Available
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="hotel-rate-details-wrapper">
+                                  <div class="hotel-ratings">
+                                    <div>
+                                      <h5>Good</h5>
+                                      <p>71 ratings</p>
+                                    </div>
+                                    <div
+                                      class="hotel-ratings-value bg-color-primary fs-14 fw-400 pt-sans-font-family font-color-white"
+                                    >
+                                      4.5
+                                    </div>
+                                  </div>
+                                  <div class="text-md-end">
+                                    <h4
+                                      class="font-color-secondary fw-700 fs-18 mb-0"
+                                    >
+                                      ₹ 1,500
+                                    </h4>
+                                    <p
+                                      class="font-color-gravel-grey fs-14 fw-400 pt-sans-font-family mb-0"
+                                    >
+                                      Price per room/night
+                                    </p>
+                                  </div>
+                                  <a
+                                    class="btn select-room-btn primary-bg-outline-btn"
+                                    href="selected-room.html"
+                                    role="button"
+                                  >
+                                    Select Room
+                                  </a>
+                                  <button class="short-list-btn btn">
+                                    <i
+                                      class="fa fa-heart-o"
+                                      aria-hidden="true"
+                                    ></i>
+                                    Shortlist
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="searchFilterPillsHolidays"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsHolidaysTab"
+            tabindex="0"
+          >
+            Holidays content...
           </div>
         </div>
       </div>
+      <!-- share Modal  -->
+      <div
+        class="modal fade main-modal-wrapper"
+        id="shareModal"
+        tabindex="-1"
+        aria-labelledby="shareModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div
+              class="modal-header align-items-center justify-content-between"
+            >
+              <h3
+                class="font-color-secondary fw-700 fs-18 mb-0 pt-sans-font-family"
+              >
+                Share Itinerary
+              </h3>
+              <button
+                class="btn p-0 border-0"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <img src="assets/images/close_round_icon.svg" alt="" />
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-3 gy-4 align-items-end">
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="toEmailInput"
+                      placeholder="To Email"
+                    />
+                    <label for="toEmailInput">To Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="replyToEmailInput"
+                      placeholder="Reply to Email"
+                    />
+                    <label for="replyToEmailInput">Reply to Email</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="displayNameInput"
+                      placeholder="Display Name"
+                    />
+                    <label for="displayNameInput">Display Name</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="includeFareShareCheck"
+                    />
+                    <label
+                      class="form-check-label pt-sans-font-family fs-14 fw-400"
+                      for="includeFareShareCheck"
+                    >
+                      Include Fare
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="col-12 d-flex gap-sm-2 gap-3 align-items-sm-center flex-column flex-sm-row"
+                >
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img src="assets/images/pdf_icon.svg" alt="pdf icon" />
+                    Download PDF
+                    <img
+                      src="assets/images/download_primary_icon.svg"
+                      alt="download icon"
+                    />
+                  </button>
+                  <div class="vr d-none d-sm-block"></div>
+                  <button
+                    class="btn border-0 py-0 fs-14 fw-400 pt-sans-font-family font-color-secondary d-flex align-items-center gap-2"
+                  >
+                    <img
+                      src="assets/images/whatsapp_icon.svg"
+                      alt="whatsapp icon"
+                    />
+                    Copy For WhatsApp
+                    <img src="assets/images/copy_icon.svg" alt="copy icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn bg-color-primary font-color-white pt-sans-font-family fw-400 fs-16 py-2"
+                data-bs-dismiss="modal"
+              >
+                Send Email
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Choose Travelers Start -->
+      <div
+        class="mobile-drawer-wrapper mobile-choose-travelers travel-date-details"
+      >
+        <div class="chosen-travelers-class-wrapper">
+          <div class="travels-number-wrapper">
+            <div>
+              <label class="form-label fw-bold" for="adultSelector"
+                >Adults (12y+)</label
+              >
+              <div
+                class="btn-group number-btn-group number-btn-group-wrapper"
+                role="group"
+                id="adultSelector"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="1"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="2"
+                >
+                  2
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary active"
+                  data-value="3"
+                >
+                  3
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="4"
+                >
+                  4
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="5"
+                >
+                  5
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="6"
+                >
+                  6
+                </button>
+                <!-- ... -->
+              </div>
+            </div>
+            <div>
+              <label class="form-label fw-bold" for="childrenSelector"
+                >Children 2 - 12 Years</label
+              >
+              <div
+                class="btn-group children-btn-group number-btn-group-wrapper"
+                role="group"
+                id="childrenSelector"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="1"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="2"
+                >
+                  2
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary active"
+                  data-value="3"
+                >
+                  3
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="4"
+                >
+                  4
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="5"
+                >
+                  5
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="6"
+                >
+                  6
+                </button>
+                <!-- ... -->
+              </div>
+            </div>
+            <div>
+              <label class="form-label fw-bold" for="infantsSelector"
+                >Infants 0 - 23 Months</label
+              >
+              <div
+                class="btn-group infants-btn-group number-btn-group-wrapper"
+                role="group"
+                id="infantsSelector"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="1"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="2"
+                >
+                  2
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary active"
+                  data-value="3"
+                >
+                  3
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="4"
+                >
+                  4
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="5"
+                >
+                  5
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary"
+                  data-value="6"
+                >
+                  6
+                </button>
+                <!-- ... -->
+              </div>
+            </div>
+          </div>
+          <div class="choose-travel-class">
+            <p>Choose Travel Class</p>
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="radioEconomy"
+                />
+                <label class="form-check-label" for="radioEconomy">
+                  Economy
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="radioPremiumEconomy"
+                />
+                <label class="form-check-label" for="radioPremiumEconomy">
+                  Premium Economy
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="radioBusiness"
+                />
+                <label class="form-check-label" for="radioBusiness">
+                  Business
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="travelClass"
+                  id="radioFirstClass"
+                />
+                <label class="form-check-label" for="radioFirstClass">
+                  First Class
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Choose Travelers End -->
     </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="js/namoItinerary.js"></script>
   </body>
 </html>
-<nav class="dashboard-aside-nav">
-  <ul class="list-unstyled dashboard-nav-list">
-    <li class="nav-item">
-      <a href="dashboard.html" class="nav-link">
-        <span>
-          <img
-            src="assets/images/dashboard_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Dashboard
-        </span>
-      </a>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/my_booking_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          My Bookings
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li><a href="booking-history.html">Booking History</a></li>
-        <li><a href="import-PNR.html">Import Pnr</a></li>
-        <li><a href="import-offline.html">Import Offline</a></li>
-      </ul>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/markup_settings_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Markup Settings
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li><a href="markup-settings.html">Flight Markup</a></li>
-      </ul>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/settings_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          User Settings
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li><a href="manage-users.html">Manage Users</a></li>
-      </ul>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/accounts_panel_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Accounts Panel
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li><a href="view-statement.html">View Statement</a></li>
-        <li>
-          <a href="instant-topup-payment.html">Instant Topup & Payment</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/admin_panel_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Admin Panel
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li>
-          <a href="agency-registrations.html">Agency Registrations</a>
-        </li>
-        <li>
-          <a href="manage-supplier-api.html">Manage Supplier Api</a>
-        </li>
-        <li>
-          <a href="manage-flight-details.html">Manage Flight Details</a>
-        </li>
-        <li><a href="admin-markup.html">Admin Markup</a></li>
-        <li>
-          <a href="payment-provider-settings.html">Payment Provider Settings</a>
-        </li>
-        <li>
-          <a href="map-supplier-faretypes.html">Map Supplier Faretypes</a>
-        </li>
-      </ul>
-    </li>
-    <li class="nav-item has-submenu">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/master_setup_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Master Setup
-        </span>
-        <i class="fa fa-chevron-down submenu-arrow"></i>
-      </a>
-      <ul class="submenu-list">
-        <li><a href="airlines.html">Airlines</a></li>
-        <li><a href="currencies.html">Currencies</a></li>
-        <li><a href="countries.html">Countries</a></li>
-        <li><a href="states.html">States</a></li>
-        <li><a href="cities.html">Cities</a></li>
-        <li><a href="airports.html">Airports</a></li>
-        <li><a href="deal-templates.html">Deal Templates</a></li>
-      </ul>
-    </li>
-    <li class="nav-item">
-      <a href="change-password.html" class="nav-link">
-        <span>
-          <img
-            src="assets/images/change_password_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Change Password
-        </span>
-      </a>
-    </li>
-    <li class="nav-item logout-item">
-      <a href="#" class="nav-link">
-        <span>
-          <img
-            src="assets/images/logout_white_icon.svg"
-            alt=""
-            class="nav-icon"
-          />
-          Logout
-        </span>
-      </a>
-    </li>
-  </ul>
-</nav>
