@@ -4556,11 +4556,16 @@ textarea {
         flex-direction: column;
       }
     }
-    img {
+    .main-hotel-img {
       border-radius: 5px;
       object-fit: cover;
       width: 100%;
-      // height: 100%;
+      height: 334px;
+      @media screen {
+        @media (max-width: 1399px) {
+          height: 100%;
+        }
+      }
     }
     ul {
       display: flex;
@@ -4571,7 +4576,15 @@ textarea {
         flex-grow: 1;
         flex-shrink: 0;
         img {
-          height: 100%;
+          border-radius: 5px;
+          object-fit: cover;
+          width: 100%;
+          height: 77px;
+          @media screen {
+            @media (max-width: 1399px) {
+              height: 100%;
+            }
+          }
         }
       }
     }

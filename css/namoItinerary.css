@@ -4930,10 +4930,16 @@ textarea.form-control {
     flex-direction: column;
   }
 }
-.room-facility-view-wrapper .room-gallery-wrapper img {
+.room-facility-view-wrapper .room-gallery-wrapper .main-hotel-img {
   border-radius: 5px;
   object-fit: cover;
   width: 100%;
+  height: 334px;
+}
+@media screen and (max-width: 1399px) {
+  .room-facility-view-wrapper .room-gallery-wrapper .main-hotel-img {
+    height: 100%;
+  }
 }
 .room-facility-view-wrapper .room-gallery-wrapper ul {
   display: flex;
@@ -4946,7 +4952,15 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .room-facility-view-wrapper .room-gallery-wrapper ul li img {
-  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 77px;
+}
+@media screen and (max-width: 1399px) {
+  .room-facility-view-wrapper .room-gallery-wrapper ul li img {
+    height: 100%;
+  }
 }
 .selected-room-facilities-wrapper {
   border: 1px solid #e7e7e7;
