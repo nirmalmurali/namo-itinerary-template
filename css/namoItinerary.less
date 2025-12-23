@@ -1186,6 +1186,56 @@ textarea {
       padding: 1rem;
     }
   }
+  .flight-trip-details-wrapper {
+    .from-to-details-wrapper {
+      @media screen {
+        @media (max-width: 991px) {
+          border-bottom: 1px solid #e7e7e7;
+        }
+      }
+      .from-details {
+        @media screen {
+          @media (max-width: 576px) {
+            padding-right: 48px;
+          }
+        }
+      }
+      .to-details {
+        @media screen {
+          @media (max-width: 576px) {
+            padding-left: 32px;
+          }
+        }
+      }
+    }
+    .travel-date-details {
+      ul {
+        &.multi-city-travel-date {
+          li {
+            &:last-child {
+              width: fit-content;
+              border: none;
+            }
+          }
+        }
+        @media screen {
+          @media (max-width: 576px) {
+            flex-wrap: wrap;
+          }
+        }
+        li {
+          &:last-child {
+            @media screen {
+              @media (max-width: 576px) {
+                width: 100%;
+                border-top: 1px solid #e7e7e7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .trip-tab-wrapper {
   .trip-tab-pills {
@@ -1428,7 +1478,17 @@ textarea {
   margin-bottom: 1.5rem;
 
   .travel-date-details {
+    @media screen {
+      @media (max-width: 991px) {
+        border-top: 1px solid @platinum;
+      }
+    }
     & > ul {
+      @media screen {
+        @media (max-width: 576px) {
+          flex-wrap: wrap;
+        }
+      }
       & > li {
         position: relative;
         &:first-child {
@@ -1440,18 +1500,14 @@ textarea {
         }
         &.room-count-wrapper-list {
           padding-left: 45px;
-          @media screen {
-            @media (max-width: 576px) {
-              padding-left: 0.625rem;
-              padding-top: 45px;
-            }
-          }
         }
         &:last-child {
           padding-left: 25px;
           @media screen {
             @media (max-width: 576px) {
               padding-left: 0.625rem;
+              width: 100%;
+              border-top: 1px solid @platinum;
             }
           }
         }
@@ -1469,10 +1525,10 @@ textarea {
           gap: 2px;
           @media screen {
             @media (max-width: 576px) {
-              bottom: inherit;
-              left: 0;
-              top: -16px;
-              right: 0;
+              // bottom: inherit;
+              // left: 0;
+              // top: -16px;
+              // right: 0;
             }
           }
           .room-count {
@@ -1551,6 +1607,11 @@ textarea {
   padding: 12px 14px;
   border-right: 1px solid @platinum;
   height: 100%;
+  @media screen {
+    @media (max-width: 991px) {
+      border: none;
+    }
+  }
   p {
     margin-bottom: 0;
     &:extend(.pt-sans-font-family,
@@ -1848,7 +1909,7 @@ textarea {
   align-items: center;
   gap: 1rem;
   @media screen {
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
   }
@@ -1863,8 +1924,8 @@ textarea {
     flex-wrap: wrap;
     @media screen {
       @media (max-width: 576px) {
-        flex-direction: column;
-        width: 100%;
+        // flex-direction: column;
+        // width: 100%;
       }
     }
     & > li {

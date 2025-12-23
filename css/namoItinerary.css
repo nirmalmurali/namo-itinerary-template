@@ -2403,6 +2403,36 @@ textarea.form-control {
   border-radius: 10px;
   padding: 1rem;
 }
+@media screen and (max-width: 991px) {
+  .dashboard-platforms-wrapper .flight-trip-details-wrapper .from-to-details-wrapper {
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dashboard-platforms-wrapper .flight-trip-details-wrapper .from-to-details-wrapper .from-details {
+    padding-right: 48px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dashboard-platforms-wrapper .flight-trip-details-wrapper .from-to-details-wrapper .to-details {
+    padding-left: 32px;
+  }
+}
+.dashboard-platforms-wrapper .flight-trip-details-wrapper .travel-date-details ul.multi-city-travel-date li:last-child {
+  width: fit-content;
+  border: none;
+}
+@media screen and (max-width: 576px) {
+  .dashboard-platforms-wrapper .flight-trip-details-wrapper .travel-date-details ul {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 576px) {
+  .dashboard-platforms-wrapper .flight-trip-details-wrapper .travel-date-details ul li:last-child {
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+  }
+}
 .trip-tab-wrapper .trip-tab-pills .nav-item .nav-link.active {
   background: transparent;
 }
@@ -2545,6 +2575,16 @@ textarea.form-control {
   border-radius: 10px;
   margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 991px) {
+  .booking-hotels-wrapper .travel-date-details {
+    border-top: 1px solid #e7e7e7;
+  }
+}
+@media screen and (max-width: 576px) {
+  .booking-hotels-wrapper .travel-date-details > ul {
+    flex-wrap: wrap;
+  }
+}
 .booking-hotels-wrapper .travel-date-details > ul > li {
   position: relative;
 }
@@ -2556,18 +2596,14 @@ textarea.form-control {
 .booking-hotels-wrapper .travel-date-details > ul > li.room-count-wrapper-list {
   padding-left: 45px;
 }
-@media screen and (max-width: 576px) {
-  .booking-hotels-wrapper .travel-date-details > ul > li.room-count-wrapper-list {
-    padding-left: 0.625rem;
-    padding-top: 45px;
-  }
-}
 .booking-hotels-wrapper .travel-date-details > ul > li:last-child {
   padding-left: 25px;
 }
 @media screen and (max-width: 576px) {
   .booking-hotels-wrapper .travel-date-details > ul > li:last-child {
     padding-left: 0.625rem;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
   }
 }
 .booking-hotels-wrapper .travel-date-details > ul > li .room-count-wrapper {
@@ -2582,14 +2618,6 @@ textarea.form-control {
   justify-content: center;
   flex-direction: column;
   gap: 2px;
-}
-@media screen and (max-width: 576px) {
-  .booking-hotels-wrapper .travel-date-details > ul > li .room-count-wrapper {
-    bottom: inherit;
-    left: 0;
-    top: -16px;
-    right: 0;
-  }
 }
 .booking-hotels-wrapper .travel-date-details > ul > li .room-count-wrapper .room-count {
   width: 30px;
@@ -2644,6 +2672,11 @@ textarea.form-control {
   padding: 12px 14px;
   border-right: 1px solid #e7e7e7;
   height: 100%;
+}
+@media screen and (max-width: 991px) {
+  .hotel-destination-list-wrapper {
+    border: none;
+  }
 }
 .hotel-destination-list-wrapper p {
   margin-bottom: 0;
@@ -2849,7 +2882,7 @@ textarea.form-control {
   align-items: center;
   gap: 1rem;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .tab-content-search-hotels-header {
     flex-direction: column;
   }
@@ -2863,12 +2896,6 @@ textarea.form-control {
   border-radius: 5px;
   flex-grow: 1;
   flex-wrap: wrap;
-}
-@media screen and (max-width: 576px) {
-  .tab-content-search-hotels-header > ul {
-    flex-direction: column;
-    width: 100%;
-  }
 }
 .tab-content-search-hotels-header > ul > li {
   padding: 12px 14px;

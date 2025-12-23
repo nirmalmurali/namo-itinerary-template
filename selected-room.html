@@ -342,7 +342,7 @@
                   <div class="selected-room-facilities-wrapper">
                     <div class="selected-room-date-details">
                       <div
-                        class="d-flex align-items-center justify-content-between gap-4 flex-column flex-sm-row"
+                        class="d-flex align-items-center justify-content-between gap-4"
                       >
                         <div class="dropdown">
                           <a
@@ -419,10 +419,8 @@
                           </p>
                         </div>
                       </div>
-                      <div
-                        class="d-flex flex-column align-items-center align-items-sm-start"
-                      >
-                        <div class="dropdown">
+                      <div class="d-flex flex-column">
+                        <div class="dropdown show-mobile-room-guest-wrapper">
                           <button
                             class="btn btn-secondary dropdown-toggle global-dropdown-toggle"
                             role="button"
@@ -2069,6 +2067,77 @@
         </div>
       </div>
       <!-- details changed popup end -->
+
+      <!-- Mobile room guest Start -->
+      <div
+        class="mobile-drawer-wrapper mobile-room-guest-wrapper room-guest-dropdown-wrapper"
+      >
+        <ul class="added-room-list list-unstyled mb-0">
+          <li>
+            <div>
+              <h5>Room 1</h5>
+              <p><span>1</span> Adult <span>3</span> Children</p>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <button class="btn border-0 p-0 room-remove-btn">
+                <img src="assets/images/room_close_icon.svg" alt="" />
+              </button>
+              <button class="btn border-0 p-0 room-edit-btn">
+                <img src="assets/images/room_edit_icon.svg" alt="" />
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="room-guest-dropdown-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Room 1</h4>
+            <button class="btn border-0 p-0 room-remove-btn">
+              <img src="assets/images/room_close_icon.svg" alt="" />
+            </button>
+          </div>
+          <ul class="room-selection-wrapper list-unstyled">
+            <li>
+              <h5>Adults</h5>
+              <div class="room-add-count-wrapper">
+                <h6 class="count-view">1</h6>
+                <div class="d-flex align-items-center">
+                  <button class="btn count-decrease-btn">-</button>
+                  <button class="btn count-increase-btn">+</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h5>Children</h5>
+                <p>0- 12 Years</p>
+              </div>
+              <div class="room-add-count-wrapper">
+                <h6 class="count-view">0</h6>
+                <div class="d-flex align-items-center">
+                  <button class="btn count-decrease-btn">-</button>
+                  <button class="btn count-increase-btn">+</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="room-guest-dropdown-footer d-flex justify-content-between align-items-center"
+        >
+          <button
+            class="btn border-0 p-0 room-add-btn font-color-sea-green d-flex align-items-center gap-1 fs-12 fw-700 pt-sans-font-family"
+          >
+            <img src="assets/images/green_plus_icon.png" alt="" />
+            Add another room
+          </button>
+          <button
+            class="btn done-btn border-0 bg-color-primary text-white rounded-2"
+          >
+            Done
+          </button>
+        </div>
+      </div>
+      <!-- Mobile room guest End -->
     </main>
     <footer>
       <div class="container">
