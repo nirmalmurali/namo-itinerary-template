@@ -1015,8 +1015,12 @@ $(document).ready(function () {
       eyeIcon.alt = "Show";
     }
   };
-  $(".show-mobile-chosen-travelers .btn").on("click", function () {
-    $(".mobile-drawer-wrapper").toggleClass("active");
-    $(".black-drop").toggleClass("active");
+  $(
+    ".show-mobile-chosen-travelers .btn,.show-mobile-room-guest-wrapper .btn"
+  ).on("click", function () {
+    if ($(window).width() < 576) {
+      $(".mobile-drawer-wrapper").toggleClass("active");
+      $(".black-drop").toggleClass("active");
+    }
   });
 });
