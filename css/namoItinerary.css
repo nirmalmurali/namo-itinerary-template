@@ -3602,6 +3602,12 @@ textarea.form-control {
   border: 1px solid #f4efef;
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .sorted-list-wrapper .flight-profile-details-duration-wrapper {
+    column-gap: 10px !important;
+    flex-direction: row !important;
+  }
+}
 .sorted-flight-details {
   display: flex;
   align-items: center;
@@ -6361,4 +6367,10 @@ textarea.form-control {
 }
 .qr-card-wrapper table tbody tr td:first-child {
   min-width: 108px;
+}
+@media screen and (max-width: 576px) {
+  .flight-booked-details-wrapper .flight-booked-details {
+    flex-direction: column;
+    align-items: center !important;
+  }
 }

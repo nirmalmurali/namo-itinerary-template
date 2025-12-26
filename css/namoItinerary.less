@@ -2802,6 +2802,14 @@ textarea {
       width: 100%;
     }
   }
+  .flight-profile-details-duration-wrapper {
+    @media screen {
+      @media (max-width: 576px) {
+        column-gap: 10px !important;
+        flex-direction: row !important;
+      }
+    }
+  }
 }
 .sorted-flight-details {
   display: flex;
@@ -6551,6 +6559,18 @@ textarea {
           }
         }
       }
+    }
+  }
+}
+.flight-booked-details-wrapper {
+  .flight-booked-details {
+    @media screen {
+      @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: center !important;
+      }
+    }
+    h4 {
     }
   }
 }
