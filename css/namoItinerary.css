@@ -3608,6 +3608,12 @@ textarea.form-control {
     flex-direction: row !important;
   }
 }
+@media screen and (max-width: 1399px) {
+  .sorted-list-wrapper .book-now-fare-type-list-wrapper .filter-fare-wrapper {
+    flex-grow: 1;
+    text-align: start;
+  }
+}
 .sorted-flight-details {
   display: flex;
   align-items: center;
@@ -3741,6 +3747,16 @@ textarea.form-control {
 .book-now-fare-type-list-wrapper ul li .refund-wrapper {
   padding: 0 1rem;
   border-right: 1px solid #eaeaea;
+}
+@media screen and (max-width: 1399px) {
+  .book-now-fare-type-list-wrapper ul li .refund-wrapper {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 418px) {
+  .book-now-fare-type-list-wrapper ul li .refund-wrapper {
+    padding-left: 0;
+  }
 }
 .book-now-fare-type-list-wrapper ul li .refund-wrapper h6 {
   margin: 0;

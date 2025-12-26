@@ -2810,6 +2810,16 @@ textarea {
       }
     }
   }
+  .book-now-fare-type-list-wrapper {
+    .filter-fare-wrapper {
+      @media screen {
+        @media (max-width: 1399px) {
+          flex-grow: 1;
+          text-align: start;
+        }
+      }
+    }
+  }
 }
 .sorted-flight-details {
   display: flex;
@@ -2985,6 +2995,14 @@ textarea {
       .refund-wrapper {
         padding: 0 1rem;
         border-right: 1px solid @lavenderMist;
+        @media screen {
+          @media (max-width: 1399px) {
+            border-right: none;
+          }
+          @media (max-width: 418px) {
+            padding-left: 0;
+          }
+        }
         h6 {
           margin: 0;
           &:extend(.font-color-sea-green,
