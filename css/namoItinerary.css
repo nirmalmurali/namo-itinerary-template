@@ -6390,3 +6390,13 @@ textarea.form-control {
     align-items: center !important;
   }
 }
+.popup-fight-details-wrapper {
+  border: 1px solid #f4efef;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.popup-fight-list-wrapper li {
+  border: 1px solid #f4efef;
+  padding: 1rem 1rem 10px;
+  border-radius: 5px;
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -1697,7 +1697,7 @@
                               />
                               <button
                                 class="btn p-0 border-0 filter-content-search-btn"
-                                onclick="searchContent1.hidden^=1"
+                                onclick="searchContent1.hidden ^= 1"
                               >
                                 <img
                                   src="assets/images/serach_btn_icon.svg"
@@ -2020,7 +2020,7 @@
                                         </button>
                                         <button
                                           class="btn change-flight-details-btn open-addons"
-                                          data-tab="flightDetailsTab"
+                                          data-tab="flightDetails"
                                         >
                                           Flight Details
                                           <i
@@ -2030,7 +2030,7 @@
                                         </button>
                                         <button
                                           class="btn change-fare-rule-btn open-addons"
-                                          data-tab="fareSummaryRulesTab"
+                                          data-tab="fareSummaryRules"
                                         >
                                           Fare Rule
                                           <i
@@ -2544,7 +2544,7 @@
                               />
                               <button
                                 class="btn p-0 border-0 filter-content-search-btn"
-                                onclick="searchContent2.hidden^=1"
+                                onclick="searchContent2.hidden ^= 1"
                               >
                                 <img
                                   src="assets/images/serach_btn_icon.svg"
@@ -4005,7 +4005,7 @@
                                           </button>
                                           <button
                                             class="btn change-flight-details-btn open-addons"
-                                            data-tab="flightDetailsTab"
+                                            data-tab="flightDetails"
                                           >
                                             Flight Details
                                             <i
@@ -4015,7 +4015,7 @@
                                           </button>
                                           <button
                                             class="btn change-fare-rule-btn open-addons"
-                                            data-tab="fareSummaryRulesTab"
+                                            data-tab="fareSummaryRules"
                                           >
                                             Fare Rule
                                             <i
@@ -5757,14 +5757,14 @@
         <div class="side-bar-popup-body p-3">
           <div class="primary-tab-nav-wrapper">
             <ul
-              class="nav nav-pills mb-3 justify-content-start"
+              class="nav nav-pills mb-3 justify-content-start flex-nowrap"
               id="addonsTab"
               role="tablist"
             >
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link active"
-                  id="flightDetailsTab"
+                  id="flightDetails-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#flightDetails"
                   type="button"
@@ -5776,7 +5776,7 @@
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
-                  id="fareSummaryRulesTab"
+                  id="fareSummaryRules-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#fareSummaryRules"
                   type="button"
@@ -5788,7 +5788,7 @@
               <li class="nav-item" role="presentation">
                 <button
                   class="nav-link"
-                  id="baggageAndInclusionsTab"
+                  id="baggageAndInclusions-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#baggageAndInclusions"
                   type="button"
@@ -5802,18 +5802,158 @@
 
           <!-- Tab Content -->
           <div class="tab-content" id="addonsTabContent">
-            <!-- Baggage -->
-            <div
-              class="tab-pane fade show active"
-              id="flightDetails"
-              role="tabpanel"
-            >
-              DXB > COK
+            <!-- flightDetails -->
+            <div class="tab-pane fade" id="flightDetails" role="tabpanel">
+              <div
+                class="sorted-flight-details gap-3 popup-fight-details-wrapper"
+              >
+                <div class="d-flex gap-3 align-items-center">
+                  <h4
+                    class="fs-18 fw-700 pt-sans-font-family font-color-secondary mb-0"
+                  >
+                    DXB
+                  </h4>
+                  <div class="duration-details">
+                    <p>02h 20m</p>
+                    <img src="assets/images/duration_view_img.svg" alt="" />
+                    <p>1 stop</p>
+                  </div>
+                  <h4
+                    class="fs-18 fw-700 pt-sans-font-family font-color-secondary mb-0"
+                  >
+                    COK
+                  </h4>
+                </div>
+                <div class="vr"></div>
+                <div>
+                  <p
+                    class="fs-12 fw-400 pt-sans-font-family font-color-gravel-grey mb-0"
+                  >
+                    Departure
+                  </p>
+                  <h4
+                    class="fs-14 fw-400 pt-sans-font-family font-color-secondary mb-0"
+                  >
+                    <span class="fs-18 fw-700">18</span>
+                    May’25
+                  </h4>
+                </div>
+              </div>
+              <ul class="popup-fight-list-wrapper list-unstyled m-0 p-0">
+                <li>
+                  <div class="flight-profile-details mb-3">
+                    <img src="assets/images/air_india_icon.svg" />
+                    <div>
+                      <h6>Air India</h6>
+                      <p>AI - 2950</p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex gap-3 align-items-center align-items-sm-start align-items-md-center flex-wrap flight-booked-details-wrapper flex-column flex-md-row"
+                  >
+                    <div
+                      class="d-flex gap-3 align-items-center flight-booked-details"
+                    >
+                      <div>
+                        <h4
+                          class="fs-18 fw-700 pt-sans-font-family font-color-secondary mb-0"
+                        >
+                          Dubai [DXB]
+                        </h4>
+                        <p
+                          class="fs-14 fw-400 pt-sans-font-family font-color-gravel-grey mb-2"
+                        >
+                          Dubai&nbsp;,Terminal&nbsp;1
+                        </p>
+                        <h5 class="fs-14 fw-400 font-color-secondary mb-0">
+                          <span class="fw-700">18</span>
+                          Monday, May’25
+                        </h5>
+                      </div>
+                      <div class="duration-details">
+                        <p>02h&nbsp;20m</p>
+                        <img
+                          src="assets/images/doted_duration_view_img.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <h4
+                          class="fs-18 fw-700 pt-sans-font-family font-color-secondary mb-0"
+                        >
+                          Dubai [DXB]
+                        </h4>
+                        <p
+                          class="fs-14 fw-400 pt-sans-font-family font-color-gravel-grey mb-2"
+                        >
+                          Dubai&nbsp;,Terminal&nbsp;1
+                        </p>
+                        <h5 class="fs-14 fw-400 font-color-secondary mb-0">
+                          <span class="fw-700">18</span>
+                          Monday, May’25
+                        </h5>
+                      </div>
+                    </div>
+                    <div class="vr d-none d-md-block"></div>
+                    <div class="d-flex gap-3 align-items-center">
+                      <div>
+                        <p
+                          class="fs-10 fw-400 pt-sans-font-family font-color-gravel-grey mb-0"
+                        >
+                          Aircraft
+                        </p>
+                        <h6 class="fs-12 fw-400 font-color-secondary mb-0">
+                          AIRBUS JET
+                        </h6>
+                      </div>
+                      <div class="vr"></div>
+                      <div>
+                        <p
+                          class="fs-10 fw-400 pt-sans-font-family font-color-secondary mb-0"
+                        >
+                          Travel Class
+                        </p>
+                        <h6 class="fs-12 fw-400 font-color-secondary mb-0">
+                          Economy Class
+                        </h6>
+                      </div>
+                      <div class="vr"></div>
+                      <div>
+                        <p
+                          class="fs-10 fw-400 pt-sans-font-family font-color-secondary mb-0"
+                        >
+                          Refund
+                        </p>
+                        <h6 class="fs-12 fw-400 font-color-sea-green mb-0">
+                          Refundable
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <!-- Meals -->
+            <!-- fare Summary Rules -->
             <div class="tab-pane fade" id="fareSummaryRules" role="tabpanel">
-              Fare Details
+              <div class="popup-fare-summary-rules-wrapper">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h4
+                      class="fs-14 fw-700 font-color-secondary mb-0 pt-sans-font-family"
+                    >
+                      Fare Details
+                    </h4>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4
+                      class="fs-14 fw-700 font-color-secondary mb-0 pt-sans-font-family"
+                    >
+                      Fare Details
+                    </h4>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Seat -->
