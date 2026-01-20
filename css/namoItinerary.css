@@ -225,7 +225,9 @@ body:has(header.fixed-top) main {
 .password-requirements ul li,
 .applied-convenience-modal-wrapper table thead tr th,
 .applied-convenience-modal-wrapper table tbody tr td,
-.qr-card-wrapper table tbody tr td {
+.qr-card-wrapper table tbody tr td,
+.fight-fare-table-wrapper table thead tr th,
+.fight-fare-table-wrapper table tbody tr td {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -406,7 +408,9 @@ footer .quick-links-wrapper li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-label,
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
 .applied-convenience-modal-wrapper table thead tr th,
-.qr-card-wrapper table tbody tr td {
+.qr-card-wrapper table tbody tr td,
+.fight-fare-table-wrapper table thead tr th,
+.fight-fare-table-wrapper table tbody tr td {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -868,7 +872,9 @@ footer .quick-links-wrapper li a,
 .password-requirements ul li,
 .applied-convenience-modal-wrapper table thead tr th,
 .applied-convenience-modal-wrapper table tbody tr td,
-.qr-card-wrapper table tbody tr td {
+.qr-card-wrapper table tbody tr td,
+.fight-fare-table-wrapper table thead tr th,
+.fight-fare-table-wrapper table tbody tr td {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -1039,7 +1045,8 @@ footer .quick-links-wrapper li a,
 .dashboard-mobile-nav .dashboard-nav-list .nav-item .submenu-list li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-label,
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
-.applied-convenience-modal-wrapper table thead tr th {
+.applied-convenience-modal-wrapper table thead tr th,
+.fight-fare-table-wrapper table thead tr th {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1186,7 +1193,8 @@ footer .quick-links-wrapper li a,
 .section-nav-btns .btn,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
 .applied-convenience-modal-wrapper table tbody tr td,
-.qr-card-wrapper table tbody tr td {
+.qr-card-wrapper table tbody tr td,
+.fight-fare-table-wrapper table tbody tr td {
   color: #444444 !important;
 }
 .bg-color-ship-grey {
@@ -6399,4 +6407,53 @@ textarea.form-control {
   border: 1px solid #f4efef;
   padding: 1rem 1rem 10px;
   border-radius: 5px;
+}
+.popup-fare-summary-rules-wrapper .fare-details-wrapper {
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  padding: 10px;
+}
+.popup-fare-summary-rules-wrapper .fare-details-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+.popup-fare-summary-rules-wrapper .fare-details-wrapper ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.popup-fare-summary-rules-wrapper .fare-details-wrapper ul li:first-child {
+  padding-top: 0;
+}
+.popup-fare-summary-rules-wrapper .fare-details-wrapper ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.fight-fare-table-wrapper table {
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+.fight-fare-table-wrapper table thead tr th {
+  text-align: left;
+  background: #efefef;
+  padding: 10px;
+  border-bottom: 1px solid #ebebeb;
+}
+.fight-fare-table-wrapper table tbody tr td {
+  border-bottom: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+  text-align: left;
+  padding: 10px;
+}
+.fight-fare-table-wrapper table tbody tr td:last-child {
+  border-right: none;
+}
+.fight-fare-table-wrapper table tbody tr.table-fee-header td {
+  background: #f8fafc;
+  color: #003c89 !important;
+}
+.fight-fare-table-wrapper table tbody tr:last-child td {
+  border-bottom: none;
 }

@@ -6642,3 +6642,82 @@ textarea {
     border-radius: 5px;
   }
 }
+.popup-fare-summary-rules-wrapper {
+  .fare-details-wrapper {
+    border-radius: 10px;
+    border: 1px solid @greenWhite;
+    padding: 10px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        padding: 10px 0;
+        border-bottom: 1px solid @greenWhite;
+        &:first-child {
+          padding-top: 0;
+        }
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.fight-fare-table-wrapper {
+  table {
+    border: 1px solid @greenWhite;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+
+    thead {
+      tr {
+        th {
+          &:extend(.fs-14,
+          .fw-400,
+          .pt-sans-font-family,
+          .font-color-secondary);
+          text-align: left;
+          background: #efefef;
+          padding: 10px;
+          border-bottom: 1px solid @greenWhite;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid @greenWhite;
+          border-right: 1px solid @greenWhite;
+          &:extend(.font-color-ship-grey,
+          .fs-14,
+          .fw-400,
+          .pt-sans-font-family);
+          text-align: left;
+          padding: 10px;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        &.table-fee-header {
+          td {
+            background: #f8fafc;
+            color: #003c89 !important;
+          }
+        }
+
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
