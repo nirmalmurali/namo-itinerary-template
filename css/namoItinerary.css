@@ -227,7 +227,8 @@ body:has(header.fixed-top) main {
 .applied-convenience-modal-wrapper table tbody tr td,
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
-.fight-fare-table-wrapper table tbody tr td {
+.fight-fare-table-wrapper table tbody tr td,
+.booking-reference-table table thead tr th {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -410,7 +411,8 @@ footer .quick-links-wrapper li a,
 .applied-convenience-modal-wrapper table thead tr th,
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
-.fight-fare-table-wrapper table tbody tr td {
+.fight-fare-table-wrapper table tbody tr td,
+.booking-reference-table table thead tr th {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -874,7 +876,8 @@ footer .quick-links-wrapper li a,
 .applied-convenience-modal-wrapper table tbody tr td,
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
-.fight-fare-table-wrapper table tbody tr td {
+.fight-fare-table-wrapper table tbody tr td,
+.booking-reference-table table thead tr th {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -1046,7 +1049,8 @@ footer .quick-links-wrapper li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-label,
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
 .applied-convenience-modal-wrapper table thead tr th,
-.fight-fare-table-wrapper table thead tr th {
+.fight-fare-table-wrapper table thead tr th,
+.booking-reference-table table thead tr th {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1519,7 +1523,8 @@ footer .quick-links-wrapper li a,
 .airline-modal-wrapper table thead tr th,
 .dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link:hover,
 .dashboard-mobile-nav .dashboard-nav-list .nav-item.active .nav-link,
-.applied-convenience-modal-wrapper table thead tr th {
+.applied-convenience-modal-wrapper table thead tr th,
+.booking-reference-table table thead tr th {
   background-color: #e4e4e4 !important;
 }
 .font-color-snow-drift {
@@ -6456,4 +6461,14 @@ textarea.form-control {
 }
 .fight-fare-table-wrapper table tbody tr:last-child td {
   border-bottom: none;
+}
+.booking-reference-table table thead tr th {
+  border: 1px solid #cdcccc;
+}
+.booking-flight-details-wrapper {
+  border: 1px solid #cdcccc;
+}
+.booking-flight-details-wrapper .title-header {
+  border-bottom: 1px solid #cdcccc;
+  padding: 1rem;
 }
