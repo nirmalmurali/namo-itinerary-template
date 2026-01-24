@@ -6472,3 +6472,20 @@ textarea.form-control {
   border-bottom: 1px solid #cdcccc;
   padding: 1rem;
 }
+.booked-traveler-details-wrapper {
+  border: 1px solid #cdcccc;
+}
+.booked-traveler-details-wrapper .title-header {
+  border-bottom: 1px solid #cdcccc;
+  padding: 1rem;
+}
+.booked-tearms-conditions-wrapper {
+  border: 1px solid #cdcccc;
+}
+.booked-tearms-conditions-wrapper .title-header {
+  border-bottom: 1px solid #cdcccc;
+  padding: 1rem;
+}
+.booking-voucher-content {
+  padding: 1rem 5% 2rem;
+}
