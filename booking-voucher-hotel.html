@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>Booking Voucher - Hotel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <link rel="stylesheet" href="css/namoItinerary.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/namo_logo.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler btn p-0 border-0 shadow-none"
+            type="button"
+          >
+            <i
+              class="fa fa-bars font-color-primary fw-500"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <div
+            class="collapse navbar-collapse d-none d-lg-flex justify-content-between align-items-center"
+            id="navbarNavAltMarkup"
+          >
+            <!-- <div class="flex-grow-1 d-flex justify-content-center">
+              <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">About Us</a>
+                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact US</a>
+              </div>
+            </div>
+            <a href="/login.html" class="btn fw-400 fs-13">LOGIN / SIGNUP</a> -->
+            <div class="dropdown ms-auto profile-header-dropdown-wrapper">
+              <div
+                class="btn border-0 dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div>
+                  <h6 class="fw-400 font-color-heavy-metal fs-16 mb-0 text-end">
+                    Jhone Dou
+                  </h6>
+                  <p
+                    class="fw-400 font-color-charcoal-grey mb-0 text-end fs-12"
+                  >
+                    Agent Code : 64605
+                  </p>
+                </div>
+                <img
+                  src="assets/images/profile_avathar.png"
+                  alt=""
+                  class="profile-img"
+                  width="35"
+                  height="35"
+                />
+                <i
+                  class="fa fa-ellipsis-v font-color-charcoal-grey"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="#"
+                    ><img src="assets/images/dashboard_icon.svg" alt="" />
+                    Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/my_booking_icon.svg" alt="" />My
+                    booking</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/markup_settings_icon.svg"
+                      alt=""
+                    />Markup Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/settings_icon.svg" alt="" /> User
+                    Settings</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/accounts_panel_icon.svg"
+                      alt=""
+                    />Accounts Panel</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/admin_panel_icon.svg"
+                      alt=""
+                    />Admin Panel</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img
+                      src="assets/images/master_setup_icon.svg"
+                      alt=""
+                    />Master Setup</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><img src="assets/images/logout_icon.svg" alt="" />Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-nav-menu">
+          <div class="d-flex justify-content-end w-100">
+            <button class="menu-close btn p-0 border-0">
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="navbar-nav">
+              <a class="nav-link" aria-current="page" href="#">About Us</a>
+              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="#">Contact US</a>
+            </div>
+          </div>
+          <a href="/login.html" class="btn fw-400 fs-13 view-more-btn"
+            >LOGIN / SIGNUP</a
+          >
+        </div>
+        <div class="black-drop"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-booking-voucher-wrapper">
+        <div class="page-tab-header-wrapper bg-color-old-lace">
+          <div class="container">
+            <ul
+              class="nav nav-pills search-filter-nav-pills"
+              id="search-filters-tab"
+              role="tablist"
+            >
+              <!-- Flight Tab -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="searchFilterPillsFlightsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsFlights"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsFlights"
+                  aria-selected="true"
+                >
+                  <img
+                    src="assets/images/flight_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/flight_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
+                  Flight
+                </button>
+              </li>
+
+              <!-- Hotels Tab -->
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="searchFilterPillsHotelsTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsHotels"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsHotels"
+                  aria-selected="false"
+                >
+                  <img
+                    src="assets/images/hotels_tab_icon.svg"
+                    alt=""
+                    class="img-default"
+                  />
+                  <img
+                    src="assets/images/hotels_tab_active_icon.svg"
+                    alt=""
+                    class="img-active"
+                  />
+                  Hotels
+                </button>
+              </li>
+
+              <!-- Holidays Tab -->
+              <!-- <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="searchFilterPillsHolidaysTab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#searchFilterPillsHolidays"
+                  type="button"
+                  role="tab"
+                  aria-controls="searchFilterPillsHolidays"
+                  aria-selected="false"
+                >
+                  <img src="assets/images/holidays_tab_icon.svg" alt="" />
+                  Holidays
+                </button>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div
+          class="tab-content bg-color-desert-storm"
+          id="search-filters-pills-tabContent"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="searchFilterPillsFlights"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsFlightsTab"
+            tabindex="0"
+          >
+            <div class="container pb-5">
+              <div
+                class="d-flex justify-content-between align-items-center gap-2 py-3 flex-wrap"
+              >
+                <h3
+                  class="fw-700 fs-18 pt-sans-font-family font-color-secondary mb-0"
+                >
+                  Booking_Confirmation_Vouche
+                </h3>
+                <button
+                  class="btn bg-color-primary text-white fs-14 fw-600 d-flex align-items-center gap-2 pt-sans-font-family"
+                >
+                  <img src="assets/images/download_icon.svg" alt="" />
+                  Download
+                </button>
+              </div>
+              <div class="booking-voucher-content bg-color-white">
+                <div class="booking-voucher-content-header">
+                  <div
+                    class="d-flex justify-content-between align-items-center gap-3"
+                  >
+                    <img src="assets/images/namo_logo.svg" alt="" />
+                    <div class="d-flex flex-column align-items-end">
+                      <h6
+                        class="font-color-secondary fs-16 fw-400 pt-sans-font-family mb-2"
+                      >
+                        Namo Travel India
+                      </h6>
+                      <p
+                        class="font-color-dorado fs-14 fw-400 pt-sans-font-family mb-1"
+                      >
+                        Ground floor, Muallim Complex
+                      </p>
+                      <div class="d-flex align-items-center gap-3">
+                        <p
+                          class="font-color-dorado fs-14 fw-400 pt-sans-font-family"
+                        >
+                          <img
+                            src="assets/images/phone_icon.svg"
+                            alt=""
+                            class="me-2"
+                          />
+                          +91 1234567890
+                        </p>
+                        <p
+                          class="font-color-dorado fs-14 fw-400 pt-sans-font-family"
+                        >
+                          <img
+                            src="assets/images/email_icon.svg"
+                            alt=""
+                            class="me-2"
+                          />
+                          info@namotravel.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="booking-voucher-content-body">
+                  <div class="booking-confirmation-wrapper">
+                    <div
+                      class="d-flex align-items-center w-100 h-100 flex-wrap gap-3"
+                    >
+                      <div class="booking-info-item ps-4 pe-5 border-end">
+                        <span class="label d-block mb-1">Booking ID</span>
+                        <span class="value d-block">NH78005424868876</span>
+                      </div>
+                      <div class="booking-info-item px-5 border-lg-end">
+                        <span class="label d-block mb-1">Booking Date</span>
+                        <span class="value d-block">Aug 20, 2025</span>
+                      </div>
+                      <div class="booking-status-wrapper ms-auto pe-4">
+                        <div class="booking-status-badge success">
+                          <i
+                            class="fa fa-check-circle-o"
+                            aria-hidden="true"
+                          ></i>
+                          BOOKING CONFIRMED
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-room-details-wrapper">
+                    <div class="room-details-box mb-3">
+                      <div class="p-3">
+                        <h4
+                          class="fw-700 fs-16 font-color-secondary mb-2 pt-sans-font-family"
+                        >
+                          Room 1-
+                          <span class="fs-14 fw-400 font-color-dorado"
+                            >Room, 1 King Bed, Smoking</span
+                          >
+                        </h4>
+                        <p
+                          class="fs-14 fw-400 font-color-dorado mb-0 pt-sans-font-family"
+                        >
+                          <i class="fa fa-user me-2" aria-hidden="true"></i> 2
+                          Adult(s), 0 Children
+                        </p>
+                      </div>
+                      <div class="border-top"></div>
+                      <div class="p-3">
+                        <div class="mb-3">
+                          <p
+                            class="fs-12 fw-400 font-color-dorado mb-1 pt-sans-font-family"
+                          >
+                            Meal Plan
+                          </p>
+                          <p
+                            class="fs-14 fw-600 font-color-secondary mb-0 pt-sans-font-family"
+                          >
+                            Breakfast
+                          </p>
+                        </div>
+                        <div>
+                          <p
+                            class="fs-12 fw-400 font-color-dorado mb-1 pt-sans-font-family"
+                          >
+                            Inclusions
+                          </p>
+                          <ul class="mb-0 ps-3">
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Free WiFi
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Early - Check in & Late - Check out (2 hours -
+                              Subject to availability )
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Free stay for kids below 12 years
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Enjoy INR 500 hotel credit, once during the stay
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Free self parking
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-2 pt-sans-font-family"
+                            >
+                              Spa 25% discount on Best Available Rate.
+                            </li>
+                            <li
+                              class="fs-14 fw-400 font-color-secondary mb-0 pt-sans-font-family"
+                            >
+                              Breakfast buffet
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="guest-details-box mb-4">
+                      <div class="p-3">
+                        <h4
+                          class="fw-700 fs-16 font-color-secondary mb-1 pt-sans-font-family"
+                        >
+                          Guest Details (2)
+                        </h4>
+                        <p
+                          class="fs-14 fw-400 font-color-dorado mb-0 pt-sans-font-family"
+                        >
+                          Bivin Samuel (Primary Guest) + 1
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-importent-info">
+                    <h5 class="title">IMPORTANT INFORMATION</h5>
+                    <ul>
+                      <li>
+                        Passport, Aadhaar, Driving License and Govt. ID are
+                        accepted as ID proof(s). Local ids are allowed
+                      </li>
+                    </ul>
+
+                    <h6 class="sub-title">ID Proof Related</h6>
+                    <ul>
+                      <li>
+                        Passport, Aadhaar, Driving License and Govt. ID are
+                        accepted as ID proof(s)
+                      </li>
+                      <li>Local ids are allowed</li>
+                    </ul>
+
+                    <h6 class="sub-title">Must read</h6>
+                    <ul>
+                      <li>
+                        Extra-person charges may apply and vary depending on
+                        property policy|Government-issued photo identification
+                        and a credit card, debit card, or cash deposit may be
+                        required at check-in for incidental charges|Special
+                        requests are subject to availability upon check-in and
+                        may incur additional charges; special requests cannot be
+                        guaranteed|This property accepts credit cards, debit
+                        cards, and cash|Parties and events are allowed on
+                        site|Safety features at this property include a deadbolt
+                        lock|This property has outdoor spaces, such as
+                        balconies, patios, terraces which may not be suitable
+                        for children; if you have concerns, we recommend
+                        contacting the property prior to your arrival to confirm
+                        they can accommodate you in a suitable room|This
+                        property affirms that it follows the cleaning and
+                        disinfection practices of Commitment to Clean (Marriott)
+                      </li>
+                      <li>
+                        Optional : Fee for buffet breakfast: approximately INR
+                        750 per person|Airport shuttle fee: INR 3000 per vehicle
+                        (one-way, maximum occupancy 4)|Late check-in fee for
+                        check-in between 2:00 PM and 4:00 PM|Rollaway bed fee:
+                        INR 1500.0 per night
+                      </li>
+                    </ul>
+
+                    <h6 class="sub-title">Guest Profile</h6>
+                    <ul>
+                      <li>Primary guest should be atleast 18 years of age</li>
+                      <li>Unmarried couples allowed</li>
+                    </ul>
+
+                    <h6 class="sub-title">Pet(s) Related</h6>
+                    <ul>
+                      <li>Pets are not allowed</li>
+                      <li>There are no pets living on the property</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="searchFilterPillsHotels"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsHotelsTab"
+            tabindex="0"
+          ></div>
+          <div
+            class="tab-pane fade"
+            id="searchFilterPillsHolidays"
+            role="tabpanel"
+            aria-labelledby="searchFilterPillsHolidaysTab"
+            tabindex="0"
+          >
+            Holidays content...
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 footer-company-info">
+            <img src="assets/images/footer_logo.svg" alt="" />
+            <p class="pt-sans-font-family fs-14 fw-400 text-white mt-2 mb-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </p>
+            <div class="social-media-wrapper">
+              <p class="fs-15 fw-400 text-white pt-sans-font-family mb-0">
+                Follow us
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/facebook_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/twitter_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/instagram_icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="assets/images/linkedin_icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 d-flex col-sm-6 justify-content-sm-center first-quick-link"
+          >
+            <div>
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Quick Links
+              </h5>
+              <ul class="quick-links-wrapper">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About US</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 d-flex col-sm-6 justify-content-lg-center second-quick-link"
+          >
+            <div>
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Quick Links
+              </h5>
+              <ul class="quick-links-wrapper">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About US</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 d-flex justify-content-sm-center">
+            <div class="ps-lg-5 ps-sm-3">
+              <h5 class="baloo-font-family fw-600 text-white mb-2 fs-15">
+                Contact Info
+              </h5>
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-3">
+                201, 2nd Floor, Antariksh Thakoor House <br />
+                Makwana Road, Marol, Andheri(E) <br />
+                Mumbai, Maharashtra 400059
+              </p>
+              <p class="pt-sans-font-family fs-14 fw-400 text-white mb-2">
+                9958377492, 9958377493
+              </p>
+              <a
+                href="mailto:ajish44@gmail.com"
+                class="pt-sans-font-family fs-14 fw-400 text-white text-decoration-none"
+                >ajish44@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrapper flex-column flex-sm-row">
+          <p class="fs-14 fw-400 text-white pt-sans-font-family mb-0">
+            © 2024 Travel. All rights reserved.
+          </p>
+          <a
+            href="#"
+            class="fs-14 fw-400 text-white pt-sans-font-family mb-0 text-decoration-none"
+          >
+            Privacy Policy Terms of Use
+          </a>
+        </div>
+      </div>
+      <div class="back-drop"></div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="js/namoItinerary.js"></script>
+  </body>
+</html>

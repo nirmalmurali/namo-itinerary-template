@@ -228,7 +228,13 @@ body:has(header.fixed-top) main {
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
 .fight-fare-table-wrapper table tbody tr td,
-.booking-reference-table table thead tr th {
+.booking-reference-table table thead tr th,
+.booking-confirmation-wrapper .booking-info-item .label,
+.booking-confirmation-wrapper .booking-info-item .value,
+.booking-confirmation-wrapper .booking-status-badge,
+.booking-importent-info .title,
+.booking-importent-info .sub-title,
+.booking-importent-info ul li {
   font-family: "PT Sans", sans-serif !important;
 }
 .baloo-font-family {
@@ -278,7 +284,9 @@ body:has(header.fixed-top) main {
 .review-form-content p,
 .comments-view-wrapper ul li .reply-btn,
 .room-more-info,
-.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p {
+.cancellation-policy-side-bar-popup .cancellation-policy-wrapper ul li p,
+.booking-confirmation-wrapper .booking-info-item .label,
+.booking-importent-info ul li {
   font-size: 0.75rem !important;
 }
 .fs-13,
@@ -292,7 +300,9 @@ body:has(header.fixed-top) main {
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
 .smart-data-grid-table-wrapper .smart-data-grid-table-body .table-responsive table tbody tr td,
 .password-requirements ul li,
-.applied-convenience-modal-wrapper table tbody tr td {
+.applied-convenience-modal-wrapper table tbody tr td,
+.booking-importent-info .title,
+.booking-importent-info .sub-title {
   font-size: 0.8125rem !important;
 }
 .fs-14,
@@ -412,7 +422,8 @@ footer .quick-links-wrapper li a,
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
 .fight-fare-table-wrapper table tbody tr td,
-.booking-reference-table table thead tr th {
+.booking-reference-table table thead tr th,
+.booking-confirmation-wrapper .booking-status-badge {
   font-size: 0.875rem !important;
 }
 .fs-15,
@@ -441,7 +452,8 @@ footer .quick-links-wrapper li a,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item .nav-link,
 .booking-history-list li h5,
 .booking-details-table-wrapper table tbody tr td p,
-.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link {
+.dashboard-mobile-nav .dashboard-nav-list .nav-item .nav-link,
+.booking-confirmation-wrapper .booking-info-item .value {
   font-size: 1rem !important;
 }
 .fs-17 {
@@ -877,7 +889,10 @@ footer .quick-links-wrapper li a,
 .qr-card-wrapper table tbody tr td,
 .fight-fare-table-wrapper table thead tr th,
 .fight-fare-table-wrapper table tbody tr td,
-.booking-reference-table table thead tr th {
+.booking-reference-table table thead tr th,
+.booking-confirmation-wrapper .booking-info-item .label,
+.booking-confirmation-wrapper .booking-info-item .value,
+.booking-importent-info ul li {
   font-weight: 400 !important;
 }
 .fw-500,
@@ -890,7 +905,9 @@ footer .quick-links-wrapper li a,
 .fw-600,
 .smart-dashboard-wrapper .smart-dashboard-aside-wrapper .dashboard-aside-nav .dashboard-nav-list .nav-item.active .nav-link,
 .dashboard-mobile-nav .dashboard-nav-list .nav-item.active .nav-link,
-.wallet-dropdown-menu .wallet-info-item .wallet-value {
+.wallet-dropdown-menu .wallet-info-item .wallet-value,
+.booking-confirmation-wrapper .booking-status-badge,
+.booking-importent-info .sub-title {
   font-weight: 600 !important;
 }
 .fw-700,
@@ -932,7 +949,8 @@ footer .quick-links-wrapper li a,
 .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td h4,
 .review-hotel-booking-wrapper .review-hotel-booking-content .review-hotel-details-wrapper .room-count-table-wrapper table tbody tr td p span,
 .smart-dashboard-wrapper .smart-dashboard-content-wrapper .smart-dashboard-content-header h4,
-.booking-history-list li h5 {
+.booking-history-list li h5,
+.booking-importent-info .title {
   font-weight: 700 !important;
 }
 .fw-800 {
@@ -1050,7 +1068,10 @@ footer .quick-links-wrapper li a,
 .wallet-dropdown-menu .wallet-info-item .wallet-value,
 .applied-convenience-modal-wrapper table thead tr th,
 .fight-fare-table-wrapper table thead tr th,
-.booking-reference-table table thead tr th {
+.booking-reference-table table thead tr th,
+.booking-confirmation-wrapper .booking-info-item .value,
+.booking-importent-info .sub-title,
+.booking-importent-info ul li {
   color: #000000 !important;
 }
 .bg-color-secondary {
@@ -1381,7 +1402,8 @@ footer .quick-links-wrapper li a,
 .blogs-items-wrapper a,
 .details-changed-modal .modal-footer .btn.back-to-search-btn,
 .review-hotel-fare-sidebar .accordion-item .accordion-body ul li h6,
-.review-hotel-fare-sidebar .accordion-item .accordion-body ul li p {
+.review-hotel-fare-sidebar .accordion-item .accordion-body ul li p,
+.booking-confirmation-wrapper .booking-info-item .label {
   color: #605e5e !important;
 }
 .bg-color-dorado {
@@ -6488,4 +6510,64 @@ textarea.form-control {
 }
 .booking-voucher-content {
   padding: 1rem 5% 2rem;
+}
+.booking-confirmation-wrapper {
+  border: 1px solid #cdcccc;
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+}
+.booking-confirmation-wrapper .booking-info-item {
+  border-color: #cdcccc !important;
+}
+.booking-confirmation-wrapper .booking-info-item .label {
+  line-height: normal;
+}
+.booking-confirmation-wrapper .booking-info-item .value {
+  line-height: normal;
+}
+.booking-confirmation-wrapper .booking-status-badge {
+  padding: 0.625rem 1rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+.booking-confirmation-wrapper .booking-status-badge.success {
+  background-color: #dfffed;
+  color: #098753;
+}
+.booking-importent-info {
+  background-color: #fff5f5;
+  padding: 1.5rem 1rem;
+  border-radius: 4px;
+}
+.booking-importent-info .title {
+  color: #ff4848;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.booking-importent-info .sub-title {
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+.booking-importent-info ul {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+.booking-importent-info ul li {
+  margin-bottom: 0.5rem;
+  line-height: normal;
+}
+.booking-importent-info ul li::marker {
+  font-size: 0.8rem;
+  color: #000000;
+}
+.booking-room-details-wrapper .room-details-box,
+.booking-room-details-wrapper .guest-details-box {
+  border: 1px solid #cdcccc;
+}
+.booking-room-details-wrapper .room-details-box .border-top,
+.booking-room-details-wrapper .guest-details-box .border-top {
+  border-top-color: #cdcccc !important;
 }
